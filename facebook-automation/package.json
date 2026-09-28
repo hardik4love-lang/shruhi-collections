@@ -1,0 +1,14 @@
+{
+  "name": "shruhi-facebook-automation",
+  "version": "1.0.0",
+  "description": "Shruhi Collections — 100% Automatic Facebook Page Auto-Poster, Comment Auto-Replier & Messenger Auto-AI (Pauses When Owner Jumps In)",
+  "main": "fb-bot.js",
+  "scripts": {
+    "start": "node fb-bot.js",
+    "post-all": "node fb-bot.js --post-all",
+    "autopilot": "node fb-browser-autopilot.js"
+  },
+  "dependencies": {
+    "playwright-core": "^1.49.0"
+  }
+}
