@@ -42,11 +42,12 @@ const configPath = path.join(__dirname, "fb-config.json");
 let fbConfig = {
   PLAN_TIER: "SURAT PRO TIER (₹29,999 / month)",
   CONNECTED_PAGES: [
-    { id: process.env.FB_PAGE_ID || "shruhi_page_1_main", name: "Shruhi Collections — Official Boutique (Surat)" },
-    { id: process.env.FB_PAGE_ID_2 || "shruhi_page_2_plussize", name: "Shruhi Curvy & Plus-Size Couture (S to 6XL)" },
-    { id: process.env.FB_PAGE_ID_3 || "shruhi_page_3_wholesale", name: "Shruhi Wholesale & B2B Surat Factory Outlet" }
+    { id: process.env.FB_PAGE_ID || "61586357894191", name: "Shruhi Collections — Official Boutique (ID: 61586357894191)", url: "https://www.facebook.com/profile.php?id=61586357894191" },
+    { id: process.env.FB_PAGE_ID_2 || "shruhi_page_2_plussize", name: "Shruhi Curvy & Plus-Size Couture (S to 6XL)", url: "https://shruhicollections.in/facebook-page.html" },
+    { id: process.env.FB_PAGE_ID_3 || "shruhi_page_3_wholesale", name: "Shruhi Wholesale & B2B Surat Factory Outlet", url: "https://shruhicollections.in" }
   ],
-  PAGE_ID: process.env.FB_PAGE_ID || "",
+  PAGE_ID: process.env.FB_PAGE_ID || "61586357894191",
+  FB_PAGE_URL: "https://www.facebook.com/profile.php?id=61586357894191",
   PAGE_ACCESS_TOKEN: process.env.FB_PAGE_ACCESS_TOKEN || "",
   VERIFY_TOKEN: process.env.FB_VERIFY_TOKEN || "shruhi_collections_verify_2026",
   TELEGRAM_BOT_HANDLE: "@Aassqqee_bot",

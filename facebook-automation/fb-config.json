@@ -1,0 +1,31 @@
+{
+  "PAGE_ID": "61586357894191",
+  "FB_PAGE_URL": "https://www.facebook.com/profile.php?id=61586357894191",
+  "PLAN_TIER": "SURAT PRO TIER (₹29,999 / month)",
+  "CONNECTED_PAGES": [
+    {
+      "id": "61586357894191",
+      "name": "Shruhi Collections — Official Boutique (Surat)",
+      "url": "https://www.facebook.com/profile.php?id=61586357894191"
+    },
+    {
+      "id": "shruhi_page_2_plussize",
+      "name": "Shruhi Curvy & Plus-Size Couture (S to 6XL)",
+      "url": "https://shruhicollections.in/facebook-page.html"
+    },
+    {
+      "id": "shruhi_page_3_wholesale",
+      "name": "Shruhi Wholesale & B2B Surat Factory Outlet",
+      "url": "https://shruhicollections.in"
+    }
+  ],
+  "VERIFY_TOKEN": "shruhi_collections_verify_2026",
+  "TELEGRAM_BOT_HANDLE": "@Aassqqee_bot",
+  "TELEGRAM_CHAT_ID": "8737013099",
+  "SUB_005S_SHIELD_ENABLED": true,
+  "HERO_BOTS_INCLUDED": 100,
+  "PORT": 8095,
+  "PUBLIC_SITE_URL": "https://shruhicollections.in",
+  "WHATSAPP_NUMBER": "916355285433",
+  "WHATSAPP_DISPLAY": "+91 63552 85433"
+}
