@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Option 3: Modern WhatsApp Boutique Storefront — Shruhi Collections (www.shruhicollections.in)</title>
+  <meta
+    name="description"
+    content="Shruhi Collections (www.shruhicollections.in) — Option 3: Modern D2C Boutique & Instant WhatsApp Ordering Storefront. Sizes S to 6XL. Direct WhatsApp: +91 90542 41725."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+
+    :root {
+      --bg-pure: #ffffff;
+      --bg-blush: #fdf8f9;
+      --bg-petal: #f7eef0;
+      --wine-primary: #7a1436;
+      --wine-dark: #4d0a20;
+      --gold-accent: #c59132;
+      --wa-green: #128c7e;
+      --wa-bright: #25d366;
+      --text-dark: #191416;
+      --text-mid: #5a4d52;
+      --border-light: #eadce0;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-blush);
+      color: var(--text-dark);
+      line-height: 1.55;
+      padding-bottom: 5.5rem;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* 3-Website Option Switcher Bar */
+    .option-switcher-bar {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: linear-gradient(90deg, #210912 0%, #3b1020 50%, #210912 100%);
+      border-bottom: 1px solid #e5c478;
+      padding: 0.55rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .switcher-label {
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #e5c478;
+      margin-right: 0.35rem;
+    }
+
+    .opt-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.38rem 0.95rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      border: 1px solid rgba(229, 196, 120, 0.35);
+      background: rgba(11, 8, 10, 0.65);
+      color: #d8cbb8;
+      transition: all 0.2s ease;
+    }
+
+    .opt-pill:hover {
+      border-color: #f5d98e;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .opt-pill.active {
+      background: #e5c478;
+      color: #140e12;
+      border-color: #f5d98e;
+      font-weight: 700;
+      box-shadow: 0 0 16px rgba(229, 196, 120, 0.45);
+    }
+
+    /* Storefront Header */
+    .boutique-nav {
+      background: var(--bg-pure);
+      border-bottom: 1px solid var(--border-light);
+      padding: 0.95rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .boutique-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--wine-primary);
+      color: #fff;
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+    }
+
+    .logo-text h1 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--wine-dark);
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      font-size: 0.72rem;
+      color: var(--text-mid);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .boutique-search-wrap {
+      flex: 1 1 320px;
+      max-width: 480px;
+    }
+
+    .boutique-search-wrap input {
+      width: 100%;
+      padding: 0.68rem 1.2rem;
+      border-radius: 999px;
+      border: 1.5px solid var(--border-light);
+      background: var(--bg-blush);
+      font-size: 0.88rem;
+      color: var(--text-dark);
+    }
+
+    .boutique-search-wrap input:focus {
+      outline: none;
+      border-color: var(--wine-primary);
+      background: #fff;
+    }
+
+    .nav-right-btns {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .bag-trigger-btn {
+      padding: 0.62rem 1.15rem;
+      border-radius: 999px;
+      border: 1.5px solid var(--wine-primary);
+      background: var(--bg-petal);
+      color: var(--wine-primary);
+      font-weight: 700;
+      font-size: 0.82rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .wa-direct-pill {
+      padding: 0.65rem 1.2rem;
+      border-radius: 999px;
+      background: var(--wa-green);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.82rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Instagram-Style Story Highlight Circles */
+    .stories-bar {
+      background: var(--bg-pure);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1.25rem 1.5rem;
+    }
+
+    .stories-track {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.65rem;
+      overflow-x: auto;
+    }
+
+    .story-bubble {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.45rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      min-width: 86px;
+    }
+
+    .story-ring {
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, var(--wine-primary), var(--gold-accent));
+      transition: transform 0.25s ease;
+    }
+
+    .story-bubble:hover .story-ring,
+    .story-bubble.active .story-ring {
+      transform: scale(1.08);
+      box-shadow: 0 6px 18px rgba(122, 20, 54, 0.28);
+    }
+
+    .story-ring img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2.5px solid #fff;
+    }
+
+    .story-label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      white-space: nowrap;
+    }
+
+    .story-bubble.active .story-label {
+      color: var(--wine-primary);
+      text-decoration: underline;
+    }
+
+    /* Quick Size Bar */
+    .quick-size-strip {
+      max-width: 1360px;
+      margin: 1.5rem auto 0;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .size-filter-group {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .sz-chip-btn {
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-light);
+      background: var(--bg-pure);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-mid);
+      cursor: pointer;
+    }
+
+    .sz-chip-btn.active {
+      background: var(--wine-primary);
+      color: #fff;
+      border-color: var(--wine-primary);
+    }
+
+    /* 4-Column High-Density E-Commerce Grid */
+    .storefront-container {
+      max-width: 1360px;
+      margin: 1.4rem auto 3rem;
+      padding: 0 1.5rem;
+    }
+
+    .store-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.35rem;
+    }
+
+    .store-card {
+      background: var(--bg-pure);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(25, 20, 22, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .store-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(122, 20, 54, 0.12);
+    }
+
+    .store-img-box {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      background: #f4ecee;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .store-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .store-card:hover .store-img-box img {
+      transform: scale(1.04);
+    }
+
+    .store-tag-top {
+      position: absolute;
+      top: 0.65rem;
+      left: 0.65rem;
+      right: 0.65rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .store-code-pill {
+      background: rgba(25, 20, 22, 0.85);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.24rem 0.6rem;
+      border-radius: 6px;
+      letter-spacing: 0.06em;
+    }
+
+    .store-zoom-icon {
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--wine-dark);
+      border: none;
+      border-radius: 6px;
+      padding: 0.24rem 0.55rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .store-body {
+      padding: 1rem 1.05rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      flex: 1;
+    }
+
+    .store-cat-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--wine-primary);
+      font-weight: 700;
+    }
+
+    .store-title {
+      font-family: var(--font-serif);
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.25;
+    }
+
+    .store-fabric {
+      font-size: 0.76rem;
+      color: var(--text-mid);
+    }
+
+    /* Interactive Card Size Picker */
+    .card-size-picker {
+      margin-top: 0.2rem;
+    }
+
+    .card-size-picker-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--text-mid);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .card-size-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.28rem;
+    }
+
+    .card-sz-opt {
+      padding: 0.2rem 0.48rem;
+      border-radius: 5px;
+      border: 1px solid var(--border-light);
+      background: var(--bg-blush);
+      font-size: 0.7rem;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--text-dark);
+    }
+
+    .card-sz-opt.selected {
+      background: var(--wine-primary);
+      color: #fff;
+      border-color: var(--wine-primary);
+    }
+
+    .store-cta-stack {
+      margin-top: auto;
+      padding-top: 0.65rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.45rem;
+    }
+
+    .btn-wa-instant {
+      padding: 0.58rem 0.75rem;
+      border-radius: 8px;
+      background: var(--wa-green);
+      color: #fff;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-add-bag {
+      padding: 0.58rem 0.7rem;
+      border-radius: 8px;
+      border: 1px solid var(--wine-primary);
+      background: var(--bg-petal);
+      color: var(--wine-primary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Floating Bottom WhatsApp Inquiry Bag Bar */
+    .floating-bag-dock {
+      position: fixed;
+      bottom: 1.1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 180;
+      background: var(--wine-dark);
+      color: #fff;
+      padding: 0.75rem 1.35rem;
+      border-radius: 999px;
+      box-shadow: 0 14px 36px rgba(77, 10, 32, 0.42);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      max-width: 94vw;
+    }
+
+    .dock-wa-checkout {
+      background: var(--wa-bright);
+      color: #0b2416;
+      padding: 0.5rem 1.1rem;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.82rem;
+    }
+
+    /* 4K Lightbox Dialog */
+    dialog.store-dialog {
+      margin: auto;
+      max-width: min(920px, 94vw);
+      width: 100%;
+      max-height: 90vh;
+      border: none;
+      border-radius: 18px;
+      padding: 0;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    dialog.store-dialog::backdrop {
+      background: rgba(25, 15, 20, 0.72);
+      backdrop-filter: blur(5px);
+    }
+
+    @media (max-width: 1120px) {
+      .store-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 820px) {
+      .store-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 520px) {
+      .store-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 3 Website Options Switcher Bar -->
+  <nav class="option-switcher-bar" aria-label="Website Design Options">
+    <span class="switcher-label">✦ Compare 3 Website Options:</span>
+    <a href="index.html" class="opt-pill">Option 1: Royal Ivory &amp; Maroon</a>
+    <a href="option-2-midnight-luxe.html" class="opt-pill">Option 2: Midnight Obsidian Couture</a>
+    <a href="option-3-modern-boutique.html" class="opt-pill active">Option 3: Modern WhatsApp Storefront</a>
+  </nav>
+
+  <!-- Storefront Header -->
+  <header class="boutique-nav">
+    <a href="#" class="boutique-logo">
+      <div class="logo-badge">S</div>
+      <div class="logo-text">
+        <h1>Shruhi Collections</h1>
+        <span>Instant WhatsApp Store • www.shruhicollections.in</span>
+      </div>
+    </a>
+
+    <div class="boutique-search-wrap">
+      <input
+        type="search"
+        id="storeSearch"
+        placeholder="Search by code (Meera, 1042, B-2876, 5041), colour, or fabric..."
+      />
+    </div>
+
+    <div class="nav-right-btns">
+      <button type="button" class="bag-trigger-btn" id="clearBagBtn" title="Clear selected inquiry bag">
+        🛍️ Inquiry Bag (<span id="bagCountTop">0</span>)
+      </button>
+      <a
+        href="https://wa.me/919054241725?text=Hello%20Shruhi%20Collections!%20I%20am%20shopping%20on%20www.shruhicollections.in"
+        target="_blank"
+        rel="noopener"
+        class="wa-direct-pill"
+      >
+        WhatsApp +91 90542 41725
+      </a>
+    </div>
+  </header>
+
+  <!-- Circular 4K Story Filter Highlights -->
+  <section class="stories-bar">
+    <div class="stories-track" id="storyTrack">
+      <button type="button" class="story-bubble active" data-story="all">
+        <div class="story-ring">
+          <img src="assets/products/styleefik-tejal-ochre-sharara-set.jpg" alt="All 18 Designs" />
+        </div>
+        <span class="story-label">All 18 Designs</span>
+      </button>
+
+      <button type="button" class="story-bubble" data-story="plus-size">
+        <div class="story-ring">
+          <img src="assets/products/meera-mustard-plus-size-suit.jpg" alt="Plus Size 3XL to 6XL" />
+        </div>
+        <span class="story-label">Plus Size 3XL–6XL</span>
+      </button>
+
+      <button type="button" class="story-bubble" data-story="suit-sets">
+        <div class="story-ring">
+          <img src="assets/products/styleefik-lamex-bronze-suit.jpg" alt="3-Piece Festive Suits" />
+        </div>
+        <span class="story-label">3-Piece Suits (10)</span>
+      </button>
+
+      <button type="button" class="story-bubble" data-story="coord-sets">
+        <div class="story-ring">
+          <img src="assets/products/mostyle-b2876-maroon-embroidered-coord.jpg" alt="Co-ord Sets" />
+        </div>
+        <span class="story-label">Co-ord Sets (5)</span>
+      </button>
+
+      <button type="button" class="story-bubble" data-story="tunics-dresses">
+        <div class="story-ring">
+          <img src="assets/products/mostyle-5810-black-paisley-midi-dress.jpg" alt="Tunics & Midi Dresses" />
+        </div>
+        <span class="story-label">Tunics &amp; Midi (3)</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Quick Size Filter Strip -->
+  <div class="quick-size-strip">
+    <div>
+      <strong style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--wine-dark);">
+        Select Size &amp; Enquire Instantly
+      </strong>
+      <span id="storeStatusText" style="font-size: 0.84rem; color: var(--text-mid); margin-left: 0.5rem;">
+        Showing all 18 4K branded designs
+      </span>
+    </div>
+
+    <div class="size-filter-group" id="storeSizeBar">
+      <button type="button" class="sz-chip-btn active" data-size="all">All Sizes</button>
+      <button type="button" class="sz-chip-btn" data-size="S">S</button>
+      <button type="button" class="sz-chip-btn" data-size="M">M</button>
+      <button type="button" class="sz-chip-btn" data-size="L">L</button>
+      <button type="button" class="sz-chip-btn" data-size="XL">XL</button>
+      <button type="button" class="sz-chip-btn" data-size="2XL">2XL</button>
+      <button type="button" class="sz-chip-btn" data-size="3XL">3XL</button>
+      <button type="button" class="sz-chip-btn" data-size="4XL">4XL</button>
+      <button type="button" class="sz-chip-btn" data-size="5XL">5XL</button>
+      <button type="button" class="sz-chip-btn" data-size="6XL">6XL</button>
+    </div>
+  </div>
+
+  <!-- 4-Column Storefront Product Grid -->
+  <main class="storefront-container">
+    <div class="store-grid" id="storeGrid"></div>
+  </main>
+
+  <!-- Floating Bottom WhatsApp Inquiry Bag Dock -->
+  <div class="floating-bag-dock">
+    <span style="font-size: 0.84rem; font-weight: 600;">
+      🛍️ <strong id="dockBagCount">0</strong> outfit(s) in your Inquiry Bag
+    </span>
+    <a
+      id="dockWaLink"
+      href="https://wa.me/919054241725?text=Hello%20Shruhi%20Collections!%20I%20would%20like%20to%20enquire%20about%20your%20catalog%20on%20www.shruhicollections.in"
+      target="_blank"
+      rel="noopener"
+      class="dock-wa-checkout"
+    >
+      Send Inquiry on WhatsApp (+91 90542 41725) →
+    </a>
+  </div>
+
+  <!-- 4K Image Lightbox Modal (<dialog closedby="any">) -->
+  <dialog id="storeDialog" class="store-dialog" closedby="any" aria-labelledby="storeModalTitle">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; max-height: 90vh;">
+      <div style="background: #f4ecee; display: flex; align-items: center; justify-content: center; padding: 1rem; max-height: 90vh; overflow: auto;">
+        <img id="storeModalImg" src="" alt="" style="max-height: 82vh; max-width: 100%; object-fit: contain; border-radius: 8px;" />
+      </div>
+      <div style="padding: 1.75rem; display: flex; flex-direction: column; gap: 0.9rem; overflow-y: auto;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span class="store-code-pill" id="storeModalCode"></span>
+          <form method="dialog">
+            <button type="submit" class="sz-chip-btn">✕ Close</button>
+          </form>
+        </div>
+        <h3 id="storeModalTitle" style="font-family: var(--font-serif); font-size: 1.65rem; color: var(--wine-dark);"></h3>
+        <p id="storeModalDesc" style="font-size: 0.9rem; color: var(--text-mid);"></p>
+        <div id="storeModalMeta" style="font-size: 0.84rem; background: var(--bg-blush); padding: 0.9rem; border-radius: 10px; border: 1px solid var(--border-light);"></div>
+        <a id="storeModalWa" href="#" target="_blank" rel="noopener" class="btn-wa-instant" style="padding: 0.85rem; font-size: 0.9rem; margin-top: auto;">
+          Order / Enquire on WhatsApp (+91 90542 41725) →
+        </a>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="catalog-data.js"></script>
+  <script>
+    (function () {
+      const catalog = window.SHRUHI_CATALOG || [];
+      const storeGrid = document.getElementById('storeGrid');
+      const storeDialog = document.getElementById('storeDialog');
+
+      if (storeDialog && !('closedBy' in HTMLDialogElement.prototype)) {
+        storeDialog.addEventListener('click', (e) => {
+          if (e.target === storeDialog) storeDialog.close();
+        });
+      }
+
+      let activeStory = 'all';
+      let activeSize = 'all';
+      let search = '';
+      const selectedSizes = {};
+      const bag = [];
+
+      catalog.forEach((item) => {
+        selectedSizes[item.id] = item.sizes[0];
+      });
+
+      function buildSingleWa(item) {
+        const sz = selectedSizes[item.id] || item.sizes[0];
+        const msg = `Hello Shruhi Collections! ✨\nI want to order / enquire about:\n• Code: *${item.code}*\n• Outfit: ${item.name}\n• MRP: *${item.priceFormatted || ''}* (${item.qtyInfo || ''})\n• Selected Size: *${sz}*\n• Website: https://www.shruhicollections.in`;
+        return `https://wa.me/919054241725?text=${encodeURIComponent(msg)}`;
+      }
+
+      function updateBagDock() {
+        document.getElementById('bagCountTop').textContent = String(bag.length);
+        const totalVal = bag.reduce((sum, entry) => sum + (entry.price || 0), 0);
+        document.getElementById('dockBagCount').textContent = bag.length
+          ? `${bag.length} (Total: ₹${totalVal.toLocaleString('en-IN')})`
+          : '0';
+        const dockLink = document.getElementById('dockWaLink');
+        if (!bag.length) {
+          dockLink.href =
+            'https://wa.me/919054241725?text=Hello%20Shruhi%20Collections!%20I%20would%20like%20to%20enquire%20about%20your%20catalog%20on%20www.shruhicollections.in';
+        } else {
+          const lines = bag.map((entry, idx) => `${idx + 1}. *${entry.code}* (${entry.name}) — *${entry.priceFormatted || ''}* — Size: *${entry.size}*`).join('\n');
+          const msg = `Hello Shruhi Collections! ✨\nHere is my Order / Inquiry Bag from www.shruhicollections.in:\n\n${lines}\n\n*Total MRP: ₹${totalVal.toLocaleString('en-IN')}*\nPlease confirm availability & dispatch.`;
+          dockLink.href = `https://wa.me/919054241725?text=${encodeURIComponent(msg)}`;
+        }
+      }
+
+      function render() {
+        const filtered = catalog.filter((item) => {
+          if (activeStory === 'plus-size' && !item.isPlusSize) return false;
+          if (activeStory !== 'all' && activeStory !== 'plus-size' && item.category !== activeStory) return false;
+          if (activeSize !== 'all' && !item.sizes.includes(activeSize)) return false;
+          if (search) {
+            const hay = `${item.code} ${item.name} ${item.colorName} ${item.fabric} ${item.priceFormatted || ''} ${item.qtyInfo || ''}`.toLowerCase();
+            if (!hay.includes(search)) return false;
+          }
+          return true;
+        });
+
+        document.getElementById('storeStatusText').textContent = `Showing ${filtered.length} of ${catalog.length} 4K branded designs (MRP ₹850 – ₹3,550)`;
+
+        storeGrid.innerHTML = filtered
+          .map((item) => {
+            const chosenSz = selectedSizes[item.id] || item.sizes[0];
+            const szButtons = item.sizes
+              .map(
+                (sz) =>
+                  `<button type="button" class="card-sz-opt ${sz === chosenSz ? 'selected' : ''}" data-pick-id="${item.id}" data-pick-sz="${sz}">${sz}</button>`
+              )
+              .join('');
+
+            return `
+            <article class="store-card">
+              <div class="store-img-box" data-zoom="${item.id}">
+                <img src="${item.image}" alt="${item.name}" loading="lazy" />
+                <div class="store-tag-top">
+                  <span class="store-code-pill">${item.code} • ${item.priceFormatted || ''}</span>
+                  <button type="button" class="store-zoom-icon" data-zoom="${item.id}">🔍 4K Zoom</button>
+                </div>
+              </div>
+              <div class="store-body">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span class="store-cat-label">${item.categoryLabel}</span>
+                  <span style="font-family:var(--font-serif); font-size:1.22rem; font-weight:800; color:var(--wine-primary);">
+                    ${item.priceFormatted || ''}
+                  </span>
+                </div>
+                <h3 class="store-title">${item.name}</h3>
+                <p class="store-fabric">${item.fabric} • <strong>${item.qtyInfo || ''}</strong></p>
+
+                <div class="card-size-picker">
+                  <span class="card-size-picker-label">Tap Size (${chosenSz} selected):</span>
+                  <div class="card-size-row">${szButtons}</div>
+                </div>
+
+                <div class="store-cta-stack">
+                  <a href="${buildSingleWa(item)}" target="_blank" rel="noopener" class="btn-wa-instant">
+                    Buy / Enquire (${item.priceFormatted || ''} • ${chosenSz})
+                  </a>
+                  <button type="button" class="btn-add-bag" data-bag-add="${item.id}">
+                    + Bag
+                  </button>
+                </div>
+              </div>
+            </article>
+          `;
+          })
+          .join('');
+      }
+
+      document.body.addEventListener('click', (e) => {
+        const pickBtn = e.target.closest('[data-pick-id]');
+        if (pickBtn) {
+          const id = pickBtn.getAttribute('data-pick-id');
+          const sz = pickBtn.getAttribute('data-pick-sz');
+          selectedSizes[id] = sz;
+          render();
+          return;
+        }
+
+        const addBtn = e.target.closest('[data-bag-add]');
+        if (addBtn) {
+          const id = addBtn.getAttribute('data-bag-add');
+          const item = catalog.find((c) => c.id === id);
+          if (item) {
+            bag.push({
+              id: item.id,
+              code: item.code,
+              name: item.name,
+              price: item.price || 0,
+              priceFormatted: item.priceFormatted || '',
+              size: selectedSizes[id] || item.sizes[0]
+            });
+            updateBagDock();
+            addBtn.textContent = '✓ Added';
+            setTimeout(() => {
+              addBtn.textContent = '+ Bag';
+            }, 900);
+          }
+          return;
+        }
+
+        const zoomBtn = e.target.closest('[data-zoom]');
+        if (zoomBtn) {
+          const id = zoomBtn.getAttribute('data-zoom');
+          const item = catalog.find((c) => c.id === id);
+          if (item) {
+            document.getElementById('storeModalImg').src = item.image;
+            document.getElementById('storeModalCode').textContent = `${item.code} • MRP ${item.priceFormatted || ''}`;
+            document.getElementById('storeModalTitle').textContent = `${item.name} (${item.priceFormatted || ''})`;
+            document.getElementById('storeModalDesc').textContent = item.description;
+            document.getElementById('storeModalMeta').innerHTML = `
+              <strong>MRP Price:</strong> ${item.priceFormatted || ''} (${item.rawWhatsAppText || ''})<br/>
+              <strong>Pack / Size Qty:</strong> ${item.qtyInfo || ''} (${item.sizes.join(', ')})<br/>
+              <strong>Fabric:</strong> ${item.fabric}<br/>
+              <strong>Work:</strong> ${item.workType}
+            `;
+            document.getElementById('storeModalWa').href = buildSingleWa(item);
+            storeDialog.showModal();
+          }
+        }
+      });
+
+      document.getElementById('storyTrack').addEventListener('click', (e) => {
+        const b = e.target.closest('[data-story]');
+        if (!b) return;
+        document.querySelectorAll('.story-bubble').forEach((el) => el.classList.remove('active'));
+        b.classList.add('active');
+        activeStory = b.getAttribute('data-story');
+        render();
+      });
+
+      document.getElementById('storeSizeBar').addEventListener('click', (e) => {
+        const b = e.target.closest('[data-size]');
+        if (!b) return;
+        document.querySelectorAll('.sz-chip-btn').forEach((el) => el.classList.remove('active'));
+        b.classList.add('active');
+        activeSize = b.getAttribute('data-size');
+        render();
+      });
+
+      document.getElementById('storeSearch').addEventListener('input', (e) => {
+        search = e.target.value.toLowerCase().trim();
+        render();
+      });
+
+      document.getElementById('clearBagBtn').addEventListener('click', () => {
+        bag.length = 0;
+        updateBagDock();
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>
