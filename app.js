@@ -1,14 +1,14 @@
 // ==========================================================================
 // SHRUHI COLLECTIONS (www.shruhicollections.in)
 // Interactive Lookbook Application Controller
-// WhatsApp & Phone: +91 90542 41725
+// WhatsApp & Phone: +91 63552 85433
 // ==========================================================================
 
 (function () {
   'use strict';
 
-  const WHATSAPP_NUMBER = '919054241725';
-  const DISPLAY_PHONE = '+91 90542 41725';
+  const WHATSAPP_NUMBER = '916355285433';
+  const DISPLAY_PHONE = '+91 63552 85433';
   const SITE_URL = 'https://www.shruhicollections.in';
   const STORAGE_KEY = 'shruhi_shortlist_v1';
 
@@ -109,7 +109,7 @@
   }
 
   // --------------------------------------------------------------------------
-  // 3. WhatsApp Link Helpers (+91 90542 41725)
+  // 3. WhatsApp Link Helpers (+91 63552 85433)
   // --------------------------------------------------------------------------
   function buildWhatsAppUrl(product, preferredSize) {
     const sizeText = preferredSize ? ` (Selected Size: ${preferredSize})` : ` (Sizes: ${product.sizes.join(', ')})`;

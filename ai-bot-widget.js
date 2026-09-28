@@ -5,8 +5,6 @@
 (function () {
   const AI_PHONE = "916355285433";
   const AI_PHONE_DISPLAY = "+91 63552 85433";
-  const PRIMARY_PHONE = "919054241725";
-  const PRIMARY_PHONE_DISPLAY = "+91 90542 41725";
 
   const catalog = window.SHRUHI_CATALOG || [];
   let aiMode = "AUTO_AI"; // "AUTO_AI" | "HUMAN_TAKEOVER"
@@ -562,7 +560,7 @@
   });
 
   // Expose helper to open AI concierge from anywhere on the page
-  window.openShruhiAiConcierge = function (tabName) {
+  window.openShruhiAiConcierge = window.openShruhiAiDrawer = function (tabName) {
     drawer.classList.add("open");
     if (tabName) {
       const tBtn = drawer.querySelector(`[data-ai-tab="${tabName}"]`);

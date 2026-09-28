@@ -165,7 +165,7 @@ async function startWhatsAppAiBot() {
         const sent = await sock.sendMessage(jid, {
           text:
             `🙋‍♂️ *Shruhi Collections — Owner Handover Activated*\n\n` +
-            `I have paused the Auto-AI assistant and notified our boutique owner on *+91 63552 85433* / *+91 90542 41725*. They will jump into this chat shortly!`
+            `I have paused the Auto-AI assistant and notified our boutique owner on *+91 63552 85433*. They will jump into this chat shortly!`
         });
         if (sent?.key?.id) botSentMessageIds.add(sent.key.id);
         continue;
