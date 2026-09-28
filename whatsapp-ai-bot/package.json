@@ -1,0 +1,14 @@
+{
+  "name": "shruhi-whatsapp-ai-bot-6355285433",
+  "version": "1.0.0",
+  "description": "100% Auto-AI WhatsApp Bot for Shruhi Collections (+91 63552 85433) with all 29 4K products listed and automatic Owner Jump-In takeover detection.",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.8",
+    "pino": "^9.4.0",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
