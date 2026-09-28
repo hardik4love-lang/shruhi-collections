@@ -80,26 +80,40 @@ async function startWhatsAppAiBot() {
     return;
   }
 
-  const { default: makeWASocket, useMultiFileAuthState, DisconnectReason } = baileys;
+  const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion } = baileys;
   const pino = require("pino");
   const qrcode = require("qrcode-terminal");
 
   const { state, saveCreds } = await useMultiFileAuthState(path.join(__dirname, "auth_6355285433"));
+  let versionInfo = {};
+  try {
+    const latest = await fetchLatestBaileysVersion();
+    if (latest?.version) versionInfo = { version: latest.version };
+  } catch (_) {}
+
   const sock = makeWASocket({
+    ...versionInfo,
     auth: state,
     printQRInTerminal: false,
-    logger: pino({ level: "silent" })
+    logger: pino({ level: "silent" }),
+    browser: ["Shruhi Collections AI", "Chrome", "122.0.0"]
   });
 
   sock.ev.on("creds.update", saveCreds);
 
-  sock.ev.on("connection.update", (update) => {
+  sock.ev.on("connection.update", async (update) => {
     const { connection, lastDisconnect, qr } = update;
     if (qr) {
       console.log("\n========================================================");
-      console.log("SCAN THIS QR CODE FROM WHATSAPP (+91 63552 85433):");
+      console.log("📱 SCAN THIS QR CODE FROM WHATSAPP ON +91 63552 85433:");
+      console.log("   (WhatsApp -> Linked Devices -> Link a Device)");
       console.log("========================================================\n");
       qrcode.generate(qr, { small: true });
+
+      // Also save a clean browser-scannable QR page at whatsapp-ai-bot/qr.html
+      const qrPageHtml = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="15"><title>Scan QR — Shruhi Collections +91 63552 85433 Auto-AI</title></head><body style="background:#0b141a;color:#fff;font-family:sans-serif;display:grid;place-items:center;min-height:95vh;text-align:center;"><div><h2 style="color:#25d366;">Shruhi Collections — +91 63552 85433 Auto-AI Bot</h2><p>Open WhatsApp on <strong>+91 63552 85433</strong> → <strong>Linked Devices</strong> → <strong>Link a Device</strong> and scan:</p><div style="background:#fff;padding:24px;border-radius:16px;display:inline-block;margin-top:12px;"><img src="https://api.qrserver.com/v1/create-qr-code/?size=340x340&data=${encodeURIComponent(qr)}" width="340" height="340" alt="WhatsApp QR"/></div></div></body></html>`;
+      fs.writeFileSync(path.join(__dirname, "qr.html"), qrPageHtml, "utf8");
+      console.log("\n🌐 Or scan in browser: http://localhost:8090/whatsapp-ai-bot/qr.html\n");
     }
     if (connection === "open") {
       console.log("\n✅ SHRUHI COLLECTIONS 100% AUTO-AI BOT IS LIVE ON +91 63552 85433!");
@@ -109,7 +123,7 @@ async function startWhatsAppAiBot() {
     if (connection === "close") {
       const code = lastDisconnect?.error?.output?.statusCode;
       if (code !== DisconnectReason.loggedOut) {
-        startWhatsAppAiBot();
+        setTimeout(() => startWhatsAppAiBot(), 2500);
       }
     }
   });
