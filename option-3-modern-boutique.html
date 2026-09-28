@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Option 3: Modern WhatsApp Boutique Storefront — Shruhi Collections (www.shruhicollections.in)</title>
+  <title>Shruhi Collections — Official Boutique Storefront | Ethnic, Festive &amp; Curvy Couture (Sizes S to 6XL)</title>
   <meta
     name="description"
-    content="Shruhi Collections (www.shruhicollections.in) — Option 3: Modern D2C Boutique & Instant WhatsApp Ordering Storefront. Sizes S to 6XL. Direct WhatsApp: +91 90542 41725."
+    content="Official Online Storefront of Shruhi Collections, Surat (www.shruhicollections.in). Shop 29+ 4K Designer 3-Piece Suits, Co-ord Sets, Tunics & Plus-Size Curvy Couture (Sizes S to 6XL, MRP ₹850 – ₹3,550). Direct WhatsApp Ordering: +91 90542 41725."
   />
+  <meta property="og:title" content="Shruhi Collections — Official Ethnic, Festive &amp; Curvy Boutique (Sizes S to 6XL)" />
+  <meta property="og:description" content="Explore 29+ 4K UHD Designer Suits, Co-ord Sets &amp; Plus-Size Ethnic Wear (MRP ₹850 – ₹3,550). Order directly on WhatsApp +91 90542 41725." />
+  <meta property="og:image" content="https://www.shruhicollections.in/assets/social/shruhi-fb-cover-option2-4k.jpg" />
+  <meta property="og:url" content="https://www.shruhicollections.in/" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.shruhicollections.in/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
   <style>
@@ -23,9 +29,12 @@
       --bg-pure: #ffffff;
       --bg-blush: #fdf8f9;
       --bg-petal: #f7eef0;
+      --bg-cream: #fbf6f0;
       --wine-primary: #7a1436;
-      --wine-dark: #4d0a20;
+      --wine-dark: #43091c;
+      --wine-soft: #9e244c;
       --gold-accent: #c59132;
+      --gold-light: #f6e7c1;
       --wa-green: #128c7e;
       --wa-bright: #25d366;
       --text-dark: #191416;
@@ -41,6 +50,10 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: var(--font-sans);
       background: var(--bg-blush);
@@ -54,193 +67,371 @@
       text-decoration: none;
     }
 
-    /* 3-Website Option Switcher Bar */
-    .option-switcher-bar {
-      position: sticky;
-      top: 0;
-      z-index: 200;
-      background: linear-gradient(90deg, #210912 0%, #3b1020 50%, #210912 100%);
-      border-bottom: 1px solid #e5c478;
-      padding: 0.55rem 1rem;
+    /* Official Top Announcement Bar */
+    .top-announcement-bar {
+      background: linear-gradient(90deg, #2b0713 0%, #520d24 50%, #2b0713 100%);
+      color: #f9eed3;
+      padding: 0.52rem 1.5rem;
+      font-size: 0.76rem;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(229, 196, 120, 0.35);
+    }
+
+    .top-announcement-inner {
+      max-width: 1380px;
+      margin: 0 auto;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 0.65rem;
+      justify-content: space-between;
+      gap: 1rem;
       flex-wrap: wrap;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
     }
 
-    .switcher-label {
-      font-size: 0.74rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: #e5c478;
-      margin-right: 0.35rem;
-    }
-
-    .opt-pill {
-      display: inline-flex;
+    .top-announcement-links {
+      display: flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.38rem 0.95rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .top-announcement-links a {
+      color: #f5d98e;
+      font-weight: 700;
+      font-size: 0.74rem;
+      padding: 0.2rem 0.65rem;
       border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      border: 1px solid rgba(229, 196, 120, 0.35);
-      background: rgba(11, 8, 10, 0.65);
-      color: #d8cbb8;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(245, 217, 142, 0.3);
       transition: all 0.2s ease;
     }
 
-    .opt-pill:hover {
-      border-color: #f5d98e;
-      color: #fff;
-      transform: translateY(-1px);
-    }
-
-    .opt-pill.active {
-      background: #e5c478;
-      color: #140e12;
-      border-color: #f5d98e;
-      font-weight: 700;
-      box-shadow: 0 0 16px rgba(229, 196, 120, 0.45);
+    .top-announcement-links a:hover {
+      background: #f5d98e;
+      color: #210610;
     }
 
     /* Storefront Header */
     .boutique-nav {
-      background: var(--bg-pure);
+      position: sticky;
+      top: 0;
+      z-index: 190;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-light);
-      padding: 0.95rem 2rem;
+      padding: 0.85rem 1.75rem;
+      box-shadow: 0 4px 20px rgba(25, 20, 22, 0.05);
+    }
+
+    .boutique-nav-inner {
+      max-width: 1380px;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1.25rem;
+      gap: 1.15rem;
       flex-wrap: wrap;
     }
 
     .boutique-logo {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.8rem;
     }
 
     .logo-badge {
-      width: 42px;
-      height: 42px;
+      width: 46px;
+      height: 46px;
       border-radius: 12px;
-      background: var(--wine-primary);
-      color: #fff;
+      background: linear-gradient(135deg, var(--wine-primary), var(--wine-dark));
+      color: #f7e2a9;
+      border: 1.5px solid var(--gold-accent);
       font-family: var(--font-serif);
-      font-size: 1.35rem;
+      font-size: 1.5rem;
       font-weight: 700;
       display: grid;
       place-items: center;
+      box-shadow: 0 4px 12px rgba(122, 20, 54, 0.22);
     }
 
     .logo-text h1 {
       font-family: var(--font-serif);
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       color: var(--wine-dark);
-      line-height: 1.1;
+      line-height: 1.08;
+      letter-spacing: 0.01em;
     }
 
     .logo-text span {
-      font-size: 0.72rem;
+      font-size: 0.69rem;
       color: var(--text-mid);
-      letter-spacing: 0.12em;
+      letter-spacing: 0.11em;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .boutique-search-wrap {
-      flex: 1 1 320px;
-      max-width: 480px;
+      flex: 1 1 290px;
+      max-width: 460px;
+      position: relative;
     }
 
     .boutique-search-wrap input {
       width: 100%;
-      padding: 0.68rem 1.2rem;
+      padding: 0.68rem 1.15rem;
       border-radius: 999px;
       border: 1.5px solid var(--border-light);
       background: var(--bg-blush);
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: var(--text-dark);
+      font-family: inherit;
+      transition: all 0.2s ease;
     }
 
     .boutique-search-wrap input:focus {
       outline: none;
       border-color: var(--wine-primary);
       background: #fff;
+      box-shadow: 0 0 0 3px rgba(122, 20, 54, 0.1);
     }
 
     .nav-right-btns {
       display: flex;
       align-items: center;
-      gap: 0.65rem;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-link-pill {
+      padding: 0.55rem 0.95rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-light);
+      background: var(--bg-pure);
+      color: var(--text-dark);
+      font-weight: 700;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .nav-link-pill:hover {
+      border-color: var(--wine-primary);
+      color: var(--wine-primary);
+      background: var(--bg-petal);
     }
 
     .bag-trigger-btn {
-      padding: 0.62rem 1.15rem;
+      padding: 0.6rem 1.1rem;
       border-radius: 999px;
       border: 1.5px solid var(--wine-primary);
       background: var(--bg-petal);
       color: var(--wine-primary);
-      font-weight: 700;
-      font-size: 0.82rem;
+      font-weight: 800;
+      font-size: 0.8rem;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 0.45rem;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .bag-trigger-btn:hover {
+      background: var(--wine-primary);
+      color: #fff;
     }
 
     .wa-direct-pill {
-      padding: 0.65rem 1.2rem;
+      padding: 0.62rem 1.15rem;
       border-radius: 999px;
       background: var(--wa-green);
       color: #fff;
-      font-weight: 700;
-      font-size: 0.82rem;
+      font-weight: 800;
+      font-size: 0.8rem;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
+      box-shadow: 0 4px 12px rgba(18, 140, 126, 0.25);
+    }
+
+    /* Production Editorial Boutique Hero */
+    .boutique-hero {
+      background: linear-gradient(135deg, #fff9fa 0%, #f8ecef 55%, #f5e6d8 100%);
+      border-bottom: 1px solid var(--border-light);
+      padding: 2.2rem 1.5rem;
+    }
+
+    .boutique-hero-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.32rem 0.85rem;
+      border-radius: 999px;
+      background: var(--wine-primary);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-headline {
+      font-family: var(--font-serif);
+      font-size: clamp(1.9rem, 3.3vw, 2.85rem);
+      color: var(--wine-dark);
+      line-height: 1.15;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-subtext {
+      font-size: 0.96rem;
+      color: var(--text-mid);
+      max-width: 610px;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-trust-badge {
+      background: #fff;
+      border: 1px solid var(--border-light);
+      padding: 0.45rem 0.85rem;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn-primary-wine {
+      padding: 0.78rem 1.45rem;
+      border-radius: 999px;
+      background: var(--wine-primary);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.86rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(122, 20, 54, 0.24);
+      transition: transform 0.2s ease;
+    }
+
+    .btn-primary-wine:hover {
+      transform: translateY(-2px);
+      background: var(--wine-dark);
+    }
+
+    .btn-secondary-outline {
+      padding: 0.78rem 1.35rem;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--wine-dark);
+      border: 1.5px solid var(--wine-primary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .hero-cards-trio {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+
+    .hero-mini-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 0.35rem;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 8px 24px rgba(77, 10, 32, 0.09);
+      cursor: pointer;
+      transition: transform 0.25s ease;
+    }
+
+    .hero-mini-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .hero-mini-card img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .hero-mini-meta {
+      padding: 0.45rem 0.35rem 0.25rem;
+      text-align: center;
+    }
+
+    .hero-mini-meta strong {
+      display: block;
+      font-size: 0.76rem;
+      color: var(--wine-dark);
+    }
+
+    .hero-mini-meta span {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--wine-primary);
     }
 
     /* Instagram-Style Story Highlight Circles */
     .stories-bar {
       background: var(--bg-pure);
       border-bottom: 1px solid var(--border-light);
-      padding: 1.25rem 1.5rem;
+      padding: 1.15rem 1.5rem;
     }
 
     .stories-track {
-      max-width: 1280px;
+      max-width: 1360px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1.65rem;
+      gap: 1.45rem;
       overflow-x: auto;
+      padding-bottom: 0.2rem;
     }
 
     .story-bubble {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.45rem;
+      gap: 0.4rem;
       background: none;
       border: none;
       cursor: pointer;
-      min-width: 86px;
+      min-width: 88px;
+      font-family: inherit;
     }
 
     .story-ring {
-      width: 78px;
-      height: 78px;
+      width: 76px;
+      height: 76px;
       border-radius: 50%;
       padding: 3px;
       background: linear-gradient(135deg, var(--wine-primary), var(--gold-accent));
-      transition: transform 0.25s ease;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .story-bubble:hover .story-ring,
@@ -258,7 +449,7 @@
     }
 
     .story-label {
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 700;
       color: var(--text-dark);
       white-space: nowrap;
@@ -269,34 +460,45 @@
       text-decoration: underline;
     }
 
-    /* Quick Size Bar */
+    /* Quick Size, Sort & Order Mode Strip */
     .quick-size-strip {
-      max-width: 1360px;
-      margin: 1.5rem auto 0;
-      padding: 0 1.5rem;
+      max-width: 1380px;
+      margin: 1.35rem auto 0;
+      padding: 1rem 1.5rem;
+      background: var(--bg-pure);
+      border-radius: 16px;
+      border: 1px solid var(--border-light);
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 1rem;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
     }
 
     .size-filter-group {
       display: flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.35rem;
       flex-wrap: wrap;
     }
 
     .sz-chip-btn {
-      padding: 0.4rem 0.85rem;
+      padding: 0.38rem 0.78rem;
       border-radius: 999px;
       border: 1px solid var(--border-light);
-      background: var(--bg-pure);
-      font-size: 0.78rem;
+      background: var(--bg-blush);
+      font-size: 0.76rem;
       font-weight: 700;
       color: var(--text-mid);
       cursor: pointer;
+      font-family: inherit;
+      transition: all 0.15s ease;
+    }
+
+    .sz-chip-btn:hover {
+      border-color: var(--wine-primary);
+      color: var(--wine-primary);
     }
 
     .sz-chip-btn.active {
@@ -305,10 +507,22 @@
       border-color: var(--wine-primary);
     }
 
+    .sort-select {
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-light);
+      background: var(--bg-blush);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      font-family: inherit;
+      cursor: pointer;
+    }
+
     /* 4-Column High-Density E-Commerce Grid */
     .storefront-container {
-      max-width: 1360px;
-      margin: 1.4rem auto 3rem;
+      max-width: 1380px;
+      margin: 1.35rem auto 3rem;
       padding: 0 1.5rem;
     }
 
@@ -361,61 +575,77 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 0.4rem;
     }
 
     .store-code-pill {
-      background: rgba(25, 20, 22, 0.85);
+      background: rgba(25, 20, 22, 0.88);
       color: #fff;
       font-size: 0.68rem;
-      font-weight: 700;
-      padding: 0.24rem 0.6rem;
+      font-weight: 800;
+      padding: 0.26rem 0.62rem;
       border-radius: 6px;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
     }
 
     .store-zoom-icon {
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.94);
       color: var(--wine-dark);
       border: none;
       border-radius: 6px;
-      padding: 0.24rem 0.55rem;
-      font-size: 0.7rem;
-      font-weight: 700;
+      padding: 0.26rem 0.58rem;
+      font-size: 0.69rem;
+      font-weight: 800;
       cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    .store-pack-badge {
+      position: absolute;
+      bottom: 0.6rem;
+      left: 0.6rem;
+      background: rgba(122, 20, 54, 0.92);
+      color: #fff;
+      font-size: 0.66rem;
+      font-weight: 700;
+      padding: 0.22rem 0.55rem;
+      border-radius: 6px;
     }
 
     .store-body {
       padding: 1rem 1.05rem 1.15rem;
       display: flex;
       flex-direction: column;
-      gap: 0.55rem;
+      gap: 0.5rem;
       flex: 1;
     }
 
     .store-cat-label {
-      font-size: 0.68rem;
+      font-size: 0.67rem;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.09em;
       color: var(--wine-primary);
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .store-title {
       font-family: var(--font-serif);
-      font-size: 1.08rem;
+      font-size: 1.06rem;
       font-weight: 700;
       color: var(--text-dark);
       line-height: 1.25;
     }
 
     .store-fabric {
-      font-size: 0.76rem;
+      font-size: 0.75rem;
       color: var(--text-mid);
     }
 
     /* Interactive Card Size Picker */
     .card-size-picker {
-      margin-top: 0.2rem;
+      margin-top: 0.15rem;
+      padding-top: 0.45rem;
+      border-top: 1px dashed var(--border-light);
     }
 
     .card-size-picker-label {
@@ -429,18 +659,19 @@
     .card-size-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.28rem;
+      gap: 0.26rem;
     }
 
     .card-sz-opt {
-      padding: 0.2rem 0.48rem;
+      padding: 0.2rem 0.46rem;
       border-radius: 5px;
       border: 1px solid var(--border-light);
       background: var(--bg-blush);
-      font-size: 0.7rem;
+      font-size: 0.69rem;
       font-weight: 700;
       cursor: pointer;
       color: var(--text-dark);
+      font-family: inherit;
     }
 
     .card-sz-opt.selected {
@@ -451,52 +682,166 @@
 
     .store-cta-stack {
       margin-top: auto;
-      padding-top: 0.65rem;
+      padding-top: 0.6rem;
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 0.45rem;
+      gap: 0.42rem;
     }
 
     .btn-wa-instant {
-      padding: 0.58rem 0.75rem;
+      padding: 0.6rem 0.72rem;
       border-radius: 8px;
       background: var(--wa-green);
       color: #fff;
-      font-size: 0.76rem;
-      font-weight: 700;
+      font-size: 0.75rem;
+      font-weight: 800;
       text-align: center;
       border: none;
       cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+
+    .btn-wa-instant:hover {
+      background: #0e7266;
     }
 
     .btn-add-bag {
-      padding: 0.58rem 0.7rem;
+      padding: 0.6rem 0.72rem;
       border-radius: 8px;
-      border: 1px solid var(--wine-primary);
+      border: 1.5px solid var(--wine-primary);
       background: var(--bg-petal);
       color: var(--wine-primary);
-      font-size: 0.75rem;
-      font-weight: 700;
+      font-size: 0.74rem;
+      font-weight: 800;
       cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn-add-bag:hover {
+      background: var(--wine-primary);
+      color: #fff;
+    }
+
+    /* Complete Master Price & Pack Table Section */
+    .master-schedule-section {
+      max-width: 1380px;
+      margin: 0 auto 3.5rem;
+      padding: 0 1.5rem;
+    }
+
+    .schedule-card {
+      background: var(--bg-pure);
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 28px rgba(25, 20, 22, 0.05);
+    }
+
+    .schedule-table-wrap {
+      overflow-x: auto;
+      margin-top: 1.2rem;
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+
+    .schedule-table th {
+      background: var(--bg-petal);
+      color: var(--wine-dark);
+      text-align: left;
+      padding: 0.75rem 0.9rem;
+      font-weight: 800;
+      border-bottom: 2px solid var(--border-light);
+    }
+
+    .schedule-table td {
+      padding: 0.68rem 0.9rem;
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: middle;
+    }
+
+    .schedule-table tr:hover td {
+      background: var(--bg-blush);
+    }
+
+    /* Flagship Showroom & Trust Footer */
+    .showroom-banner {
+      max-width: 1380px;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+    }
+
+    .showroom-grid {
+      background: linear-gradient(135deg, #2d0714 0%, #4d0a20 60%, #240510 100%);
+      color: #fff;
+      border-radius: 22px;
+      padding: 2.4rem;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+      border: 1px solid rgba(229, 196, 120, 0.4);
+    }
+
+    .site-footer {
+      background: #16070c;
+      color: #d9c8ce;
+      padding: 3rem 1.5rem 6rem;
+      border-top: 2px solid var(--gold-accent);
+    }
+
+    .site-footer-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 2rem;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-serif);
+      color: #f5d98e;
+      font-size: 1.1rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.48rem;
+      font-size: 0.83rem;
+    }
+
+    .footer-col a:hover {
+      color: #f5d98e;
     }
 
     /* Floating Bottom WhatsApp Inquiry Bag Bar */
     .floating-bag-dock {
       position: fixed;
-      bottom: 1.1rem;
+      bottom: 1rem;
       left: 50%;
       transform: translateX(-50%);
       z-index: 180;
       background: var(--wine-dark);
       color: #fff;
-      padding: 0.75rem 1.35rem;
+      padding: 0.7rem 1.25rem;
       border-radius: 999px;
-      box-shadow: 0 14px 36px rgba(77, 10, 32, 0.42);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 14px 36px rgba(77, 10, 32, 0.45);
+      border: 1px solid rgba(245, 217, 142, 0.4);
       display: flex;
       align-items: center;
-      gap: 1.1rem;
-      max-width: 94vw;
+      gap: 0.95rem;
+      max-width: 95vw;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .dock-wa-checkout {
@@ -505,13 +850,15 @@
       padding: 0.5rem 1.1rem;
       border-radius: 999px;
       font-weight: 800;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
+      border: none;
+      cursor: pointer;
     }
 
-    /* 4K Lightbox Dialog */
+    /* Dialog Modals */
     dialog.store-dialog {
       margin: auto;
-      max-width: min(920px, 94vw);
+      max-width: min(960px, 94vw);
       width: 100%;
       max-height: 90vh;
       border: none;
@@ -519,23 +866,38 @@
       padding: 0;
       overflow: hidden;
       background: #fff;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
     }
 
     dialog.store-dialog::backdrop {
-      background: rgba(25, 15, 20, 0.72);
+      background: rgba(25, 12, 18, 0.72);
       backdrop-filter: blur(5px);
+    }
+
+    .modal-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-height: 90vh;
     }
 
     @media (max-width: 1120px) {
       .store-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
+      .boutique-hero-inner,
+      .showroom-grid,
+      .site-footer-inner {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 820px) {
       .store-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .modal-grid-2 {
+        grid-template-columns: 1fr;
+        overflow-y: auto;
       }
     }
 
@@ -547,60 +909,116 @@
   </style>
 </head>
 <body>
-  <!-- 3 Website Options Switcher Bar -->
-  <nav class="option-switcher-bar" aria-label="Website Design Options">
-    <span class="switcher-label">✦ Compare 3 Website Options:</span>
-    <a href="index.html" class="opt-pill">Option 1: Royal Ivory &amp; Maroon</a>
-    <a href="option-2-midnight-luxe.html" class="opt-pill">Option 2: Midnight Obsidian Couture</a>
-    <a href="option-3-modern-boutique.html" class="opt-pill active">Option 3: Modern WhatsApp Storefront</a>
-  </nav>
-
-  <!-- Storefront Header -->
-  <header class="boutique-nav">
-    <a href="#" class="boutique-logo">
-      <div class="logo-badge">S</div>
-      <div class="logo-text">
-        <h1>Shruhi Collections</h1>
-        <span>Instant WhatsApp Store • www.shruhicollections.in</span>
+  <!-- Official Production Top Announcement Bar -->
+  <div class="top-announcement-bar">
+    <div class="top-announcement-inner">
+      <span>✨ <strong>SHRUHI COLLECTIONS SURAT</strong> • FESTIVE, BOUTIQUE &amp; PLUS-SIZE COUTURE (SIZES S TO 6XL) • DIRECT WHATSAPP DISPATCH: <strong>+91 90542 41725</strong></span>
+      <div class="top-announcement-links">
+        <a href="#priceScheduleSection">📋 All 29 MRP &amp; Pack List</a>
+        <a href="#showroomSection">📍 Surat Flagship Showroom</a>
+        <a href="facebook-page.html">🌙 Official Facebook Page (Midnight Luxe)</a>
       </div>
-    </a>
-
-    <div class="boutique-search-wrap">
-      <input
-        type="search"
-        id="storeSearch"
-        placeholder="Search by code (Meera, 1042, B-2876, 5041), colour, or fabric..."
-      />
     </div>
+  </div>
 
-    <div class="nav-right-btns">
-      <button type="button" class="bag-trigger-btn" id="clearBagBtn" title="Clear selected inquiry bag">
-        🛍️ Inquiry Bag (<span id="bagCountTop">0</span>)
-      </button>
-      <a
-        href="https://wa.me/919054241725?text=Hello%20Shruhi%20Collections!%20I%20am%20shopping%20on%20www.shruhicollections.in"
-        target="_blank"
-        rel="noopener"
-        class="wa-direct-pill"
-      >
-        WhatsApp +91 90542 41725
+  <!-- Sticky Production Storefront Header -->
+  <header class="boutique-nav">
+    <div class="boutique-nav-inner">
+      <a href="#" class="boutique-logo">
+        <div class="logo-badge">S</div>
+        <div class="logo-text">
+          <h1>Shruhi Collections</h1>
+          <span>Official Storefront • www.shruhicollections.in</span>
+        </div>
       </a>
+
+      <div class="boutique-search-wrap">
+        <input
+          type="search"
+          id="storeSearch"
+          placeholder="Search 29 designs by code (Tejal, Galaxy, Kavya, 1042, B-2876, 5041), colour, size, or price..."
+        />
+      </div>
+
+      <div class="nav-right-btns">
+        <button type="button" class="nav-link-pill" id="openSizeChartBtn">📏 Size Chart (S–6XL)</button>
+        <a href="facebook-page.html" class="nav-link-pill">📘 Facebook Page</a>
+        <button type="button" class="bag-trigger-btn" id="openBagModalBtn">
+          🛍️ Order Bag (<span id="bagCountTop">0</span>)
+        </button>
+        <a
+          href="https://wa.me/919054241725?text=Hello%20Shruhi%20Collections!%20I%20am%20shopping%20on%20www.shruhicollections.in"
+          target="_blank"
+          rel="noopener"
+          class="wa-direct-pill"
+        >
+          💬 +91 90542 41725
+        </a>
+      </div>
     </div>
   </header>
 
+  <!-- Editorial D2C + Boutique Hero Showcase -->
+  <section class="boutique-hero">
+    <div class="boutique-hero-inner">
+      <div>
+        <span class="hero-kicker">✦ Official 2026 Collection • Surat Flagship Boutique</span>
+        <h2 class="hero-headline">Effortless Heritage &amp; Curvy Couture, Tailored from Size S to 6XL.</h2>
+        <p class="hero-subtext">
+          Explore all <strong>29 signature designs (31 4K UHD Lookbook Plates)</strong> from Shruhi Collections with verified boutique pricing from <strong>₹850 to ₹3,550</strong>. Select your size for instant single-piece orders or full boutique sets via WhatsApp Concierge.
+        </p>
+        <div class="hero-badges-row">
+          <span class="hero-trust-badge">✓ 29 Verified Designs (₹850 – ₹3,550)</span>
+          <span class="hero-trust-badge">✓ Dedicated Plus Sizes (3XL, 4XL, 5XL, 6XL)</span>
+          <span class="hero-trust-badge">✓ Retail Single Piece &amp; Full Pack Sets</span>
+          <span class="hero-trust-badge">✓ Prime Arcade, Adajan, Surat</span>
+        </div>
+        <div class="hero-cta-row">
+          <a href="#catalogGridAnchor" class="btn-primary-wine">Shop All 29 Designs ↓</a>
+          <button type="button" class="btn-secondary-outline" id="heroFilterPlusBtn">Curvy / Plus-Size (3XL–6XL)</button>
+          <a href="#priceScheduleSection" class="btn-secondary-outline">View Complete Price Table</a>
+        </div>
+      </div>
+
+      <div class="hero-cards-trio">
+        <div class="hero-mini-card" data-zoom="styleefik-tejal">
+          <img src="assets/products/styleefik-tejal-ochre-sharara-set.jpg" alt="Tejal Golden Ochre Sharara Suit" />
+          <div class="hero-mini-meta">
+            <strong>TEJAL (M–2XL)</strong>
+            <span>MRP ₹3,550 • 4 Pcs Set</span>
+          </div>
+        </div>
+        <div class="hero-mini-card" data-zoom="wa-galaxy-banarasi-suit">
+          <img src="assets/products/wa-04-shruhi-galaxy-banarasi-suit.jpg" alt="Galaxy Ivory & Crimson Banarasi Suit" />
+          <div class="hero-mini-meta">
+            <strong>GALAXY (M–5XL)</strong>
+            <span>MRP ₹3,550 • 7 Pcs Set</span>
+          </div>
+        </div>
+        <div class="hero-mini-card" data-zoom="wa-kavya-mauve-suit">
+          <img src="assets/products/wa-12-shruhi-kavya-mauve-suit.jpg" alt="Kavya Mauve Scalloped Organza Dupatta Suit" />
+          <div class="hero-mini-meta">
+            <strong>KAVYA (S, L, 2XL)</strong>
+            <span>MRP ₹2,850 • 3 Pcs Set</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Circular 4K Story Filter Highlights -->
-  <section class="stories-bar">
+  <section class="stories-bar" id="catalogGridAnchor">
     <div class="stories-track" id="storyTrack">
       <button type="button" class="story-bubble active" data-story="all">
         <div class="story-ring">
-          <img src="assets/products/styleefik-tejal-ochre-sharara-set.jpg" alt="All 18 Designs" />
+          <img src="assets/products/styleefik-tejal-ochre-sharara-set.jpg" alt="All 29 Designs" />
         </div>
-        <span class="story-label">All 18 Designs</span>
+        <span class="story-label">All 29 Designs</span>
       </button>
 
       <button type="button" class="story-bubble" data-story="plus-size">
         <div class="story-ring">
-          <img src="assets/products/meera-mustard-plus-size-suit.jpg" alt="Plus Size 3XL to 6XL" />
+          <img src="assets/products/dno-1038-maroon-ajrakh-plus-size-suit.jpg" alt="Plus Size 3XL to 6XL" />
         </div>
         <span class="story-label">Plus Size 3XL–6XL</span>
       </button>
@@ -609,47 +1027,70 @@
         <div class="story-ring">
           <img src="assets/products/styleefik-lamex-bronze-suit.jpg" alt="3-Piece Festive Suits" />
         </div>
-        <span class="story-label">3-Piece Suits (10)</span>
+        <span class="story-label">3-Piece Suits (17)</span>
       </button>
 
       <button type="button" class="story-bubble" data-story="coord-sets">
         <div class="story-ring">
           <img src="assets/products/mostyle-b2876-maroon-embroidered-coord.jpg" alt="Co-ord Sets" />
         </div>
-        <span class="story-label">Co-ord Sets (5)</span>
+        <span class="story-label">Co-ord Sets (7)</span>
       </button>
 
       <button type="button" class="story-bubble" data-story="tunics-dresses">
         <div class="story-ring">
           <img src="assets/products/mostyle-5810-black-paisley-midi-dress.jpg" alt="Tunics & Midi Dresses" />
         </div>
-        <span class="story-label">Tunics &amp; Midi (3)</span>
+        <span class="story-label">Tunics &amp; Midi (5)</span>
+      </button>
+
+      <button type="button" class="story-bubble" data-story="under-1600">
+        <div class="story-ring">
+          <img src="assets/products/mostyle-4781-ivory-floral-tunic.jpg" alt="Everyday Under ₹1,600" />
+        </div>
+        <span class="story-label">Under ₹1,600 (9)</span>
+      </button>
+
+      <button type="button" class="story-bubble" data-story="festive-luxe">
+        <div class="story-ring">
+          <img src="assets/products/wa-04-shruhi-galaxy-banarasi-suit.jpg" alt="Royal Festive ₹2,500+" />
+        </div>
+        <span class="story-label">Royal Luxe ₹2,500+</span>
       </button>
     </div>
   </section>
 
-  <!-- Quick Size Filter Strip -->
+  <!-- Quick Size Filter & Sort Bar -->
   <div class="quick-size-strip">
     <div>
-      <strong style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--wine-dark);">
-        Select Size &amp; Enquire Instantly
+      <strong style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--wine-dark);">
+        Tap Your Size &amp; Order Instantly
       </strong>
-      <span id="storeStatusText" style="font-size: 0.84rem; color: var(--text-mid); margin-left: 0.5rem;">
-        Showing all 18 4K branded designs
+      <span id="storeStatusText" style="font-size: 0.82rem; color: var(--text-mid); margin-left: 0.45rem;">
+        Showing all 29 4K branded designs (MRP ₹850 – ₹3,550)
       </span>
     </div>
 
-    <div class="size-filter-group" id="storeSizeBar">
-      <button type="button" class="sz-chip-btn active" data-size="all">All Sizes</button>
-      <button type="button" class="sz-chip-btn" data-size="S">S</button>
-      <button type="button" class="sz-chip-btn" data-size="M">M</button>
-      <button type="button" class="sz-chip-btn" data-size="L">L</button>
-      <button type="button" class="sz-chip-btn" data-size="XL">XL</button>
-      <button type="button" class="sz-chip-btn" data-size="2XL">2XL</button>
-      <button type="button" class="sz-chip-btn" data-size="3XL">3XL</button>
-      <button type="button" class="sz-chip-btn" data-size="4XL">4XL</button>
-      <button type="button" class="sz-chip-btn" data-size="5XL">5XL</button>
-      <button type="button" class="sz-chip-btn" data-size="6XL">6XL</button>
+    <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+      <div class="size-filter-group" id="storeSizeBar">
+        <button type="button" class="sz-chip-btn active" data-size="all">All Sizes</button>
+        <button type="button" class="sz-chip-btn" data-size="S">S</button>
+        <button type="button" class="sz-chip-btn" data-size="M">M</button>
+        <button type="button" class="sz-chip-btn" data-size="L">L</button>
+        <button type="button" class="sz-chip-btn" data-size="XL">XL</button>
+        <button type="button" class="sz-chip-btn" data-size="2XL">2XL</button>
+        <button type="button" class="sz-chip-btn" data-size="3XL">3XL</button>
+        <button type="button" class="sz-chip-btn" data-size="4XL">4XL</button>
+        <button type="button" class="sz-chip-btn" data-size="5XL">5XL</button>
+        <button type="button" class="sz-chip-btn" data-size="6XL">6XL</button>
+      </div>
+
+      <select id="storeSortSelect" class="sort-select" aria-label="Sort products">
+        <option value="featured">Sort: Featured Lookbook</option>
+        <option value="price-asc">Price: Low to High (₹850 → ₹3,550)</option>
+        <option value="price-desc">Price: High to Low (₹3,550 → ₹850)</option>
+        <option value="plus-first">Plus-Size (3XL–6XL) First</option>
+      </select>
     </div>
   </div>
 
@@ -658,42 +1099,258 @@
     <div class="store-grid" id="storeGrid"></div>
   </main>
 
+  <!-- Complete Printable 29-Design Price & Pack Quantity Schedule -->
+  <section class="master-schedule-section" id="priceScheduleSection">
+    <div class="schedule-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <span style="font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--wine-primary);">
+            Official Verified Price &amp; Set Schedule
+          </span>
+          <h2 style="font-family: var(--font-serif); font-size: 1.75rem; color: var(--wine-dark);">
+            Shruhi Collections — Complete 29-Design MRP &amp; Size Matrix
+          </h2>
+        </div>
+        <a
+          href="https://wa.me/919054241725?text=Hello%20Shruhi%20Collections!%20Please%20share%20bulk%20/%20set%20availability%20for%20your%2029-design%20catalog%20on%20www.shruhicollections.in"
+          target="_blank"
+          rel="noopener"
+          class="wa-direct-pill"
+        >
+          💬 Request Full Set / Bulk Quote on WhatsApp
+        </a>
+      </div>
+
+      <div class="schedule-table-wrap">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Preview</th>
+              <th>Design Code</th>
+              <th>Outfit Name &amp; Fabric</th>
+              <th>MRP (Per Pc)</th>
+              <th>Available Sizes</th>
+              <th>Pack / Set Qty</th>
+              <th>Full Set Value</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="masterScheduleBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verified Surat Flagship Showroom Banner -->
+  <section class="showroom-banner" id="showroomSection">
+    <div class="showroom-grid">
+      <div>
+        <span style="font-size: 0.75rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #f5d98e;">
+          ✦ Visit Our Flagship Boutique or Order via Video Call ✦
+        </span>
+        <h2 style="font-family: var(--font-serif); font-size: 2rem; color: #fff; margin: 0.45rem 0 0.85rem;">
+          Shruhi Collections — Adajan, Surat
+        </h2>
+        <p style="color: #eadce0; font-size: 0.94rem; margin-bottom: 1.1rem; max-width: 620px;">
+          Every ensemble in our 4K lookbook is inspected and dispatched directly from our Surat studio. Book a live WhatsApp video call shopping session or visit our showroom in Adajan, Surat.
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.9rem; color: #f9eed3; margin-bottom: 1.35rem;">
+          <div>📍 <strong>Showroom Address:</strong> 214/215, Prime Arcade, Anand Mahal Road, Adajan, Surat – 395009, Gujarat, India</div>
+          <div>📞 <strong>Direct WhatsApp &amp; Call Concierge:</strong> +91 90542 41725</div>
+          <div>🌐 <strong>Official Website:</strong> www.shruhicollections.in</div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <a
+            href="https://wa.me/919054241725?text=Hello%20Shruhi%20Collections!%20I%20would%20like%20to%20book%20a%20video%20call%20or%20visit%20your%20Prime%20Arcade%20Surat%20showroom."
+            target="_blank"
+            rel="noopener"
+            class="dock-wa-checkout"
+            style="padding: 0.75rem 1.35rem; font-size: 0.86rem;"
+          >
+            💬 WhatsApp Concierge (+91 90542 41725)
+          </a>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Prime+Arcade+214+215+Anand+Mahal+Rd+Adajan+Surat+395009"
+            target="_blank"
+            rel="noopener"
+            class="top-announcement-links"
+            style="padding: 0.75rem 1.25rem; border-radius: 999px; border: 1px solid #f5d98e; color: #f5d98e; font-weight: 700; font-size: 0.84rem;"
+          >
+            📍 Open in Google Maps →
+          </a>
+        </div>
+      </div>
+
+      <div style="background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(245, 217, 142, 0.3); border-radius: 16px; padding: 1.5rem;">
+        <h3 style="font-family: var(--font-serif); color: #f5d98e; font-size: 1.3rem; margin-bottom: 0.75rem;">
+          Why Shop Directly with Shruhi Collections?
+        </h3>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.86rem; color: #f3e8ec;">
+          <li>✦ <strong>True-to-Size Curvy Grading:</strong> Dedicated patterns for S, M, L, XL, 2XL and curvy 3XL, 4XL, 5XL &amp; 6XL.</li>
+          <li>✦ <strong>4K UHD Verified Photography:</strong> Every zari border, mirror work, and fabric weave shown in true 4K detail.</li>
+          <li>✦ <strong>Single Piece &amp; Boutique Set Orders:</strong> Flexible ordering for individual shoppers and boutique owners.</li>
+          <li>✦ <strong>Fast Pan-India &amp; Worldwide Courier:</strong> Dispatched with tracking directly from Surat, Gujarat.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Official Production Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-col">
+        <h4>Shruhi Collections</h4>
+        <p style="font-size: 0.84rem; line-height: 1.6; margin-bottom: 0.85rem;">
+          Surat's premier destination for Designer 3-Piece Festive Suits, Contemporary Co-ord Sets, Indo-Western Midi Dresses, and Inclusive Plus-Size Ethnic Couture (Sizes S to 6XL).
+        </p>
+        <p style="font-size: 0.8rem; color: #f5d98e;">
+          © 2026 Shruhi Collections (www.shruhicollections.in). All Rights Reserved.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop Categories</h4>
+        <ul>
+          <li><a href="#catalogGridAnchor" data-footer-filter="all">All 29 4K Designs (₹850 – ₹3,550)</a></li>
+          <li><a href="#catalogGridAnchor" data-footer-filter="plus-size">Plus-Size Curvy Couture (3XL–6XL)</a></li>
+          <li><a href="#catalogGridAnchor" data-footer-filter="suit-sets">3-Piece Festive &amp; Bridal Suits</a></li>
+          <li><a href="#catalogGridAnchor" data-footer-filter="coord-sets">Luxury Embroidered Co-ord Sets</a></li>
+          <li><a href="#catalogGridAnchor" data-footer-filter="tunics-dresses">Botanical Tunics &amp; Midi Dresses</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Brand &amp; Social</h4>
+        <ul>
+          <li><a href="facebook-page.html">📘 Official Facebook Page (Midnight Luxe Edition)</a></li>
+          <li><a href="option-2-midnight-luxe.html">🌙 Midnight Obsidian Editorial Lookbook</a></li>
+          <li><a href="option-1-royal-heritage.html">👑 Royal Heritage Bridal Lookbook</a></li>
+          <li><a href="#priceScheduleSection">📋 Complete MRP &amp; Pack Schedule</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Showroom &amp; WhatsApp Desk</h4>
+        <ul>
+          <li>📍 214/215, Prime Arcade, Anand Mahal Rd, Adajan, Surat – 395009, GJ</li>
+          <li>💬 <a href="https://wa.me/919054241725" target="_blank" rel="noopener">WhatsApp: +91 90542 41725</a></li>
+          <li>🌐 <a href="https://www.shruhicollections.in">www.shruhicollections.in</a></li>
+          <li>🕒 Mon – Sat: 10:30 AM – 8:30 PM IST</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
   <!-- Floating Bottom WhatsApp Inquiry Bag Dock -->
   <div class="floating-bag-dock">
     <span style="font-size: 0.84rem; font-weight: 600;">
-      🛍️ <strong id="dockBagCount">0</strong> outfit(s) in your Inquiry Bag
+      🛍️ <strong id="dockBagCount">0</strong> in Order Bag
     </span>
-    <a
-      id="dockWaLink"
-      href="https://wa.me/919054241725?text=Hello%20Shruhi%20Collections!%20I%20would%20like%20to%20enquire%20about%20your%20catalog%20on%20www.shruhicollections.in"
-      target="_blank"
-      rel="noopener"
-      class="dock-wa-checkout"
-    >
-      Send Inquiry on WhatsApp (+91 90542 41725) →
-    </a>
+    <button type="button" class="dock-wa-checkout" id="dockOpenBagBtn">
+      Review &amp; Checkout on WhatsApp (+91 90542 41725) →
+    </button>
   </div>
 
-  <!-- 4K Image Lightbox Modal (<dialog closedby="any">) -->
+  <!-- 1. 4K Product Detail & Zoom Lightbox Modal -->
   <dialog id="storeDialog" class="store-dialog" closedby="any" aria-labelledby="storeModalTitle">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; max-height: 90vh;">
-      <div style="background: #f4ecee; display: flex; align-items: center; justify-content: center; padding: 1rem; max-height: 90vh; overflow: auto;">
-        <img id="storeModalImg" src="" alt="" style="max-height: 82vh; max-width: 100%; object-fit: contain; border-radius: 8px;" />
+    <div class="modal-grid-2">
+      <div style="background: #f4ecee; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1rem; max-height: 90vh; overflow: auto; gap: 0.65rem;">
+        <img id="storeModalImg" src="" alt="" style="max-height: 74vh; max-width: 100%; object-fit: contain; border-radius: 8px;" />
+        <div id="storeModalThumbs" style="display: flex; gap: 0.5rem;"></div>
       </div>
-      <div style="padding: 1.75rem; display: flex; flex-direction: column; gap: 0.9rem; overflow-y: auto;">
+      <div style="padding: 1.75rem; display: flex; flex-direction: column; gap: 0.85rem; overflow-y: auto;">
         <div style="display: flex; justify-content: space-between; align-items: center;">
           <span class="store-code-pill" id="storeModalCode"></span>
           <form method="dialog">
             <button type="submit" class="sz-chip-btn">✕ Close</button>
           </form>
         </div>
-        <h3 id="storeModalTitle" style="font-family: var(--font-serif); font-size: 1.65rem; color: var(--wine-dark);"></h3>
-        <p id="storeModalDesc" style="font-size: 0.9rem; color: var(--text-mid);"></p>
-        <div id="storeModalMeta" style="font-size: 0.84rem; background: var(--bg-blush); padding: 0.9rem; border-radius: 10px; border: 1px solid var(--border-light);"></div>
-        <a id="storeModalWa" href="#" target="_blank" rel="noopener" class="btn-wa-instant" style="padding: 0.85rem; font-size: 0.9rem; margin-top: auto;">
-          Order / Enquire on WhatsApp (+91 90542 41725) →
+        <h3 id="storeModalTitle" style="font-family: var(--font-serif); font-size: 1.55rem; color: var(--wine-dark);"></h3>
+        <div id="storeModalPriceBanner" style="font-size: 1.35rem; font-weight: 800; color: var(--wine-primary); font-family: var(--font-serif);"></div>
+        <p id="storeModalDesc" style="font-size: 0.88rem; color: var(--text-mid);"></p>
+        <div id="storeModalMeta" style="font-size: 0.83rem; background: var(--bg-blush); padding: 0.95rem; border-radius: 10px; border: 1px solid var(--border-light); line-height: 1.65;"></div>
+        <ul id="storeModalHighlights" style="padding-left: 1.15rem; font-size: 0.82rem; color: var(--text-dark); display: flex; flex-direction: column; gap: 0.3rem;"></ul>
+        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: auto; padding-top: 0.75rem;">
+          <a id="storeModalWa" href="#" target="_blank" rel="noopener" class="btn-wa-instant" style="flex: 1; padding: 0.85rem; font-size: 0.86rem;">
+            💬 Order on WhatsApp (+91 90542 41725)
+          </a>
+          <a id="storeModalDownload" href="#" download class="btn-add-bag" style="padding: 0.85rem 1rem; font-size: 0.82rem;">
+            ⬇ Download 4K Plate
+          </a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- 2. Interactive Order Bag & WhatsApp Checkout Modal -->
+  <dialog id="bagModal" class="store-dialog" closedby="any" style="max-width: 680px;">
+    <div style="padding: 1.65rem; display: flex; flex-direction: column; gap: 1rem; max-height: 88vh; overflow-y: auto;">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-light); padding-bottom: 0.75rem;">
+        <div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.45rem; color: var(--wine-dark);">🛍️ Your Shruhi Collections Order Bag</h3>
+          <span style="font-size: 0.78rem; color: var(--text-mid);">Direct WhatsApp Checkout • +91 90542 41725</span>
+        </div>
+        <form method="dialog">
+          <button type="submit" class="sz-chip-btn">✕ Close</button>
+        </form>
+      </div>
+
+      <div id="bagItemsList" style="display: flex; flex-direction: column; gap: 0.65rem;"></div>
+
+      <div style="background: var(--bg-petal); padding: 1rem; border-radius: 12px; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-weight: 700; color: var(--wine-dark);">Estimated Order Total:</span>
+        <strong id="bagModalTotal" style="font-family: var(--font-serif); font-size: 1.45rem; color: var(--wine-primary);">₹0</strong>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem;">
+        <input type="text" id="custName" placeholder="Your Name (Optional)" style="padding: 0.65rem 0.9rem; border-radius: 8px; border: 1px solid var(--border-light); font-family: inherit; font-size: 0.84rem;" />
+        <input type="text" id="custCity" placeholder="Delivery City / Pincode" style="padding: 0.65rem 0.9rem; border-radius: 8px; border: 1px solid var(--border-light); font-family: inherit; font-size: 0.84rem;" />
+      </div>
+
+      <div style="display: flex; justify-content: space-between; gap: 0.65rem; flex-wrap: wrap;">
+        <button type="button" class="sz-chip-btn" id="clearBagBtn">🗑 Clear Bag</button>
+        <a id="bagModalSendWa" href="#" target="_blank" rel="noopener" class="btn-wa-instant" style="flex: 1; padding: 0.85rem; font-size: 0.9rem;">
+          💬 Send Complete Order on WhatsApp (+91 90542 41725) →
         </a>
       </div>
+    </div>
+  </dialog>
+
+  <!-- 3. Size Chart Guide Modal (S to 6XL) -->
+  <dialog id="sizeChartModal" class="store-dialog" closedby="any" style="max-width: 720px;">
+    <div style="padding: 1.75rem; max-height: 88vh; overflow-y: auto;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--wine-dark);">📏 Shruhi Collections — Standard &amp; Curvy Size Guide</h3>
+          <span style="font-size: 0.8rem; color: var(--text-mid);">Garment Ready Measurements (in Inches) • Sizes S to 6XL</span>
+        </div>
+        <form method="dialog">
+          <button type="submit" class="sz-chip-btn">✕ Close</button>
+        </form>
+      </div>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Size</th>
+            <th>Bust (Inches)</th>
+            <th>Waist (Inches)</th>
+            <th>Hip (Inches)</th>
+            <th>Category Fit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>S (36)</strong></td><td>36"</td><td>32"</td><td>39"</td><td>Boutique Petite / Standard</td></tr>
+          <tr><td><strong>M (38)</strong></td><td>38"</td><td>34"</td><td>41"</td><td>Standard Boutique Fit</td></tr>
+          <tr><td><strong>L (40)</strong></td><td>40"</td><td>36"</td><td>43"</td><td>Standard Boutique Fit</td></tr>
+          <tr><td><strong>XL (42)</strong></td><td>42"</td><td>38"</td><td>45"</td><td>Standard Boutique Fit</td></tr>
+          <tr><td><strong>2XL (44)</strong></td><td>44"</td><td>40"</td><td>47"</td><td>Extended Boutique Fit</td></tr>
+          <tr><td><strong>3XL (46)</strong></td><td>46"</td><td>42"</td><td>49"</td><td>Curvy Couture Plus-Size</td></tr>
+          <tr><td><strong>4XL (48)</strong></td><td>48"</td><td>44"</td><td>51"</td><td>Curvy Couture Plus-Size</td></tr>
+          <tr><td><strong>5XL (50)</strong></td><td>50"</td><td>46"</td><td>53"</td><td>Curvy Couture Plus-Size</td></tr>
+          <tr><td><strong>6XL (52)</strong></td><td>52"</td><td>48"</td><td>55"</td><td>Curvy Couture Plus-Size</td></tr>
+        </tbody>
+      </table>
     </div>
   </dialog>
 
@@ -703,15 +1360,20 @@
       const catalog = window.SHRUHI_CATALOG || [];
       const storeGrid = document.getElementById('storeGrid');
       const storeDialog = document.getElementById('storeDialog');
+      const bagModal = document.getElementById('bagModal');
+      const sizeChartModal = document.getElementById('sizeChartModal');
 
-      if (storeDialog && !('closedBy' in HTMLDialogElement.prototype)) {
-        storeDialog.addEventListener('click', (e) => {
-          if (e.target === storeDialog) storeDialog.close();
-        });
-      }
+      [storeDialog, bagModal, sizeChartModal].forEach((dlg) => {
+        if (dlg && !('closedBy' in HTMLDialogElement.prototype)) {
+          dlg.addEventListener('click', (e) => {
+            if (e.target === dlg) dlg.close();
+          });
+        }
+      });
 
       let activeStory = 'all';
       let activeSize = 'all';
+      let sortBy = 'featured';
       let search = '';
       const selectedSizes = {};
       const bag = [];
@@ -722,45 +1384,129 @@
 
       function buildSingleWa(item) {
         const sz = selectedSizes[item.id] || item.sizes[0];
-        const msg = `Hello Shruhi Collections! ✨\nI want to order / enquire about:\n• Code: *${item.code}*\n• Outfit: ${item.name}\n• MRP: *${item.priceFormatted || ''}* (${item.qtyInfo || ''})\n• Selected Size: *${sz}*\n• Website: https://www.shruhicollections.in`;
+        const isFullSet = sz.startsWith('Full Set');
+        const totalLine = isFullSet
+          ? `Full Pack (${item.qtyInfo}) — ₹${(item.price * item.sizes.length).toLocaleString('en-IN')}`
+          : `Single Pc (Size: ${sz}) — ${item.priceFormatted}`;
+        const msg = `Hello Shruhi Collections! ✨\nI would like to order from www.shruhicollections.in:\n• Code: *${item.code}*\n• Outfit: ${item.name}\n• MRP: *${item.priceFormatted}* (${item.qtyInfo})\n• Selection: *${totalLine}*\nPlease confirm availability & dispatch.`;
         return `https://wa.me/919054241725?text=${encodeURIComponent(msg)}`;
       }
 
-      function updateBagDock() {
-        document.getElementById('bagCountTop').textContent = String(bag.length);
-        const totalVal = bag.reduce((sum, entry) => sum + (entry.price || 0), 0);
+      function renderBagModal() {
+        const listEl = document.getElementById('bagItemsList');
+        const totalVal = bag.reduce((sum, entry) => sum + entry.unitPrice * entry.qty, 0);
+        document.getElementById('bagCountTop').textContent = String(bag.reduce((s, e) => s + e.qty, 0));
         document.getElementById('dockBagCount').textContent = bag.length
-          ? `${bag.length} (Total: ₹${totalVal.toLocaleString('en-IN')})`
-          : '0';
-        const dockLink = document.getElementById('dockWaLink');
+          ? `${bag.reduce((s, e) => s + e.qty, 0)} item(s) • ₹${totalVal.toLocaleString('en-IN')}`
+          : '0 items';
+        document.getElementById('bagModalTotal').textContent = `₹${totalVal.toLocaleString('en-IN')}`;
+
         if (!bag.length) {
-          dockLink.href =
-            'https://wa.me/919054241725?text=Hello%20Shruhi%20Collections!%20I%20would%20like%20to%20enquire%20about%20your%20catalog%20on%20www.shruhicollections.in';
+          listEl.innerHTML = `<p style="padding: 1.25rem; text-align: center; color: var(--text-mid); font-size: 0.88rem;">Your Order Bag is currently empty. Tap <strong>+ Bag</strong> on any outfit to add it here.</p>`;
         } else {
-          const lines = bag.map((entry, idx) => `${idx + 1}. *${entry.code}* (${entry.name}) — *${entry.priceFormatted || ''}* — Size: *${entry.size}*`).join('\n');
-          const msg = `Hello Shruhi Collections! ✨\nHere is my Order / Inquiry Bag from www.shruhicollections.in:\n\n${lines}\n\n*Total MRP: ₹${totalVal.toLocaleString('en-IN')}*\nPlease confirm availability & dispatch.`;
-          dockLink.href = `https://wa.me/919054241725?text=${encodeURIComponent(msg)}`;
+          listEl.innerHTML = bag
+            .map(
+              (entry, idx) => `
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.65rem; border: 1px solid var(--border-light); border-radius: 10px; background: var(--bg-blush);">
+                <img src="${entry.image}" alt="${entry.name}" style="width: 48px; height: 64px; object-fit: cover; border-radius: 6px;" />
+                <div style="flex: 1;">
+                  <strong style="font-size: 0.85rem; color: var(--wine-dark);">${entry.code} — ${entry.name}</strong>
+                  <div style="font-size: 0.76rem; color: var(--text-mid);">Selection: <strong>${entry.size}</strong> • Unit: ₹${entry.unitPrice.toLocaleString('en-IN')}</div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.35rem;">
+                  <button type="button" class="card-sz-opt" data-bag-dec="${idx}">−</button>
+                  <strong style="font-size: 0.82rem; min-width: 20px; text-align: center;">${entry.qty}</strong>
+                  <button type="button" class="card-sz-opt" data-bag-inc="${idx}">+</button>
+                </div>
+                <strong style="font-size: 0.88rem; color: var(--wine-primary); min-width: 68px; text-align: right;">₹${(entry.unitPrice * entry.qty).toLocaleString('en-IN')}</strong>
+              </div>
+            `
+            )
+            .join('');
         }
+
+        const custName = (document.getElementById('custName')?.value || '').trim();
+        const custCity = (document.getElementById('custCity')?.value || '').trim();
+        const lines = bag.map(
+          (e, i) => `${i + 1}. *${e.code}* (${e.name}) — Size: *${e.size}* × ${e.qty} = *₹${(e.unitPrice * e.qty).toLocaleString('en-IN')}*`
+        );
+        const headerInfo = [
+          custName ? `Name: *${custName}*` : '',
+          custCity ? `City/Pincode: *${custCity}*` : ''
+        ].filter(Boolean).join(' | ');
+        const msg = bag.length
+          ? `Hello Shruhi Collections! ✨\nHere is my Order from www.shruhicollections.in:\n${headerInfo ? headerInfo + '\n' : ''}\n${lines.join('\n')}\n\n*Total Order Value: ₹${totalVal.toLocaleString('en-IN')}*\nPlease share payment & dispatch details.`
+          : `Hello Shruhi Collections! ✨ I would like to order from www.shruhicollections.in.`;
+        document.getElementById('bagModalSendWa').href = `https://wa.me/919054241725?text=${encodeURIComponent(msg)}`;
+      }
+
+      function renderMasterSchedule() {
+        const tbody = document.getElementById('masterScheduleBody');
+        if (!tbody) return;
+        tbody.innerHTML = catalog
+          .map((item, idx) => {
+            const setVal = item.price * item.sizes.length;
+            return `
+              <tr>
+                <td><strong>${idx + 1}</strong></td>
+                <td><img src="${item.image}" alt="${item.code}" style="width: 42px; height: 56px; object-fit: cover; border-radius: 6px; cursor: pointer;" data-zoom="${item.id}" /></td>
+                <td><strong style="color: var(--wine-dark);">${item.code}</strong></td>
+                <td>
+                  <strong>${item.name}</strong><br/>
+                  <span style="font-size: 0.74rem; color: var(--text-mid);">${item.fabric}</span>
+                </td>
+                <td><strong style="color: var(--wine-primary); font-size: 0.95rem;">${item.priceFormatted}</strong></td>
+                <td><span style="font-weight: 700;">${item.sizes.join(', ')}</span></td>
+                <td><span class="card-sz-opt">${item.qtyInfo}</span></td>
+                <td><strong>₹${setVal.toLocaleString('en-IN')}</strong> <span style="font-size: 0.72rem; color: var(--text-mid);">(${item.sizes.length} pcs)</span></td>
+                <td>
+                  <a href="${buildSingleWa(item)}" target="_blank" rel="noopener" class="btn-wa-instant" style="padding: 0.4rem 0.65rem; font-size: 0.72rem;">
+                    Order
+                  </a>
+                </td>
+              </tr>
+            `;
+          })
+          .join('');
       }
 
       function render() {
         const filtered = catalog.filter((item) => {
           if (activeStory === 'plus-size' && !item.isPlusSize) return false;
-          if (activeStory !== 'all' && activeStory !== 'plus-size' && item.category !== activeStory) return false;
+          if (activeStory === 'under-1600' && item.price > 1600) return false;
+          if (activeStory === 'festive-luxe' && item.price < 2500) return false;
+          if (
+            activeStory !== 'all' &&
+            activeStory !== 'plus-size' &&
+            activeStory !== 'under-1600' &&
+            activeStory !== 'festive-luxe' &&
+            item.category !== activeStory
+          ) {
+            return false;
+          }
           if (activeSize !== 'all' && !item.sizes.includes(activeSize)) return false;
           if (search) {
-            const hay = `${item.code} ${item.name} ${item.colorName} ${item.fabric} ${item.priceFormatted || ''} ${item.qtyInfo || ''}`.toLowerCase();
+            const hay = `${item.code} ${item.name} ${item.colorName} ${item.fabric} ${item.priceFormatted || ''} ${item.qtyInfo || ''} ${item.sizes.join(' ')}`.toLowerCase();
             if (!hay.includes(search)) return false;
           }
           return true;
         });
+
+        if (sortBy === 'price-asc') {
+          filtered.sort((a, b) => a.price - b.price);
+        } else if (sortBy === 'price-desc') {
+          filtered.sort((a, b) => b.price - a.price);
+        } else if (sortBy === 'plus-first') {
+          filtered.sort((a, b) => Number(b.isPlusSize) - Number(a.isPlusSize));
+        }
 
         document.getElementById('storeStatusText').textContent = `Showing ${filtered.length} of ${catalog.length} 4K branded designs (MRP ₹850 – ₹3,550)`;
 
         storeGrid.innerHTML = filtered
           .map((item) => {
             const chosenSz = selectedSizes[item.id] || item.sizes[0];
-            const szButtons = item.sizes
+            const allOptions = item.sizes.length > 1 ? [...item.sizes, `Full Set (${item.sizes.length} Pcs)`] : item.sizes;
+            const szButtons = allOptions
               .map(
                 (sz) =>
                   `<button type="button" class="card-sz-opt ${sz === chosenSz ? 'selected' : ''}" data-pick-id="${item.id}" data-pick-sz="${sz}">${sz}</button>`
@@ -772,28 +1518,29 @@
               <div class="store-img-box" data-zoom="${item.id}">
                 <img src="${item.image}" alt="${item.name}" loading="lazy" />
                 <div class="store-tag-top">
-                  <span class="store-code-pill">${item.code} • ${item.priceFormatted || ''}</span>
-                  <button type="button" class="store-zoom-icon" data-zoom="${item.id}">🔍 4K Zoom</button>
+                  <span class="store-code-pill">${item.code} • ${item.priceFormatted}</span>
+                  <button type="button" class="store-zoom-icon" data-zoom="${item.id}">🔍 4K View</button>
                 </div>
+                <span class="store-pack-badge">${item.qtyInfo}${item.gallery && item.gallery.length > 1 ? ' • 2 Plates' : ''}</span>
               </div>
               <div class="store-body">
                 <div style="display:flex; justify-content:space-between; align-items:center;">
                   <span class="store-cat-label">${item.categoryLabel}</span>
-                  <span style="font-family:var(--font-serif); font-size:1.22rem; font-weight:800; color:var(--wine-primary);">
-                    ${item.priceFormatted || ''}
+                  <span style="font-family:var(--font-serif); font-size:1.25rem; font-weight:800; color:var(--wine-primary);">
+                    ${item.priceFormatted}
                   </span>
                 </div>
                 <h3 class="store-title">${item.name}</h3>
-                <p class="store-fabric">${item.fabric} • <strong>${item.qtyInfo || ''}</strong></p>
+                <p class="store-fabric">${item.fabric} • <strong>${item.colorName}</strong></p>
 
                 <div class="card-size-picker">
-                  <span class="card-size-picker-label">Tap Size (${chosenSz} selected):</span>
+                  <span class="card-size-picker-label">Select Size / Pack (${chosenSz}):</span>
                   <div class="card-size-row">${szButtons}</div>
                 </div>
 
                 <div class="store-cta-stack">
                   <a href="${buildSingleWa(item)}" target="_blank" rel="noopener" class="btn-wa-instant">
-                    Buy / Enquire (${item.priceFormatted || ''} • ${chosenSz})
+                    💬 Buy (${item.priceFormatted} • ${chosenSz})
                   </a>
                   <button type="button" class="btn-add-bag" data-bag-add="${item.id}">
                     + Bag
@@ -821,20 +1568,64 @@
           const id = addBtn.getAttribute('data-bag-add');
           const item = catalog.find((c) => c.id === id);
           if (item) {
-            bag.push({
-              id: item.id,
-              code: item.code,
-              name: item.name,
-              price: item.price || 0,
-              priceFormatted: item.priceFormatted || '',
-              size: selectedSizes[id] || item.sizes[0]
-            });
-            updateBagDock();
-            addBtn.textContent = '✓ Added';
+            const chosenSz = selectedSizes[id] || item.sizes[0];
+            const isSet = chosenSz.startsWith('Full Set');
+            const unitPrice = isSet ? item.price * item.sizes.length : item.price;
+            const existing = bag.find((b) => b.id === item.id && b.size === chosenSz);
+            if (existing) {
+              existing.qty += 1;
+            } else {
+              bag.push({
+                id: item.id,
+                code: item.code,
+                name: item.name,
+                image: item.image,
+                unitPrice,
+                size: chosenSz,
+                qty: 1
+              });
+            }
+            renderBagModal();
+            addBtn.textContent = '✓ In Bag';
             setTimeout(() => {
               addBtn.textContent = '+ Bag';
             }, 900);
           }
+          return;
+        }
+
+        const incBtn = e.target.closest('[data-bag-inc]');
+        if (incBtn) {
+          const idx = Number(incBtn.getAttribute('data-bag-inc'));
+          if (bag[idx]) bag[idx].qty += 1;
+          renderBagModal();
+          return;
+        }
+
+        const decBtn = e.target.closest('[data-bag-dec]');
+        if (decBtn) {
+          const idx = Number(decBtn.getAttribute('data-bag-dec'));
+          if (bag[idx]) {
+            bag[idx].qty -= 1;
+            if (bag[idx].qty <= 0) bag.splice(idx, 1);
+          }
+          renderBagModal();
+          return;
+        }
+
+        const thumbSwap = e.target.closest('[data-modal-src]');
+        if (thumbSwap) {
+          document.getElementById('storeModalImg').src = thumbSwap.getAttribute('data-modal-src');
+          return;
+        }
+
+        const footerFilter = e.target.closest('[data-footer-filter]');
+        if (footerFilter) {
+          activeStory = footerFilter.getAttribute('data-footer-filter');
+          document.querySelectorAll('.story-bubble').forEach((el) => {
+            el.classList.toggle('active', el.getAttribute('data-story') === activeStory);
+          });
+          render();
           return;
         }
 
@@ -844,15 +1635,32 @@
           const item = catalog.find((c) => c.id === id);
           if (item) {
             document.getElementById('storeModalImg').src = item.image;
-            document.getElementById('storeModalCode').textContent = `${item.code} • MRP ${item.priceFormatted || ''}`;
-            document.getElementById('storeModalTitle').textContent = `${item.name} (${item.priceFormatted || ''})`;
+            document.getElementById('storeModalDownload').href = item.image;
+            document.getElementById('storeModalCode').textContent = `${item.code} • ${item.categoryLabel}`;
+            document.getElementById('storeModalTitle').textContent = item.name;
+            document.getElementById('storeModalPriceBanner').textContent = `MRP ${item.priceFormatted} • ${item.qtyInfo}`;
             document.getElementById('storeModalDesc').textContent = item.description;
             document.getElementById('storeModalMeta').innerHTML = `
-              <strong>MRP Price:</strong> ${item.priceFormatted || ''} (${item.rawWhatsAppText || ''})<br/>
-              <strong>Pack / Size Qty:</strong> ${item.qtyInfo || ''} (${item.sizes.join(', ')})<br/>
-              <strong>Fabric:</strong> ${item.fabric}<br/>
-              <strong>Work:</strong> ${item.workType}
+              <strong>Verified MRP:</strong> ${item.priceFormatted} per piece (${item.rawWhatsAppText || ''})<br/>
+              <strong>Available Sizes:</strong> ${item.sizes.join(', ')} (${item.qtyInfo})<br/>
+              <strong>Full Set Value:</strong> ₹${(item.price * item.sizes.length).toLocaleString('en-IN')} (${item.sizes.length} Pcs)<br/>
+              <strong>Fabric &amp; Craft:</strong> ${item.fabric} — ${item.workType}<br/>
+              <strong>Silhouette:</strong> ${item.silhouette}
             `;
+            document.getElementById('storeModalHighlights').innerHTML = (item.highlights || [])
+              .map((h) => `<li>${h}</li>`)
+              .join('');
+            const thumbsEl = document.getElementById('storeModalThumbs');
+            if (item.gallery && item.gallery.length > 1) {
+              thumbsEl.innerHTML = item.gallery
+                .map(
+                  (g, i) =>
+                    `<img src="${g}" alt="Plate ${i + 1}" data-modal-src="${g}" style="width: 56px; height: 74px; object-fit: cover; border-radius: 6px; border: 2px solid var(--wine-primary); cursor: pointer;" />`
+                )
+                .join('');
+            } else {
+              thumbsEl.innerHTML = '';
+            }
             document.getElementById('storeModalWa').href = buildSingleWa(item);
             storeDialog.showModal();
           }
@@ -868,6 +1676,15 @@
         render();
       });
 
+      document.getElementById('heroFilterPlusBtn').addEventListener('click', () => {
+        activeStory = 'plus-size';
+        document.querySelectorAll('.story-bubble').forEach((el) => {
+          el.classList.toggle('active', el.getAttribute('data-story') === 'plus-size');
+        });
+        render();
+        document.getElementById('catalogGridAnchor').scrollIntoView({ behavior: 'smooth' });
+      });
+
       document.getElementById('storeSizeBar').addEventListener('click', (e) => {
         const b = e.target.closest('[data-size]');
         if (!b) return;
@@ -877,17 +1694,42 @@
         render();
       });
 
+      document.getElementById('storeSortSelect').addEventListener('change', (e) => {
+        sortBy = e.target.value;
+        render();
+      });
+
       document.getElementById('storeSearch').addEventListener('input', (e) => {
         search = e.target.value.toLowerCase().trim();
         render();
       });
 
+      document.getElementById('openBagModalBtn').addEventListener('click', () => {
+        renderBagModal();
+        bagModal.showModal();
+      });
+
+      document.getElementById('dockOpenBagBtn').addEventListener('click', () => {
+        renderBagModal();
+        bagModal.showModal();
+      });
+
+      document.getElementById('openSizeChartBtn').addEventListener('click', () => {
+        sizeChartModal.showModal();
+      });
+
       document.getElementById('clearBagBtn').addEventListener('click', () => {
         bag.length = 0;
-        updateBagDock();
+        renderBagModal();
+      });
+
+      ['custName', 'custCity'].forEach((id) => {
+        document.getElementById(id)?.addEventListener('input', renderBagModal);
       });
 
       render();
+      renderMasterSchedule();
+      renderBagModal();
     })();
   </script>
 </body>

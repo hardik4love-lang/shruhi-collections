@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shruhi Collections — Official Facebook Page &amp; Social Kit (Option 2: Midnight Obsidian &amp; Gold)</title>
+  <meta
+    name="description"
+    content="Shruhi Collections Official Facebook Business Page & Social Media Launch Kit in Midnight Obsidian & Champagne Gold (Option 2). Includes downloadable 4K Facebook Cover, Profile Crest, Pinned Lookbook Collage, Facebook Shop (29 priced items), and 12 ready-to-post captions."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg-obsidian: #09070b;
+      --bg-card: #130f17;
+      --bg-elevated: #1c1622;
+      --gold-bright: #f5d98e;
+      --gold-mid: #d4ac5c;
+      --gold-dim: rgba(212, 172, 92, 0.28);
+      --text-ivory: #f9f3e6;
+      --text-muted: #bfb29e;
+      --fb-blue: #1877f2;
+      --wa-green: #25d366;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-obsidian);
+      color: var(--text-ivory);
+      line-height: 1.55;
+      padding-bottom: 4rem;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Top Bar */
+    .fb-top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(12, 9, 15, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gold-dim);
+      padding: 0.65rem 1.5rem;
+    }
+
+    .fb-top-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .fb-badge-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-weight: 800;
+      font-size: 0.88rem;
+      color: var(--gold-bright);
+    }
+
+    .fb-icon-circle {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--fb-blue);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.15rem;
+      display: grid;
+      place-items: center;
+    }
+
+    .top-btn-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.52rem 1rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold-mid));
+      color: #120d16;
+      font-weight: 800;
+      font-size: 0.78rem;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-outline-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 0.95rem;
+      border-radius: 999px;
+      background: var(--bg-elevated);
+      color: var(--gold-bright);
+      border: 1px solid var(--gold-dim);
+      font-weight: 700;
+      font-size: 0.76rem;
+      cursor: pointer;
+    }
+
+    .btn-outline-gold:hover {
+      border-color: var(--gold-bright);
+    }
+
+    /* Facebook Page Shell */
+    .fb-page-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .fb-cover-card {
+      background: var(--bg-card);
+      border: 1px solid var(--gold-dim);
+      border-top: none;
+      border-radius: 0 0 20px 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+    }
+
+    .fb-cover-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 2400 / 900;
+      background: #0d0a10;
+      overflow: hidden;
+    }
+
+    .fb-cover-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cover-download-btn {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      background: rgba(11, 8, 14, 0.88);
+      color: var(--gold-bright);
+      border: 1px solid var(--gold-bright);
+      padding: 0.5rem 0.95rem;
+      border-radius: 10px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      backdrop-filter: blur(8px);
+    }
+
+    /* Profile Header Strip */
+    .fb-profile-strip {
+      padding: 0 2rem 1.5rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: -54px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .fb-profile-left {
+      display: flex;
+      align-items: flex-end;
+      gap: 1.35rem;
+      flex-wrap: wrap;
+    }
+
+    .fb-avatar-wrap {
+      position: relative;
+      width: 152px;
+      height: 152px;
+      border-radius: 50%;
+      border: 4px solid var(--gold-bright);
+      background: #0a080c;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75);
+    }
+
+    .fb-avatar-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .fb-title-block {
+      padding-bottom: 0.35rem;
+    }
+
+    .fb-page-title {
+      font-family: var(--font-serif);
+      font-size: 2.35rem;
+      font-weight: 700;
+      color: var(--text-ivory);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      line-height: 1.1;
+    }
+
+    .verified-tick {
+      display: inline-grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--fb-blue);
+      color: #fff;
+      font-size: 0.8rem;
+      font-family: var(--font-sans);
+    }
+
+    .fb-handle {
+      font-size: 0.84rem;
+      color: var(--gold-bright);
+      font-weight: 600;
+      margin-top: 0.2rem;
+    }
+
+    .fb-followers {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .fb-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+      padding-bottom: 0.35rem;
+    }
+
+    .btn-wa-fb {
+      background: var(--wa-green);
+      color: #071f10;
+      padding: 0.68rem 1.25rem;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 0.82rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    /* Navigation Tabs inside Facebook Page */
+    .fb-tabs-nav {
+      border-top: 1px solid var(--gold-dim);
+      padding: 0 2rem;
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      background: rgba(15, 11, 18, 0.7);
+    }
+
+    .fb-tab-btn {
+      padding: 0.95rem 1.25rem;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 800;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .fb-tab-btn.active {
+      color: var(--gold-bright);
+      border-bottom-color: var(--gold-bright);
+    }
+
+    /* Main 2-Column Facebook Layout */
+    .fb-body-grid {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .fb-side-card {
+      background: var(--bg-card);
+      border: 1px solid var(--gold-dim);
+      border-radius: 16px;
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      position: sticky;
+      top: 4.5rem;
+    }
+
+    .fb-side-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      color: var(--gold-bright);
+      border-bottom: 1px solid var(--gold-dim);
+      padding-bottom: 0.45rem;
+    }
+
+    .about-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      font-size: 0.82rem;
+      color: var(--text-ivory);
+    }
+
+    /* Feed Post Cards */
+    .fb-feed-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1.35rem;
+    }
+
+    .fb-post-card {
+      background: var(--bg-card);
+      border: 1px solid var(--gold-dim);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+    }
+
+    .fb-post-header {
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      border-bottom: 1px solid rgba(212, 172, 92, 0.14);
+    }
+
+    .fb-post-author {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .fb-post-author img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1.5px solid var(--gold-bright);
+    }
+
+    .fb-post-caption {
+      padding: 1rem 1.25rem;
+      font-size: 0.86rem;
+      white-space: pre-line;
+      color: var(--text-ivory);
+      line-height: 1.6;
+    }
+
+    .fb-post-media {
+      background: #08060a;
+      border-top: 1px solid var(--gold-dim);
+      border-bottom: 1px solid var(--gold-dim);
+      max-height: 680px;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .fb-post-media img {
+      max-height: 660px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .fb-post-actions {
+      padding: 0.85rem 1.25rem;
+      background: var(--bg-elevated);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    /* Shop Grid inside Tab 2 */
+    .fb-shop-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.15rem;
+      margin-top: 1.25rem;
+    }
+
+    .fb-shop-card {
+      background: var(--bg-card);
+      border: 1px solid var(--gold-dim);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fb-shop-card img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+    }
+
+    .fb-shop-body {
+      padding: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      flex: 1;
+    }
+
+    /* Copy Kit Boxes inside Tab 3 */
+    .copy-box-card {
+      background: var(--bg-card);
+      border: 1px solid var(--gold-dim);
+      border-radius: 14px;
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .copy-box-card pre {
+      background: #09070c;
+      border: 1px solid rgba(212, 172, 92, 0.2);
+      padding: 0.85rem;
+      border-radius: 8px;
+      color: var(--text-ivory);
+      font-family: inherit;
+      font-size: 0.84rem;
+      white-space: pre-wrap;
+      margin-top: 0.55rem;
+    }
+
+    .hidden-tab {
+      display: none !important;
+    }
+
+    @media (max-width: 960px) {
+      .fb-body-grid {
+        grid-template-columns: 1fr;
+      }
+      .fb-side-card {
+        position: static;
+      }
+      .fb-shop-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .fb-shop-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Sticky Top Bar -->
+  <header class="fb-top-bar">
+    <div class="fb-top-inner">
+      <div class="fb-badge-brand">
+        <span class="fb-icon-circle">f</span>
+        <span>Shruhi Collections — Official Facebook Brand Page (Option 2: Midnight Obsidian &amp; Gold)</span>
+      </div>
+      <div class="top-btn-row">
+        <a href="assets/social/shruhi-fb-cover-option2-4k.jpg" download class="btn-outline-gold">⬇ Download FB Cover (4K)</a>
+        <a href="assets/social/shruhi-fb-profile-crest-option2.jpg" download class="btn-outline-gold">⬇ Download FB Profile Logo</a>
+        <a href="assets/social/shruhi-fb-pinned-catalog-post-option2.jpg" download class="btn-outline-gold">⬇ Pinned 9-Grid Post</a>
+        <a href="index.html" class="btn-gold">🛍️ Back to Main Storefront (shruhicollections.in) →</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="fb-page-container">
+    <!-- Facebook Cover + Profile Header Card -->
+    <section class="fb-cover-card">
+      <div class="fb-cover-box">
+        <img src="assets/social/shruhi-fb-cover-option2-4k.jpg" alt="Shruhi Collections Midnight Obsidian & Gold Facebook Cover" />
+        <a href="assets/social/shruhi-fb-cover-option2-4k.jpg" download class="cover-download-btn">
+          ⬇ Download 4K Cover Photo (2400 × 900)
+        </a>
+      </div>
+
+      <div class="fb-profile-strip">
+        <div class="fb-profile-left">
+          <div class="fb-avatar-wrap">
+            <img src="assets/social/shruhi-fb-profile-crest-option2.jpg" alt="Shruhi Collections Crest" />
+          </div>
+          <div class="fb-title-block">
+            <h1 class="fb-page-title">
+              Shruhi Collections <span class="verified-tick" title="Verified Brand Page">✓</span>
+            </h1>
+            <div class="fb-handle">@ShruhiCollectionsOfficial • Women's Clothing Store • Ethnic &amp; Curvy Couture</div>
+            <div class="fb-followers">29+ Verified 4K Designs • Sizes S to 6XL • MRP ₹850 – ₹3,550 • Adajan, Surat</div>
+          </div>
+        </div>
+
+        <div class="fb-cta-group">
+          <a
+            href="https://wa.me/919054241725?text=Hello%20Shruhi%20Collections!%20I%20visited%20your%20Facebook%20Page%20and%20want%20to%20order."
+            target="_blank"
+            rel="noopener"
+            class="btn-wa-fb"
+          >
+            💬 WhatsApp +91 90542 41725
+          </a>
+          <a href="index.html" class="btn-gold" style="padding: 0.68rem 1.2rem;">
+            🌐 Shop www.shruhicollections.in
+          </a>
+          <a href="assets/social/shruhi-fb-profile-crest-option2.jpg" download class="btn-outline-gold" style="padding: 0.65rem 1rem;">
+            ⬇ Save DP Logo
+          </a>
+        </div>
+      </div>
+
+      <!-- Facebook Page Tabs -->
+      <nav class="fb-tabs-nav" id="fbTabBar">
+        <button type="button" class="fb-tab-btn active" data-fb-tab="feed">📌 Posts &amp; Ready-to-Publish Captions (13)</button>
+        <button type="button" class="fb-tab-btn" data-fb-tab="shop">🛒 Facebook Shop (All 29 Priced Outfits)</button>
+        <button type="button" class="fb-tab-btn" data-fb-tab="kit">⚙️ Page Bio, Details &amp; Setup Copy-Paste Kit</button>
+      </nav>
+    </section>
+
+    <!-- TAB 1: FACEBOOK FEED & READY-TO-PUBLISH POSTS -->
+    <div id="fbTabFeed" class="fb-body-grid">
+      <!-- Left Intro / Bio Column -->
+      <aside class="fb-side-card">
+        <h3>Intro &amp; Page Bio</h3>
+        <p style="font-size: 0.85rem; color: var(--text-ivory);">
+          ✨ <strong>Shruhi Collections</strong> — Surat's Premier Ethnic, Festive &amp; Curvy Couture House.<br/>
+          👑 Designer 3-Piece Suits • Co-ord Sets • Tunics<br/>
+          📏 Inclusive Sizing: <strong>S, M, L, XL, 2XL &amp; Plus-Size 3XL to 6XL</strong><br/>
+          🏷️ Verified Boutique MRP: <strong>₹850 – ₹3,550</strong>
+        </p>
+        <ul class="about-list">
+          <li>📍 <strong>Showroom:</strong> 214/215, Prime Arcade, Anand Mahal Road, Adajan, Surat – 395009, Gujarat</li>
+          <li>💬 <strong>WhatsApp Orders:</strong> <a href="https://wa.me/919054241725" style="color: var(--gold-bright);">+91 90542 41725</a></li>
+          <li>🌐 <strong>Website:</strong> <a href="index.html" style="color: var(--gold-bright);">www.shruhicollections.in</a></li>
+          <li>🚚 <strong>Dispatch:</strong> Same/Next-Day Express Dispatch across India &amp; Worldwide</li>
+        </ul>
+
+        <div style="border-top: 1px solid var(--gold-dim); padding-top: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem;">
+          <span style="font-size: 0.74rem; color: var(--gold-bright); font-weight: 800; text-transform: uppercase;">
+            Download Option 2 Facebook Brand Assets
+          </span>
+          <a href="assets/social/shruhi-fb-cover-option2-4k.jpg" download class="btn-outline-gold">⬇ 1. Facebook Cover Banner (2400×900)</a>
+          <a href="assets/social/shruhi-fb-profile-crest-option2.jpg" download class="btn-outline-gold">⬇ 2. Facebook Profile Crest (1080×1080)</a>
+          <a href="assets/social/shruhi-fb-pinned-catalog-post-option2.jpg" download class="btn-outline-gold">⬇ 3. Pinned 9-Grid Lookbook (1600×1600)</a>
+        </div>
+      </aside>
+
+      <!-- Right Posts Column -->
+      <div class="fb-feed-column" id="fbPostsFeed"></div>
+    </div>
+
+    <!-- TAB 2: FACEBOOK SHOP (ALL 29 PRICED OUTFITS IN OPTION 2 MIDNIGHT LUXE) -->
+    <div id="fbTabShop" class="hidden-tab">
+      <div style="margin-top: 1.5rem; background: var(--bg-card); border: 1px solid var(--gold-dim); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h2 style="font-family: var(--font-serif); font-size: 1.75rem; color: var(--gold-bright);">
+            🛒 Facebook Shop — All 29 Verified Designs (Option 2 Midnight Gold Edition)
+          </h2>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">
+            Every outfit includes its exact client-verified MRP (₹850 – ₹3,550), available sizes (S to 6XL), and 1-click WhatsApp checkout.
+          </p>
+        </div>
+        <input
+          type="search"
+          id="fbShopSearch"
+          placeholder="Search Facebook Shop by code, size, or price..."
+          style="padding: 0.6rem 1rem; border-radius: 999px; border: 1px solid var(--gold-dim); background: #09070c; color: #fff; font-size: 0.84rem; min-width: 260px;"
+        />
+      </div>
+      <div class="fb-shop-grid" id="fbShopGrid"></div>
+    </div>
+
+    <!-- TAB 3: FACEBOOK PAGE SETUP COPY-PASTE KIT -->
+    <div id="fbTabKit" class="hidden-tab" style="margin-top: 1.5rem;">
+      <div class="copy-box-card">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <strong style="color: var(--gold-bright);">1. Facebook Page Name &amp; Username</strong>
+          <button type="button" class="btn-outline-gold" data-copy-text="Shruhi Collections">📋 Copy Name</button>
+        </div>
+        <pre>Page Name: Shruhi Collections
+Username: @ShruhiCollectionsOfficial
+Category: Women's Clothing Store • Boutique • Designer Clothing</pre>
+      </div>
+
+      <div class="copy-box-card">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <strong style="color: var(--gold-bright);">2. Facebook Short Bio (Under 101 Characters)</strong>
+          <button type="button" class="btn-outline-gold" data-copy-text="✨ Ethnic, Festive & Curvy Couture (Sizes S to 6XL) • Surat Flagship • WhatsApp: +91 90542 41725">📋 Copy Bio</button>
+        </div>
+        <pre>✨ Ethnic, Festive & Curvy Couture (Sizes S to 6XL) • Surat Flagship • WhatsApp: +91 90542 41725</pre>
+      </div>
+
+      <div class="copy-box-card">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <strong style="color: var(--gold-bright);">3. Facebook "About / Story" Description</strong>
+          <button type="button" class="btn-outline-gold" data-copy-text="Welcome to the Official Facebook Page of Shruhi Collections (www.shruhicollections.in) — Surat's premier destination for Designer 3-Piece Festive Suits, Contemporary Co-ord Sets, Tunics, and Inclusive Plus-Size Curvy Couture graded from Size S to 6XL (MRP ₹850 – ₹3,550).&#10;&#10;📍 Flagship Showroom: 214/215, Prime Arcade, Anand Mahal Road, Adajan, Surat – 395009, Gujarat&#10;💬 Direct WhatsApp Orders & Video Call Shopping: +91 90542 41725&#10;🌐 Shop Online: https://www.shruhicollections.in">📋 Copy About Text</button>
+        </div>
+        <pre>Welcome to the Official Facebook Page of Shruhi Collections (www.shruhicollections.in) — Surat's premier destination for Designer 3-Piece Festive Suits, Contemporary Co-ord Sets, Tunics, and Inclusive Plus-Size Curvy Couture graded from Size S to 6XL (MRP ₹850 – ₹3,550).
+
+📍 Flagship Showroom: 214/215, Prime Arcade, Anand Mahal Road, Adajan, Surat – 395009, Gujarat
+💬 Direct WhatsApp Orders & Video Call Shopping: +91 90542 41725
+🌐 Shop Online: https://www.shruhicollections.in</pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="catalog-data.js"></script>
+  <script>
+    (function () {
+      const catalog = window.SHRUHI_CATALOG || [];
+      const feedEl = document.getElementById('fbPostsFeed');
+      const shopGrid = document.getElementById('fbShopGrid');
+
+      // Build Pinned Post + 12 Featured Product Posts
+      const pinnedCaption = `✨ WELCOME TO SHRUHI COLLECTIONS — OFFICIAL 2026 4K LOOKBOOK ✨\n\nExplore our complete collection of 29+ Designer 3-Piece Suits, Luxury Co-ord Sets, and Curvy Plus-Size Couture tailored from Size S to 6XL!\n\n👑 Featured Highlights:\n• TEJAL (Golden Ochre Sharara Suit) — MRP ₹3,550 | Sizes: M to 2XL\n• GALAXY (Ivory & Crimson Banarasi Suit) — MRP ₹3,550 | Sizes: M to 5XL\n• KAVYA (Dusty Mauve Scalloped Dupatta Suit) — MRP ₹2,850 | Sizes: S, L, 2XL\n• LAMEX (Antique Bronze Tissue-Silk Suit) — MRP ₹2,850 | Sizes: M to 2XL\n• MANIKA (Berry-Mauve Mandala V-Neck Suit) — MRP ₹2,850 | Sizes: M to 2XL\n• D.NO 1038 (Crimson Maroon Plus-Size Suit) — MRP ₹2,650 | Sizes: 3XL, 5XL, 6XL\n• D.NO 1042 (Olive & Bandhani Plus-Size Suit) — MRP ₹2,550 | Sizes: 3XL to 6XL\n• B-2876 (Burgundy Kashmiri Embroidered Co-ord) — MRP ₹2,250 | Sizes: 3XL to 5XL\n• MEERA (Mustard Zari-Yoke Suit) — MRP ₹1,950 | Sizes: M to 2XL\n\n🛍️ Shop Live Website: https://www.shruhicollections.in\n💬 Order on WhatsApp: https://wa.me/919054241725\n📍 Flagship Showroom: 214/215, Prime Arcade, Anand Mahal Road, Adajan, Surat – 395009\n\n#ShruhiCollections #SuratBoutique #EthnicWearIndia #PlusSizeEthnicWear #CurvyCouture #DesignerSuits #FestiveWear2026`;
+
+      const postCardsHtml = [
+        `
+        <article class="fb-post-card">
+          <div class="fb-post-header">
+            <div class="fb-post-author">
+              <img src="assets/social/shruhi-fb-profile-crest-option2.jpg" alt="Shruhi Collections" />
+              <div>
+                <strong style="color: var(--gold-bright);">Shruhi Collections ✓</strong>
+                <div style="font-size: 0.74rem; color: var(--text-muted);">📌 Pinned Master Lookbook Post • Option 2 Midnight Gold Edition</div>
+              </div>
+            </div>
+            <span class="btn-outline-gold" style="font-size: 0.72rem;">📌 Pinned Post</span>
+          </div>
+          <div class="fb-post-caption">${pinnedCaption}</div>
+          <div class="fb-post-media">
+            <img src="assets/social/shruhi-fb-pinned-catalog-post-option2.jpg" alt="Shruhi Collections Pinned 9-Grid Lookbook" />
+          </div>
+          <div class="fb-post-actions">
+            <button type="button" class="btn-gold" data-copy-text="${pinnedCaption.replace(/"/g, '&quot;')}">📋 Copy Pinned Post Caption</button>
+            <a href="assets/social/shruhi-fb-pinned-catalog-post-option2.jpg" download class="btn-outline-gold">⬇ Download 9-Grid Image (1600×1600)</a>
+            <a href="https://wa.me/919054241725?text=Hello%20Shruhi%20Collections!%20I%20saw%20your%20Pinned%20Lookbook%20on%20Facebook." target="_blank" rel="noopener" class="btn-wa-fb">💬 Order on WhatsApp</a>
+          </div>
+        </article>
+        `
+      ];
+
+      catalog.slice(0, 12).forEach((item, idx) => {
+        const cap = `✨ NEW ARRIVAL AT SHRUHI COLLECTIONS — ${item.code} ✨\n\n• Outfit: ${item.name}\n• Verified MRP: ${item.priceFormatted} (${item.qtyInfo})\n• Available Sizes: ${item.sizes.join(', ')}\n• Fabric & Craft: ${item.fabric} — ${item.workType}\n\n${item.description}\n\n💬 Instant WhatsApp Order: https://wa.me/919054241725\n🌐 Shop Online: https://www.shruhicollections.in\n📍 Showroom: 214/215, Prime Arcade, Anand Mahal Road, Adajan, Surat – 395009\n\n#ShruhiCollections #${item.code.replace(/[^A-Za-z0-9]/g, '')} #SuratEthnicWear #DesignerSuits #IndianBoutique`;
+        const waHref = `https://wa.me/919054241725?text=${encodeURIComponent(`Hello Shruhi Collections! I saw *${item.code}* (${item.priceFormatted}) on your Facebook Page and want to order.`)}`;
+
+        postCardsHtml.push(`
+          <article class="fb-post-card">
+            <div class="fb-post-header">
+              <div class="fb-post-author">
+                <img src="assets/social/shruhi-fb-profile-crest-option2.jpg" alt="Shruhi Collections" />
+                <div>
+                  <strong style="color: var(--gold-bright);">Shruhi Collections ✓</strong>
+                  <div style="font-size: 0.74rem; color: var(--text-muted);">Ready-to-Publish Post #${idx + 1} • Code: ${item.code} • MRP ${item.priceFormatted}</div>
+                </div>
+              </div>
+              <span class="btn-outline-gold" style="font-size: 0.72rem;">${item.priceFormatted} • ${item.qtyInfo}</span>
+            </div>
+            <div class="fb-post-caption">${cap}</div>
+            <div class="fb-post-media">
+              <img src="${item.image}" alt="${item.name}" loading="lazy" />
+            </div>
+            <div class="fb-post-actions">
+              <button type="button" class="btn-gold" data-copy-text="${cap.replace(/"/g, '&quot;')}">📋 Copy Post Caption</button>
+              <a href="${item.image}" download class="btn-outline-gold">⬇ Download 4K Photo</a>
+              <a href="${waHref}" target="_blank" rel="noopener" class="btn-wa-fb">💬 Buy on WhatsApp (${item.priceFormatted})</a>
+            </div>
+          </article>
+        `);
+      });
+
+      feedEl.innerHTML = postCardsHtml.join('');
+
+      function renderShop(q = '') {
+        const list = catalog.filter((item) => {
+          if (!q) return true;
+          return `${item.code} ${item.name} ${item.priceFormatted} ${item.sizes.join(' ')}`.toLowerCase().includes(q);
+        });
+        shopGrid.innerHTML = list
+          .map((item) => {
+            const waHref = `https://wa.me/919054241725?text=${encodeURIComponent(`Hello Shruhi Collections! I want to order *${item.code}* (${item.priceFormatted} • ${item.qtyInfo}) from your Facebook Shop.`)}`;
+            return `
+              <article class="fb-shop-card">
+                <img src="${item.image}" alt="${item.name}" loading="lazy" />
+                <div class="fb-shop-body">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 0.72rem; color: var(--gold-bright); font-weight: 800;">${item.code}</span>
+                    <strong style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--gold-bright);">${item.priceFormatted}</strong>
+                  </div>
+                  <h3 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--text-ivory);">${item.name}</h3>
+                  <p style="font-size: 0.76rem; color: var(--text-muted);">Sizes: <strong>${item.sizes.join(', ')}</strong> (${item.qtyInfo})</p>
+                  <div style="margin-top: auto; padding-top: 0.65rem; display: flex; gap: 0.45rem;">
+                    <a href="${waHref}" target="_blank" rel="noopener" class="btn-wa-fb" style="flex: 1; justify-content: center; padding: 0.55rem;">
+                      💬 Buy (${item.priceFormatted})
+                    </a>
+                    <a href="${item.image}" download class="btn-outline-gold" style="padding: 0.55rem 0.75rem;">⬇ 4K</a>
+                  </div>
+                </div>
+              </article>
+            `;
+          })
+          .join('');
+      }
+
+      renderShop();
+
+      document.getElementById('fbShopSearch').addEventListener('input', (e) => {
+        renderShop(e.target.value.toLowerCase().trim());
+      });
+
+      document.getElementById('fbTabBar').addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-fb-tab]');
+        if (!btn) return;
+        document.querySelectorAll('.fb-tab-btn').forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        const tab = btn.getAttribute('data-fb-tab');
+        document.getElementById('fbTabFeed').classList.toggle('hidden-tab', tab !== 'feed');
+        document.getElementById('fbTabShop').classList.toggle('hidden-tab', tab !== 'shop');
+        document.getElementById('fbTabKit').classList.toggle('hidden-tab', tab !== 'kit');
+      });
+
+      document.body.addEventListener('click', (e) => {
+        const copyBtn = e.target.closest('[data-copy-text]');
+        if (copyBtn) {
+          const text = copyBtn.getAttribute('data-copy-text');
+          navigator.clipboard?.writeText(text);
+          const orig = copyBtn.textContent;
+          copyBtn.textContent = '✓ Copied to Clipboard!';
+          setTimeout(() => {
+            copyBtn.textContent = orig;
+          }, 1400);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
