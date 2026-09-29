@@ -1,19 +1,24 @@
 /**
  * SHRUHI COLLECTIONS — 100% AUTO-AI WHATSAPP BOT FOR +91 63552 85433
  * ============================================================================
+ * Linked Account: 916355285433 ("shruhi collection" — WhatsApp Business)
+ * Live Status API: http://localhost:8096/api/status
+ *
  * Features:
  * 1. All 29 Priced 4K Products (MRP ₹850 – ₹3,550, Sizes S to 6XL) built-in.
- * 2. 100% Auto-AI responses: greets customers, lists all 29 products, sends
- *    4K branded product images + exact MRP & sizes when asked for any code,
- *    number (1–29), size (S–6XL), or budget.
+ * 2. Trilingual 100% Auto-AI (Surati Gujarati, Hindi & English): greets
+ *    customers, lists all 29 products, sends 4K branded product images +
+ *    exact MRP & sizes when asked for any code, number (1–29), size (S–6XL),
+ *    or budget.
  * 3. AUTOMATIC "UNTIL I JUMP IN" HUMAN TAKEOVER:
  *    - The moment YOU send any manual message from your phone / WhatsApp Web on
  *      +91 63552 85433 to a customer (`msg.key.fromMe === true` and not sent by
  *      this bot), the bot immediately pauses Auto-AI for that customer so you
  *      can chat personally without interruption!
- *    - Type `!ai` in any chat to re-enable 100% Auto-AI for that customer.
+ *    - Type `!ai` or `/ai` in any chat to re-enable 100% Auto-AI for that customer.
  */
 
+const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
@@ -31,6 +36,24 @@ const humanTakeoverChats = new Map();
 // Track message IDs sent by the AI bot itself so we distinguish bot replies from owner manual replies
 const botSentMessageIds = new Set();
 
+// Live runtime telemetry exposed on http://localhost:8096/api/status
+const waStatus = {
+  service: "Shruhi Collections 24/7 WhatsApp Auto-AI Bot (+91 63552 85433)",
+  connection: "connecting",
+  linkedAccount: null,
+  totalProducts: CATALOG.length,
+  autoRepliesSent: 0,
+  recentEvents: [],
+  startedAt: new Date().toISOString()
+};
+
+function logEvent(type, detail) {
+  const entry = { time: new Date().toISOString(), type, detail };
+  waStatus.recentEvents.unshift(entry);
+  if (waStatus.recentEvents.length > 30) waStatus.recentEvents.pop();
+  console.log(`[${type}] ${detail}`);
+}
+
 function buildFullCatalogMenuText() {
   const lines = CATALOG.map(
     (item, idx) =>
@@ -42,7 +65,7 @@ function buildFullCatalogMenuText() {
     `🚚 Pan-India & Worldwide Express Delivery\n\n` +
     `📋 *ALL ${CATALOG.length} VERIFIED 4K DESIGNS (MRP ₹850 – ₹3,550):*\n\n` +
     lines.join("\n\n") +
-    `\n\n💡 *Reply with any Item Number (1–${CATALOG.length}), Design Code (e.g. TEJAL, 1042, KAVYA), or Size (e.g. 3XL, 6XL, L) to receive its 4K Photo & instant order link!*`
+    `\n\n💡 *Reply with any Item Number (1–${CATALOG.length}), Design Code (e.g. TEJAL, GALAXY, KAVYA, 1042, B-2876), or Size (e.g. 3XL, 6XL, L) to receive its 4K Photo & instant order link!*`
   );
 }
 
@@ -71,6 +94,8 @@ function findMatchingProducts(query) {
   });
 }
 
+let activeSock = null;
+
 async function startWhatsAppAiBot() {
   let baileys;
   try {
@@ -85,6 +110,10 @@ async function startWhatsAppAiBot() {
   const qrcode = require("qrcode-terminal");
 
   const { state, saveCreds } = await useMultiFileAuthState(path.join(__dirname, "auth_6355285433"));
+  if (state?.creds?.me) {
+    waStatus.linkedAccount = state.creds.me;
+  }
+
   let versionInfo = {};
   try {
     const latest = await fetchLatestBaileysVersion();
@@ -98,30 +127,40 @@ async function startWhatsAppAiBot() {
     logger: pino({ level: "silent" }),
     browser: ["Shruhi Collections AI", "Chrome", "122.0.0"]
   });
+  activeSock = sock;
 
   sock.ev.on("creds.update", saveCreds);
 
   sock.ev.on("connection.update", async (update) => {
     const { connection, lastDisconnect, qr } = update;
+    if (connection) {
+      waStatus.connection = connection;
+    }
+    if (sock.user) {
+      waStatus.linkedAccount = sock.user;
+    }
     if (qr) {
+      waStatus.connection = "awaiting_qr_scan";
       console.log("\n========================================================");
       console.log("📱 SCAN THIS QR CODE FROM WHATSAPP ON +91 63552 85433:");
       console.log("   (WhatsApp -> Linked Devices -> Link a Device)");
       console.log("========================================================\n");
       qrcode.generate(qr, { small: true });
 
-      // Also save a clean browser-scannable QR page at whatsapp-ai-bot/qr.html
       const qrPageHtml = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="15"><title>Scan QR — Shruhi Collections +91 63552 85433 Auto-AI</title></head><body style="background:#0b141a;color:#fff;font-family:sans-serif;display:grid;place-items:center;min-height:95vh;text-align:center;"><div><h2 style="color:#25d366;">Shruhi Collections — +91 63552 85433 Auto-AI Bot</h2><p>Open WhatsApp on <strong>+91 63552 85433</strong> → <strong>Linked Devices</strong> → <strong>Link a Device</strong> and scan:</p><div style="background:#fff;padding:24px;border-radius:16px;display:inline-block;margin-top:12px;"><img src="https://api.qrserver.com/v1/create-qr-code/?size=340x340&data=${encodeURIComponent(qr)}" width="340" height="340" alt="WhatsApp QR"/></div></div></body></html>`;
       fs.writeFileSync(path.join(__dirname, "qr.html"), qrPageHtml, "utf8");
-      console.log("\n🌐 Or scan in browser: http://localhost:8090/whatsapp-ai-bot/qr.html\n");
+      logEvent("QR_READY", "QR code updated at http://localhost:8090/whatsapp-ai-bot/qr.html");
     }
     if (connection === "open") {
-      console.log("\n✅ SHRUHI COLLECTIONS 100% AUTO-AI BOT IS LIVE ON +91 63552 85433!");
-      console.log("• Auto-AI replies to all incoming customer messages with all 29 products.");
-      console.log("• Automatically pauses for any customer the moment YOU reply manually!\n");
+      waStatus.connection = "open";
+      waStatus.linkedAccount = sock.user || state?.creds?.me;
+      logEvent("CONNECTED", `LIVE on +91 63552 85433 (${JSON.stringify(waStatus.linkedAccount)})`);
+      const connectedHtml = `<!DOCTYPE html><html><head><meta charset="utf-8"><title>CONNECTED — Shruhi Collections +91 63552 85433 Auto-AI</title></head><body style="background:#071f12;color:#fff;font-family:sans-serif;display:grid;place-items:center;min-height:95vh;text-align:center;"><div style="background:#0d3521;border:2px solid #25d366;padding:32px;border-radius:20px;max-width:560px;"><h1 style="color:#4ade80;">✅ +91 63552 85433 IS CONNECTED &amp; 100% AUTO-AI ACTIVE!</h1><p style="font-size:1.05rem;line-height:1.6;">Linked WhatsApp Business Account: <strong>${waStatus.linkedAccount?.name || "shruhi collection"} (${waStatus.linkedAccount?.id || "916355285433"})</strong></p><p style="color:#a7f3d0;">All 29 4K Priced Designs (₹850 – ₹3,550, Sizes S to 6XL) are live. Auto-AI replies 24/7 and automatically pauses the instant you reply manually!</p></div></body></html>`;
+      fs.writeFileSync(path.join(__dirname, "qr.html"), connectedHtml, "utf8");
     }
     if (connection === "close") {
       const code = lastDisconnect?.error?.output?.statusCode;
+      logEvent("DISCONNECTED", `Status code: ${code} — Reconnecting...`);
       if (code !== DisconnectReason.loggedOut) {
         setTimeout(() => startWhatsAppAiBot(), 2500);
       }
@@ -146,24 +185,23 @@ async function startWhatsAppAiBot() {
         if (botSentMessageIds.has(msg.key.id)) continue; // Ignore bot's own messages
 
         const cmd = text.trim().toLowerCase();
-        if (cmd === "!ai" || cmd === "/ai") {
+        if (cmd === "!ai" || cmd === "/ai" || cmd === "/ai on") {
           humanTakeoverChats.delete(jid);
-          console.log(`[AI RESUMED] 100% Auto-AI re-enabled for ${jid}`);
+          logEvent("AI_RESUMED", `100% Auto-AI re-enabled for ${jid}`);
           continue;
         }
 
         // Owner typed a manual reply! Immediately pause Auto-AI for this customer ("Until I Jump In")
         humanTakeoverChats.set(jid, Date.now());
-        console.log(`[OWNER JUMPED IN] Paused Auto-AI for ${jid} because owner replied manually.`);
+        logEvent("OWNER_JUMP_IN", `Paused Auto-AI for ${jid} because owner replied manually`);
         continue;
       }
 
       // 2. IF OWNER HAS JUMPED IN FOR THIS CHAT, DO NOT AUTO-REPLY
       if (humanTakeoverChats.has(jid)) {
         const pausedAt = humanTakeoverChats.get(jid);
-        // Auto-resume after 4 hours of inactivity unless owner keeps chatting
         if (Date.now() - pausedAt < 4 * 60 * 60 * 1000) {
-          console.log(`[HUMAN MODE ACTIVE] Skipping Auto-AI reply for ${jid}`);
+          logEvent("HUMAN_MODE_SKIP", `Skipping Auto-AI reply for ${jid} (Owner is chatting)`);
           continue;
         } else {
           humanTakeoverChats.delete(jid);
@@ -172,6 +210,7 @@ async function startWhatsAppAiBot() {
 
       if (!text.trim()) continue;
       const clean = text.trim().toLowerCase();
+      logEvent("INCOMING_MSG", `From ${jid}: "${text.slice(0, 80)}"`);
 
       // If customer asks for owner / human call
       if (clean.includes("owner") || clean.includes("human") || clean.includes("call me")) {
@@ -182,17 +221,21 @@ async function startWhatsAppAiBot() {
             `I have paused the Auto-AI assistant and notified our boutique owner on *+91 63552 85433*. They will jump into this chat shortly!`
         });
         if (sent?.key?.id) botSentMessageIds.add(sent.key.id);
+        waStatus.autoRepliesSent++;
         continue;
       }
 
-      // If customer says hi/hello/catalog/menu/price/all
+      // If customer says hi/hello/catalog/menu/price/all/kem cho/namaste
       if (
-        ["hi", "hello", "hey", "catalog", "menu", "price", "prices", "all", "list", "start", "shop"].includes(clean) ||
+        ["hi", "hello", "hey", "catalog", "menu", "price", "prices", "all", "list", "start", "shop", "namaste", "kem cho", "bhav", "pp"].includes(clean) ||
         clean.includes("all product") ||
-        clean.includes("catalog")
+        clean.includes("catalog") ||
+        clean.includes("kem cho")
       ) {
         const sent = await sock.sendMessage(jid, { text: buildFullCatalogMenuText() });
         if (sent?.key?.id) botSentMessageIds.add(sent.key.id);
+        waStatus.autoRepliesSent++;
+        logEvent("AUTO_REPLY_CATALOG", `Sent 29-product catalog menu to ${jid}`);
         continue;
       }
 
@@ -206,7 +249,8 @@ async function startWhatsAppAiBot() {
             `• *Verified MRP:* ${item.priceFormatted} (${item.qtyInfo})\n` +
             `• *Available Sizes:* ${item.sizes.join(", ")}\n` +
             `• *Full Set Value:* ₹${(item.price * item.sizes.length).toLocaleString("en-IN")} (${item.sizes.length} Pcs)\n` +
-            `• *Fabric & Work:* ${item.fabric} — ${item.workType}\n\n` +
+            `• *Fabric & Work:* ${item.fabric} — ${item.workType}\n` +
+            `• *Website:* https://www.shruhicollections.in\n\n` +
             `🛍️ *Reply with your Size (${item.sizes.join("/")}) & Delivery City to confirm your order, or type "OWNER" anytime for our team to jump in!*`;
 
           if (fs.existsSync(imgPath)) {
@@ -219,7 +263,9 @@ async function startWhatsAppAiBot() {
             const sent = await sock.sendMessage(jid, { text: caption });
             if (sent?.key?.id) botSentMessageIds.add(sent.key.id);
           }
+          waStatus.autoRepliesSent++;
         }
+        logEvent("AUTO_REPLY_PRODUCT", `Sent ${matches.slice(0, 3).map((m) => m.code).join(", ")} to ${jid}`);
       } else {
         const sent = await sock.sendMessage(jid, {
           text:
@@ -227,12 +273,43 @@ async function startWhatsAppAiBot() {
             `• Reply *CATALOG* to see all *${CATALOG.length} Priced Designs (₹850 – ₹3,550)*\n` +
             `• Reply with any *Item Number (1–${CATALOG.length})* or *Code (TEJAL, GALAXY, KAVYA, 1042, B-2876)* to get its 4K Photo & Price\n` +
             `• Reply *PLUS* for Curvy Sizes (3XL to 6XL)\n` +
-            `• Reply *OWNER* anytime and I will pause so our owner can jump in personally!`
+            `• Reply *OWNER* anytime and I will pause so our owner can jump in personally!\n` +
+            `🌐 Shop Online: https://www.shruhicollections.in`
         });
         if (sent?.key?.id) botSentMessageIds.add(sent.key.id);
+        waStatus.autoRepliesSent++;
+        logEvent("AUTO_REPLY_HELP", `Sent help menu to ${jid}`);
       }
     }
   });
 }
+
+// Start Live Status & Control HTTP Server on Port 8096
+const PORT = Number(process.env.WA_BOT_PORT || 8096);
+http
+  .createServer((req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Content-Type", "application/json; charset=utf-8");
+    if (req.url.startsWith("/api/status") || req.url === "/") {
+      res.writeHead(200);
+      res.end(
+        JSON.stringify(
+          {
+            ...waStatus,
+            humanTakeoverActiveCount: humanTakeoverChats.size,
+            humanTakeoverChats: Array.from(humanTakeoverChats.keys())
+          },
+          null,
+          2
+        )
+      );
+      return;
+    }
+    res.writeHead(404);
+    res.end(JSON.stringify({ error: "Not found" }));
+  })
+  .listen(PORT, () => {
+    console.log(`🌐 WhatsApp Auto-AI Live Status Server listening on http://localhost:${PORT}/api/status`);
+  });
 
 startWhatsAppAiBot();

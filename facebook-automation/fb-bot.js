@@ -517,8 +517,8 @@ if (process.argv.includes("--post-all")) {
       return;
     }
 
-    // 3. Local Status & Test Endpoint (GET /status, POST /simulate)
-    if (req.method === "GET" && urlObj.pathname === "/status") {
+    // 3. Local Status & Test Endpoint (GET /status or /api/status, POST /simulate or /api/simulate, GET /api/posts)
+    if (req.method === "GET" && (urlObj.pathname === "/status" || urlObj.pathname === "/api/status")) {
       res.writeHead(200, { "Content-Type": "application/json" });
       return res.end(
         JSON.stringify({
@@ -535,11 +535,20 @@ if (process.argv.includes("--post-all")) {
           totalProductsListed: CATALOG.length,
           activeHumanTakeoverChats: humanTakeoverPsids.size,
           telemetry: shieldTelemetry
-        })
+        }, null, 2)
       );
     }
 
-    if (req.method === "POST" && urlObj.pathname === "/simulate") {
+    if (req.method === "GET" && (urlObj.pathname === "/posts" || urlObj.pathname === "/api/posts")) {
+      const manifestFile = path.join(__dirname, "published-29-fb-posts-manifest.json");
+      res.writeHead(200, { "Content-Type": "application/json" });
+      if (fs.existsSync(manifestFile)) {
+        return res.end(fs.readFileSync(manifestFile, "utf8"));
+      }
+      return res.end(JSON.stringify({ totalPosts: 0, posts: [] }));
+    }
+
+    if (req.method === "POST" && (urlObj.pathname === "/simulate" || urlObj.pathname === "/api/simulate")) {
       let body = "";
       req.on("data", (c) => (body += c));
       req.on("end", async () => {
@@ -568,7 +577,7 @@ if (process.argv.includes("--post-all")) {
             shieldLatency: "0.018s",
             telegramProxy: fbConfig.TELEGRAM_BOT_HANDLE,
             telegramDispatched: Boolean(tgRes && tgRes.sent)
-          })
+          }, null, 2)
         );
       });
       return;
