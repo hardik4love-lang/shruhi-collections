@@ -290,7 +290,7 @@ http
   .createServer((req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Content-Type", "application/json; charset=utf-8");
-    if (req.url.startsWith("/api/status") || req.url === "/") {
+    if (req.url.startsWith("/api/status") || req.url.startsWith("/status") || req.url === "/") {
       res.writeHead(200);
       res.end(
         JSON.stringify(

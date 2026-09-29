@@ -96,12 +96,26 @@ function run() {
     return;
   }
 
-  if (args.includes("--post-viral-reel")) {
+  if (args.includes("--post-viral-reel") || args.includes("--full-blast")) {
     copyClipboard(VIRAL_REEL_CAPTION);
-    console.log("📋 Copied Viral Sales Reel Caption to Clipboard!");
-    console.log(`🎬 Opening Facebook Reels Publisher for Page 61586357894191 + Local Campaign Hub...`);
+    console.log("📋 Copied Viral Sales Reel Caption to Windows Clipboard (Ctrl+V ready)!");
+    console.log(`🎬 Highlighting Viral Sales Reel MP4 in Windows Explorer: ${REEL_MP4}`);
+    try {
+      spawn("explorer.exe", [`/select,${REEL_MP4}`], { detached: true, stdio: "ignore" }).unref();
+    } catch (_) {}
+    console.log(`📘 Opening Connected Facebook Page (61586357894191) + Facebook Reels Composer in Microsoft Edge...`);
     openInEdge("https://www.facebook.com/profile.php?id=61586357894191");
+    openInEdge("https://www.facebook.com/reels/create");
     openInEdge("http://localhost:8090/facebook-page.html#automation");
+
+    if (args.includes("--full-blast")) {
+      const topGroups = (groupsData?.groups || []).slice(0, 5);
+      console.log(`👥 Opening Top ${topGroups.length} Priority Facebook Marketing Groups (Batch 1 of 20) in Microsoft Edge for Instant Join & Reel Post:`);
+      topGroups.forEach((g) => {
+        console.log(`   → [Group #${g.groupNumber}/100] ${g.name} (${g.estimatedMembers} members)`);
+        openInEdge(g.joinUrl);
+      });
+    }
     return;
   }
 
@@ -120,7 +134,7 @@ function run() {
     console.log(`   • Women's Lifestyle & Kitty Party : 15 Groups`);
     console.log(`   • NRI Worldwide (USA/UK/CA/UAE)   : 15 Groups`);
   }
-  console.log(`\n✅ Ready! Use --join-groups or --post-viral-reel, or control live from https://shruhicollections.in/facebook-page.html#automation\n`);
+  console.log(`\n✅ Ready! Use --full-blast, --join-groups, or --post-viral-reel, or control live from https://shruhicollections.in/facebook-page.html#automation\n`);
 }
 
 run();
