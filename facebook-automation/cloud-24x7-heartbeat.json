@@ -1,6 +1,6 @@
 {
   "status": "24/7 CLOUD ACTIVE (3 FB PAGES + 100 GROUPS + DUAL WHATSAPP UNIFIED)",
-  "lastSweepAt": "2026-09-29T21:35:19.954Z",
+  "lastSweepAt": "2026-09-29T21:42:23.008Z",
   "whatsappLinked": "+91 63552 85433 & +91 90542 41725",
   "whatsappNumber": "+91 63552 85433 & +91 90542 41725",
   "whatsappNumbers": [
@@ -10,8 +10,7 @@
   "website": "https://shruhicollections.in",
   "connectedPageIds": [
     "61586357894191",
-    "61586323275145",
-    "shruhi_boutique_reseller_hub"
+    "61586323275145"
   ],
   "pagesMonitored": 3,
   "facebookPagesMonitored": 3,
@@ -20,6 +19,28 @@
   "viralReelUrl": "https://shruhicollections.in/assets/social/shruhi-viral-sales-reel-2026.mp4",
   "newPostsPublishedInSweep": 0,
   "commentsProcessedInSweep": 0,
-  "pageSyncState": {},
+  "tokenDiagnostics": {
+    "tokenConfigured": true,
+    "tokenLength": 54,
+    "meIdentity": null,
+    "discoveredAccounts": [],
+    "meError": "Bad signature"
+  },
+  "pageSyncState": {
+    "61586357894191": {
+      "brandAssetsPosted": false,
+      "viralReelPosted": false,
+      "pinnedLookbookPosted": false,
+      "publishedCodes": [],
+      "lastGraphResponse": "Bad signature"
+    },
+    "61586323275145": {
+      "brandAssetsPosted": false,
+      "viralReelPosted": false,
+      "pinnedLookbookPosted": false,
+      "publishedCodes": [],
+      "lastGraphResponse": "Bad signature"
+    }
+  },
   "repliedCommentIds": []
 }
