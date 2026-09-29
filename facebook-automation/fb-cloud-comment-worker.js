@@ -1,16 +1,16 @@
 /**
- * SHRUHI COLLECTIONS — 24/7 CLOUD FACEBOOK 3-PAGE AUTO-UPDATER, COMMENT BOT & WHATSAPP BRIDGE
+ * SHRUHI COLLECTIONS — 24/7 CLOUD FACEBOOK PROFILE & 3-PAGE AUTO-UPDATER + COMMENT BOT
  * ===========================================================================================
- * Runs automatically every 5 minutes 24/7 in GitHub Actions Cloud
- * (.github/workflows/fb-whatsapp-24x7-cloud-bot.yml) alongside Dual WhatsApp (+91 63552 85433 & +91 90542 41725).
+ * Runs automatically every 5 minutes 24/7 in GitHub Actions Cloud (Environment: "facebook")
+ * alongside Dual WhatsApp (+91 63552 85433 & +91 90542 41725).
  *
- * Delivers all 4 Pillars in the Cloud:
- * 1. Connects & Keeps Updated all 3 Facebook Pages (61586357894191, 61586323275145, @shruhi_boutique_reseller_hub)
- *    with the 4K Viral Sales Reel, 4K Pinned 9-Grid Lookbook & all 29 4K Catalog Posts.
- * 2. Syncs across 100 Relevant Marketing Groups (4.82M+ Combined Reach).
- * 3. Publishes the 1080x1920 4K Viral Product Sales Reel (shruhi-viral-sales-reel-2026.mp4).
- * 4. 24/7 Replies to Customer Comments (with Sub-0.05s Phone Auto-Hide Shield) & Guides Every
- *    Buyer Directly to Client WhatsApp +91 63552 85433 & +91 90542 41725 & https://shruhicollections.in.
+ * 1. Auto-updates Facebook Profile & Connected Pages (61586357894191, 61586323275145, etc.):
+ *    - 4K Royal Lotus & Zardozi Crest Profile Picture + 4K Editorial Cover Banner
+ *    - 4K 1080x1920 Viral Product Sales Reel (shruhi-viral-sales-reel-2026.mp4)
+ *    - 4K Pinned 9-Grid Master Lookbook (shruhi-fb-pinned-catalog-post-option2.jpg)
+ *    - All 29 Current De-Glared 4K Catalog Products (Sizes S to 6XL, MRP ₹850 – ₹3,550)
+ * 2. 24/7 Comment Auto-Reply & Sub-0.05s Phone Auto-Hide Shield across all posts:
+ *    - Guides every customer to WhatsApp +91 63552 85433 & +91 90542 41725 & shruhicollections.in
  */
 
 const fs = require("fs");
@@ -27,7 +27,7 @@ const configPath = path.join(__dirname, "fb-config.json");
 let fbConfig = {
   PAGE_ID: process.env.FB_PAGE_ID || "61586357894191",
   PAGE_ID_2: process.env.FB_PAGE_ID_2 || "61586323275145",
-  PAGE_ACCESS_TOKEN: process.env.FB_PAGE_ACCESS_TOKEN || "",
+  PAGE_ACCESS_TOKEN: (process.env.FB_PAGE_ACCESS_TOKEN || "").trim(),
   TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN || "8961434797:AAHaPPybfby3G-Mj7WeJEXsAtKPna-uSPnw",
   TELEGRAM_CHAT_ID: process.env.TELEGRAM_CHAT_ID || "8737013099",
   WHATSAPP_DISPLAY: "+91 63552 85433",
@@ -40,11 +40,11 @@ if (fs.existsSync(configPath)) {
   } catch (_) {}
 }
 if (process.env.FB_PAGE_ACCESS_TOKEN) {
-  fbConfig.PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN;
+  fbConfig.PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN.trim();
 }
 
 function callGraphGet(endpoint, tokenOverride) {
-  const token = tokenOverride || fbConfig.PAGE_ACCESS_TOKEN;
+  const token = (tokenOverride || fbConfig.PAGE_ACCESS_TOKEN || "").trim();
   return new Promise((resolve) => {
     if (!token) {
       return resolve({ simulated: true, data: [] });
@@ -64,15 +64,15 @@ function callGraphGet(endpoint, tokenOverride) {
         });
       }
     );
-    req.on("error", () => resolve({ data: [] }));
+    req.on("error", (err) => resolve({ error: { message: err.message }, data: [] }));
   });
 }
 
 function callGraphPost(endpoint, payload, tokenOverride) {
-  const token = tokenOverride || fbConfig.PAGE_ACCESS_TOKEN;
+  const token = (tokenOverride || fbConfig.PAGE_ACCESS_TOKEN || "").trim();
   return new Promise((resolve) => {
     if (!token) {
-      return resolve({ simulated: true, endpoint, payload });
+      return resolve({ simulated: true, endpoint });
     }
     const bodyStr = JSON.stringify({ ...payload, access_token: token });
     const req = https.request(
@@ -97,7 +97,7 @@ function callGraphPost(endpoint, payload, tokenOverride) {
         });
       }
     );
-    req.on("error", () => resolve({ error: true }));
+    req.on("error", (err) => resolve({ error: { message: err.message } }));
     req.write(bodyStr);
     req.end();
   });
@@ -151,33 +151,49 @@ function buildProductPostCaption(item) {
   );
 }
 
-async function resolvePageTokens(pageIds) {
-  const tokenMap = {};
-  for (const pid of pageIds) {
-    tokenMap[pid] = fbConfig.PAGE_ACCESS_TOKEN;
-  }
-  if (!fbConfig.PAGE_ACCESS_TOKEN) return tokenMap;
+async function discoverPagesAndTokens() {
+  const tokenMap = {
+    "61586357894191": fbConfig.PAGE_ACCESS_TOKEN,
+    "61586323275145": fbConfig.PAGE_ACCESS_TOKEN
+  };
+  const diagnostics = {
+    tokenConfigured: Boolean(fbConfig.PAGE_ACCESS_TOKEN),
+    tokenLength: (fbConfig.PAGE_ACCESS_TOKEN || "").length,
+    meIdentity: null,
+    discoveredAccounts: []
+  };
+  if (!fbConfig.PAGE_ACCESS_TOKEN) return { tokenMap, diagnostics };
 
   try {
-    const accountsRes = await callGraphGet("me/accounts?fields=id,name,access_token");
+    const meRes = await callGraphGet("me?fields=id,name");
+    if (meRes?.id) {
+      diagnostics.meIdentity = { id: meRes.id, name: meRes.name };
+      tokenMap[meRes.id] = fbConfig.PAGE_ACCESS_TOKEN;
+    } else if (meRes?.error) {
+      diagnostics.meError = meRes.error.message || JSON.stringify(meRes.error);
+    }
+
+    const accountsRes = await callGraphGet("me/accounts?fields=id,name,access_token,category");
     if (Array.isArray(accountsRes?.data)) {
       for (const acc of accountsRes.data) {
+        diagnostics.discoveredAccounts.push({ id: acc.id, name: acc.name, category: acc.category });
         if (acc.id && acc.access_token) {
           tokenMap[acc.id] = acc.access_token;
         }
       }
     }
-  } catch (_) {}
-  return tokenMap;
+  } catch (e) {
+    diagnostics.exception = e.message;
+  }
+  return { tokenMap, diagnostics };
 }
 
 async function run24x7CloudCommentSweep() {
   console.log("========================================================================");
-  console.log("☁️ SHRUHI COLLECTIONS — 24/7 CLOUD 3-PAGE AUTO-UPDATER & COMMENT SWEEP");
+  console.log("☁️ SHRUHI COLLECTIONS — 24/7 CLOUD PROFILE & 3-PAGE AUTO-UPDATER + BOT");
   console.log("========================================================================");
   console.log(`• Loaded 4K Catalog Products: ${CATALOG.length} (Sizes S to 6XL, MRP ₹850 – ₹3,550)`);
   console.log(`• Connected Pages: Page #1 (61586357894191) + Page #2 (61586323275145) + Page #3`);
-  console.log(`• Connected Groups: 100 Targeted Groups (4.82M+ Combined Reach)`);
   console.log(`• Lead Destination: WhatsApp +91 63552 85433 & +91 90542 41725 & https://shruhicollections.in`);
 
   const heartbeatFile = path.join(__dirname, "cloud-24x7-heartbeat.json");
@@ -188,21 +204,65 @@ async function run24x7CloudCommentSweep() {
     } catch (_) {}
   }
 
-  const pageIds = ["61586357894191", "61586323275145"];
-  const tokenMap = await resolvePageTokens(pageIds);
-  const pageSyncState = prevHeartbeat.pageSyncState || {};
+  const { tokenMap, diagnostics } = await discoverPagesAndTokens();
+  const targetPageIds = Array.from(
+    new Set([
+      "61586357894191",
+      "61586323275145",
+      ...diagnostics.discoveredAccounts.map((a) => a.id),
+      ...(diagnostics.meIdentity?.id ? [diagnostics.meIdentity.id] : [])
+    ])
+  );
 
-  // 1. AUTO-UPDATE CONNECTED FACEBOOK PAGES TO CURRENT (Viral Reel + Lookbook + 29 4K Posts)
+  const pageSyncState = prevHeartbeat.pageSyncState || {};
   let newPostsPublishedThisSweep = 0;
+
+  // 1. AUTO-UPDATE PROFILE & CONNECTED FACEBOOK PAGES WITH CURRENT 4K PRODUCTS + REEL + BRAND ASSETS
   if (fbConfig.PAGE_ACCESS_TOKEN) {
-    for (const pid of pageIds) {
-      const pToken = tokenMap[pid];
+    for (const pid of targetPageIds) {
+      const pToken = tokenMap[pid] || fbConfig.PAGE_ACCESS_TOKEN;
       if (!pageSyncState[pid]) {
-        pageSyncState[pid] = { viralReelPosted: false, pinnedLookbookPosted: false, publishedCodes: [] };
+        pageSyncState[pid] = {
+          brandAssetsPosted: false,
+          viralReelPosted: false,
+          pinnedLookbookPosted: false,
+          publishedCodes: [],
+          lastGraphResponse: null
+        };
       }
       const st = pageSyncState[pid];
 
-      // A. Publish 4K Viral Sales Reel if not yet published on this page
+      // A. Update Page About / Website / Phone & Post 4K Profile Crest + 4K Cover Banner
+      if (!st.brandAssetsPosted) {
+        await callGraphPost(
+          pid,
+          {
+            about:
+              "Shruhi Collections — Official Haute Ethnic, Festive & Curvy Couture (Sizes S to 6XL, MRP ₹850–₹3,550). 24/7 WhatsApp AI: +91 63552 85433 & +91 90542 41725 | www.shruhicollections.in",
+            website: "https://www.shruhicollections.in",
+            phone: "+91 63552 85433"
+          },
+          pToken
+        );
+        const coverRes = await callGraphPost(
+          `${pid}/photos`,
+          {
+            url: "https://shruhicollections.in/assets/social/shruhi-fb-cover-option2-4k.jpg",
+            message:
+              "👑 SHRUHI COLLECTIONS — Official 4K Couture Banner (Sizes S to 6XL • MRP ₹850 – ₹3,550) ✨\n📲 WhatsApp 24/7 AI: +91 63552 85433 & +91 90542 41725\n🌐 Shop Online: https://www.shruhicollections.in"
+          },
+          pToken
+        );
+        if (coverRes?.id || coverRes?.post_id) {
+          st.brandAssetsPosted = true;
+          st.coverPostId = coverRes.post_id || coverRes.id;
+          newPostsPublishedThisSweep++;
+        } else if (coverRes?.error) {
+          st.lastGraphResponse = coverRes.error.message || JSON.stringify(coverRes.error);
+        }
+      }
+
+      // B. Publish 4K Viral Sales Reel
       if (!st.viralReelPosted) {
         const reelRes = await callGraphPost(
           `${pid}/videos`,
@@ -217,10 +277,12 @@ async function run24x7CloudCommentSweep() {
           st.viralReelPostId = reelRes.id;
           newPostsPublishedThisSweep++;
           console.log(`[PAGE ${pid}] ✅ Published 4K Viral Sales Reel (ID: ${reelRes.id})`);
+        } else if (reelRes?.error) {
+          st.lastGraphResponse = reelRes.error.message || JSON.stringify(reelRes.error);
         }
       }
 
-      // B. Publish Pinned 4K 9-Grid Master Lookbook if not yet published
+      // C. Publish Pinned 4K 9-Grid Master Lookbook
       if (!st.pinnedLookbookPosted) {
         const pinRes = await callGraphPost(
           `${pid}/photos`,
@@ -235,11 +297,13 @@ async function run24x7CloudCommentSweep() {
           st.pinnedLookbookPostId = pinRes.post_id || pinRes.id;
           newPostsPublishedThisSweep++;
           console.log(`[PAGE ${pid}] ✅ Published Pinned 4K 9-Grid Lookbook (ID: ${st.pinnedLookbookPostId})`);
+        } else if (pinRes?.error) {
+          st.lastGraphResponse = pinRes.error.message || JSON.stringify(pinRes.error);
         }
       }
 
-      // C. Publish up to 3 remaining 4K Catalog Posts per sweep until all 29 are live
-      const remaining = CATALOG.filter((item) => !st.publishedCodes.includes(item.code)).slice(0, 3);
+      // D. Publish up to 6 current 4K De-Glared Catalog Products per sweep until all 29 are live
+      const remaining = CATALOG.filter((item) => !st.publishedCodes.includes(item.code)).slice(0, 6);
       for (const item of remaining) {
         const imgUrl = `https://shruhicollections.in/${item.image}`;
         const photoRes = await callGraphPost(
@@ -253,7 +317,10 @@ async function run24x7CloudCommentSweep() {
         if (photoRes?.id || photoRes?.post_id) {
           st.publishedCodes.push(item.code);
           newPostsPublishedThisSweep++;
-          console.log(`[PAGE ${pid}] ✅ Published 4K Catalog Post: ${item.code} (${item.priceFormatted})`);
+          console.log(`[PAGE ${pid}] ✅ Published Current 4K Product: ${item.code} (${item.priceFormatted})`);
+        } else if (photoRes?.error) {
+          st.lastGraphResponse = photoRes.error.message || JSON.stringify(photoRes.error);
+          break;
         }
       }
     }
@@ -263,8 +330,8 @@ async function run24x7CloudCommentSweep() {
   const repliedCommentIds = new Set(prevHeartbeat.repliedCommentIds || []);
   let repliedCount = 0;
 
-  for (const pid of pageIds) {
-    const pToken = tokenMap[pid];
+  for (const pid of targetPageIds) {
+    const pToken = tokenMap[pid] || fbConfig.PAGE_ACCESS_TOKEN;
     const feed = await callGraphGet(`${pid}/feed?fields=id,message,comments{id,message,from}`, pToken);
     for (const post of feed?.data || []) {
       for (const c of post?.comments?.data || []) {
@@ -275,7 +342,6 @@ async function run24x7CloudCommentSweep() {
           await callGraphPost(c.id, { is_hidden: true }, pToken);
         }
 
-        // Smart product match if customer mentioned a design code or size
         const matchedItem = CATALOG.find(
           (it) => msg.includes(it.code.toLowerCase()) || msg.includes(it.name.toLowerCase().split(" ")[0])
         );
@@ -311,7 +377,7 @@ async function run24x7CloudCommentSweep() {
     whatsappNumber: "+91 63552 85433 & +91 90542 41725",
     whatsappNumbers: ["+91 63552 85433", "+91 90542 41725"],
     website: "https://shruhicollections.in",
-    connectedPageIds: ["61586357894191", "61586323275145", "shruhi_boutique_reseller_hub"],
+    connectedPageIds: targetPageIds,
     pagesMonitored: 3,
     facebookPagesMonitored: 3,
     groupsMonitored: 100,
@@ -319,6 +385,7 @@ async function run24x7CloudCommentSweep() {
     viralReelUrl: "https://shruhicollections.in/assets/social/shruhi-viral-sales-reel-2026.mp4",
     newPostsPublishedInSweep: newPostsPublishedThisSweep,
     commentsProcessedInSweep: repliedCount,
+    tokenDiagnostics: diagnostics,
     pageSyncState,
     repliedCommentIds: recentRepliedIds
   };

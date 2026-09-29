@@ -15,7 +15,7 @@ permissions:
 jobs:
   facebook-whatsapp-24x7-bot:
     runs-on: ubuntu-latest
-    environment: production
+    environment: facebook
     steps:
       - name: Checkout Shruhi Collections Repository
         uses: actions/checkout@v4
@@ -28,7 +28,7 @@ jobs:
       - name: Install Dependencies (Dual WhatsApp Baileys + Facebook 24/7 Bot)
         run: npm install --production
 
-      - name: Run 24/7 Facebook 3-Page + 100-Group Comment Auto-Reply & Dual WhatsApp (+91 63552 85433 & +91 90542 41725) Cloud Sweep
+      - name: Run 24/7 Facebook Profile & 3-Page Auto-Updater + Comment Bot & Dual WhatsApp (+91 63552 85433 & +91 90542 41725) Cloud Sweep
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID || '61586357894191' }}
           FB_PAGE_ID_2: "61586323275145"
@@ -41,8 +41,9 @@ jobs:
         run: |
           echo "========================================================================"
           echo "☁️  SHRUHI COLLECTIONS — UNIFIED 24/7 CLOUD BOT (FACEBOOK + WHATSAPP)"
-          echo "   Facebook : 3 Pages (61586357894191 & 61586323275145) + 100 Groups"
-          echo "   WhatsApp : +91 63552 85433 & +91 90542 41725 (29-Product 4K Catalog)"
+          echo "   Environment : facebook (FB_PAGE_ACCESS_TOKEN active)"
+          echo "   Facebook    : Auto-Update Profile & 3 Pages + 100 Groups + 24/7 Reply"
+          echo "   WhatsApp    : +91 63552 85433 & +91 90542 41725 (29-Product 4K Catalog)"
           echo "========================================================================"
           node facebook-automation/fb-cloud-comment-worker.js
           node whatsapp-ai-bot/bot.js --cloud-sweep
@@ -51,6 +52,7 @@ jobs:
         run: |
           git config --global user.email "bot@shruhicollections.in"
           git config --global user.name "Shruhi Collections 24/7 Bot"
+          git pull origin ${{ github.ref_name }} --rebase || true
           git add facebook-automation/cloud-24x7-heartbeat.json whatsapp-ai-bot/auth_6355285433 whatsapp-ai-bot/auth_9054241725 || true
           git diff --cached --quiet || git commit -m "⚡ 24/7 Cloud FB + Dual WhatsApp Sweep Heartbeat: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
           git push || true
