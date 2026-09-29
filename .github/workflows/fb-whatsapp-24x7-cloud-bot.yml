@@ -15,6 +15,7 @@ permissions:
 jobs:
   facebook-whatsapp-24x7-bot:
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Checkout Shruhi Collections Repository
         uses: actions/checkout@v4
