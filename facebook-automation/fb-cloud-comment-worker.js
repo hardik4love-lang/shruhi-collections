@@ -27,6 +27,7 @@ let fbConfig = {
   TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN || "8961434797:AAHaPPybfby3G-Mj7WeJEXsAtKPna-uSPnw",
   TELEGRAM_CHAT_ID: process.env.TELEGRAM_CHAT_ID || "8737013099",
   WHATSAPP_DISPLAY: "+91 63552 85433",
+  WHATSAPP_DISPLAY_2: "+91 90542 41725",
   PUBLIC_SITE_URL: "https://shruhicollections.in"
 };
 if (fs.existsSync(configPath)) {
@@ -121,7 +122,7 @@ async function run24x7CloudCommentSweep() {
         }
         const replyText =
           `✨ Thank you for commenting on Shruhi Collections! All 29 4K designs (Sizes S to 6XL, MRP ₹850 – ₹3,550) are ready for dispatch. ` +
-          `Click here to chat & order directly with our 24/7 AI + Team on WhatsApp (+91 63552 85433): https://wa.me/916355285433 or shop online at https://shruhicollections.in 🛍️`;
+          `Chat & order directly on WhatsApp — Main: https://wa.me/916355285433 (+91 63552 85433) | Also available: https://wa.me/919054241725 (+91 90542 41725) | Shop: https://shruhicollections.in 🛍️`;
         await callGraphPost(`${c.id}/comments`, { message: replyText });
         repliedCount++;
       }

@@ -1,83 +1,80 @@
 /**
- * SHRUHI COLLECTIONS — 100% AUTO-AI WHATSAPP BOT FOR +91 63552 85433
+ * SHRUHI COLLECTIONS — DUAL 24/7 AUTO-AI WHATSAPP BOT
  * ============================================================================
- * Linked Account: 916355285433 ("shruhi collection" — WhatsApp Business)
+ * Number 1: +91 63552 85433 (Main Business Line — auth_6355285433/)
+ * Number 2: +91 90542 41725 (Second Line — auth_9054241725/)
  * Live Status API: http://localhost:8096/api/status
  *
- * Features:
+ * Features (BOTH numbers):
  * 1. All 29 Priced 4K Products (MRP ₹850 – ₹3,550, Sizes S to 6XL) built-in.
- * 2. Trilingual 100% Auto-AI (Surati Gujarati, Hindi & English): greets
- *    customers, lists all 29 products, sends 4K branded product images +
- *    exact MRP & sizes when asked for any code, number (1–29), size (S–6XL),
- *    or budget.
- * 3. AUTOMATIC "UNTIL I JUMP IN" HUMAN TAKEOVER:
- *    - The moment YOU send any manual message from your phone / WhatsApp Web on
- *      +91 63552 85433 to a customer (`msg.key.fromMe === true` and not sent by
- *      this bot), the bot immediately pauses Auto-AI for that customer so you
- *      can chat personally without interruption!
- *    - Type `!ai` or `/ai` in any chat to re-enable 100% Auto-AI for that customer.
+ * 2. Trilingual 100% Auto-AI (Surati Gujarati, Hindi & English).
+ * 3. Sends 4K product images + exact MRP & sizes on any code/number/size/budget query.
+ * 4. "UNTIL I JUMP IN" — Auto-AI pauses the moment you manually reply from your phone.
+ *    Type !ai or /ai to resume Auto-AI for that customer.
  */
 
 const http = require("http");
-const fs = require("fs");
+const fs   = require("fs");
 const path = require("path");
 
 // ─── Silence harmless Baileys stale-session decryption errors ──────────────
-// "Bad MAC", "MessageCounterError", "Key used already or never filled" are
-// just old queued messages encrypted with a previous device session key.
-// They do NOT affect new message handling — the bot still replies perfectly.
 const STALE_SESSION_ERRORS = ["Bad MAC", "MessageCounterError", "Key used already", "Failed to decrypt"];
 process.on("unhandledRejection", (err) => {
   const msg = String(err?.message || err || "");
-  if (STALE_SESSION_ERRORS.some((e) => msg.includes(e))) return; // silent
+  if (STALE_SESSION_ERRORS.some((e) => msg.includes(e))) return;
   console.error("[UnhandledRejection]", err?.message || err);
 });
 process.on("uncaughtException", (err) => {
   const msg = String(err?.message || err || "");
-  if (STALE_SESSION_ERRORS.some((e) => msg.includes(e))) return; // silent
+  if (STALE_SESSION_ERRORS.some((e) => msg.includes(e))) return;
   console.error("[UncaughtException]", err?.message || err);
 });
 // ───────────────────────────────────────────────────────────────────────────
 
-// Load window.SHRUHI_CATALOG from ../catalog-data.js
+// Load SHRUHI_CATALOG from ../catalog-data.js
 const catalogPath = path.join(__dirname, "..", "catalog-data.js");
 const rawCatalogJs = fs.readFileSync(catalogPath, "utf8");
 const sandboxWindow = {};
 new Function("window", rawCatalogJs)(sandboxWindow);
 const CATALOG = sandboxWindow.SHRUHI_CATALOG || [];
 
-console.log(`Loaded ${CATALOG.length} Shruhi Collections 4K products for +91 63552 85433 Auto-AI.`);
+console.log(`\n✅ Loaded ${CATALOG.length} Shruhi Collections 4K products for BOTH WhatsApp bots.`);
+console.log(`   Number 1: +91 63552 85433`);
+console.log(`   Number 2: +91 90542 41725`);
 
-// Track chats where the human owner has jumped in (jid -> timestamp)
-const humanTakeoverChats = new Map();
-// Track message IDs sent by the AI bot itself so we distinguish bot replies from owner manual replies
-const botSentMessageIds = new Set();
+// ─── Per-number state ──────────────────────────────────────────────────────
+const WA_ACCOUNTS = [
+  { number: "6355285433",  display: "+91 63552 85433", authDir: "auth_6355285433",  qrFile: "qr.html",       port: null },
+  { number: "9054241725",  display: "+91 90542 41725", authDir: "auth_9054241725",  qrFile: "qr2.html",      port: null },
+];
 
-// Live runtime telemetry exposed on http://localhost:8096/api/status
-const waStatus = {
-  service: "Shruhi Collections 24/7 WhatsApp Auto-AI Bot (+91 63552 85433)",
-  connection: "connecting",
-  linkedAccount: null,
-  totalProducts: CATALOG.length,
-  autoRepliesSent: 0,
-  recentEvents: [],
-  startedAt: new Date().toISOString()
+// Global shared status
+const globalStatus = {
+  service: "Shruhi Collections Dual 24/7 WhatsApp Auto-AI Bot",
+  catalog: `${CATALOG.length} verified 4K designs (₹850 – ₹3,550, Sizes S to 6XL)`,
+  startedAt: new Date().toISOString(),
+  accounts: {}
 };
 
-function logEvent(type, detail) {
-  const entry = { time: new Date().toISOString(), type, detail };
-  waStatus.recentEvents.unshift(entry);
-  if (waStatus.recentEvents.length > 30) waStatus.recentEvents.pop();
-  console.log(`[${type}] ${detail}`);
+const humanTakeoverChats  = new Map(); // jid+number -> timestamp
+const botSentMessageIds   = new Set();
+
+function logEvent(number, type, detail) {
+  const entry = { time: new Date().toISOString(), number, type, detail };
+  if (!globalStatus.accounts[number]) globalStatus.accounts[number] = { recentEvents: [], autoRepliesSent: 0, connection: "connecting", linkedAccount: null };
+  globalStatus.accounts[number].recentEvents.unshift(entry);
+  if (globalStatus.accounts[number].recentEvents.length > 30) globalStatus.accounts[number].recentEvents.pop();
+  console.log(`[${number}][${type}] ${detail}`);
 }
 
-function buildFullCatalogMenuText() {
+// ─── Shared catalog helpers ────────────────────────────────────────────────
+function buildFullCatalogMenuText(display) {
   const lines = CATALOG.map(
     (item, idx) =>
       `*${idx + 1}. ${item.code}* — *${item.priceFormatted}* (${item.qtyInfo})\n   _${item.name}_ | Sizes: ${item.sizes.join(", ")}`
   );
   return (
-    `✨ *SHRUHI COLLECTIONS — OFFICIAL 24/7 AI CATALOG (+91 63552 85433)* ✨\n` +
+    `✨ *SHRUHI COLLECTIONS — OFFICIAL 24/7 AI CATALOG (${display})* ✨\n` +
     `🌐 Website: https://www.shruhicollections.in\n` +
     `🚚 Pan-India & Worldwide Express Delivery\n\n` +
     `📋 *ALL ${CATALOG.length} VERIFIED 4K DESIGNS (MRP ₹850 – ₹3,550):*\n\n` +
@@ -88,48 +85,45 @@ function buildFullCatalogMenuText() {
 
 function findMatchingProducts(query) {
   const q = query.toLowerCase().trim();
-
-  // Check if customer typed an item number (1 to 29)
   if (/^\d{1,2}$/.test(q)) {
     const num = parseInt(q, 10);
-    if (num >= 1 && num <= CATALOG.length) {
-      return [CATALOG[num - 1]];
-    }
+    if (num >= 1 && num <= CATALOG.length) return [CATALOG[num - 1]];
   }
-
   if (q.includes("plus") || q.includes("3xl") || q.includes("4xl") || q.includes("5xl") || q.includes("6xl") || q.includes("curvy")) {
     return CATALOG.filter((c) => c.isPlusSize || c.sizes.some((s) => ["3XL", "4XL", "5XL", "6XL"].includes(s)));
   }
-
   if (q.includes("under") || q.includes("1600") || q.includes("850") || q.includes("1500")) {
     return CATALOG.filter((c) => c.price <= 1600);
   }
-
   return CATALOG.filter((item) => {
     const hay = `${item.code} ${item.name} ${item.colorName} ${item.fabric} ${item.price} ${item.sizes.join(" ")}`.toLowerCase();
     return q.split(/\s+/).some((w) => w.length >= 2 && hay.includes(w));
   });
 }
 
-let activeSock = null;
-
-async function startWhatsAppAiBot() {
+// ─── Start one WhatsApp bot instance ──────────────────────────────────────
+async function startWhatsAppBot(account) {
   let baileys;
   try {
     baileys = require("@whiskeysockets/baileys");
   } catch (e) {
-    console.log("Installing @whiskeysockets/baileys first (`npm install`)...");
+    console.log(`[${account.number}] Run 'npm install' first.`);
     return;
   }
 
   const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion } = baileys;
-  const pino = require("pino");
-  const qrcode = require("qrcode-terminal");
+  const pino    = require("pino");
+  const qrcode  = require("qrcode-terminal");
 
-  const { state, saveCreds } = await useMultiFileAuthState(path.join(__dirname, "auth_6355285433"));
-  if (state?.creds?.me) {
-    waStatus.linkedAccount = state.creds.me;
+  const authPath = path.join(__dirname, account.authDir);
+  fs.mkdirSync(authPath, { recursive: true });
+
+  const { state, saveCreds } = await useMultiFileAuthState(authPath);
+
+  if (!globalStatus.accounts[account.number]) {
+    globalStatus.accounts[account.number] = { recentEvents: [], autoRepliesSent: 0, connection: "connecting", linkedAccount: null };
   }
+  if (state?.creds?.me) globalStatus.accounts[account.number].linkedAccount = state.creds.me;
 
   let versionInfo = {};
   try {
@@ -144,46 +138,46 @@ async function startWhatsAppAiBot() {
     logger: pino({ level: "silent" }),
     browser: ["Shruhi Collections AI", "Chrome", "122.0.0"]
   });
-  activeSock = sock;
 
   sock.ev.on("creds.update", saveCreds);
 
   sock.ev.on("connection.update", async (update) => {
     const { connection, lastDisconnect, qr } = update;
-    if (connection) {
-      waStatus.connection = connection;
-    }
-    if (sock.user) {
-      waStatus.linkedAccount = sock.user;
-    }
+    if (connection) globalStatus.accounts[account.number].connection = connection;
+    if (sock.user)  globalStatus.accounts[account.number].linkedAccount = sock.user;
+
     if (qr) {
-      waStatus.connection = "awaiting_qr_scan";
-      console.log("\n========================================================");
-      console.log("📱 SCAN THIS QR CODE FROM WHATSAPP ON +91 63552 85433:");
-      console.log("   (WhatsApp -> Linked Devices -> Link a Device)");
-      console.log("========================================================\n");
+      globalStatus.accounts[account.number].connection = "awaiting_qr_scan";
+      console.log(`\n${"=".repeat(65)}`);
+      console.log(`📱 SCAN QR FOR ${account.display}:`);
+      console.log(`   WhatsApp → Linked Devices → Link a Device`);
+      console.log(`${"=".repeat(65)}\n`);
       qrcode.generate(qr, { small: true });
 
-      const qrPageHtml = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="15"><title>Scan QR — Shruhi Collections +91 63552 85433 Auto-AI</title></head><body style="background:#0b141a;color:#fff;font-family:sans-serif;display:grid;place-items:center;min-height:95vh;text-align:center;"><div><h2 style="color:#25d366;">Shruhi Collections — +91 63552 85433 Auto-AI Bot</h2><p>Open WhatsApp on <strong>+91 63552 85433</strong> → <strong>Linked Devices</strong> → <strong>Link a Device</strong> and scan:</p><div style="background:#fff;padding:24px;border-radius:16px;display:inline-block;margin-top:12px;"><img src="https://api.qrserver.com/v1/create-qr-code/?size=340x340&data=${encodeURIComponent(qr)}" width="340" height="340" alt="WhatsApp QR"/></div></div></body></html>`;
-      fs.writeFileSync(path.join(__dirname, "qr.html"), qrPageHtml, "utf8");
-      logEvent("QR_READY", "QR code updated at http://localhost:8090/whatsapp-ai-bot/qr.html");
+      const qrHtml = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="15"><title>Scan QR — Shruhi ${account.display}</title></head><body style="background:#0b141a;color:#fff;font-family:sans-serif;display:grid;place-items:center;min-height:95vh;text-align:center;"><div><h2 style="color:#25d366;">Shruhi Collections — ${account.display} Auto-AI Bot</h2><p>Open WhatsApp on <strong>${account.display}</strong> → <strong>Linked Devices</strong> → <strong>Link a Device</strong> and scan:</p><div style="background:#fff;padding:24px;border-radius:16px;display:inline-block;margin-top:12px;"><img src="https://api.qrserver.com/v1/create-qr-code/?size=340x340&data=${encodeURIComponent(qr)}" width="340" height="340" alt="WhatsApp QR"/></div></div></body></html>`;
+      fs.writeFileSync(path.join(__dirname, account.qrFile), qrHtml, "utf8");
+      logEvent(account.number, "QR_READY", `QR updated for ${account.display} — open whatsapp-ai-bot/${account.qrFile}`);
     }
+
     if (connection === "open") {
-      waStatus.connection = "open";
-      waStatus.linkedAccount = sock.user || state?.creds?.me;
-      logEvent("CONNECTED", `LIVE on +91 63552 85433 (${JSON.stringify(waStatus.linkedAccount)})`);
-      const connectedHtml = `<!DOCTYPE html><html><head><meta charset="utf-8"><title>CONNECTED — Shruhi Collections +91 63552 85433 Auto-AI</title></head><body style="background:#071f12;color:#fff;font-family:sans-serif;display:grid;place-items:center;min-height:95vh;text-align:center;"><div style="background:#0d3521;border:2px solid #25d366;padding:32px;border-radius:20px;max-width:560px;"><h1 style="color:#4ade80;">✅ +91 63552 85433 IS CONNECTED &amp; 100% AUTO-AI ACTIVE!</h1><p style="font-size:1.05rem;line-height:1.6;">Linked WhatsApp Business Account: <strong>${waStatus.linkedAccount?.name || "shruhi collection"} (${waStatus.linkedAccount?.id || "916355285433"})</strong></p><p style="color:#a7f3d0;">All 29 4K Priced Designs (₹850 – ₹3,550, Sizes S to 6XL) are live. Auto-AI replies 24/7 and automatically pauses the instant you reply manually!</p></div></body></html>`;
-      fs.writeFileSync(path.join(__dirname, "qr.html"), connectedHtml, "utf8");
+      globalStatus.accounts[account.number].connection  = "open";
+      globalStatus.accounts[account.number].linkedAccount = sock.user || state?.creds?.me;
+      logEvent(account.number, "CONNECTED", `✅ LIVE on ${account.display} (${JSON.stringify(globalStatus.accounts[account.number].linkedAccount)})`);
+
+      const connHtml = `<!DOCTYPE html><html><head><meta charset="utf-8"><title>CONNECTED — ${account.display}</title></head><body style="background:#071f12;color:#fff;font-family:sans-serif;display:grid;place-items:center;min-height:95vh;text-align:center;"><div style="background:#0d3521;border:2px solid #25d366;padding:32px;border-radius:20px;max-width:560px;"><h1 style="color:#4ade80;">✅ ${account.display} IS CONNECTED & 100% AUTO-AI ACTIVE!</h1><p>All ${CATALOG.length} 4K Priced Designs (₹850 – ₹3,550, Sizes S to 6XL) are live.</p></div></body></html>`;
+      fs.writeFileSync(path.join(__dirname, account.qrFile), connHtml, "utf8");
     }
+
     if (connection === "close") {
       const code = lastDisconnect?.error?.output?.statusCode;
-      logEvent("DISCONNECTED", `Status code: ${code} — Reconnecting...`);
+      logEvent(account.number, "DISCONNECTED", `Code: ${code} — Reconnecting in 3s...`);
       if (code !== DisconnectReason.loggedOut) {
-        setTimeout(() => startWhatsAppAiBot(), 2500);
+        setTimeout(() => startWhatsAppBot(account), 3000);
       }
     }
   });
 
+  // ─── Message handler ─────────────────────────────────────────────────────
   sock.ev.on("messages.upsert", async ({ messages, type }) => {
     if (type !== "notify") return;
 
@@ -197,66 +191,61 @@ async function startWhatsAppAiBot() {
         msg.message?.imageMessage?.caption ||
         "";
 
-      // 1. DETECT WHEN OWNER JUMPS IN MANUALLY (`fromMe === true` and not sent by AI bot)
-      if (msg.key.fromMe) {
-        if (botSentMessageIds.has(msg.key.id)) continue; // Ignore bot's own messages
+      const takeoverKey = `${account.number}::${jid}`;
 
+      // 1. Detect owner manual reply
+      if (msg.key.fromMe) {
+        if (botSentMessageIds.has(msg.key.id)) continue;
         const cmd = text.trim().toLowerCase();
         if (cmd === "!ai" || cmd === "/ai" || cmd === "/ai on") {
-          humanTakeoverChats.delete(jid);
-          logEvent("AI_RESUMED", `100% Auto-AI re-enabled for ${jid}`);
+          humanTakeoverChats.delete(takeoverKey);
+          logEvent(account.number, "AI_RESUMED", `Auto-AI re-enabled for ${jid}`);
           continue;
         }
-
-        // Owner typed a manual reply! Immediately pause Auto-AI for this customer ("Until I Jump In")
-        humanTakeoverChats.set(jid, Date.now());
-        logEvent("OWNER_JUMP_IN", `Paused Auto-AI for ${jid} because owner replied manually`);
+        humanTakeoverChats.set(takeoverKey, Date.now());
+        logEvent(account.number, "OWNER_JUMP_IN", `Paused Auto-AI for ${jid}`);
         continue;
       }
 
-      // 2. IF OWNER HAS JUMPED IN FOR THIS CHAT, DO NOT AUTO-REPLY
-      if (humanTakeoverChats.has(jid)) {
-        const pausedAt = humanTakeoverChats.get(jid);
-        if (Date.now() - pausedAt < 4 * 60 * 60 * 1000) {
-          logEvent("HUMAN_MODE_SKIP", `Skipping Auto-AI reply for ${jid} (Owner is chatting)`);
+      // 2. Skip if owner jumped in recently (4 hour window)
+      if (humanTakeoverChats.has(takeoverKey)) {
+        if (Date.now() - humanTakeoverChats.get(takeoverKey) < 4 * 60 * 60 * 1000) {
+          logEvent(account.number, "HUMAN_MODE_SKIP", `Skipping auto-reply for ${jid}`);
           continue;
-        } else {
-          humanTakeoverChats.delete(jid);
         }
+        humanTakeoverChats.delete(takeoverKey);
       }
 
       if (!text.trim()) continue;
       const clean = text.trim().toLowerCase();
-      logEvent("INCOMING_MSG", `From ${jid}: "${text.slice(0, 80)}"`);
+      logEvent(account.number, "INCOMING_MSG", `From ${jid}: "${text.slice(0, 80)}"`);
 
-      // If customer asks for owner / human call
+      // Owner/human handover request
       if (clean.includes("owner") || clean.includes("human") || clean.includes("call me")) {
-        humanTakeoverChats.set(jid, Date.now());
+        humanTakeoverChats.set(takeoverKey, Date.now());
         const sent = await sock.sendMessage(jid, {
           text:
             `🙋‍♂️ *Shruhi Collections — Owner Handover Activated*\n\n` +
-            `I have paused the Auto-AI assistant and notified our boutique owner on *+91 63552 85433*. They will jump into this chat shortly!`
+            `I have paused the Auto-AI and notified our boutique team on *${account.display}*. They will jump in shortly!`
         });
         if (sent?.key?.id) botSentMessageIds.add(sent.key.id);
-        waStatus.autoRepliesSent++;
+        globalStatus.accounts[account.number].autoRepliesSent++;
         continue;
       }
 
-      // If customer says hi/hello/catalog/menu/price/all/kem cho/namaste
+      // Catalog / greeting
       if (
         ["hi", "hello", "hey", "catalog", "menu", "price", "prices", "all", "list", "start", "shop", "namaste", "kem cho", "bhav", "pp"].includes(clean) ||
-        clean.includes("all product") ||
-        clean.includes("catalog") ||
-        clean.includes("kem cho")
+        clean.includes("all product") || clean.includes("catalog") || clean.includes("kem cho")
       ) {
-        const sent = await sock.sendMessage(jid, { text: buildFullCatalogMenuText() });
+        const sent = await sock.sendMessage(jid, { text: buildFullCatalogMenuText(account.display) });
         if (sent?.key?.id) botSentMessageIds.add(sent.key.id);
-        waStatus.autoRepliesSent++;
-        logEvent("AUTO_REPLY_CATALOG", `Sent 29-product catalog menu to ${jid}`);
+        globalStatus.accounts[account.number].autoRepliesSent++;
+        logEvent(account.number, "AUTO_REPLY_CATALOG", `Sent ${CATALOG.length}-product catalog to ${jid}`);
         continue;
       }
 
-      // Match specific product(s) and send 4K Image + Details!
+      // Product match — send 4K image + details
       const matches = findMatchingProducts(clean);
       if (matches.length > 0) {
         for (const item of matches.slice(0, 3)) {
@@ -268,49 +257,47 @@ async function startWhatsAppAiBot() {
             `• *Full Set Value:* ₹${(item.price * item.sizes.length).toLocaleString("en-IN")} (${item.sizes.length} Pcs)\n` +
             `• *Fabric & Work:* ${item.fabric} — ${item.workType}\n` +
             `• *Website:* https://www.shruhicollections.in\n\n` +
-            `🛍️ *Reply with your Size (${item.sizes.join("/")}) & Delivery City to confirm your order, or type "OWNER" anytime for our team to jump in!*`;
+            `🛍️ *Reply with your Size (${item.sizes.join("/")}) & Delivery City to confirm order, or type "OWNER" to speak with our team directly!*`;
 
           if (fs.existsSync(imgPath)) {
-            const sent = await sock.sendMessage(jid, {
-              image: fs.readFileSync(imgPath),
-              caption
-            });
+            const sent = await sock.sendMessage(jid, { image: fs.readFileSync(imgPath), caption });
             if (sent?.key?.id) botSentMessageIds.add(sent.key.id);
           } else {
             const sent = await sock.sendMessage(jid, { text: caption });
             if (sent?.key?.id) botSentMessageIds.add(sent.key.id);
           }
-          waStatus.autoRepliesSent++;
+          globalStatus.accounts[account.number].autoRepliesSent++;
         }
-        logEvent("AUTO_REPLY_PRODUCT", `Sent ${matches.slice(0, 3).map((m) => m.code).join(", ")} to ${jid}`);
+        logEvent(account.number, "AUTO_REPLY_PRODUCT", `Sent ${matches.slice(0, 3).map((m) => m.code).join(", ")} to ${jid}`);
       } else {
+        // Generic help
         const sent = await sock.sendMessage(jid, {
           text:
-            `🤖 *Shruhi Collections 24/7 AI Concierge (+91 63552 85433)*\n\n` +
+            `🤖 *Shruhi Collections 24/7 AI Concierge (${account.display})*\n\n` +
             `• Reply *CATALOG* to see all *${CATALOG.length} Priced Designs (₹850 – ₹3,550)*\n` +
-            `• Reply with any *Item Number (1–${CATALOG.length})* or *Code (TEJAL, GALAXY, KAVYA, 1042, B-2876)* to get its 4K Photo & Price\n` +
-            `• Reply *PLUS* for Curvy Sizes (3XL to 6XL)\n` +
-            `• Reply *OWNER* anytime and I will pause so our owner can jump in personally!\n` +
+            `• Reply with any *Item Number (1–${CATALOG.length})* or *Code (TEJAL, GALAXY, KAVYA, 1042, B-2876)* for its 4K Photo & Price\n` +
+            `• Reply *PLUS* for Curvy Plus-Size (3XL to 6XL)\n` +
+            `• Reply *OWNER* to pause Auto-AI and speak with our team!\n` +
             `🌐 Shop Online: https://www.shruhicollections.in`
         });
         if (sent?.key?.id) botSentMessageIds.add(sent.key.id);
-        waStatus.autoRepliesSent++;
-        logEvent("AUTO_REPLY_HELP", `Sent help menu to ${jid}`);
+        globalStatus.accounts[account.number].autoRepliesSent++;
+        logEvent(account.number, "AUTO_REPLY_HELP", `Sent help menu to ${jid}`);
       }
     }
   });
 }
 
-// Also launch the 24/7 Facebook 3-Page + 100-Group Comment Auto-Reply Bot in the same unified 24/7 process!
+// ─── Co-launch Facebook 3-Page + 100-Group 24/7 Comment Bot ───────────────
 let fbModule = null;
 try {
   fbModule = require(path.join(__dirname, "..", "facebook-automation", "fb-bot.js"));
-  logEvent("FB_24X7_LINKED", "Facebook 3-Page + 100-Group 24/7 Comment Auto-Reply Bot running alongside WhatsApp +91 63552 85433");
+  console.log("[FB_24X7_LINKED] Facebook 3-Page + 100-Group 24/7 Comment Auto-Reply Bot running alongside both WhatsApp bots.");
 } catch (err) {
   console.error("Note: Could not co-launch fb-bot.js:", err.message);
 }
 
-// Start Unified Live Status & Control HTTP Server on Port (process.env.PORT || 8096)
+// ─── Unified Live Status HTTP Server ──────────────────────────────────────
 const PORT = Number(process.env.PORT || process.env.WA_BOT_PORT || 8096);
 http
   .createServer((req, res) => {
@@ -321,18 +308,17 @@ http
       res.end(
         JSON.stringify(
           {
-            ...waStatus,
+            ...globalStatus,
             facebook24x7Bot: {
               active: true,
               pagesConnected: 3,
               groupsJoined: 100,
               viralReelActive: true,
               sub005sShieldActive: true,
-              leadRedirect: "WhatsApp +91 63552 85433 & https://shruhicollections.in",
+              leadRedirect: "WhatsApp +91 63552 85433 & +91 90542 41725 & https://shruhicollections.in",
               telemetry: fbModule?.shieldTelemetry || { commentsScanned: 0, phoneCommentsHidden: 0 }
             },
-            humanTakeoverActiveCount: humanTakeoverChats.size,
-            humanTakeoverChats: Array.from(humanTakeoverChats.keys())
+            humanTakeoverActiveCount: humanTakeoverChats.size
           },
           null,
           2
@@ -344,8 +330,15 @@ http
     res.end(JSON.stringify({ error: "Not found" }));
   })
   .listen(PORT, () => {
-    console.log(`🌐 Unified 24/7 WhatsApp (+91 63552 85433) + Facebook Auto-AI Server listening on port ${PORT}`);
+    console.log(`\n🌐 Unified 24/7 Dual-WhatsApp + Facebook Auto-AI Server listening on port ${PORT}`);
+    console.log(`   Status: http://localhost:${PORT}/api/status`);
   });
 
-startWhatsAppAiBot();
-
+// ─── Launch BOTH WhatsApp bots in parallel ────────────────────────────────
+console.log("\n🚀 Starting BOTH WhatsApp Auto-AI bots...\n");
+WA_ACCOUNTS.forEach((account) => {
+  startWhatsAppBot(account).catch((err) => {
+    console.error(`[${account.number}] Startup error:`, err.message);
+    setTimeout(() => startWhatsAppBot(account), 5000);
+  });
+});
