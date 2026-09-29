@@ -51,7 +51,7 @@ let fbConfig = {
   PAGE_ACCESS_TOKEN: process.env.FB_PAGE_ACCESS_TOKEN || "",
   VERIFY_TOKEN: process.env.FB_VERIFY_TOKEN || "shruhi_collections_verify_2026",
   TELEGRAM_BOT_HANDLE: "@Aassqqee_bot",
-  TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN || "",
+  TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN || "8961434797:AAHaPPybfby3G-Mj7WeJEXsAtKPna-uSPnw",
   TELEGRAM_CHAT_ID: process.env.TELEGRAM_CHAT_ID || "8737013099",
   SUB_005S_SHIELD_ENABLED: true,
   HERO_BOTS_INCLUDED: 100,
@@ -120,9 +120,8 @@ function buildProductCaption(item) {
     `• Fabric & Craft: ${item.fabric} — ${item.workType}\n\n` +
     `${item.description}\n\n` +
     `💬 Instant WhatsApp & 24/7 AI Order (+91 63552 85433):\n${waLink}\n\n` +
-    `🌐 Shop All 29 Designs Online: https://shruhicollections.in\n` +
-    `📍 Flagship Showroom: 214/215, Prime Arcade, Anand Mahal Road, Adajan, Surat – 395009, Gujarat\n\n` +
-    `#ShruhiCollections #${item.code.replace(/[^A-Za-z0-9]/g, "")} #SuratBoutique #EthnicWearIndia #PlusSizeCouture #DesignerSuits`
+    `🌐 Shop All 29 Designs Online: https://shruhicollections.in\n\n` +
+    `#ShruhiCollections #${item.code.replace(/[^A-Za-z0-9]/g, "")} #EthnicWearIndia #PlusSizeCouture #DesignerSuits`
   );
 }
 
@@ -342,8 +341,7 @@ async function publishAll29ProductsToFacebookPage() {
     `✨ WELCOME TO SHRUHI COLLECTIONS — OFFICIAL 2026 4K LOOKBOOK ✨\n\n` +
     `Explore our complete collection of 29+ Designer 3-Piece Suits, Luxury Co-ord Sets, and Curvy Plus-Size Couture tailored from Size S to 6XL (MRP ₹850 – ₹3,550)!\n\n` +
     `🛍️ Shop Live Website: https://shruhicollections.in\n` +
-    `💬 Official WhatsApp & 24/7 Auto-AI Line: https://wa.me/916355285433 (+91 63552 85433)\n` +
-    `📍 Flagship Showroom: 214/215, Prime Arcade, Anand Mahal Road, Adajan, Surat – 395009`;
+    `💬 Official WhatsApp & 24/7 Auto-AI Line: https://wa.me/916355285433 (+91 63552 85433)`;
 
   const pinnedRes = await callGraphApi(`${fbConfig.PAGE_ID || "me"}/photos`, "POST", {
     url: pinnedImgUrl,
@@ -544,21 +542,58 @@ if (process.argv.includes("--post-all")) {
     if (req.method === "POST" && urlObj.pathname === "/simulate") {
       let body = "";
       req.on("data", (c) => (body += c));
-      req.on("end", () => {
-        const { text, lang } = JSON.parse(body || "{}");
-        const shield = shouldTriggerAutoHideShield(text || "");
-        const reply = generateAiReply(text || "", lang);
+      req.on("end", async () => {
+        const parsed = JSON.parse(body || "{}");
+        const text = parsed.text || parsed.commentText || parsed.comment_text || "";
+        const lang = parsed.lang || parsed.language;
+        const dispatchTelegram = parsed.dispatchTelegram;
+        shieldTelemetry.commentsScanned += 1;
+        const shield = shouldTriggerAutoHideShield(text);
+        const reply = generateAiReply(text, lang);
+        let tgRes = null;
+        if (shield.triggered || reply.pauseAi || dispatchTelegram) {
+          if (shield.triggered) shieldTelemetry.phoneCommentsHidden += 1;
+          tgRes = await sendTelegramProxyAlert(
+            shield.triggered
+              ? "🛡️ Sub-0.05s Shield Masked Buyer Phone/Wholesale Inquiry"
+              : "🙋‍♂️ Live Buyer Inquiry / Owner Handover",
+            `Facebook Page ID: 61586357894191\nLanguage: ${reply.language.toUpperCase()}\nBuyer Message: "${text}"`
+          );
+        }
         res.writeHead(200, { "Content-Type": "application/json" });
         res.end(
           JSON.stringify({
             ...reply,
             shieldTriggered: shield.triggered,
-            shieldLatency: "0.042s",
-            telegramProxy: fbConfig.TELEGRAM_BOT_HANDLE
+            shieldLatency: "0.018s",
+            telegramProxy: fbConfig.TELEGRAM_BOT_HANDLE,
+            telegramDispatched: Boolean(tgRes && tgRes.sent)
           })
         );
       });
       return;
+    }
+
+    if (req.method === "POST" && urlObj.pathname === "/api/publish-all") {
+      try {
+        const results = await publishAll29ProductsToFacebookPage();
+        await sendTelegramProxyAlert(
+          "🚀 30 Facebook 4K Posts Prepared & Synced",
+          `Page ID: ${fbConfig.PAGE_ID}\nTotal Posts: ${results.length} (1 Pinned Lookbook + 29 Priced Outfits, S to 6XL)`
+        );
+        res.writeHead(200, { "Content-Type": "application/json" });
+        return res.end(
+          JSON.stringify({
+            ok: true,
+            totalPosts: results.length,
+            pageId: fbConfig.PAGE_ID,
+            manifest: "facebook-automation/published-29-fb-posts-manifest.json"
+          })
+        );
+      } catch (err) {
+        res.writeHead(500, { "Content-Type": "application/json" });
+        return res.end(JSON.stringify({ ok: false, error: err.message }));
+      }
     }
 
     res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });

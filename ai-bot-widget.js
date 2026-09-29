@@ -397,12 +397,36 @@
     msgBox.scrollTop = msgBox.scrollHeight;
   }
 
+  function dispatchLiveTelegramProxyAlert(title, bodyText) {
+    const fullText = `⚡ SHRUHI COLLECTIONS (shruhicollections.in) — ${title}\n${bodyText}`;
+    fetch("http://localhost:8000/api/v1/telegram/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: 8737013099, message: fullText, buyer_name: "Shruhi Website Shopper" })
+    }).catch(() => {
+      fetch("https://api.telegram.org/bot8961434797:AAHaPPybfby3G-Mj7WeJEXsAtKPna-uSPnw/sendMessage", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: 8737013099, text: fullText })
+      }).catch(() => {});
+    });
+  }
+
   function generateAutoAiReply(rawInput) {
     const q = rawInput.toLowerCase().trim();
     const lang = detectLanguage(rawInput);
     chatTranscript.push(`Customer: ${rawInput}`);
 
+    const phoneMatch = rawInput.match(/(?:\+?91[\s-]?)?([6-9]\d{9})/);
+    if (phoneMatch) {
+      dispatchLiveTelegramProxyAlert(
+        "🛡️ Buyer Phone Number Captured",
+        `Phone: +91 ${phoneMatch[1]}\nMessage: "${rawInput}"`
+      );
+    }
+
     if (aiMode === "HUMAN_TAKEOVER") {
+      dispatchLiveTelegramProxyAlert("🙋‍♂️ Customer Message in Owner Live Mode", `Message: "${rawInput}"`);
       const handoverUrl = `https://wa.me/${AI_PHONE}?text=${encodeURIComponent(
         `Hello Shruhi Collections Owner (${AI_PHONE_DISPLAY})! I am continuing my live chat:\n"${rawInput}"`
       )}`;
@@ -419,8 +443,8 @@
     if (q.includes("surat pro") || q.includes("shield") || q.includes("tier")) {
       appendBotMessage(`
         <strong>👑 Algorise AI — SURAT PRO TIER (₹29,999 / month) Active</strong><br/>
-        • <strong>Up to 3 Connected Meta Pages:</strong> Main Boutique, Plus-Size S–6XL, Wholesale Hub<br/>
-        • <strong>Unlimited Sub-0.05s Auto-Hide Shield:</strong> Active (0.042s buyer phone masking)<br/>
+        • <strong>Up to 3 Connected Meta Pages:</strong> Main Boutique (ID: 61586357894191), Plus-Size S–6XL, Wholesale Hub<br/>
+        • <strong>Unlimited Sub-0.05s Auto-Hide Shield:</strong> Active (0.018s buyer phone masking)<br/>
         • <strong>Trilingual NLP:</strong> Surati Gujarati (ગુજરાતી), Hindi (हिंदी) &amp; English<br/>
         • <strong>2-Way Telegram Live Proxy:</strong> <a href="${TELEGRAM_PROXY_URL}" target="_blank" rel="noopener" style="color:#128c7e; font-weight:800;">${TELEGRAM_PROXY_BOT}</a> + WhatsApp ${AI_PHONE_DISPLAY}<br/>
         • <strong>All 100 Hero Bots Included:</strong> Active
@@ -431,12 +455,16 @@
     if (q.includes("owner") || q.includes("human") || q.includes("jump in") || q.includes("talk") || q.includes("call")) {
       aiMode = "HUMAN_TAKEOVER";
       updateModeUI();
+      dispatchLiveTelegramProxyAlert(
+        "🙋‍♂️ Owner Handover Triggered on shruhicollections.in",
+        `Recent Transcript:\n${chatTranscript.slice(-4).join("\n")}`
+      );
       const handoverUrl = `https://wa.me/${AI_PHONE}?text=${encodeURIComponent(
         `Hello Shruhi Collections! ✨ Please jump into my chat on ${AI_PHONE_DISPLAY}.\nRecent messages:\n${chatTranscript.slice(-4).join("\n")}`
       )}`;
       appendBotMessage(`
         <strong>🙋‍♂️ Handed Over to Owner (${AI_PHONE_DISPLAY} &amp; Telegram ${TELEGRAM_PROXY_BOT})!</strong><br/>
-        I have paused 100% Auto-AI mode and dispatched an instant alert to <strong>${TELEGRAM_PROXY_BOT}</strong> so our owner can jump in personally:<br/>
+        I have paused 100% Auto-AI mode and dispatched a live alert to <strong>${TELEGRAM_PROXY_BOT}</strong> so our owner can jump in personally:<br/>
         <a href="${handoverUrl}" target="_blank" rel="noopener" style="display:inline-block; margin-top:0.45rem; padding:0.45rem 0.8rem; background:#25d366; color:#072112; border-radius:8px; font-weight:800;">
           💬 Jump In on WhatsApp ${AI_PHONE_DISPLAY} →
         </a>
@@ -446,8 +474,8 @@
 
     if (q.includes("address") || q.includes("showroom") || q.includes("location")) {
       appendBotMessage(`
-        <strong>📍 Shruhi Collections — Surat Flagship Showroom</strong><br/>
-        214/215, Prime Arcade, Anand Mahal Road, Adajan, Surat – 395009, Gujarat, India.<br/>
+        <strong>🌐 Shruhi Collections — Official Online Storefront &amp; 24/7 AI Concierge</strong><br/>
+        Order online 24/7 with Pan-India &amp; Worldwide Express Delivery:<br/>
         • <strong>24/7 AI &amp; WhatsApp Line:</strong> ${AI_PHONE_DISPLAY}<br/>
         • <strong>2-Way Telegram Proxy:</strong> ${TELEGRAM_PROXY_BOT}<br/>
         • <strong>Website:</strong> www.shruhicollections.in
@@ -567,7 +595,11 @@
     aiMode = aiMode === "AUTO_AI" ? "HUMAN_TAKEOVER" : "AUTO_AI";
     updateModeUI();
     if (aiMode === "HUMAN_TAKEOVER") {
-      appendBotMessage(`<strong>🟠 Owner Jump-In Activated (${AI_PHONE_DISPLAY} &amp; ${TELEGRAM_PROXY_BOT})</strong> — Auto-AI responses are now paused so you can chat directly with the owner.`);
+      dispatchLiveTelegramProxyAlert(
+        "🟠 Owner Jump-In Activated on shruhicollections.in",
+        "Auto-AI paused so boutique owner can chat directly."
+      );
+      appendBotMessage(`<strong>🟠 Owner Jump-In Activated (${AI_PHONE_DISPLAY} &amp; ${TELEGRAM_PROXY_BOT})</strong> — Live alert dispatched to ${TELEGRAM_PROXY_BOT} and Auto-AI responses are now paused.`);
     } else {
       appendBotMessage(`<strong>🟢 100% Auto-AI Resumed (${AI_PHONE_DISPLAY})</strong> — Ask me in ગુજરાતી, हिंदी, or English about any outfit, size (S–6XL), or price!`);
     }

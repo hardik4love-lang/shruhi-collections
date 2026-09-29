@@ -39,7 +39,7 @@ function buildFullCatalogMenuText() {
   return (
     `✨ *SHRUHI COLLECTIONS — OFFICIAL 24/7 AI CATALOG (+91 63552 85433)* ✨\n` +
     `🌐 Website: https://www.shruhicollections.in\n` +
-    `📍 Showroom: 214/215, Prime Arcade, Anand Mahal Rd, Adajan, Surat – 395009\n\n` +
+    `🚚 Pan-India & Worldwide Express Delivery\n\n` +
     `📋 *ALL ${CATALOG.length} VERIFIED 4K DESIGNS (MRP ₹850 – ₹3,550):*\n\n` +
     lines.join("\n\n") +
     `\n\n💡 *Reply with any Item Number (1–${CATALOG.length}), Design Code (e.g. TEJAL, 1042, KAVYA), or Size (e.g. 3XL, 6XL, L) to receive its 4K Photo & instant order link!*`
