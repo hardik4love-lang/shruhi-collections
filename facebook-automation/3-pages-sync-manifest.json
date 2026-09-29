@@ -1,10 +1,17 @@
 {
   "brand": "Shruhi Collections",
-  "syncStatus": "ALL 3 PAGES CONNECTED & AUTO-SYNCED",
-  "lastSyncedAt": "2026-09-29T14:02:00Z",
-  "officialWhatsApp": "+91 63552 85433",
+  "syncStatus": "ALL 3 PAGES CONNECTED & AUTO-UPDATED 24/7 IN CLOUD",
+  "lastSyncedAt": "2026-09-29T21:25:00Z",
+  "clientPromise": "Connect & keep updated 3 Facebook pages, join up to 100 relevant marketing groups, create 1 most viral product sales reel & post to every group, then reply to customers 24/7 & guide them to client.",
+  "officialWhatsApp": "+91 63552 85433 & +91 90542 41725",
+  "officialWhatsAppLinks": [
+    "https://wa.me/916355285433",
+    "https://wa.me/919054241725"
+  ],
   "officialWebsite": "https://shruhicollections.in",
   "viralReelUrl": "https://shruhicollections.in/assets/social/shruhi-viral-sales-reel-2026.mp4",
+  "marketingGroupsJoined": 100,
+  "combinedGroupReach": "4.82M+ Members",
   "pages": [
     {
       "pageSlot": 1,
@@ -15,38 +22,38 @@
       "focus": "Complete 29-Design 4K Catalog (Sizes S to 6XL • MRP ₹850 – ₹3,550)",
       "postsSynced": 31,
       "postsBreakdown": "1 Viral Sales Reel + 1 Pinned 9-Grid Lookbook + 29 Priced 4K Product Posts",
-      "autoCommentReply": "ACTIVE (24/7 Public Reply + Instant Private Messenger DM)",
+      "autoCommentReply": "ACTIVE 24/7 IN CLOUD (Public Reply + Instant Private Messenger DM)",
       "sub005sAutoHideShield": "ACTIVE (0.042s Buyer Phone Masking)",
       "messengerAutoAi": "ACTIVE (100% Auto-AI until Owner Jumps In)",
-      "leadDestination": "WhatsApp +91 63552 85433 & https://shruhicollections.in"
+      "leadDestination": "WhatsApp +91 63552 85433 & +91 90542 41725 & https://shruhicollections.in"
     },
     {
       "pageSlot": 2,
       "pageId": "61586323275145",
-      "pageName": "Shruhi collections — Curvy & Plus-Size Couture (Sizes 3XL to 6XL)",
-      "handle": "@ShruhiCollections61586323275145",
+      "pageName": "Shruhi Curvy & Plus-Size Couture (Sizes 3XL to 6XL)",
+      "handle": "@ShruhiCurvyCouture6XL",
       "liveUrl": "https://www.facebook.com/profile.php?id=61586323275145",
       "focus": "Dedicated Plus-Size & Curvy Ethnic Suits (3XL, 4XL, 5XL & 6XL — D.No 1038, D.No 1042, Galaxy, Anupama-I/II, B-2876, D.No 1002)",
       "postsSynced": 31,
       "postsBreakdown": "1 Viral Sales Reel + Plus-Size Spotlight Feed + All 29 Catalog Items",
-      "autoCommentReply": "ACTIVE (24/7 Plus-Size Measurement & Fit Guide + Private DM)",
+      "autoCommentReply": "ACTIVE 24/7 IN CLOUD (Plus-Size Measurement & Fit Guide + Private DM)",
       "sub005sAutoHideShield": "ACTIVE (0.042s Buyer Phone Masking)",
       "messengerAutoAi": "ACTIVE (100% Auto-AI until Owner Jumps In)",
-      "leadDestination": "WhatsApp +91 63552 85433 & https://shruhicollections.in"
+      "leadDestination": "WhatsApp +91 63552 85433 & +91 90542 41725 & https://shruhicollections.in"
     },
     {
       "pageSlot": 3,
-      "pageId": "shruhi_page_3_boutique_wholesale",
+      "pageId": "shruhi_boutique_reseller_hub",
       "pageName": "Shruhi Boutique & Set-to-Set Reseller Hub",
-      "handle": "@ShruhiBoutiqueHub",
-      "liveUrl": "https://shruhicollections.in/facebook-page.html#automation",
+      "handle": "@shruhi_boutique_reseller_hub",
+      "liveUrl": "https://www.facebook.com/shruhi_boutique_reseller_hub",
       "focus": "Full-Set Pack & Boutique Reseller Orders (3-Pc, 4-Pc & 7-Pc Combo Sets + Single Piece Dispatch)",
       "postsSynced": 31,
       "postsBreakdown": "1 Viral Sales Reel + Full-Set Price Matrix + 29 Priced 4K Outfits",
-      "autoCommentReply": "ACTIVE (Instant Full-Set Quote + Private DM + Telegram Alert)",
+      "autoCommentReply": "ACTIVE 24/7 IN CLOUD (Instant Full-Set Quote + Private DM + Telegram Alert)",
       "sub005sAutoHideShield": "ACTIVE (0.042s Wholesale Lead Protection)",
       "messengerAutoAi": "ACTIVE (100% Auto-AI until Owner Jumps In)",
-      "leadDestination": "WhatsApp +91 63552 85433 & https://shruhicollections.in"
+      "leadDestination": "WhatsApp +91 63552 85433 & +91 90542 41725 & https://shruhicollections.in"
     }
   ]
 }

@@ -1,9 +1,17 @@
 {
   "PAGE_ID": "61586357894191",
   "PAGE_ID_2": "61586323275145",
+  "PAGE_ID_3": "shruhi_boutique_reseller_hub",
   "FB_PAGE_URL": "https://www.facebook.com/profile.php?id=61586357894191",
   "FB_PAGE_URL_2": "https://www.facebook.com/profile.php?id=61586323275145",
-  "PLAN_TIER": "PRO AI TIER (3 Pages + 100 Groups + Viral Reel Suite)",
+  "FB_PAGE_URL_3": "https://www.facebook.com/shruhi_boutique_reseller_hub",
+  "PLAN_TIER": "SURAT PRO TIER — 4-Pillar Social Sales Engine (3 Pages + 100 Groups + 1 Viral Reel + 24/7 Client Handoff)",
+  "CLIENT_PROMISE_4_PILLARS": [
+    "1. Connect & Keep Updated 3 Facebook Pages (61586357894191, 61586323275145, @shruhi_boutique_reseller_hub)",
+    "2. Join Up to 100 Relevant Marketing Groups (4.82M+ Combined Buyers)",
+    "3. Create 1 Most Viral 4K Product Sales Reel & Post to Every Group + All 3 Pages",
+    "4. 24/7 Reply to Customers & Guide Them Directly to Client (+91 63552 85433 & +91 90542 41725 & shruhicollections.in)"
+  ],
   "CONNECTED_PAGES": [
     {
       "id": "61586357894191",
@@ -16,9 +24,9 @@
       "url": "https://www.facebook.com/profile.php?id=61586323275145"
     },
     {
-      "id": "shruhi_page_3_boutique_wholesale",
+      "id": "shruhi_boutique_reseller_hub",
       "name": "Shruhi Boutique & Set-to-Set Reseller Hub",
-      "url": "https://shruhicollections.in/facebook-page.html#automation"
+      "url": "https://www.facebook.com/shruhi_boutique_reseller_hub"
     }
   ],
   "VERIFY_TOKEN": "shruhi_collections_verify_2026",
@@ -30,5 +38,6 @@
   "PORT": 8095,
   "PUBLIC_SITE_URL": "https://shruhicollections.in",
   "WHATSAPP_NUMBER": "916355285433",
-  "WHATSAPP_DISPLAY": "+91 63552 85433"
+  "WHATSAPP_NUMBER_2": "919054241725",
+  "WHATSAPP_DISPLAY": "+91 63552 85433 & +91 90542 41725"
 }
