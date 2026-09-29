@@ -18,16 +18,28 @@ const fs   = require("fs");
 const path = require("path");
 
 // ─── Silence harmless Baileys stale-session decryption errors ──────────────
-const STALE_SESSION_ERRORS = ["Bad MAC", "MessageCounterError", "Key used already", "Failed to decrypt"];
+// "Bad MAC", "MessageCounterError", "Key used already", "Session error" etc.
+// are printed internally by libsignal via its OWN console.error() calls AND
+// also as unhandled rejections. Patch BOTH layers to fully silence the noise.
+const STALE_SESSION_ERRORS = [
+  "Bad MAC", "MessageCounterError", "Key used already",
+  "Failed to decrypt", "Session error", "never filled"
+];
+const _origConsoleError = console.error.bind(console);
+console.error = (...args) => {
+  const str = args.map((a) => String(a?.message || a || "")).join(" ");
+  if (STALE_SESSION_ERRORS.some((e) => str.includes(e))) return; // silent
+  _origConsoleError(...args);
+};
 process.on("unhandledRejection", (err) => {
   const msg = String(err?.message || err || "");
   if (STALE_SESSION_ERRORS.some((e) => msg.includes(e))) return;
-  console.error("[UnhandledRejection]", err?.message || err);
+  _origConsoleError("[UnhandledRejection]", err?.message || err);
 });
 process.on("uncaughtException", (err) => {
   const msg = String(err?.message || err || "");
   if (STALE_SESSION_ERRORS.some((e) => msg.includes(e))) return;
-  console.error("[UncaughtException]", err?.message || err);
+  _origConsoleError("[UncaughtException]", err?.message || err);
 });
 // ───────────────────────────────────────────────────────────────────────────
 
