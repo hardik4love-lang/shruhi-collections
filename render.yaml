@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: shruhi-collections-whatsapp-facebook-24x7-bot
+    runtime: docker
+    plan: starter
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 8096
+      - key: FB_BOT_PORT
+        value: 8095
+      - key: FB_PAGE_ID
+        value: "61586357894191"
+      - key: WHATSAPP_NUMBER
+        value: "916355285433"

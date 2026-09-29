@@ -8,9 +8,9 @@
  *
  * SURAT PRO TIER CAPABILITIES ACTIVE:
  * 1. UP TO 3 CONNECTED META PAGES:
- *    - Page 1: Shruhi Collections — Official Boutique (Adajan, Surat)
+ *    - Page 1: Shruhi Collections — Official Flagship Boutique
  *    - Page 2: Shruhi Plus-Size & Curvy Couture (Sizes S to 6XL)
- *    - Page 3: Shruhi Wholesale & B2B Factory Outlet
+ *    - Page 3: Shruhi Boutique & Set-to-Set Reseller Hub
  * 2. UNLIMITED SUB-0.05s AUTO-HIDE SHIELD:
  *    - Instantly masks comments containing buyer phone numbers or wholesale
  *      inquiries (`POST /{comment_id}?is_hidden=true` in <0.048s) so rival
@@ -166,7 +166,7 @@ function generateAiReply(text, forceLang) {
     const msgByLang = {
       gu:
         `🙋‍♂️ Shruhi Collections — ઓનર હેન્ડઓવર એક્ટિવેટ થયું છે!\n\n` +
-        `મેં ઓટો-AI પોઝ કર્યું છે જેથી અમારા શોરૂમ ઓનર આપની સાથે સીધી વાત કરી શકે. Telegram (@Aassqqee_bot) અને WhatsApp +91 63552 85433 (https://wa.me/916355285433) પર એલર્ટ મોકલી દીધો છે!`,
+        `મેં ઓટો-AI પોઝ કર્યું છે જેથી અમારી ટીમ આપની સાથે સીધી વાત કરી શકે. Telegram (@Aassqqee_bot) અને WhatsApp +91 63552 85433 (https://wa.me/916355285433) પર એલર્ટ મોકલી દીધો છે!`,
       hi:
         `🙋‍♂️ Shruhi Collections — ओनर हैंडओवर एक्टिवेट हो गया है!\n\n` +
         `मैंने ऑटो-AI को पॉज़ कर दिया है ताकि हमारे बुटीक ओनर आपसे सीधे बात कर सकें। Telegram (@Aassqqee_bot) और WhatsApp +91 63552 85433 (https://wa.me/916355285433) पर अलर्ट भेज दिया गया है!`,
@@ -211,15 +211,15 @@ function generateAiReply(text, forceLang) {
       .join("\n\n");
 
     const introByLang = {
-      gu: `નમસ્તે જી! 🙏 Shruhi Collections (અડાજણ, સુરત) ના વેરિફાઈડ 4K કેટલોગ અને પ્રાઈસ નીચે મુજબ છે:`,
-      hi: `नमस्ते जी! 🙏 Shruhi Collections (अडाजण, सूरत) के वेरिफाइड 4K कैटलॉग और प्राइस नीचे दिए गए हैं:`,
+      gu: `નમસ્તે જી! 🙏 Shruhi Collections ના વેરિફાઈડ 4K કેટલોગ અને પ્રાઈસ નીચે મુજબ છે:`,
+      hi: `नमस्ते जी! 🙏 Shruhi Collections के वेरिफाइड 4K कैटलॉग और प्राइस नीचे दिए गए हैं:`,
       en: `Here are the verified Shruhi Collections 4K details:`
     };
 
     const outroByLang = {
-      gu: `🌐 બધા 29 4K ડ્રેસ જુઓ: https://shruhicollections.in\n(ઓર્ડર કરવા માટે આપની સાઈઝ અને શહેરનું નામ લખો, અથવા ઓનર સાથે વાત કરવા OWNER લખો!)`,
-      hi: `🌐 सभी 29 4K डिज़ाइन देखें: https://shruhicollections.in\n(ऑर्डर करने के लिए अपना साइज़ और शहर बताएं, या ओनर से बात करने के लिए OWNER लिखें!)`,
-      en: `🌐 Full 4K Catalog: https://shruhicollections.in\n(Reply with your Size & City to order, or type OWNER for personal assistance!)`
+      gu: `🌐 બધા 29 4K ડ્રેસ ઓનલાઇન જુઓ: https://shruhicollections.in\n💬 સીધા WhatsApp પર ઓર્ડર કરો: https://wa.me/916355285433 (+91 63552 85433)`,
+      hi: `🌐 सभी 29 4K डिज़ाइन ऑनलाइन देखें: https://shruhicollections.in\n💬 सीधे WhatsApp पर ऑर्डर करें: https://wa.me/916355285433 (+91 63552 85433)`,
+      en: `🌐 Full 4K Online Store: https://shruhicollections.in\n💬 Direct WhatsApp Order: https://wa.me/916355285433 (+91 63552 85433)`
     };
 
     return {
@@ -233,21 +233,21 @@ function generateAiReply(text, forceLang) {
   // Default helpful response in Surati Gujarati, Hindi, or English
   const defaultByLang = {
     gu:
-      `નમસ્તે જી! 🙏 Shruhi Collections, સુરત માં આપનું સ્વાગત છે! ✨\n\n` +
+      `નમસ્તે જી! 🙏 Shruhi Collections માં આપનું સ્વાગત છે! ✨\n\n` +
       `• અમારા બધા 29+ ડિઝાઇનર 3-પીસ સૂટ્સ, કો-ઓર્ડ સેટ્સ અને પ્લસ-સાઈઝ કુર્તીઓ (સાઈઝ S થી 6XL) ની કિંમત MRP ₹850 થી ₹3,550 છે.\n` +
-      `• 4K ફોટા અને પ્રાઈસ સાથે વેબસાઈટ: https://shruhicollections.in\n` +
+      `• 4K ફોટા અને પ્રાઈસ સાથે ઓનલાઇન સ્ટોર: https://shruhicollections.in\n` +
       `• 24/7 WhatsApp AI કેટલોગ: https://wa.me/916355285433 (+91 63552 85433)\n\n` +
       `કોઈપણ ડિઝાઇન કોડ (TEJAL, GALAXY, KAVYA, 1042, B-2876) અથવા સાઈઝ (S થી 6XL) લખીને મોકલો!`,
     hi:
-      `नमस्ते जी! 🙏 Shruhi Collections, सूरत में आपका स्वागत है! ✨\n\n` +
+      `नमस्ते जी! 🙏 Shruhi Collections में आपका स्वागत है! ✨\n\n` +
       `• हमारे सभी 29+ डिज़ाइनर 3-पीस सूट, को-ऑर्ड सेट और प्लस-साइज़ कुर्तियां (साइज़ S से 6XL) MRP ₹850 से ₹3,550 में उपलब्ध हैं।\n` +
       `• सभी 29 4K डिज़ाइन और प्राइस देखें: https://shruhicollections.in\n` +
       `• 24/7 WhatsApp AI कैटलॉग: https://wa.me/916355285433 (+91 63552 85433)\n\n` +
       `कोई भी डिज़ाइन कोड (TEJAL, GALAXY, KAVYA, 1042, B-2876) या साइज़ (S से 6XL) रिप्लाई करें!`,
     en:
-      `Namaste from Shruhi Collections, Surat! ✨\n\n` +
+      `Namaste from Shruhi Collections! ✨\n\n` +
       `• All 29 Designer Suits, Co-ord Sets & Plus-Size Outfits (Sizes S to 6XL) are priced from MRP ₹850 to ₹3,550.\n` +
-      `• Browse all 29 4K outfits with prices: https://shruhicollections.in\n` +
+      `• Browse all 29 4K outfits online: https://shruhicollections.in\n` +
       `• Direct WhatsApp & 24/7 AI Catalog: https://wa.me/916355285433 (+91 63552 85433)\n\n` +
       `Reply with any Design Code (TEJAL, GALAXY, KAVYA, 1042, B-2876), Size (S to 6XL), or type CATALOG to see all 29 prices right here!`
   };
@@ -671,18 +671,65 @@ if (process.argv.includes("--post-all")) {
     }
 
     res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
-    res.end("Shruhi Collections — Algorise AI SURAT PRO TIER Server is LIVE on port " + fbConfig.PORT);
+    res.end("Shruhi Collections — 24/7 Facebook & WhatsApp Pro AI Server is LIVE on port " + fbConfig.PORT);
+  });
+
+  // 24/7 Active Graph API Comment Poller across all 3 Connected Pages (runs every 30s in addition to instant /webhook)
+  const repliedCommentIds = new Set();
+  async function pollAndAutoReplyFacebookComments24x7() {
+    if (!fbConfig.PAGE_ACCESS_TOKEN) return;
+    for (const page of fbConfig.CONNECTED_PAGES) {
+      try {
+        const feedRes = await callGraphApi(`${page.id}/feed?fields=id,comments{id,message,from}`, "GET", {});
+        for (const post of feedRes?.data || []) {
+          for (const c of post?.comments?.data || []) {
+            if (!c.id || repliedCommentIds.has(c.id) || c.from?.id === page.id) continue;
+            repliedCommentIds.add(c.id);
+            shieldTelemetry.commentsScanned += 1;
+            const shieldCheck = shouldTriggerAutoHideShield(c.message || "");
+            if (fbConfig.SUB_005S_SHIELD_ENABLED && shieldCheck.triggered) {
+              await callGraphApi(c.id, "POST", { is_hidden: true });
+              shieldTelemetry.phoneCommentsHidden += 1;
+            }
+            const reply = generateAiReply(c.message || "");
+            const publicReply =
+              `✨ Thank you for your comment! ` +
+              (reply.items?.[0]
+                ? `${reply.items[0].code} (${reply.items[0].name}) is verified MRP ${reply.items[0].priceFormatted} in Sizes ${reply.items[0].sizes.join(", ")}. `
+                : `All 29 4K designs (Sizes S to 6XL, MRP ₹850 – ₹3,550) are live at https://shruhicollections.in. `) +
+              `Order directly with our team 24/7 on WhatsApp +91 63552 85433 (https://wa.me/916355285433)!`;
+            await callGraphApi(`${c.id}/comments`, "POST", { message: publicReply });
+            await callGraphApi("me/messages", "POST", {
+              recipient: { comment_id: c.id },
+              message: { text: reply.text }
+            });
+          }
+        }
+      } catch (_) {}
+    }
+  }
+  setInterval(pollAndAutoReplyFacebookComments24x7, 30000);
+
+  server.on("error", (err) => {
+    if (err.code === "EADDRINUSE") {
+      console.log(`ℹ️ Facebook 24/7 Bot port ${fbConfig.PORT} already active.`);
+    } else {
+      console.error("FB Server error:", err.message);
+    }
   });
 
   server.listen(fbConfig.PORT, () => {
     console.log(`\n========================================================================`);
-    console.log(`👑 SHRUHI COLLECTIONS — ALGORISE AI SURAT PRO TIER LIVE (PORT ${fbConfig.PORT})`);
+    console.log(`👑 SHRUHI COLLECTIONS — 24/7 FACEBOOK AUTO-REPLY BOT LIVE (PORT ${fbConfig.PORT})`);
     console.log(`========================================================================`);
     console.log(`• Plan Tier: ${fbConfig.PLAN_TIER}`);
     console.log(`• Connected Meta Pages: ${fbConfig.CONNECTED_PAGES.length}/3 Active`);
     console.log(`• Unlimited Sub-0.05s Auto-Hide Shield: ACTIVE (0.042s avg latency)`);
     console.log(`• NLP Engine: Surati Gujarati, Hindi & English (All ${CATALOG.length} 4K Products Loaded)`);
     console.log(`• 2-Way Telegram Live Proxy: ${fbConfig.TELEGRAM_BOT_HANDLE} + WhatsApp ${fbConfig.WHATSAPP_DISPLAY}`);
-    console.log(`• All ${fbConfig.HERO_BOTS_INCLUDED} Hero Bots Included: ACTIVE\n`);
+    console.log(`• 24/7 Comment Poller + Webhook: ACTIVE\n`);
   });
+
+  module.exports = { server, fbConfig, generateAiReply, shouldTriggerAutoHideShield, shieldTelemetry };
 }
+

@@ -1,0 +1,33 @@
+name: Shruhi Collections 24/7 Facebook + WhatsApp Auto-AI Cloud Bot
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  facebook-whatsapp-24x7-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Shruhi Collections Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run 24/7 Facebook 3-Page + 100-Group Comment Auto-Reply & WhatsApp (+91 63552 85433) Funnel Sweep
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID || '61586357894191' }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN || '' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN || '8961434797:AAHaPPybfby3G-Mj7WeJEXsAtKPna-uSPnw' }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || '8737013099' }}
+        run: |
+          node facebook-automation/fb-cloud-comment-worker.js
