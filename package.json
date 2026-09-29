@@ -1,0 +1,21 @@
+{
+  "name": "shruhi-collections-24x7-bot",
+  "version": "2.0.0",
+  "description": "Shruhi Collections — Unified 24/7 Cloud WhatsApp (+91 63552 85433) + Facebook 3-Page & 100-Group Comment Auto-Reply Bot",
+  "main": "whatsapp-ai-bot/bot.js",
+  "scripts": {
+    "start": "node whatsapp-ai-bot/bot.js",
+    "fb-bot": "node facebook-automation/fb-cloud-comment-worker.js",
+    "dev": "node whatsapp-ai-bot/bot.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.16",
+    "pino": "^8.21.0",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "author": "Algorise AI — Shruhi Collections",
+  "license": "UNLICENSED"
+}
