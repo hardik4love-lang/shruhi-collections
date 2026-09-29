@@ -43,7 +43,7 @@ let fbConfig = {
   PLAN_TIER: "PRO AI TIER (3 Pages + 100 Groups + Viral Reel Suite)",
   CONNECTED_PAGES: [
     { id: process.env.FB_PAGE_ID || "61586357894191", name: "Shruhi Collections — Official Flagship Boutique", url: "https://www.facebook.com/profile.php?id=61586357894191" },
-    { id: process.env.FB_PAGE_ID_2 || "shruhi_page_2_plussize_couture", name: "Shruhi Curvy & Plus-Size Couture (Sizes 3XL to 6XL)", url: "https://shruhicollections.in/facebook-page.html#automation" },
+    { id: process.env.FB_PAGE_ID_2 || "61586323275145", name: "Shruhi Curvy & Plus-Size Couture (Sizes 3XL to 6XL)", url: "https://www.facebook.com/profile.php?id=61586323275145" },
     { id: process.env.FB_PAGE_ID_3 || "shruhi_page_3_boutique_wholesale", name: "Shruhi Boutique & Set-to-Set Reseller Hub", url: "https://shruhicollections.in/facebook-page.html#automation" }
   ],
   PAGE_ID: process.env.FB_PAGE_ID || "61586357894191",

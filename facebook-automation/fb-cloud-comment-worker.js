@@ -98,26 +98,33 @@ async function run24x7CloudCommentSweep() {
   console.log("☁️ SHRUHI COLLECTIONS — 24/7 CLOUD FACEBOOK + WHATSAPP COMMENT SWEEP");
   console.log("========================================================================");
   console.log(`• Loaded 4K Catalog Products: ${CATALOG.length} (Sizes S to 6XL, MRP ₹850 – ₹3,550)`);
-  console.log(`• Connected Pages: 3 (Flagship 61586357894191 + Curvy 3XL-6XL + Boutique Hub)`);
+  console.log(`• Connected Pages: Page #1 (61586357894191) + Page #2 (61586323275145) + Page #3`);
   console.log(`• Connected Groups: 100 Targeted Groups (4.82M+ Combined Reach)`);
   console.log(`• Lead Destination: WhatsApp +91 63552 85433 & https://shruhicollections.in`);
 
-  const feed = await callGraphGet(`${fbConfig.PAGE_ID}/feed?fields=id,message,comments{id,message,from}`);
+  const pageIds = (fbConfig.CONNECTED_PAGES || [])
+    .map((p) => p.id)
+    .filter((id) => /^\d+$/.test(id || ""));
+  if (!pageIds.length) pageIds.push("61586357894191", "61586323275145");
+
   let repliedCount = 0;
 
-  for (const post of feed?.data || []) {
-    for (const c of post?.comments?.data || []) {
-      if (!c.id || c.from?.id === fbConfig.PAGE_ID) continue;
-      const msg = (c.message || "").toLowerCase();
-      const hasPhone = /(?:\+?91[\s-]?)?[6-9]\d{4}[\s-]?\d{5}|\b\d{10}\b/.test(msg);
-      if (hasPhone) {
-        await callGraphPost(c.id, { is_hidden: true });
+  for (const pid of pageIds) {
+    const feed = await callGraphGet(`${pid}/feed?fields=id,message,comments{id,message,from}`);
+    for (const post of feed?.data || []) {
+      for (const c of post?.comments?.data || []) {
+        if (!c.id || c.from?.id === pid) continue;
+        const msg = (c.message || "").toLowerCase();
+        const hasPhone = /(?:\+?91[\s-]?)?[6-9]\d{4}[\s-]?\d{5}|\b\d{10}\b/.test(msg);
+        if (hasPhone) {
+          await callGraphPost(c.id, { is_hidden: true });
+        }
+        const replyText =
+          `✨ Thank you for commenting on Shruhi Collections! All 29 4K designs (Sizes S to 6XL, MRP ₹850 – ₹3,550) are ready for dispatch. ` +
+          `Click here to chat & order directly with our 24/7 AI + Team on WhatsApp (+91 63552 85433): https://wa.me/916355285433 or shop online at https://shruhicollections.in 🛍️`;
+        await callGraphPost(`${c.id}/comments`, { message: replyText });
+        repliedCount++;
       }
-      const replyText =
-        `✨ Thank you for commenting on Shruhi Collections! All 29 4K designs (Sizes S to 6XL, MRP ₹850 – ₹3,550) are ready for dispatch. ` +
-        `Click here to chat & order directly with our 24/7 AI + Team on WhatsApp (+91 63552 85433): https://wa.me/916355285433 or shop online at https://shruhicollections.in 🛍️`;
-      await callGraphPost(`${c.id}/comments`, { message: replyText });
-      repliedCount++;
     }
   }
 
@@ -128,6 +135,7 @@ async function run24x7CloudCommentSweep() {
     lastSweepAt: new Date().toISOString(),
     whatsappLinked: "+91 63552 85433",
     website: "https://shruhicollections.in",
+    connectedPageIds: pageIds,
     pagesMonitored: 3,
     groupsMonitored: 100,
     viralReelUrl: "https://shruhicollections.in/assets/social/shruhi-viral-sales-reel-2026.mp4",
