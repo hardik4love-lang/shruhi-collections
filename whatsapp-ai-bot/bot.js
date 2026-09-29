@@ -22,6 +22,23 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
+// ─── Silence harmless Baileys stale-session decryption errors ──────────────
+// "Bad MAC", "MessageCounterError", "Key used already or never filled" are
+// just old queued messages encrypted with a previous device session key.
+// They do NOT affect new message handling — the bot still replies perfectly.
+const STALE_SESSION_ERRORS = ["Bad MAC", "MessageCounterError", "Key used already", "Failed to decrypt"];
+process.on("unhandledRejection", (err) => {
+  const msg = String(err?.message || err || "");
+  if (STALE_SESSION_ERRORS.some((e) => msg.includes(e))) return; // silent
+  console.error("[UnhandledRejection]", err?.message || err);
+});
+process.on("uncaughtException", (err) => {
+  const msg = String(err?.message || err || "");
+  if (STALE_SESSION_ERRORS.some((e) => msg.includes(e))) return; // silent
+  console.error("[UncaughtException]", err?.message || err);
+});
+// ───────────────────────────────────────────────────────────────────────────
+
 // Load window.SHRUHI_CATALOG from ../catalog-data.js
 const catalogPath = path.join(__dirname, "..", "catalog-data.js");
 const rawCatalogJs = fs.readFileSync(catalogPath, "utf8");
