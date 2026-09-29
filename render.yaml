@@ -11,5 +11,9 @@ services:
         value: 8095
       - key: FB_PAGE_ID
         value: "61586357894191"
+      - key: FB_PAGE_ID_2
+        value: "61586323275145"
       - key: WHATSAPP_NUMBER
         value: "916355285433"
+      - key: WHATSAPP_NUMBER_2
+        value: "919054241725"

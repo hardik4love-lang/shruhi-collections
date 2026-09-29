@@ -58,7 +58,8 @@ let fbConfig = {
   PORT: Number(process.env.FB_BOT_PORT || 8095),
   PUBLIC_SITE_URL: "https://shruhicollections.in",
   WHATSAPP_NUMBER: "916355285433",
-  WHATSAPP_DISPLAY: "+91 63552 85433"
+  WHATSAPP_NUMBER_2: "919054241725",
+  WHATSAPP_DISPLAY: "+91 63552 85433 & +91 90542 41725"
 };
 if (fs.existsSync(configPath)) {
   try {
@@ -697,7 +698,7 @@ if (process.argv.includes("--post-all")) {
               (reply.items?.[0]
                 ? `${reply.items[0].code} (${reply.items[0].name}) is verified MRP ${reply.items[0].priceFormatted} in Sizes ${reply.items[0].sizes.join(", ")}. `
                 : `All 29 4K designs (Sizes S to 6XL, MRP ₹850 – ₹3,550) are live at https://shruhicollections.in. `) +
-              `Order directly with our team 24/7 on WhatsApp +91 63552 85433 (https://wa.me/916355285433)!`;
+              `Order directly with our team 24/7 on WhatsApp +91 63552 85433 (https://wa.me/916355285433) or +91 90542 41725 (https://wa.me/919054241725)!`;
             await callGraphApi(`${c.id}/comments`, "POST", { message: publicReply });
             await callGraphApi("me/messages", "POST", {
               recipient: { comment_id: c.id },

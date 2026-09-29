@@ -14,7 +14,9 @@ module.exports = {
         WA_BOT_PORT: 8096,
         FB_BOT_PORT: 8095,
         FB_PAGE_ID: "61586357894191",
-        WHATSAPP_NUMBER: "916355285433"
+        FB_PAGE_ID_2: "61586323275145",
+        WHATSAPP_NUMBER: "916355285433",
+        WHATSAPP_NUMBER_2: "919054241725"
       }
     }
   ]

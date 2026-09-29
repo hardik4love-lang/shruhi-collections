@@ -347,10 +347,22 @@ http
   });
 
 // ─── Launch BOTH WhatsApp bots in parallel ────────────────────────────────
-console.log("\n🚀 Starting BOTH WhatsApp Auto-AI bots...\n");
+console.log("\n🚀 Starting BOTH WhatsApp Auto-AI bots (+91 63552 85433 & +91 90542 41725)...\n");
 WA_ACCOUNTS.forEach((account) => {
   startWhatsAppBot(account).catch((err) => {
     console.error(`[${account.number}] Startup error:`, err.message);
-    setTimeout(() => startWhatsAppBot(account), 5000);
+    if (!process.argv.includes("--cloud-sweep")) {
+      setTimeout(() => startWhatsAppBot(account), 5000);
+    }
   });
 });
+
+// When invoked by GitHub Actions 24/7 Cloud Workflow (--cloud-sweep), stay online for 20s to process
+// any queued incoming WhatsApp messages on both numbers + Facebook comments, then exit 0 cleanly.
+if (process.argv.includes("--cloud-sweep")) {
+  setTimeout(() => {
+    console.log("✅ Cloud Dual-WhatsApp (+91 63552 85433 & +91 90542 41725) + Facebook 24/7 Sweep window completed.");
+    process.exit(0);
+  }, 20000);
+}
+

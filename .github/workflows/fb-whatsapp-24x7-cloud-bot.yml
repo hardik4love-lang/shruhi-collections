@@ -25,28 +25,32 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install Dependencies (WhatsApp Baileys + Facebook Bot)
+      - name: Install Dependencies (Dual WhatsApp Baileys + Facebook 24/7 Bot)
         run: npm install --production
 
-      - name: Run 24/7 Facebook 3-Page + 100-Group Comment Auto-Reply & WhatsApp (+91 63552 85433) Funnel Sweep
+      - name: Run 24/7 Facebook 3-Page + 100-Group Comment Auto-Reply & Dual WhatsApp (+91 63552 85433 & +91 90542 41725) Cloud Sweep
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID || '61586357894191' }}
+          FB_PAGE_ID_2: "61586323275145"
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN || '' }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN || '8961434797:AAHaPPybfby3G-Mj7WeJEXsAtKPna-uSPnw' }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || '8737013099' }}
           WHATSAPP_NUMBER: "916355285433"
+          WHATSAPP_NUMBER_2: "919054241725"
           NODE_ENV: production
         run: |
-          echo "========================================================"
-          echo "☁️  SHRUHI COLLECTIONS — 24/7 CLOUD BOT SWEEP (GitHub Actions)"
-          echo "   Facebook: 3 Pages + 100 Groups • WhatsApp: +91 63552 85433"
-          echo "========================================================"
+          echo "========================================================================"
+          echo "☁️  SHRUHI COLLECTIONS — UNIFIED 24/7 CLOUD BOT (FACEBOOK + WHATSAPP)"
+          echo "   Facebook : 3 Pages (61586357894191 & 61586323275145) + 100 Groups"
+          echo "   WhatsApp : +91 63552 85433 & +91 90542 41725 (29-Product 4K Catalog)"
+          echo "========================================================================"
           node facebook-automation/fb-cloud-comment-worker.js
+          node whatsapp-ai-bot/bot.js --cloud-sweep
 
-      - name: Commit Heartbeat Update (if changed)
+      - name: Commit Cloud Heartbeat & WhatsApp Session Updates
         run: |
           git config --global user.email "bot@shruhicollections.in"
           git config --global user.name "Shruhi Collections 24/7 Bot"
-          git add facebook-automation/cloud-24x7-heartbeat.json || true
-          git diff --cached --quiet || git commit -m "⚡ 24/7 Cloud Sweep Heartbeat: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          git add facebook-automation/cloud-24x7-heartbeat.json whatsapp-ai-bot/auth_6355285433 whatsapp-ai-bot/auth_9054241725 || true
+          git diff --cached --quiet || git commit -m "⚡ 24/7 Cloud FB + Dual WhatsApp Sweep Heartbeat: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
           git push || true

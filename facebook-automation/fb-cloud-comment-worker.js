@@ -101,7 +101,7 @@ async function run24x7CloudCommentSweep() {
   console.log(`• Loaded 4K Catalog Products: ${CATALOG.length} (Sizes S to 6XL, MRP ₹850 – ₹3,550)`);
   console.log(`• Connected Pages: Page #1 (61586357894191) + Page #2 (61586323275145) + Page #3`);
   console.log(`• Connected Groups: 100 Targeted Groups (4.82M+ Combined Reach)`);
-  console.log(`• Lead Destination: WhatsApp +91 63552 85433 & https://shruhicollections.in`);
+  console.log(`• Lead Destination: WhatsApp +91 63552 85433 & +91 90542 41725 & https://shruhicollections.in`);
 
   const pageIds = (fbConfig.CONNECTED_PAGES || [])
     .map((p) => p.id)
@@ -132,13 +132,17 @@ async function run24x7CloudCommentSweep() {
   // Update live cloud heartbeat timestamp
   const heartbeatFile = path.join(__dirname, "cloud-24x7-heartbeat.json");
   const heartbeat = {
-    status: "24/7 CLOUD ACTIVE (WHATSAPP + FACEBOOK UNIFIED)",
+    status: "24/7 CLOUD ACTIVE (DUAL WHATSAPP + FACEBOOK UNIFIED)",
     lastSweepAt: new Date().toISOString(),
-    whatsappLinked: "+91 63552 85433",
+    whatsappLinked: "+91 63552 85433 & +91 90542 41725",
+    whatsappNumber: "+91 63552 85433 & +91 90542 41725",
+    whatsappNumbers: ["+91 63552 85433", "+91 90542 41725"],
     website: "https://shruhicollections.in",
     connectedPageIds: pageIds,
     pagesMonitored: 3,
+    facebookPagesMonitored: 3,
     groupsMonitored: 100,
+    marketingGroupsMonitored: 100,
     viralReelUrl: "https://shruhicollections.in/assets/social/shruhi-viral-sales-reel-2026.mp4",
     commentsProcessedInSweep: repliedCount
   };

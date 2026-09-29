@@ -1,14 +1,21 @@
 {
-  "status": "24/7 CLOUD ACTIVE (WHATSAPP + FACEBOOK UNIFIED)",
-  "lastSweepAt": "2026-09-29T17:54:48.116Z",
-  "whatsappLinked": "+91 63552 85433",
+  "status": "24/7 CLOUD ACTIVE (DUAL WHATSAPP + FACEBOOK UNIFIED)",
+  "lastSweepAt": "2026-09-29T20:54:23.678Z",
+  "whatsappLinked": "+91 63552 85433 & +91 90542 41725",
+  "whatsappNumber": "+91 63552 85433 & +91 90542 41725",
+  "whatsappNumbers": [
+    "+91 63552 85433",
+    "+91 90542 41725"
+  ],
   "website": "https://shruhicollections.in",
   "connectedPageIds": [
     "61586357894191",
     "61586323275145"
   ],
   "pagesMonitored": 3,
+  "facebookPagesMonitored": 3,
   "groupsMonitored": 100,
+  "marketingGroupsMonitored": 100,
   "viralReelUrl": "https://shruhicollections.in/assets/social/shruhi-viral-sales-reel-2026.mp4",
   "commentsProcessedInSweep": 0
 }
