@@ -1,8 +1,8 @@
 /**
  * SHRUHI COLLECTIONS — DUAL 24/7 AUTO-AI WHATSAPP BOT
  * ============================================================================
- * Number 1: +91 63552 85433 (Main Business Line — auth_6355285433/)
- * Number 2: +91 90542 41725 (Second Line — auth_9054241725/)
+ * Primary Client Line (#1) : +91 90542 41725 (Official Primary — auth_9054241725/)
+ * Backup Line (#2)         : +91 63552 85433 (Backup Line — auth_6355285433/)
  * Live Status API: http://localhost:8096/api/status
  *
  * Features (BOTH numbers):
@@ -51,13 +51,13 @@ new Function("window", rawCatalogJs)(sandboxWindow);
 const CATALOG = sandboxWindow.SHRUHI_CATALOG || [];
 
 console.log(`\n✅ Loaded ${CATALOG.length} Shruhi Collections 4K products for BOTH WhatsApp bots.`);
-console.log(`   Number 1: +91 63552 85433`);
-console.log(`   Number 2: +91 90542 41725`);
+console.log(`   Primary Client Line (#1): +91 90542 41725`);
+console.log(`   Backup Line (#2)        : +91 63552 85433`);
 
 // ─── Per-number state ──────────────────────────────────────────────────────
 const WA_ACCOUNTS = [
-  { number: "6355285433",  display: "+91 63552 85433", authDir: "auth_6355285433",  qrFile: "qr.html",       port: null },
-  { number: "9054241725",  display: "+91 90542 41725", authDir: "auth_9054241725",  qrFile: "qr2.html",      port: null },
+  { number: "9054241725",  display: "+91 90542 41725 (Primary)", authDir: "auth_9054241725",  qrFile: "qr2.html",      port: null },
+  { number: "6355285433",  display: "+91 63552 85433 (Backup)",  authDir: "auth_6355285433",  qrFile: "qr.html",       port: null },
 ];
 
 // Global shared status
@@ -346,7 +346,7 @@ http
               groupsJoined: 100,
               viralReelActive: true,
               sub005sShieldActive: true,
-              leadRedirect: "WhatsApp +91 63552 85433 & +91 90542 41725 & https://shruhicollections.in",
+              leadRedirect: "Primary WhatsApp +91 90542 41725 (Backup: +91 63552 85433) & https://shruhicollections.in",
               telemetry: fbModule?.shieldTelemetry || { commentsScanned: 0, phoneCommentsHidden: 0 }
             },
             humanTakeoverActiveCount: humanTakeoverChats.size
@@ -366,7 +366,7 @@ http
   });
 
 // ─── Launch BOTH WhatsApp bots in parallel ────────────────────────────────
-console.log("\n🚀 Starting BOTH WhatsApp Auto-AI bots (+91 63552 85433 & +91 90542 41725)...\n");
+console.log("\n🚀 Starting BOTH WhatsApp Auto-AI bots (Primary: +91 90542 41725 | Backup: +91 63552 85433)...\n");
 WA_ACCOUNTS.forEach((account) => {
   startWhatsAppBot(account).catch((err) => {
     console.error(`[${account.number}] Startup error:`, err.message);
@@ -380,7 +380,7 @@ WA_ACCOUNTS.forEach((account) => {
 if (process.argv.includes("--cloud-24x7")) {
   const { execFile } = require("child_process");
   const fbWorkerScript = path.join(__dirname, "..", "facebook-automation", "fb-cloud-comment-worker.js");
-  console.log("☁️ [CLOUD_24X7_DAEMON] Continuous 50-minute live session active for Dual WhatsApp (+91 63552 85433 & +91 90542 41725) + 45s Facebook 3-Page Comment Sweeps.");
+  console.log("☁️ [CLOUD_24X7_DAEMON] Continuous 50-minute live session active for Dual WhatsApp (Primary: +91 90542 41725 | Backup: +91 63552 85433) + 45s Facebook 3-Page Comment Sweeps.");
 
   // Run Facebook 3-Page + 100-Group Comment Auto-Reply sweep every 45 seconds
   setInterval(() => {
@@ -396,7 +396,7 @@ if (process.argv.includes("--cloud-24x7")) {
   }, 50 * 60 * 1000);
 } else if (process.argv.includes("--cloud-sweep")) {
   setTimeout(() => {
-    console.log("✅ Cloud Dual-WhatsApp (+91 63552 85433 & +91 90542 41725) + Facebook 24/7 Sweep window completed.");
+    console.log("✅ Cloud Dual-WhatsApp (Primary: +91 90542 41725 | Backup: +91 63552 85433) + Facebook 24/7 Sweep window completed.");
     process.exit(0);
   }, 20000);
 }

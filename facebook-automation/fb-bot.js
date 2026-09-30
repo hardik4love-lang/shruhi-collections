@@ -3,7 +3,7 @@
  * 100% AUTO-AI FACEBOOK PAGE, SUB-0.05s SHIELD, TRILINGUAL NLP & TELEGRAM PROXY
  * ============================================================================
  * Official Domain: https://shruhicollections.in
- * Official WhatsApp & 24/7 AI Line: +91 63552 85433
+ * Official WhatsApp & 24/7 AI Line : +91 90542 41725 (Primary) | Backup: +91 63552 85433
  * Telegram 2-Way Live Proxy: @Aassqqee_bot
  *
  * SURAT PRO TIER CAPABILITIES ACTIVE:
@@ -57,9 +57,9 @@ let fbConfig = {
   HERO_BOTS_INCLUDED: 100,
   PORT: Number(process.env.FB_BOT_PORT || 8095),
   PUBLIC_SITE_URL: "https://shruhicollections.in",
-  WHATSAPP_NUMBER: "916355285433",
-  WHATSAPP_NUMBER_2: "919054241725",
-  WHATSAPP_DISPLAY: "+91 63552 85433 & +91 90542 41725"
+  WHATSAPP_NUMBER: "919054241725",
+  WHATSAPP_NUMBER_BACKUP: "916355285433",
+  WHATSAPP_DISPLAY: "+91 90542 41725 (Primary) & +91 63552 85433 (Backup)"
 };
 if (fs.existsSync(configPath)) {
   try {
@@ -342,7 +342,7 @@ async function publishAll29ProductsToFacebookPage() {
     `✨ WELCOME TO SHRUHI COLLECTIONS — OFFICIAL 2026 4K LOOKBOOK ✨\n\n` +
     `Explore our complete collection of 29+ Designer 3-Piece Suits, Luxury Co-ord Sets, and Curvy Plus-Size Couture tailored from Size S to 6XL (MRP ₹850 – ₹3,550)!\n\n` +
     `🛍️ Shop Live Website: https://shruhicollections.in\n` +
-    `💬 Official WhatsApp & 24/7 Auto-AI Line: https://wa.me/916355285433 (+91 63552 85433)`;
+    `💬 Official WhatsApp & 24/7 Auto-AI Line: https://wa.me/919054241725 (+91 90542 41725 — Primary)`;
 
   const pinnedRes = await callGraphApi(`${fbConfig.PAGE_ID || "me"}/photos`, "POST", {
     url: pinnedImgUrl,

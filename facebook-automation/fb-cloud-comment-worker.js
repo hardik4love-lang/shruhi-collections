@@ -30,8 +30,8 @@ let fbConfig = {
   PAGE_ACCESS_TOKEN: (process.env.FB_PAGE_ACCESS_TOKEN || "").trim(),
   TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN || "8961434797:AAHaPPybfby3G-Mj7WeJEXsAtKPna-uSPnw",
   TELEGRAM_CHAT_ID: process.env.TELEGRAM_CHAT_ID || "8737013099",
-  WHATSAPP_DISPLAY: "+91 63552 85433",
-  WHATSAPP_DISPLAY_2: "+91 90542 41725",
+  WHATSAPP_DISPLAY: "+91 90542 41725",
+  WHATSAPP_BACKUP: "+91 63552 85433",
   PUBLIC_SITE_URL: "https://shruhicollections.in"
 };
 if (fs.existsSync(configPath)) {
@@ -118,16 +118,14 @@ const VIRAL_REEL_CAPTION =
   `🔥 CODE B-2876 (Burgundy Kashmiri Embroidered Co-ord) — MRP ₹2,250 (3XL to 5XL)\n` +
   `🛍️ CODE 5625 (Navy Botanical Tunic) — MRP ₹850 (M to 2XL)\n\n` +
   `💬 COMMENT "PP" OR "PRICE" BELOW FOR INSTANT DM!\n` +
-  `📲 Direct WhatsApp & 24/7 AI Order Lines:\n` +
-  `   • Line 1: https://wa.me/916355285433 (+91 63552 85433)\n` +
-  `   • Line 2: https://wa.me/919054241725 (+91 90542 41725)\n` +
+  `📲 Direct WhatsApp & 24/7 AI Order: https://wa.me/919054241725 (+91 90542 41725)\n` +
   `🌐 Shop All 29 Verified Designs: https://www.shruhicollections.in\n\n` +
   `#ShruhiCollections #ViralReels2026 #EthnicWearIndia #PlusSizeKurtis #CurvyFashionIndia #3XLto6XL #DesignerSuits`;
 
 const PINNED_LOOKBOOK_CAPTION =
   `✨ WELCOME TO SHRUHI COLLECTIONS — OFFICIAL 2026 4K LOOKBOOK ✨\n\n` +
   `Explore our complete collection of 29 Verified 4K Designer 3-Piece Suits, Luxury Co-ord Sets & Curvy Plus-Size Couture tailored from Size S to 6XL (MRP ₹850 – ₹3,550)!\n\n` +
-  `📲 Order 24/7 on WhatsApp: https://wa.me/916355285433 (+91 63552 85433) | https://wa.me/919054241725 (+91 90542 41725)\n` +
+  `📲 Order 24/7 on WhatsApp: https://wa.me/919054241725 (+91 90542 41725)\n` +
   `🌐 Official Online Store: https://www.shruhicollections.in`;
 
 function buildProductPostCaption(item) {
@@ -140,9 +138,7 @@ function buildProductPostCaption(item) {
     `• Full Set Value: ₹${fullSetPrice} (${item.sizes.length} Pcs)\n` +
     `• Fabric & Craft: ${item.fabric} — ${item.workType}\n\n` +
     `${item.description}\n\n` +
-    `💬 Order 24/7 on WhatsApp:\n` +
-    `   • +91 63552 85433: https://wa.me/916355285433\n` +
-    `   • +91 90542 41725: https://wa.me/919054241725\n` +
+    `💬 Order 24/7 on WhatsApp: https://wa.me/919054241725 (+91 90542 41725)\n` +
     `🌐 Shop Online: https://www.shruhicollections.in\n\n` +
     `#ShruhiCollections #${item.code.replace(/[^A-Za-z0-9]/g, "")} #EthnicWearIndia #DesignerSuits #PlusSizeCouture`
   );
@@ -155,7 +151,7 @@ async function run24x7CloudCommentSweep() {
   console.log(`• Loaded 4K Catalog Products: ${CATALOG.length} (Sizes S to 6XL, MRP ₹850 – ₹3,550)`);
   console.log(`• Connected Pages: Page #1 (61586357894191) + Page #2 (61586323275145) + Page #3 (@shruhi_boutique_reseller_hub)`);
   console.log(`• Connected Groups: 100 Marketing Groups (4.82M+ Combined Reach)`);
-  console.log(`• Lead Destination: WhatsApp +91 63552 85433 & +91 90542 41725 & https://shruhicollections.in`);
+  console.log(`• Primary Lead Destination: WhatsApp +91 90542 41725 (Backup: +91 63552 85433) & https://shruhicollections.in`);
 
   const heartbeatFile = path.join(__dirname, "cloud-24x7-heartbeat.json");
   let prevHeartbeat = {};
@@ -227,7 +223,7 @@ async function run24x7CloudCommentSweep() {
 
         const replyText =
           productHighlight +
-          `Chat & order directly on WhatsApp — Line 1: https://wa.me/916355285433 (+91 63552 85433) | Line 2: https://wa.me/919054241725 (+91 90542 41725) | Shop: https://shruhicollections.in 🛍️`;
+          `Chat & order directly on Official WhatsApp: https://wa.me/919054241725 (+91 90542 41725) | Shop: https://shruhicollections.in 🛍️`;
 
         await callGraphPost(`${c.id}/comments`, { message: replyText });
         await callGraphPost("me/messages", {
@@ -245,9 +241,11 @@ async function run24x7CloudCommentSweep() {
   const heartbeat = {
     status: "24/7 CLOUD ACTIVE (3 FB PAGES + 100 GROUPS + DUAL WHATSAPP UNIFIED)",
     lastSweepAt: new Date().toISOString(),
-    whatsappLinked: "+91 63552 85433 & +91 90542 41725",
-    whatsappNumber: "+91 63552 85433 & +91 90542 41725",
-    whatsappNumbers: ["+91 63552 85433", "+91 90542 41725"],
+    whatsappPrimary: "+91 90542 41725",
+    whatsappBackup: "+91 63552 85433",
+    whatsappLinked: "Primary: +91 90542 41725 | Backup: +91 63552 85433",
+    whatsappNumber: "+91 90542 41725",
+    whatsappNumbers: ["+91 90542 41725", "+91 63552 85433"],
     website: "https://shruhicollections.in",
     connectedPageIds: targetPageIds,
     pagesMonitored: 3,

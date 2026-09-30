@@ -1,11 +1,13 @@
 {
   "status": "24/7 CLOUD ACTIVE (3 FB PAGES + 100 GROUPS + DUAL WHATSAPP UNIFIED)",
-  "lastSweepAt": "2026-09-30T05:59:20.759Z",
-  "whatsappLinked": "+91 63552 85433 & +91 90542 41725",
-  "whatsappNumber": "+91 63552 85433 & +91 90542 41725",
+  "lastSweepAt": "2026-09-30T06:43:51.426Z",
+  "whatsappPrimary": "+91 90542 41725",
+  "whatsappBackup": "+91 63552 85433",
+  "whatsappLinked": "Primary: +91 90542 41725 | Backup: +91 63552 85433",
+  "whatsappNumber": "+91 90542 41725",
   "whatsappNumbers": [
-    "+91 63552 85433",
-    "+91 90542 41725"
+    "+91 90542 41725",
+    "+91 63552 85433"
   ],
   "website": "https://shruhicollections.in",
   "connectedPageIds": [
