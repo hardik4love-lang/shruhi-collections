@@ -101,6 +101,9 @@ function findMatchingProducts(query) {
     const num = parseInt(q, 10);
     if (num >= 1 && num <= CATALOG.length) return [CATALOG[num - 1]];
   }
+  if (q.includes("shirt") || q.includes("mens") || q.includes("men's") || q.includes("linen") || q.includes("lycra") || q.includes("ms-1")) {
+    return CATALOG.filter((c) => c.category === "mens-shirts");
+  }
   if (q.includes("plus") || q.includes("3xl") || q.includes("4xl") || q.includes("5xl") || q.includes("6xl") || q.includes("curvy")) {
     return CATALOG.filter((c) => c.isPlusSize || c.sizes.some((s) => ["3XL", "4XL", "5XL", "6XL"].includes(s)));
   }
@@ -108,7 +111,7 @@ function findMatchingProducts(query) {
     return CATALOG.filter((c) => c.price <= 1600);
   }
   return CATALOG.filter((item) => {
-    const hay = `${item.code} ${item.name} ${item.colorName} ${item.fabric} ${item.price} ${item.sizes.join(" ")}`.toLowerCase();
+    const hay = `${item.code} ${item.name} ${item.colorName} ${item.fabric} ${item.categoryLabel || ""} ${item.price} ${item.sizes.join(" ")}`.toLowerCase();
     return q.split(/\s+/).some((w) => w.length >= 2 && hay.includes(w));
   });
 }

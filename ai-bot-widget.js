@@ -3,8 +3,8 @@
 // 3 Connected Meta Pages, 100 Hero Bots & 2-Way Telegram Live Proxy (@Aassqqee_bot) on +91 63552 85433
 
 (function () {
-  const AI_PHONE = "916355285433";
-  const AI_PHONE_DISPLAY = "+91 63552 85433";
+  const AI_PHONE = "919054241725";
+  const AI_PHONE_DISPLAY = "+91 90542 41725";
   const TELEGRAM_PROXY_BOT = "@Aassqqee_bot";
   const TELEGRAM_PROXY_URL = "https://t.me/Aassqqee_bot";
 
@@ -310,30 +310,30 @@
     <div id="aiChatPane" style="display: flex; flex-direction: column; flex: 1; overflow: hidden;">
       <div class="shruhi-ai-messages" id="aiMessagesBox"></div>
       <div class="ai-quick-chips" id="aiQuickChips">
+        <button type="button" class="ai-q-chip" data-ai-ask="Show Men's Luxury Shirts">👔 Men's Shirts (20)</button>
         <button type="button" class="ai-q-chip" data-ai-ask="Kem cho! 3XL to 6XL ma ketla dress che? Bhav moklo">🇮🇳 ગુજરાતી (Surati)</button>
         <button type="button" class="ai-q-chip" data-ai-ask="Namaste! Plus size 3XL se 6XL ke suits aur rate dikhao">🇮🇳 हिंदी (Hindi)</button>
-        <button type="button" class="ai-q-chip" data-ai-ask="Show all 29 products">📋 All 29 Products</button>
+        <button type="button" class="ai-q-chip" data-ai-ask="Show all 49 products">📋 All 49 Products</button>
         <button type="button" class="ai-q-chip" data-ai-ask="Show Plus Size 3XL to 6XL">👑 Plus Size 3XL–6XL</button>
-        <button type="button" class="ai-q-chip" data-ai-ask="Surat Pro Tier status">🛡️ Surat Pro Status</button>
         <button type="button" class="ai-q-chip" data-ai-ask="Owner jump in">🙋‍♂️ Talk to Owner</button>
       </div>
       <form class="ai-input-bar" id="aiChatForm">
-        <input type="text" id="aiChatInput" placeholder="Ask in ગુજરાતી, हिंदी, or English (e.g. Tejal, 3XL–6XL, bhav)..." autocomplete="off" />
+        <input type="text" id="aiChatInput" placeholder="Ask in ગુજરાતી, हिंदी, or English (e.g. Men's Shirts, MS-101, Tejal, 3XL–6XL)..." autocomplete="off" />
         <button type="submit" class="ai-send-btn">Send</button>
       </form>
     </div>
 
-    <!-- Pane 2: All 29 Products Listed on +91 63552 85433 -->
+    <!-- Pane 2: All 49 Products Listed on +91 90542 41725 -->
     <div id="aiCatalogPane" class="ai-catalog-pane">
       <div style="display: flex; gap: 0.4rem; margin-bottom: 0.35rem;">
-        <input type="search" id="aiCatSearch" placeholder="Filter 29 products on +91 63552 85433..." style="flex: 1; padding: 0.48rem 0.75rem; border-radius: 8px; border: 1px solid #d5c5ca; font-size: 0.78rem;" />
+        <input type="search" id="aiCatSearch" placeholder="Filter 49 products (Women's & Men's Shirts)..." style="flex: 1; padding: 0.48rem 0.75rem; border-radius: 8px; border: 1px solid #d5c5ca; font-size: 0.78rem;" />
       </div>
       <div id="aiCatalogList" style="display: flex; flex-direction: column; gap: 0.5rem;"></div>
     </div>
 
     <div class="ai-handover-footer">
       <span id="aiCartSummary">🛒 AI Order Bag: 0 items</span>
-      <a id="aiSendToWaLink" href="https://wa.me/916355285433?text=Hello%20Shruhi%20Collections%20AI%20Desk%20(%2B91%2063552%2085433)!" target="_blank" rel="noopener" style="background: #25d366; color: #072112; padding: 0.32rem 0.75rem; border-radius: 999px; font-weight: 800;">
+      <a id="aiSendToWaLink" href="https://wa.me/919054241725?text=Hello%20Shruhi%20Collections%20AI%20Desk%20(%2B91%2090542%2041725)!" target="_blank" rel="noopener" style="background: #25d366; color: #072112; padding: 0.32rem 0.75rem; border-radius: 999px; font-weight: 800;">
         Open WhatsApp ${AI_PHONE_DISPLAY} →
       </a>
     </div>
@@ -377,7 +377,7 @@
     const lines = aiCart.map((it, idx) => `${idx + 1}. *${it.code}* (${it.name}) — *${it.priceFormatted}* (${it.qtyInfo})`);
     const text = aiCart.length
       ? `Hello Shruhi Collections (${AI_PHONE_DISPLAY})! ✨\nHere is my AI Concierge Order:\n\n${lines.join("\n")}\n\n*Total MRP: ₹${total.toLocaleString("en-IN")}*\nPlease confirm availability (Owner Jump-In Requested).`
-      : `Hello Shruhi Collections (${AI_PHONE_DISPLAY})! ✨ Please share your 29-design catalog.`;
+      : `Hello Shruhi Collections (${AI_PHONE_DISPLAY})! ✨ Please share your 49-design catalog.`;
     drawer.querySelector("#aiSendToWaLink").href = `https://wa.me/${AI_PHONE}?text=${encodeURIComponent(text)}`;
   }
 
@@ -440,13 +440,22 @@
       return;
     }
 
+    if (q.includes("shirt") || q.includes("mens") || q.includes("men's") || q.includes("linen") || q.includes("lycra") || q.includes("ms-1")) {
+      const matches = catalog.filter((c) => c.category === "mens-shirts");
+      appendBotMessage(`
+        <strong>👔 Men's Luxury Shirt Collection (${matches.length} Series • 80 Studio Plates • Verified MRP ₹999 • Sizes M–2XL):</strong>
+        ${matches.slice(0, 8).map(renderMiniCard).join("")}
+      `);
+      return;
+    }
+
     if (q.includes("surat pro") || q.includes("shield") || q.includes("tier")) {
       appendBotMessage(`
         <strong>👑 Algorise AI — SURAT PRO TIER (₹29,999 / month) Active</strong><br/>
         • <strong>Up to 3 Connected Meta Pages:</strong> Main Boutique (ID: 61586357894191), Plus-Size S–6XL, Wholesale Hub<br/>
         • <strong>Unlimited Sub-0.05s Auto-Hide Shield:</strong> Active (0.018s buyer phone masking)<br/>
         • <strong>Trilingual NLP:</strong> Surati Gujarati (ગુજરાતી), Hindi (हिंदी) &amp; English<br/>
-        • <strong>2-Way Telegram Live Proxy:</strong> <a href="${TELEGRAM_PROXY_URL}" target="_blank" rel="noopener" style="color:#128c7e; font-weight:800;">${TELEGRAM_PROXY_BOT}</a> + WhatsApp ${AI_PHONE_DISPLAY}<br/>
+        • <strong>2-Way Telegram Live Proxy:</strong> <a href="${TELEGRAM_PROXY_URL}" target="_blank" rel="noopener" style="color:#128c7e; font-weight:800;">${TELEGRAM_PROXY_BOT}</a> + Primary WhatsApp ${AI_PHONE_DISPLAY} (Backup: +91 63552 85433)<br/>
         • <strong>All 100 Hero Bots Included:</strong> Active
       `);
       return;
@@ -476,8 +485,8 @@
       appendBotMessage(`
         <strong>🌐 Shruhi Collections — Official Online Storefront &amp; 24/7 AI Concierge</strong><br/>
         Order online 24/7 with Pan-India &amp; Worldwide Express Delivery:<br/>
-        • <strong>24/7 AI &amp; WhatsApp Line:</strong> ${AI_PHONE_DISPLAY}<br/>
-        • <strong>2-Way Telegram Proxy:</strong> ${TELEGRAM_PROXY_BOT}<br/>
+        • <strong>Primary WhatsApp Line:</strong> ${AI_PHONE_DISPLAY}<br/>
+        • <strong>Backup 24/7 AI Line:</strong> +91 63552 85433<br/>
         • <strong>Website:</strong> www.shruhicollections.in
       `);
       return;
@@ -501,7 +510,7 @@
       const matches = catalog.filter((c) => c.price <= 1600);
       appendBotMessage(`
         <strong>✨ Bestsellers Under ₹1,600 (MRP ₹850 – ₹1,550) — ${matches.length} Designs:</strong>
-        ${matches.map(renderMiniCard).join("")}
+        ${matches.slice(0, 8).map(renderMiniCard).join("")}
       `);
       return;
     }
@@ -515,7 +524,7 @@
       return;
     }
 
-    if (q.includes("all") || q.includes("catalog") || q.includes("list") || q.includes("29")) {
+    if (q.includes("all") || q.includes("catalog") || q.includes("list") || q.includes("29") || q.includes("49")) {
       appendBotMessage(`
         <strong>📋 All ${catalog.length} Priced Designs on ${AI_PHONE_DISPLAY} (MRP ₹850 – ₹3,550):</strong><br/>
         Here are our top highlights (or switch to the <strong>"🛍️ All ${catalog.length} Products Listed"</strong> tab above to browse every single one!):
@@ -526,7 +535,7 @@
 
     // Search by code, name, color, size, or price
     const found = catalog.filter((item) => {
-      const hay = `${item.code} ${item.name} ${item.colorName} ${item.fabric} ${item.price} ${item.sizes.join(" ")}`.toLowerCase();
+      const hay = `${item.code} ${item.name} ${item.colorName} ${item.fabric} ${item.categoryLabel || ""} ${item.price} ${item.sizes.join(" ")}`.toLowerCase();
       return q.split(/\s+/).some((word) => word.length >= 2 && hay.includes(word));
     });
 
@@ -542,9 +551,9 @@
       `);
     } else {
       const fallbackByLang = {
-        gu: `<strong>નમસ્તે જી! 🙏 Shruhi Collections (સુરત) Auto-AI માં આપનું સ્વાગત છે!</strong><br/>અમારી પાસે સાઈઝ <strong>S થી 6XL</strong> માં <strong>${catalog.length} 4K ડિઝાઇનર સૂટ્સ (MRP ₹850 – ₹3,550)</strong> હાજર છે.<br/>કોઈપણ ડિઝાઇન કોડ (<em>Tejal, Galaxy, Kavya, 1042, B-2876</em>) અથવા સાઈઝ લખો!`,
-        hi: `<strong>नमस्ते जी! 🙏 Shruhi Collections (सूरत) Auto-AI में आपका स्वागत है!</strong><br/>हमारे पास साइज़ <strong>S से 6XL</strong> में <strong>${catalog.length} 4K डिज़ाइनर सूट (MRP ₹850 – ₹3,550)</strong> उपलब्ध हैं।<br/>कोई भी डिज़ाइन कोड (<em>Tejal, Galaxy, Kavya, 1042, B-2876</em>) या साइज़ लिखें!`,
-        en: `I am your <strong>100% Auto-AI Assistant on ${AI_PHONE_DISPLAY}</strong> (Surat Pro Tier)! ✨<br/>We have <strong>${catalog.length} verified 4K designs</strong> from <strong>₹850 to ₹3,550</strong> in sizes <strong>S to 6XL</strong>.<br/>Ask in <strong>ગુજરાતી, हिंदी, or English</strong> for any design code (<em>Tejal, Galaxy, Kavya, 1042, B-2876</em>) or size!`
+        gu: `<strong>નમસ્તે જી! 🙏 Shruhi Collections (સુરત) Auto-AI માં આપનું સ્વાગત છે!</strong><br/>અમારી પાસે <strong>29 વુમન્સ સૂટ્સ (S થી 6XL)</strong> અને <strong>20 મેન્સ લક્ઝરી શર્ટ્સ (M થી 2XL • ₹999)</strong> સહિત કુલ <strong>${catalog.length} ડિઝાઇન</strong> હાજર છે!`,
+        hi: `<strong>नमस्ते जी! 🙏 Shruhi Collections (सूरत) Auto-AI में आपका स्वागत है!</strong><br/>हमारे पास <strong>29 विमेंस सूट (S से 6XL)</strong> और <strong>20 मेंस लक्ज़री शर्ट्स (M से 2XL • ₹999)</strong> सहित कुल <strong>${catalog.length} डिज़ाइन</strong> उपलब्ध हैं!`,
+        en: `I am your <strong>100% Auto-AI Assistant on ${AI_PHONE_DISPLAY}</strong>! ✨<br/>We have <strong>${catalog.length} verified 4K designs</strong>—including <strong>29 Women's Couture Suits (S to 6XL)</strong> and <strong>20 Men's Luxury Shirts (M to 2XL • MRP ₹999)</strong>.<br/>Ask for any design code (<em>MS-101 to MS-120, Tejal, Galaxy, Kavya, 1042</em>) or size!`
       };
       appendBotMessage(fallbackByLang[lang] || fallbackByLang.en);
     }
