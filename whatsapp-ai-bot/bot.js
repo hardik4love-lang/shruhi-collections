@@ -50,32 +50,23 @@ new Function("window", rawCatalogJs)(sandboxWindow);
 const CATALOG = sandboxWindow.SHRUHI_CATALOG || [];
 
 console.log(`\n✅ Loaded ${CATALOG.length} Shruhi Collections 4K products for 24/7 WhatsApp Auto-AI Bots.`);
-console.log(`   Line #1 (Women's Primary): +91 90542 41725`);
-console.log(`   Line #2 (Men's Shirts)   : +91 88496 01725`);
-console.log(`   Line #3 (Backup AI Line) : +91 63552 85433`);
+console.log(`   Line #1 (Primary 24/7 AI): +91 90542 41725`);
+console.log(`   Line #2 (24/7 AI Line 2) : +91 63552 85433`);
 
 // ─── Per-number configuration ──────────────────────────────────────────────
 const WA_ACCOUNTS = [
   {
     number: "9054241725",
-    display: "+91 90542 41725 (Women's Primary)",
-    role: "Women's Ethnic & Curvy Couture (29 Editions • S–6XL)",
+    display: "+91 90542 41725 (Primary 24/7 Auto-AI)",
+    role: "All 59 Editions (29 Women's Ethnic S–6XL + 30 Men's AI Shirts M–2XL)",
     authDir: "auth_9054241725",
     qrFile: "qr2.html",
     defaultCategory: "all"
   },
   {
-    number: "8849601725",
-    display: "+91 88496 01725 (Men's Luxury Shirts)",
-    role: "Men's Luxury AI-Model Shirts (30 Editions • M–2XL • ₹999)",
-    authDir: "auth_8849601725",
-    qrFile: "qr-8849601725.html",
-    defaultCategory: "mens-shirts"
-  },
-  {
     number: "6355285433",
-    display: "+91 63552 85433 (24/7 AI Backup)",
-    role: "All 59 Editions Backup AI Concierge",
+    display: "+91 63552 85433 (Secondary 24/7 Auto-AI)",
+    role: "All 59 Editions (29 Women's Ethnic S–6XL + 30 Men's AI Shirts M–2XL)",
     authDir: "auth_6355285433",
     qrFile: "qr.html",
     defaultCategory: "all"
@@ -311,6 +302,24 @@ async function startWhatsAppBot(account) {
       fs.writeFileSync(path.join(__dirname, account.qrFile), qrHtml, "utf8");
       writeUnifiedQrFiles();
       logEvent(account.number, "QR_READY", `QR updated for ${account.display} — open http://localhost:${PORT}/qr`);
+
+      // Also auto-save PNG to artifact folder so inline QR image stays fresh
+      try {
+        const https = require("https");
+        const artDir = "C:\\Users\\om\\.gemini\\antigravity\\brain\\429c21df-045e-435b-b4b0-ace6c43f5c0a";
+        if (fs.existsSync(artDir)) {
+          https.get(qrImgUrl, (resp) => {
+            const chunks = [];
+            resp.on("data", (c) => chunks.push(c));
+            resp.on("end", () => {
+              const buf = Buffer.concat(chunks);
+              if (buf.length > 200) {
+                fs.writeFileSync(path.join(artDir, `new_qr_${account.number}.png`), buf);
+              }
+            });
+          }).on("error", () => {});
+        }
+      } catch (_) {}
     }
 
     if (connection === "open") {

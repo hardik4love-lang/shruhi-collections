@@ -1,313 +1,105 @@
 {
   "service": "Shruhi Collections 24/7 Multi-Line WhatsApp Auto-AI Bot",
   "catalog": "59 verified 4K designs (29 Women's Ethnic S–6XL + 30 Men's AI-Model Shirts M–2XL)",
-  "startedAt": "2026-09-30T18:58:54.951Z",
+  "startedAt": "2026-09-30T19:52:51.054Z",
   "accounts": {
-    "8849601725": {
-      "recentEvents": [
-        {
-          "time": "2026-09-30T19:25:07.591Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:24:47.574Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:23:47.527Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:23:42.481Z",
-          "number": "8849601725",
-          "type": "RECONNECTING",
-          "detail": "Retrying in 4s (code 408)..."
-        },
-        {
-          "time": "2026-09-30T19:23:42.481Z",
-          "number": "8849601725",
-          "type": "DISCONNECTED",
-          "detail": "Code: 408 reason: QR refs attempts ended"
-        },
-        {
-          "time": "2026-09-30T19:23:22.469Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:23:02.434Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:22:42.399Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:22:22.372Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:22:02.336Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:21:02.287Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:20:57.192Z",
-          "number": "8849601725",
-          "type": "RECONNECTING",
-          "detail": "Retrying in 4s (code 408)..."
-        },
-        {
-          "time": "2026-09-30T19:20:57.192Z",
-          "number": "8849601725",
-          "type": "DISCONNECTED",
-          "detail": "Code: 408 reason: QR refs attempts ended"
-        },
-        {
-          "time": "2026-09-30T19:20:37.190Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:20:17.155Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:19:57.125Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:19:37.088Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:19:17.071Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:18:17.014Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:18:11.864Z",
-          "number": "8849601725",
-          "type": "RECONNECTING",
-          "detail": "Retrying in 4s (code 408)..."
-        },
-        {
-          "time": "2026-09-30T19:18:11.864Z",
-          "number": "8849601725",
-          "type": "DISCONNECTED",
-          "detail": "Code: 408 reason: QR refs attempts ended"
-        },
-        {
-          "time": "2026-09-30T19:17:51.857Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:17:31.829Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:17:11.796Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:16:51.763Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:16:31.741Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:15:31.682Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        },
-        {
-          "time": "2026-09-30T19:15:26.286Z",
-          "number": "8849601725",
-          "type": "RECONNECTING",
-          "detail": "Retrying in 4s (code 408)..."
-        },
-        {
-          "time": "2026-09-30T19:15:26.286Z",
-          "number": "8849601725",
-          "type": "DISCONNECTED",
-          "detail": "Code: 408 reason: QR refs attempts ended"
-        },
-        {
-          "time": "2026-09-30T19:15:06.275Z",
-          "number": "8849601725",
-          "type": "QR_READY",
-          "detail": "QR updated for +91 88496 01725 (Men's Luxury Shirts) — open http://localhost:8096/qr"
-        }
-      ],
-      "autoRepliesSent": 0,
-      "connection": "awaiting_qr_scan",
-      "linkedAccount": null,
-      "qrRaw": "2@pbYbL7x75p3r9h8PxSBxBN5VOVSf+0K8JhY/Fnnu7BgiQER1O1IOlmehRL+P/0bUnOB1rKrgK8ME+DwAPo2/mI3lWoEDW/iPDQ4=,kq6W3XwZz3Jem9So3ybdL5DZflUZKn9TCwcf1fXBNQM=,FrRoWupcP+Z8UEDgzdGHuWRAqOPlSmfNK/90uQj/1gQ=,7ye/mHwObYfWqUvKRp6V1CmNShrbPzl4qjhuTR84+NY=",
-      "qrImgUrl": "https://api.qrserver.com/v1/create-qr-code/?size=360x360&data=2%40pbYbL7x75p3r9h8PxSBxBN5VOVSf%2B0K8JhY%2FFnnu7BgiQER1O1IOlmehRL%2BP%2F0bUnOB1rKrgK8ME%2BDwAPo2%2FmI3lWoEDW%2FiPDQ4%3D%2Ckq6W3XwZz3Jem9So3ybdL5DZflUZKn9TCwcf1fXBNQM%3D%2CFrRoWupcP%2BZ8UEDgzdGHuWRAqOPlSmfNK%2F90uQj%2F1gQ%3D%2C7ye%2FmHwObYfWqUvKRp6V1CmNShrbPzl4qjhuTR84%2BNY%3D",
-      "qrUpdatedAt": "2026-09-30T19:25:27.597Z"
-    },
     "9054241725": {
       "recentEvents": [
         {
-          "time": "2026-09-30T18:59:20.828Z",
-          "number": "9054241725",
-          "type": "OWNER_JUMP_IN",
-          "detail": "Paused Auto-AI for 240630525636788@lid"
-        },
-        {
-          "time": "2026-09-30T18:59:15.576Z",
-          "number": "9054241725",
-          "type": "OWNER_JUMP_IN",
-          "detail": "Paused Auto-AI for 43830845915210@lid"
-        },
-        {
-          "time": "2026-09-30T18:59:10.144Z",
-          "number": "9054241725",
-          "type": "OWNER_JUMP_IN",
-          "detail": "Paused Auto-AI for 240630525636788@lid"
-        },
-        {
-          "time": "2026-09-30T18:58:58.719Z",
+          "time": "2026-09-30T19:54:28.591Z",
           "number": "9054241725",
           "type": "CONNECTED",
-          "detail": "✅ LIVE on +91 90542 41725 (Women's Primary) ({\"id\":\"919054241725:1@s.whatsapp.net\",\"name\":\"really\",\"lid\":\"101301803343915:1@lid\"})"
+          "detail": "✅ LIVE on +91 90542 41725 (Primary 24/7 Auto-AI) ({\"id\":\"919054241725:2@s.whatsapp.net\",\"name\":\"really\"})"
+        },
+        {
+          "time": "2026-09-30T19:54:21.572Z",
+          "number": "9054241725",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 515)..."
+        },
+        {
+          "time": "2026-09-30T19:54:21.572Z",
+          "number": "9054241725",
+          "type": "DISCONNECTED",
+          "detail": "Code: 515 reason: Stream Errored (restart required)"
+        },
+        {
+          "time": "2026-09-30T19:54:02.700Z",
+          "number": "9054241725",
+          "type": "QR_READY",
+          "detail": "QR updated for +91 90542 41725 (Primary 24/7 Auto-AI) — open http://localhost:8096/qr"
+        },
+        {
+          "time": "2026-09-30T19:53:02.676Z",
+          "number": "9054241725",
+          "type": "QR_READY",
+          "detail": "QR updated for +91 90542 41725 (Primary 24/7 Auto-AI) — open http://localhost:8096/qr"
         }
       ],
       "autoRepliesSent": 0,
       "connection": "open",
       "linkedAccount": {
-        "id": "919054241725:1@s.whatsapp.net",
-        "name": "really",
-        "lid": "101301803343915:1@lid"
+        "id": "919054241725:2@s.whatsapp.net",
+        "name": "really"
       },
       "qrRaw": null,
       "qrImgUrl": null,
-      "qrUpdatedAt": null
+      "qrUpdatedAt": "2026-09-30T19:54:02.681Z"
     },
     "6355285433": {
       "recentEvents": [
         {
-          "time": "2026-09-30T18:59:51.902Z",
-          "number": "6355285433",
-          "type": "OWNER_JUMP_IN",
-          "detail": "Paused Auto-AI for 141600911036551@lid"
-        },
-        {
-          "time": "2026-09-30T18:59:46.971Z",
-          "number": "6355285433",
-          "type": "OWNER_JUMP_IN",
-          "detail": "Paused Auto-AI for 141600911036551@lid"
-        },
-        {
-          "time": "2026-09-30T18:59:41.462Z",
-          "number": "6355285433",
-          "type": "OWNER_JUMP_IN",
-          "detail": "Paused Auto-AI for 141600911036551@lid"
-        },
-        {
-          "time": "2026-09-30T18:59:36.163Z",
-          "number": "6355285433",
-          "type": "OWNER_JUMP_IN",
-          "detail": "Paused Auto-AI for 141600911036551@lid"
-        },
-        {
-          "time": "2026-09-30T18:59:31.267Z",
-          "number": "6355285433",
-          "type": "OWNER_JUMP_IN",
-          "detail": "Paused Auto-AI for 141600911036551@lid"
-        },
-        {
-          "time": "2026-09-30T18:59:26.071Z",
-          "number": "6355285433",
-          "type": "OWNER_JUMP_IN",
-          "detail": "Paused Auto-AI for 193260794441859@lid"
-        },
-        {
-          "time": "2026-09-30T18:59:20.540Z",
-          "number": "6355285433",
-          "type": "OWNER_JUMP_IN",
-          "detail": "Paused Auto-AI for 60250287771803@lid"
-        },
-        {
-          "time": "2026-09-30T18:59:14.772Z",
-          "number": "6355285433",
-          "type": "OWNER_JUMP_IN",
-          "detail": "Paused Auto-AI for 193260794441859@lid"
-        },
-        {
-          "time": "2026-09-30T18:59:13.442Z",
-          "number": "6355285433",
-          "type": "OWNER_JUMP_IN",
-          "detail": "Paused Auto-AI for 141600911036551@lid"
-        },
-        {
-          "time": "2026-09-30T18:59:08.917Z",
-          "number": "6355285433",
-          "type": "OWNER_JUMP_IN",
-          "detail": "Paused Auto-AI for 193260794441859@lid"
-        },
-        {
-          "time": "2026-09-30T18:58:58.987Z",
+          "time": "2026-09-30T19:55:04.701Z",
           "number": "6355285433",
           "type": "CONNECTED",
-          "detail": "✅ LIVE on +91 63552 85433 (24/7 AI Backup) ({\"id\":\"916355285433:20@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:20@lid\"})"
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\"})"
+        },
+        {
+          "time": "2026-09-30T19:54:57.842Z",
+          "number": "6355285433",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 515)..."
+        },
+        {
+          "time": "2026-09-30T19:54:57.841Z",
+          "number": "6355285433",
+          "type": "DISCONNECTED",
+          "detail": "Code: 515 reason: Stream Errored (restart required)"
+        },
+        {
+          "time": "2026-09-30T19:54:42.611Z",
+          "number": "6355285433",
+          "type": "QR_READY",
+          "detail": "QR updated for +91 63552 85433 (Secondary 24/7 Auto-AI) — open http://localhost:8096/qr"
+        },
+        {
+          "time": "2026-09-30T19:54:22.584Z",
+          "number": "6355285433",
+          "type": "QR_READY",
+          "detail": "QR updated for +91 63552 85433 (Secondary 24/7 Auto-AI) — open http://localhost:8096/qr"
+        },
+        {
+          "time": "2026-09-30T19:54:02.549Z",
+          "number": "6355285433",
+          "type": "QR_READY",
+          "detail": "QR updated for +91 63552 85433 (Secondary 24/7 Auto-AI) — open http://localhost:8096/qr"
+        },
+        {
+          "time": "2026-09-30T19:53:02.455Z",
+          "number": "6355285433",
+          "type": "QR_READY",
+          "detail": "QR updated for +91 63552 85433 (Secondary 24/7 Auto-AI) — open http://localhost:8096/qr"
         }
       ],
       "autoRepliesSent": 0,
       "connection": "open",
       "linkedAccount": {
-        "id": "916355285433:20@s.whatsapp.net",
-        "name": "shruhi collection",
-        "lid": "43830845915210:20@lid"
+        "id": "916355285433:22@s.whatsapp.net",
+        "name": "shruhi collection"
       },
       "qrRaw": null,
       "qrImgUrl": null,
-      "qrUpdatedAt": null
+      "qrUpdatedAt": "2026-09-30T19:54:42.596Z"
     }
+  }
+}
