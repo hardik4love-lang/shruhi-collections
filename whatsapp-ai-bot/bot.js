@@ -148,7 +148,11 @@ async function startWhatsAppBot(account) {
     auth: state,
     printQRInTerminal: false,
     logger: pino({ level: "silent" }),
-    browser: ["Shruhi Collections AI", "Chrome", "122.0.0"]
+    browser: ["Shruhi Collections AI", "Chrome", "122.0.0"],
+    generateHighQualityLinkPreview: false,
+    syncFullHistory: false,
+    markOnlineOnConnect: true,
+    getMessage: async () => ({ conversation: "" })
   });
 
   sock.ev.on("creds.update", saveCreds);
@@ -166,8 +170,17 @@ async function startWhatsAppBot(account) {
       console.log(`${"=".repeat(65)}\n`);
       qrcode.generate(qr, { small: true });
 
-      const qrHtml = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="15"><title>Scan QR — Shruhi ${account.display}</title></head><body style="background:#0b141a;color:#fff;font-family:sans-serif;display:grid;place-items:center;min-height:95vh;text-align:center;"><div><h2 style="color:#25d366;">Shruhi Collections — ${account.display} Auto-AI Bot</h2><p>Open WhatsApp on <strong>${account.display}</strong> → <strong>Linked Devices</strong> → <strong>Link a Device</strong> and scan:</p><div style="background:#fff;padding:24px;border-radius:16px;display:inline-block;margin-top:12px;"><img src="https://api.qrserver.com/v1/create-qr-code/?size=340x340&data=${encodeURIComponent(qr)}" width="340" height="340" alt="WhatsApp QR"/></div></div></body></html>`;
+      const qrImgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=340x340&data=${encodeURIComponent(qr)}`;
+      const qrHtml = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="15"><title>Scan QR — Shruhi ${account.display}</title></head><body style="background:#0b141a;color:#fff;font-family:sans-serif;display:grid;place-items:center;min-height:95vh;text-align:center;"><div><h2 style="color:#25d366;">Shruhi Collections — ${account.display} Auto-AI Bot</h2><p>Open WhatsApp on <strong>${account.display}</strong> → <strong>Linked Devices</strong> → <strong>Link a Device</strong> and scan:</p><div style="background:#fff;padding:24px;border-radius:16px;display:inline-block;margin-top:12px;"><img src="${qrImgUrl}" width="340" height="340" alt="WhatsApp QR"/></div></div></body></html>`;
       fs.writeFileSync(path.join(__dirname, account.qrFile), qrHtml, "utf8");
+      // Also write qr-data.json so GitHub Pages connect-wa-primary.html can fetch fresh QR
+      if (account.number === "9054241725") {
+        const qrDataPath = path.join(__dirname, "qr-data.json");
+        fs.writeFileSync(qrDataPath, JSON.stringify({ connected: false, qrUrl: qrImgUrl, updatedAt: new Date().toISOString() }), "utf8");
+        // Copy to GitHub Pages root for public access
+        const publicQrPath = path.join(__dirname, "..", "connect-wa-primary.html");
+        fs.writeFileSync(publicQrPath, qrHtml.replace("</body>", `<p style="margin-top:16px;color:#8696a0;font-size:0.85rem;">Auto-refreshes every 15s &nbsp;|&nbsp; Share: <a href="https://hardik4love-lang.github.io/shruhi-collections/connect-wa-primary.html" style="color:#25d366;">GitHub Pages Link</a></p></body>`), "utf8");
+      }
       logEvent(account.number, "QR_READY", `QR updated for ${account.display} — open whatsapp-ai-bot/${account.qrFile}`);
     }
 
@@ -182,14 +195,25 @@ async function startWhatsAppBot(account) {
 
     if (connection === "close") {
       const code = lastDisconnect?.error?.output?.statusCode;
-      logEvent(account.number, "DISCONNECTED", `Code: ${code} — Reconnecting in 3s...`);
-      if (code !== DisconnectReason.loggedOut) {
-        setTimeout(() => startWhatsAppBot(account), 3000);
+      const reason = lastDisconnect?.error?.message || "";
+      logEvent(account.number, "DISCONNECTED", `Code: ${code} reason: ${reason}`);
+
+      // 401 = loggedOut (manually unlinked from phone) — don't retry
+      if (code === DisconnectReason.loggedOut) {
+        logEvent(account.number, "LOGGED_OUT", "Session revoked on phone. Please re-scan QR.");
+        return;
       }
+
+      // 440 = connectionReplaced — another WhatsApp Web tab is open.
+      // Wait 8s and retry; the other session usually auto-expires.
+      const delay = code === 440 ? 8000 : 4000;
+      logEvent(account.number, "RECONNECTING", `Retrying in ${delay/1000}s (code ${code})...`);
+      setTimeout(() => startWhatsAppBot(account), delay);
     }
   });
 
   // ─── Message handler (live 'notify' + recent 'append' within 10 mins) ───
+
   const processedIncomingIds = new Set();
 
   sock.ev.on("messages.upsert", async ({ messages, type }) => {
