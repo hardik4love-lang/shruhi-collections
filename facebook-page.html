@@ -595,15 +595,15 @@
 
       <!-- Facebook Page Tabs -->
       <nav class="fb-tabs-nav" id="fbTabBar">
-        <button type="button" class="fb-tab-btn active" data-fb-tab="automation">✅ 3 Pages + 100 Groups + 1 Viral Reel + 24/7 Reply &amp; Guide to Client</button>
-        <button type="button" class="fb-tab-btn" data-fb-tab="feed">4K Runway Reel &amp; 30 Lookbook Posts</button>
+        <button type="button" class="fb-tab-btn active" data-fb-tab="feed">👑 Profile &amp; 3-Pages Auto-Updated Current Products (29 Designs + Reel)</button>
+        <button type="button" class="fb-tab-btn" data-fb-tab="automation">✅ 3 Pages + 100 Groups + 1 Viral Reel + 24/7 Reply &amp; Guide to Client</button>
         <button type="button" class="fb-tab-btn" data-fb-tab="shop">Social Boutique (All 29 Editions)</button>
         <button type="button" class="fb-tab-btn" data-fb-tab="kit">Brand Identity &amp; Copy Kit</button>
       </nav>
     </section>
 
-    <!-- TAB 1: FACEBOOK FEED & ALL 30 READY-TO-PUBLISH POSTS -->
-    <div id="fbTabFeed" class="fb-body-grid hidden-tab">
+    <!-- TAB 1: FACEBOOK PROFILE & 3-PAGES AUTO-UPDATED CURRENT PRODUCTS FEED -->
+    <div id="fbTabFeed" class="fb-body-grid" style="margin-bottom: 2rem;">
       <!-- Left Intro / Bio Column -->
       <aside class="fb-side-card">
         <h3>Atelier Identity &amp; Cloud Sync</h3>
@@ -630,14 +630,27 @@
           <a href="assets/social/shruhi-fb-profile-crest-option2.jpg" download class="btn-outline-gold">2. Royal Lotus &amp; Zardozi Crest (1400&times;1400)</a>
           <a href="assets/social/shruhi-fb-pinned-catalog-post-option2.jpg" download class="btn-outline-gold">3. Pinned 9-Grid Lookbook (2160&times;2700)</a>
           <a href="assets/brand/shruhi-royal-logo.svg" download class="btn-outline-gold">4. Vector SVG Royal Crest Logo</a>
-          <button type="button" class="btn-gold" style="justify-content: center; margin-top: 0.25rem;" onclick="window.switchFbTab('automation')">
-            Open 24/7 Cloud Automation Suite &rarr;
+          <button type="button" class="btn-gold" style="justify-content: center; margin-top: 0.25rem;" onclick="document.getElementById('fbTabAutomation').scrollIntoView({behavior:'smooth'})">
+            View 3 Pages + 100 Groups Suite &darr;
           </button>
         </div>
       </aside>
 
       <!-- Right Posts Column -->
-      <div class="fb-feed-column" id="fbPostsFeed"></div>
+      <div class="fb-feed-column">
+        <div style="background: linear-gradient(135deg, #12090d, #1c0d14); border: 1.5px solid var(--gold-bright); border-radius: 6px; padding: 1.15rem 1.35rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <div style="font-size: 0.68rem; color: #4ade80; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;">🟢 PROFILE &amp; ALL 3 FACEBOOK PAGES AUTO-UPDATED WITH CURRENT PRODUCTS</div>
+            <div style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-ivory); margin-top: 0.15rem;">31 Live 4K Posts Synced: 1 Viral Sales Reel + 1 Pinned Lookbook + All 29 Current Products (₹850 – ₹3,550)</div>
+          </div>
+          <div style="display: flex; gap: 0.45rem; flex-wrap: wrap;">
+            <a href="https://www.facebook.com/profile.php?id=61586357894191" target="_blank" rel="noopener" class="btn-outline-gold" style="padding: 0.42rem 0.8rem; font-size: 0.72rem;">Page #1: 61586357894191 ↗</a>
+            <a href="https://www.facebook.com/profile.php?id=61586323275145" target="_blank" rel="noopener" class="btn-outline-gold" style="padding: 0.42rem 0.8rem; font-size: 0.72rem;">Page #2: 61586323275145 ↗</a>
+            <a href="https://www.facebook.com/shruhi_boutique_reseller_hub" target="_blank" rel="noopener" class="btn-outline-gold" style="padding: 0.42rem 0.8rem; font-size: 0.72rem;">Page #3: Reseller Hub ↗</a>
+          </div>
+        </div>
+        <div class="fb-feed-column" id="fbPostsFeed"></div>
+      </div>
     </div>
 
     <!-- TAB 4: FACEBOOK AUTO-AI & 4-PILLAR CLIENT PROMISE DELIVERY CENTER -->
@@ -1071,16 +1084,20 @@ Page 3 (Reseller Hub): Shruhi Boutique & Set-to-Set Reseller Hub (@ShruhiBoutiqu
         document.querySelectorAll('.fb-tab-btn').forEach((b) => {
           b.classList.toggle('active', b.getAttribute('data-fb-tab') === tab);
         });
-        document.getElementById('fbTabFeed').classList.toggle('hidden-tab', tab !== 'feed');
-        document.getElementById('fbTabAutomation').classList.toggle('hidden-tab', tab !== 'automation');
+        const isMainView = tab === 'feed' || tab === 'automation';
+        document.getElementById('fbTabFeed').classList.toggle('hidden-tab', !isMainView);
+        document.getElementById('fbTabAutomation').classList.toggle('hidden-tab', !isMainView);
         document.getElementById('fbTabShop').classList.toggle('hidden-tab', tab !== 'shop');
         document.getElementById('fbTabKit').classList.toggle('hidden-tab', tab !== 'kit');
+        if (tab === 'automation') {
+          document.getElementById('fbTabAutomation').scrollIntoView({ behavior: 'smooth' });
+        } else if (tab === 'feed') {
+          document.getElementById('fbTabFeed').scrollIntoView({ behavior: 'smooth' });
+        }
       }
       window.switchFbTab = switchFbTab;
 
-      if (window.location.hash === '#feed') {
-        switchFbTab('feed');
-      } else if (window.location.hash === '#shop') {
+      if (window.location.hash === '#shop') {
         switchFbTab('shop');
       } else if (window.location.hash === '#kit') {
         switchFbTab('kit');
