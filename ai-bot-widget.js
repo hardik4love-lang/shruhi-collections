@@ -310,7 +310,8 @@
     <div id="aiChatPane" style="display: flex; flex-direction: column; flex: 1; overflow: hidden;">
       <div class="shruhi-ai-messages" id="aiMessagesBox"></div>
       <div class="ai-quick-chips" id="aiQuickChips">
-        <button type="button" class="ai-q-chip" data-ai-ask="Show Men's Luxury Shirts">👔 Men's Shirts (20)</button>
+        <button type="button" class="ai-q-chip" data-ai-ask="Show Payment UPI QR">💳 Payment QR (UPI)</button>
+        <button type="button" class="ai-q-chip" data-ai-ask="Show Men's Luxury Shirts">👔 Men's Shirts (30)</button>
         <button type="button" class="ai-q-chip" data-ai-ask="Kem cho! 3XL to 6XL ma ketla dress che? Bhav moklo">🇮🇳 ગુજરાતી (Surati)</button>
         <button type="button" class="ai-q-chip" data-ai-ask="Namaste! Plus size 3XL se 6XL ke suits aur rate dikhao">🇮🇳 हिंदी (Hindi)</button>
         <button type="button" class="ai-q-chip" data-ai-ask="Show all 59 products">📋 All 59 Products</button>
@@ -479,6 +480,19 @@
         <a href="${handoverUrl}" target="_blank" rel="noopener" style="display:inline-block; margin-top:0.45rem; padding:0.45rem 0.8rem; background:#25d366; color:#072112; border-radius:8px; font-weight:800;">
           💬 Jump In on WhatsApp ${AI_PHONE_DISPLAY} →
         </a>
+      `);
+      return;
+    }
+
+    if (q.includes("pay") || q.includes("upi") || q.includes("qr") || q.includes("gpay") || q.includes("phonepe") || q.includes("scanner")) {
+      appendBotMessage(`
+        <strong>💳 Shruhi Collections — Official UPI Payment QR</strong><br/>
+        <div style="background:#fff; border:1px solid #eadce0; border-radius:10px; padding:0.65rem; margin-top:0.45rem; text-align:center;">
+          <img src="assets/payment-upi-qr.jpg" alt="UPI QR — Purshottam Ramawat" style="width:170px; height:170px; object-fit:contain; border-radius:8px; display:block; margin:0 auto 0.45rem;" />
+          <div style="font-size:0.78rem; color:#230912; font-weight:800;">Purshottam Ramawat</div>
+          <div style="font-size:0.74rem; color:#7a1436; font-weight:700; margin:0.2rem 0 0.45rem;">UPI ID: purshottamramawat27@oksbi</div>
+          <a href="upi://pay?pa=purshottamramawat27@oksbi&pn=Purshottam%20Ramawat&cu=INR" style="display:inline-block; padding:0.35rem 0.75rem; background:#7a1436; color:#fff; border-radius:6px; font-size:0.72rem; font-weight:700; text-decoration:none;">Pay via Any UPI App →</a>
+        </div>
       `);
       return;
     }

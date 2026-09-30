@@ -425,7 +425,7 @@ async function startWhatsAppBot(account) {
         }
         // Only allow fromMe messages to trigger Auto-AI if the user is explicitly testing with a catalog keyword/code
         const isSelfTestKeyword =
-          ["hi", "hello", "hey", "catalog", "menu", "price", "prices", "all", "list", "start", "shop", "shirts", "plus", "kem cho", "bhav", "pp"].includes(clean) ||
+          ["hi", "hello", "hey", "catalog", "menu", "price", "prices", "all", "list", "start", "shop", "shirts", "plus", "kem cho", "bhav", "pp", "pay", "payment", "qr", "upi", "gpay"].includes(clean) ||
           /^(shruhi-)?(ms-1\d{2}|\d{1,2}|10[1-7])$/i.test(clean);
         if (!isSelfTestKeyword) continue;
       }
@@ -453,6 +453,29 @@ async function startWhatsAppBot(account) {
       }
 
       if (
+        ["pay", "payment", "qr", "upi", "gpay", "phonepe", "paytm", "scanner", "account", "bank"].includes(clean) ||
+        clean.includes("payment qr") || clean.includes("upi id") || clean.includes("qr code") || clean.includes("scan to pay")
+      ) {
+        const payQrPath = path.join(__dirname, "..", "assets", "payment-upi-qr.jpg");
+        const payCaption =
+          `💳 *Shruhi Collections — Official UPI Payment QR*\n\n` +
+          `• *Payee Name:* Purshottam Ramawat\n` +
+          `• *UPI ID:* \`purshottamramawat27@oksbi\`\n` +
+          `• *Accepted Apps:* GPay, PhonePe, Paytm, BHIM & All UPI Apps\n\n` +
+          `📸 *Scan the QR code above to pay, then send your Payment Screenshot + Delivery Address & Size here for instant dispatch!*`;
+        if (fs.existsSync(payQrPath)) {
+          const sent = await sock.sendMessage(jid, { image: fs.readFileSync(payQrPath), caption: payCaption });
+          if (sent?.key?.id) botSentMessageIds.add(sent.key.id);
+        } else {
+          const sent = await sock.sendMessage(jid, { text: payCaption });
+          if (sent?.key?.id) botSentMessageIds.add(sent.key.id);
+        }
+        globalStatus.accounts[account.number].autoRepliesSent++;
+        logEvent(account.number, "AUTO_REPLY_PAYMENT_QR", `Sent UPI Payment QR (purshottamramawat27@oksbi) to ${jid}`);
+        continue;
+      }
+
+      if (
         ["hi", "hello", "hey", "catalog", "menu", "price", "prices", "all", "list", "start", "shop", "namaste", "kem cho", "bhav", "pp"].includes(clean) ||
         clean.includes("all product") || clean.includes("catalog") || clean.includes("kem cho")
       ) {
@@ -475,8 +498,9 @@ async function startWhatsAppBot(account) {
             `• *Full Set Value:* ₹${(item.price * item.sizes.length).toLocaleString("en-IN")} (${item.sizes.length} Pcs)\n` +
             `• *Fabric & Work:* ${item.fabric} — ${item.workType}\n` +
             `• *Direct Order Line:* ${orderNum}\n` +
+            `• *Official UPI ID:* purshottamramawat27@oksbi (Purshottam Ramawat)\n` +
             `• *Website:* https://www.shruhicollections.in\n\n` +
-            `🛍️ *Reply with your Size (${item.sizes.join("/")}) & Delivery City to confirm order, or type "OWNER" to speak with our team directly!*`;
+            `🛍️ *Reply "PAY" or "QR" for our UPI Payment Scanner, or reply with your Size (${item.sizes.join("/")}) & Delivery City to confirm order!*`;
 
           if (fs.existsSync(imgPath)) {
             const sent = await sock.sendMessage(jid, { image: fs.readFileSync(imgPath), caption });
@@ -495,6 +519,7 @@ async function startWhatsAppBot(account) {
             `• Reply *CATALOG* to see all *${CATALOG.length} Priced Designs (₹850 – ₹3,550)*\n` +
             `• Reply *SHIRTS* or *MS-101* to *MS-130* for our *30 Men's Luxury AI-Model Shirt Collections (₹999)*\n` +
             `• Reply *PLUS* for Women's Curvy Plus-Size (3XL to 6XL)\n` +
+            `• Reply *PAY* or *QR* for Official UPI Payment QR (\`purshottamramawat27@oksbi\`)\n` +
             `• Reply *OWNER* to pause Auto-AI and speak with our team!\n` +
             `🌐 Shop Online: https://www.shruhicollections.in`
         });
