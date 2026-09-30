@@ -690,7 +690,7 @@
     <span class="runway-kicker">2026 Private Runway Edition • Women's Couture (S–6XL) &amp; Men's Shirts (M–2XL)</span>
     <h2 class="runway-title">Nocturnal Opulence &amp; <em>4K Indian Craftsmanship</em></h2>
     <p class="runway-sub">
-      Experience all 49 Shruhi Collections signature editions (111 studio plates)—including 29 Women's Ethnic &amp; Curvy Couture ensembles and 20 Men's Luxury Shirt series—in an atmospheric dark-velvet gallery.
+      Experience all 59 Shruhi Collections signature editions (148 AI-Model & 4K studio plates)—including 29 Women's Ethnic &amp; Curvy Couture ensembles and 30 Men's Luxury Shirt series—in an atmospheric dark-velvet gallery.
     </p>
 
     <div class="runway-strip" id="runwayStrip"></div>
@@ -715,7 +715,7 @@
         <div class="vertical-cat-list" id="luxeCats">
           <button type="button" class="v-cat-btn active" data-cat="all">
             <span>All Curated Designs</span>
-            <span>49</span>
+            <span>59</span>
           </button>
           <button type="button" class="v-cat-btn" data-cat="mens-shirts">
             <span>Men's Luxury Shirts (₹999)</span>
@@ -767,7 +767,7 @@
     <section>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <h2 style="font-family: var(--font-editorial); font-size: 2.1rem; font-weight: 500;">
-          4K Editorial Plates <span id="luxeCount" style="color: var(--gold-champagne); font-size: 1.1rem;">(49)</span>
+          4K Editorial Plates <span id="luxeCount" style="color: var(--gold-champagne); font-size: 1.1rem;">(59)</span>
         </h2>
       </div>
 
@@ -842,7 +842,8 @@
 
       function waUrl(item) {
         const text = `Hello Shruhi Collections! ✨\nI would like to order / enquire about *${item.code}* (${item.name})\n• MRP: *${item.priceFormatted || ''}* (${item.qtyInfo || ''})\n• Sizes: ${item.sizes.join(', ')}\n• Website: www.shruhicollections.in`;
-        return `https://wa.me/919054241725?text=${encodeURIComponent(text)}`;
+        const targetPhone = item.whatsappPhone || (item.category === 'mens-shirts' ? '918849601725' : '919054241725');
+        return `https://wa.me/${targetPhone}?text=${encodeURIComponent(text)}`;
       }
 
       function render() {

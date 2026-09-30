@@ -9,7 +9,8 @@ const header = "id,title,description,availability,condition,price,link,image_lin
 
 const numbers = [
   { num: "6355285433", display: "+91 63552 85433" },
-  { num: "9054241725", display: "+91 90542 41725" }
+  { num: "9054241725", display: "+91 90542 41725" },
+  { num: "8849601725", display: "+91 88496 01725" }
 ];
 
 for (const n of numbers) {

@@ -1035,9 +1035,9 @@
     <div class="stories-track" id="storyTrack">
       <button type="button" class="story-bubble active" data-story="all">
         <div class="story-ring">
-          <img src="assets/products/styleefik-tejal-ochre-sharara-set.jpg" alt="All 49 Designs" />
+          <img src="assets/products/styleefik-tejal-ochre-sharara-set.jpg" alt="All 59 Designs" />
         </div>
-        <span class="story-label">All 49 Designs</span>
+        <span class="story-label">All 59 Designs</span>
       </button>
 
       <button type="button" class="story-bubble" data-story="mens-shirts">
@@ -1431,6 +1431,7 @@
       });
 
       function buildSingleWa(item, phone = '916355285433') {
+        phone = item.whatsappPhone || (item.category === 'mens-shirts' ? '918849601725' : phone);
         const sz = selectedSizes[item.id] || item.sizes[0];
         const isFullSet = sz.startsWith('Full Set');
         const totalLine = isFullSet

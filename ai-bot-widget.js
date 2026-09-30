@@ -313,7 +313,7 @@
         <button type="button" class="ai-q-chip" data-ai-ask="Show Men's Luxury Shirts">👔 Men's Shirts (20)</button>
         <button type="button" class="ai-q-chip" data-ai-ask="Kem cho! 3XL to 6XL ma ketla dress che? Bhav moklo">🇮🇳 ગુજરાતી (Surati)</button>
         <button type="button" class="ai-q-chip" data-ai-ask="Namaste! Plus size 3XL se 6XL ke suits aur rate dikhao">🇮🇳 हिंदी (Hindi)</button>
-        <button type="button" class="ai-q-chip" data-ai-ask="Show all 49 products">📋 All 49 Products</button>
+        <button type="button" class="ai-q-chip" data-ai-ask="Show all 59 products">📋 All 59 Products</button>
         <button type="button" class="ai-q-chip" data-ai-ask="Show Plus Size 3XL to 6XL">👑 Plus Size 3XL–6XL</button>
         <button type="button" class="ai-q-chip" data-ai-ask="Owner jump in">🙋‍♂️ Talk to Owner</button>
       </div>
@@ -323,10 +323,10 @@
       </form>
     </div>
 
-    <!-- Pane 2: All 49 Products Listed on +91 90542 41725 -->
+    <!-- Pane 2: All 59 Products Listed on +91 90542 41725 -->
     <div id="aiCatalogPane" class="ai-catalog-pane">
       <div style="display: flex; gap: 0.4rem; margin-bottom: 0.35rem;">
-        <input type="search" id="aiCatSearch" placeholder="Filter 49 products (Women's & Men's Shirts)..." style="flex: 1; padding: 0.48rem 0.75rem; border-radius: 8px; border: 1px solid #d5c5ca; font-size: 0.78rem;" />
+        <input type="search" id="aiCatSearch" placeholder="Filter 59 products (Women's & Men's Shirts)..." style="flex: 1; padding: 0.48rem 0.75rem; border-radius: 8px; border: 1px solid #d5c5ca; font-size: 0.78rem;" />
       </div>
       <div id="aiCatalogList" style="display: flex; flex-direction: column; gap: 0.5rem;"></div>
     </div>
@@ -346,7 +346,9 @@
   const catList = drawer.querySelector("#aiCatalogList");
 
   function renderMiniCard(item) {
-    const waUrl = `https://wa.me/${AI_PHONE}?text=${encodeURIComponent(
+    const itemPhone = item.whatsappPhone || (item.category === 'mens-shirts' ? '918849601725' : AI_PHONE);
+    const itemPhoneDisplay = item.category === 'mens-shirts' ? '+91 88496 01725' : AI_PHONE_DISPLAY;
+    const waUrl = `https://wa.me/${itemPhone}?text=${encodeURIComponent(
       `Hello Shruhi Collections (${AI_PHONE_DISPLAY})! ✨\nI want to order:\n• Code: *${item.code}*\n• Outfit: ${item.name}\n• MRP: *${item.priceFormatted}* (${item.qtyInfo})\n• Sizes: ${item.sizes.join(", ")}`
     )}`;
     return `
@@ -361,7 +363,7 @@
           <div style="font-size: 0.68rem; color: #5a4d52;">Sizes: <strong>${item.sizes.join(", ")}</strong> (${item.qtyInfo})</div>
           <div style="display: flex; gap: 0.35rem; margin-top: 0.3rem;">
             <button type="button" data-ai-add="${item.id}" style="padding: 0.2rem 0.5rem; font-size: 0.67rem; font-weight: 800; border-radius: 5px; border: 1px solid #7a1436; background: #fff; color: #7a1436; cursor: pointer;">+ Add</button>
-            <a href="${waUrl}" target="_blank" rel="noopener" style="padding: 0.2rem 0.55rem; font-size: 0.67rem; font-weight: 800; border-radius: 5px; background: #128c7e; color: #fff;">WhatsApp ${AI_PHONE_DISPLAY}</a>
+            <a href="${waUrl}" target="_blank" rel="noopener" style="padding: 0.2rem 0.55rem; font-size: 0.67rem; font-weight: 800; border-radius: 5px; background: #128c7e; color: #fff;">WhatsApp ${itemPhoneDisplay}</a>
           </div>
         </div>
       </div>
@@ -377,7 +379,7 @@
     const lines = aiCart.map((it, idx) => `${idx + 1}. *${it.code}* (${it.name}) — *${it.priceFormatted}* (${it.qtyInfo})`);
     const text = aiCart.length
       ? `Hello Shruhi Collections (${AI_PHONE_DISPLAY})! ✨\nHere is my AI Concierge Order:\n\n${lines.join("\n")}\n\n*Total MRP: ₹${total.toLocaleString("en-IN")}*\nPlease confirm availability (Owner Jump-In Requested).`
-      : `Hello Shruhi Collections (${AI_PHONE_DISPLAY})! ✨ Please share your 49-design catalog.`;
+      : `Hello Shruhi Collections (${AI_PHONE_DISPLAY})! ✨ Please share your 59-design catalog.`;
     drawer.querySelector("#aiSendToWaLink").href = `https://wa.me/${AI_PHONE}?text=${encodeURIComponent(text)}`;
   }
 
@@ -443,7 +445,7 @@
     if (q.includes("shirt") || q.includes("mens") || q.includes("men's") || q.includes("linen") || q.includes("lycra") || q.includes("ms-1")) {
       const matches = catalog.filter((c) => c.category === "mens-shirts");
       appendBotMessage(`
-        <strong>👔 Men's Luxury Shirt Collection (${matches.length} Series • 80 Studio Plates • Verified MRP ₹999 • Sizes M–2XL):</strong>
+        <strong>👔 Men's Luxury Shirt Collection (${matches.length} Series • 117 AI-Model & Studio Plates • Verified MRP ₹999 • Sizes M–2XL):</strong>
         ${matches.slice(0, 8).map(renderMiniCard).join("")}
       `);
       return;
@@ -524,7 +526,7 @@
       return;
     }
 
-    if (q.includes("all") || q.includes("catalog") || q.includes("list") || q.includes("29") || q.includes("49")) {
+    if (q.includes("all") || q.includes("catalog") || q.includes("list") || q.includes("29") || q.includes("49") || q.includes("59")) {
       appendBotMessage(`
         <strong>📋 All ${catalog.length} Priced Designs on ${AI_PHONE_DISPLAY} (MRP ₹850 – ₹3,550):</strong><br/>
         Here are our top highlights (or switch to the <strong>"🛍️ All ${catalog.length} Products Listed"</strong> tab above to browse every single one!):

@@ -118,18 +118,22 @@ const VIRAL_REEL_CAPTION =
   `🔥 CODE B-2876 (Burgundy Kashmiri Embroidered Co-ord) — MRP ₹2,250 (3XL to 5XL)\n` +
   `🛍️ CODE 5625 (Navy Botanical Tunic) — MRP ₹850 (M to 2XL)\n\n` +
   `💬 COMMENT "PP" OR "PRICE" BELOW FOR INSTANT DM!\n` +
-  `📲 Direct WhatsApp & 24/7 AI Order: https://wa.me/919054241725 (+91 90542 41725)\n` +
-  `🌐 Shop All 29 Verified Designs: https://www.shruhicollections.in\n\n` +
-  `#ShruhiCollections #ViralReels2026 #EthnicWearIndia #PlusSizeKurtis #CurvyFashionIndia #3XLto6XL #DesignerSuits`;
+  `📲 Women's Couture WhatsApp (24/7 AI): https://wa.me/919054241725 (+91 90542 41725)\n` +
+  `👔 Men's Luxury Shirts WhatsApp (24/7 AI): https://wa.me/918849601725 (+91 88496 01725)\n` +
+  `🌐 Shop All 59 Verified Designs: https://www.shruhicollections.in\n\n` +
+  `#ShruhiCollections #ViralReels2026 #EthnicWearIndia #PlusSizeKurtis #MensLuxuryShirts #3XLto6XL #DesignerSuits`;
 
 const PINNED_LOOKBOOK_CAPTION =
   `✨ WELCOME TO SHRUHI COLLECTIONS — OFFICIAL 2026 4K LOOKBOOK ✨\n\n` +
-  `Explore our complete collection of 29 Verified 4K Designer 3-Piece Suits, Luxury Co-ord Sets & Curvy Plus-Size Couture tailored from Size S to 6XL (MRP ₹850 – ₹3,550)!\n\n` +
-  `📲 Order 24/7 on WhatsApp: https://wa.me/919054241725 (+91 90542 41725)\n` +
+  `Explore our complete collection of 59 Verified 4K Editions — 29 Women's Designer 3-Piece Suits, Co-ord Sets & Curvy Plus-Size Couture (S to 6XL) + 30 Men's Luxury AI-Model Shirt Collections (M to 2XL, MRP ₹999)!\n\n` +
+  `📲 Women's Couture WhatsApp (24/7): https://wa.me/919054241725 (+91 90542 41725)\n` +
+  `👔 Men's Luxury Shirts WhatsApp (24/7): https://wa.me/918849601725 (+91 88496 01725)\n` +
   `🌐 Official Online Store: https://www.shruhicollections.in`;
 
 function buildProductPostCaption(item) {
   const fullSetPrice = (item.price * item.sizes.length).toLocaleString("en-IN");
+  const waNum = item.category === "mens-shirts" ? "918849601725" : "919054241725";
+  const waDisp = item.category === "mens-shirts" ? "+91 88496 01725" : "+91 90542 41725";
   return (
     `✨ NEW ARRIVAL AT SHRUHI COLLECTIONS — ${item.code} ✨\n\n` +
     `• Outfit: ${item.name}\n` +
@@ -138,9 +142,9 @@ function buildProductPostCaption(item) {
     `• Full Set Value: ₹${fullSetPrice} (${item.sizes.length} Pcs)\n` +
     `• Fabric & Craft: ${item.fabric} — ${item.workType}\n\n` +
     `${item.description}\n\n` +
-    `💬 Order 24/7 on WhatsApp: https://wa.me/919054241725 (+91 90542 41725)\n` +
+    `💬 Order 24/7 on WhatsApp: https://wa.me/${waNum} (${waDisp})\n` +
     `🌐 Shop Online: https://www.shruhicollections.in\n\n` +
-    `#ShruhiCollections #${item.code.replace(/[^A-Za-z0-9]/g, "")} #EthnicWearIndia #DesignerSuits #PlusSizeCouture`
+    `#ShruhiCollections #${item.code.replace(/[^A-Za-z0-9]/g, "")} #EthnicWearIndia #MensLuxuryShirts #PlusSizeCouture`
   );
 }
 
@@ -148,10 +152,10 @@ async function run24x7CloudCommentSweep() {
   console.log("========================================================================");
   console.log("☁️ SHRUHI COLLECTIONS — 24/7 CLOUD PROFILE & 3-PAGE AUTO-UPDATER + BOT");
   console.log("========================================================================");
-  console.log(`• Loaded 4K Catalog Products: ${CATALOG.length} (Sizes S to 6XL, MRP ₹850 – ₹3,550)`);
+  console.log(`• Loaded 4K Catalog Products: ${CATALOG.length} (29 Women's S–6XL + 30 Men's AI-Model Shirts M–2XL)`);
   console.log(`• Connected Pages: Page #1 (61586357894191) + Page #2 (61586323275145) + Page #3 (@shruhi_boutique_reseller_hub)`);
   console.log(`• Connected Groups: 100 Marketing Groups (4.82M+ Combined Reach)`);
-  console.log(`• Primary Lead Destination: WhatsApp +91 90542 41725 (Backup: +91 63552 85433) & https://shruhicollections.in`);
+  console.log(`• Primary Lead Destinations: Women's +91 90542 41725 | Men's Shirts +91 88496 01725 | Backup +91 63552 85433`);
 
   const heartbeatFile = path.join(__dirname, "cloud-24x7-heartbeat.json");
   let prevHeartbeat = {};
