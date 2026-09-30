@@ -11,10 +11,16 @@ on:
 
 permissions:
   contents: write
+  actions: write
+
+concurrency:
+  group: shruhi-24x7-cloud-bot
+  cancel-in-progress: ${{ github.event_name == 'push' }}
 
 jobs:
   facebook-whatsapp-24x7-bot:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     environment: facebook
     steps:
       - name: Checkout Shruhi Collections Repository
@@ -28,7 +34,26 @@ jobs:
       - name: Install Dependencies (Dual WhatsApp Baileys + Facebook 24/7 Bot)
         run: npm install --production
 
-      - name: Run 24/7 Facebook Profile & 3-Page Auto-Updater + Comment Bot & Dual WhatsApp (+91 63552 85433 & +91 90542 41725) Cloud Sweep
+      - name: Initial 24/7 Facebook Profile & 3-Page Auto-Updater Sweep + Heartbeat Sync
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID || '61586357894191' }}
+          FB_PAGE_ID_2: "61586323275145"
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN || '' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN || '8961434797:AAHaPPybfby3G-Mj7WeJEXsAtKPna-uSPnw' }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || '8737013099' }}
+          WHATSAPP_NUMBER: "916355285433"
+          WHATSAPP_NUMBER_2: "919054241725"
+          NODE_ENV: production
+        run: |
+          node facebook-automation/fb-cloud-comment-worker.js
+          git config --global user.email "bot@shruhicollections.in"
+          git config --global user.name "Shruhi Collections 24/7 Bot"
+          git pull origin ${{ github.ref_name }} --rebase || true
+          git add facebook-automation/cloud-24x7-heartbeat.json || true
+          git diff --cached --quiet || git commit -m "⚡ 24/7 Cloud FB + Dual WhatsApp Live Daemon Started: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          git push || true
+
+      - name: Run Continuous 24/7 Live Daemon (Facebook Comment Bot + Dual WhatsApp +91 63552 85433 & +91 90542 41725)
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID || '61586357894191' }}
           FB_PAGE_ID_2: "61586323275145"
@@ -40,19 +65,19 @@ jobs:
           NODE_ENV: production
         run: |
           echo "========================================================================"
-          echo "☁️  SHRUHI COLLECTIONS — UNIFIED 24/7 CLOUD BOT (FACEBOOK + WHATSAPP)"
+          echo "☁️  SHRUHI COLLECTIONS — CONTINUOUS 24/7 LIVE CLOUD DAEMON"
           echo "   Environment : facebook (FB_PAGE_ACCESS_TOKEN active)"
-          echo "   Facebook    : Auto-Update Profile & 3 Pages + 100 Groups + 24/7 Reply"
-          echo "   WhatsApp    : +91 63552 85433 & +91 90542 41725 (29-Product 4K Catalog)"
+          echo "   Facebook    : Auto-Update Profile & 3 Pages + 100 Groups + 24/7 Reply (every 45s)"
+          echo "   WhatsApp    : +91 63552 85433 & +91 90542 41725 (Real-Time Live WebSocket)"
           echo "========================================================================"
-          node facebook-automation/fb-cloud-comment-worker.js
-          node whatsapp-ai-bot/bot.js --cloud-sweep
+          node whatsapp-ai-bot/bot.js --cloud-24x7
 
-      - name: Commit Cloud Heartbeat & WhatsApp Session Updates
+      - name: Save & Push Updated WhatsApp Sessions & Cloud Heartbeat on Cycle Rotation
+        if: always()
         run: |
           git config --global user.email "bot@shruhicollections.in"
           git config --global user.name "Shruhi Collections 24/7 Bot"
           git pull origin ${{ github.ref_name }} --rebase || true
           git add facebook-automation/cloud-24x7-heartbeat.json whatsapp-ai-bot/auth_6355285433 whatsapp-ai-bot/auth_9054241725 || true
-          git diff --cached --quiet || git commit -m "⚡ 24/7 Cloud FB + Dual WhatsApp Sweep Heartbeat: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          git diff --cached --quiet || git commit -m "⚡ 24/7 Cloud FB + Dual WhatsApp Session Sync: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
           git push || true

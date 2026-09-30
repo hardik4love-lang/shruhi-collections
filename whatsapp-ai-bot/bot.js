@@ -189,18 +189,35 @@ async function startWhatsAppBot(account) {
     }
   });
 
-  // ─── Message handler ─────────────────────────────────────────────────────
+  // ─── Message handler (live 'notify' + recent 'append' within 10 mins) ───
+  const processedIncomingIds = new Set();
+
   sock.ev.on("messages.upsert", async ({ messages, type }) => {
-    if (type !== "notify") return;
+    if (type !== "notify" && type !== "append") return;
 
     for (const msg of messages) {
-      const jid = msg.key.remoteJid;
+      const jid = msg.key?.remoteJid;
       if (!jid || jid === "status@broadcast" || jid.endsWith("@g.us")) continue;
+
+      const msgId = msg.key?.id;
+      if (msgId && processedIncomingIds.has(msgId)) continue;
+
+      // For 'append' (history/offline sync on reconnect), only process recent messages (<= 10 mins old)
+      if (type === "append") {
+        const rawTs = msg.messageTimestamp;
+        const tsSec = typeof rawTs === "object" && rawTs !== null ? Number(rawTs.low || rawTs) : Number(rawTs || 0);
+        const ageSec = Math.floor(Date.now() / 1000) - tsSec;
+        if (!tsSec || ageSec < 0 || ageSec > 600) continue;
+      }
+
+      if (msgId) processedIncomingIds.add(msgId);
 
       const text =
         msg.message?.conversation ||
         msg.message?.extendedTextMessage?.text ||
         msg.message?.imageMessage?.caption ||
+        msg.message?.buttonsResponseMessage?.selectedDisplayText ||
+        msg.message?.listResponseMessage?.title ||
         "";
 
       const takeoverKey = `${account.number}::${jid}`;
@@ -214,8 +231,10 @@ async function startWhatsAppBot(account) {
           logEvent(account.number, "AI_RESUMED", `Auto-AI re-enabled for ${jid}`);
           continue;
         }
-        humanTakeoverChats.set(takeoverKey, Date.now());
-        logEvent(account.number, "OWNER_JUMP_IN", `Paused Auto-AI for ${jid}`);
+        if (type === "notify") {
+          humanTakeoverChats.set(takeoverKey, Date.now());
+          logEvent(account.number, "OWNER_JUMP_IN", `Paused Auto-AI for ${jid}`);
+        }
         continue;
       }
 
@@ -230,7 +249,7 @@ async function startWhatsAppBot(account) {
 
       if (!text.trim()) continue;
       const clean = text.trim().toLowerCase();
-      logEvent(account.number, "INCOMING_MSG", `From ${jid}: "${text.slice(0, 80)}"`);
+      logEvent(account.number, "INCOMING_MSG", `From ${jid} (${type}): "${text.slice(0, 80)}"`);
 
       // Owner/human handover request
       if (clean.includes("owner") || clean.includes("human") || clean.includes("call me")) {
@@ -357,9 +376,25 @@ WA_ACCOUNTS.forEach((account) => {
   });
 });
 
-// When invoked by GitHub Actions 24/7 Cloud Workflow (--cloud-sweep), stay online for 20s to process
-// any queued incoming WhatsApp messages on both numbers + Facebook comments, then exit 0 cleanly.
-if (process.argv.includes("--cloud-sweep")) {
+// ─── Cloud Continuous 24/7 Mode (--cloud-24x7) & Quick Sweep (--cloud-sweep) ───
+if (process.argv.includes("--cloud-24x7")) {
+  const { execFile } = require("child_process");
+  const fbWorkerScript = path.join(__dirname, "..", "facebook-automation", "fb-cloud-comment-worker.js");
+  console.log("☁️ [CLOUD_24X7_DAEMON] Continuous 50-minute live session active for Dual WhatsApp (+91 63552 85433 & +91 90542 41725) + 45s Facebook 3-Page Comment Sweeps.");
+
+  // Run Facebook 3-Page + 100-Group Comment Auto-Reply sweep every 45 seconds
+  setInterval(() => {
+    execFile(process.execPath, [fbWorkerScript], { env: process.env }, (err) => {
+      if (err) console.error("[FB_SWEEP_WARN]", err.message);
+    });
+  }, 45000);
+
+  // Rotate cleanly at 50 minutes (3,000,000 ms) so updated session keys are committed & next queued runner takes over seamlessly
+  setTimeout(() => {
+    console.log("✅ 50-Minute Cloud 24/7 Live Cycle completed — saving session state & handing over to next runner.");
+    process.exit(0);
+  }, 50 * 60 * 1000);
+} else if (process.argv.includes("--cloud-sweep")) {
   setTimeout(() => {
     console.log("✅ Cloud Dual-WhatsApp (+91 63552 85433 & +91 90542 41725) + Facebook 24/7 Sweep window completed.");
     process.exit(0);
