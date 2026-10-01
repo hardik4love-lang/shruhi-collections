@@ -75,7 +75,7 @@ def render_clean_pattern_model(model_key, clean_fabric_patch, flip=False):
     """
     Maps a pure fabric patch (free of collars, buttons, clips, and tags)
     naturally across the model's shirt geometry with authentic lighting & creases.
-    ZERO tiling of folded shirts.
+    ZERO tiling of folded shirts. Zero background or trousers color leakage.
     """
     model_im = Image.open(MODEL_FILES[model_key]).convert("RGB")
     W, H = model_im.size
@@ -110,30 +110,6 @@ def render_clean_pattern_model(model_key, clean_fabric_patch, flip=False):
     if flip:
         out_im = ImageOps.mirror(out_im)
     return out_im
-
-def render_color_shifted_model(base_model_im, shirt_mask, target_rgb):
-    """
-    Shifts the shirt color on an existing authentic model wearing the shirt
-    (e.g. MS-105 micro-gingham, MS-113 pinstripes) to generate additional colorways
-    with 100% realistic weave, collar, placket, and buttons preserved.
-    """
-    arr = np.asarray(base_model_im, dtype=np.float32).copy()
-    mask = shirt_mask.copy()
-    if len(mask.shape) == 2:
-        mask = mask[:, :, None]
-
-    shirt_pixels = arr[mask[:, :, 0] > 0.5]
-    if len(shirt_pixels) == 0:
-        return base_model_im
-
-    orig_mean = np.mean(shirt_pixels, axis=0)
-    target = np.array(target_rgb, dtype=np.float32)
-
-    shift = target / np.maximum(orig_mean, 1.0)
-    shifted_shirt = np.clip(arr * shift[None, None, :], 0, 255)
-
-    comp = arr * (1.0 - mask) + shifted_shirt * mask
-    return Image.fromarray(comp.astype(np.uint8))
 
 def render_luxury_plate(
     model_im,
@@ -260,6 +236,57 @@ def render_macro_fabric_plate(src_path, code, title, sub_title):
 
 catalog_gallery_updates = {}
 
+def process_ms102():
+    print("\n--- Processing MS-102: Pastel Brushed Cotton Checks (Zero Artifacts) ---")
+    code = "SHRUHI-MS-102"
+    slug = "ms-102-pastel-flannel-checks"
+    title = "Pastel Brushed Cotton Check Casual Shirt (3-Shade Pack)"
+    sub = "Soft Brushed Twill • Sage, Mauve & Sky Checks"
+    mrp = "MRP ₹999"
+    sizes = "M, L, XL, 2XL (38–44)"
+
+    swatches = [
+        ("Pastel Sage Olive Check", "shirt_164_73b9aca1b.jpg", "ms106", False),
+        ("Pastel Dusty Mauve Check", "shirt_165_73b9aca1c.jpg", "ms108", False),
+        ("Pastel Sky Blue Check", "shirt_166_73b9aca1d.jpg", "ms106", True),
+        ("Pastel Sand Check", "shirt_167_73b9aca1e.jpg", "ms108", True)
+    ]
+
+    gallery = []
+
+    for idx, (c_name, fn, m_key, fl) in enumerate(swatches):
+        src_p = os.path.join(wa_shirts_dir, fn)
+        src_im = Image.open(src_p).convert("RGB")
+        sw, sh = src_im.size
+        # Clean left-chest fabric crop (zero collars, zero buttons, zero tags)
+        clean_patch = src_im.crop((int(sw * 0.18), int(sh * 0.44), int(sw * 0.44), int(sh * 0.76)))
+
+        model_im = render_clean_pattern_model(m_key, clean_patch, flip=fl)
+
+        if idx == 0:
+            hero_plate = render_luxury_plate(model_im, src_p, code, title, f"{sub} • {c_name}", mrp, sizes, is_hero=True)
+            hero_fn = f"{slug}.jpg"
+            hero_plate.save(os.path.join(prod_dir, hero_fn), quality=94, optimize=True)
+            hero_plate.save(os.path.join(prod_dir, f"{code.lower()}.jpg"), quality=94)
+            cat_4k_fn = "33_SHRUHI_MS_102_4K.jpg"
+            hero_plate.save(os.path.join(cat_4k_dir, cat_4k_fn), quality=94)
+            gallery.append(f"assets/products/mens/{hero_fn}")
+
+            # Macro Swatch
+            macro_fn = f"{code.lower()}-macro-swatch.jpg"
+            macro_plate = render_macro_fabric_plate(src_p, code, title, sub)
+            macro_plate.save(os.path.join(prod_dir, macro_fn), quality=92, optimize=True)
+            gallery.append(f"assets/products/mens/{macro_fn}")
+            print(f"  ✓ Saved MS-102 Hero ({c_name}) + Macro Swatch")
+        else:
+            view_plate = render_luxury_plate(model_im, src_p, code, title, f"{c_name} • Color {idx+1} of 4", mrp, sizes, is_hero=False)
+            view_fn = f"{slug}-view-{idx+1}.jpg"
+            view_plate.save(os.path.join(prod_dir, view_fn), quality=93, optimize=True)
+            gallery.append(f"assets/products/mens/{view_fn}")
+            print(f"  ✓ Saved MS-102 Colorway {idx+1}: {c_name} -> {view_fn}")
+
+    catalog_gallery_updates[code] = gallery
+
 def process_ms105():
     print("\n--- Processing MS-105: Executive Micro-Gingham 5-Colour Pack ---")
     code = "SHRUHI-MS-105"
@@ -270,50 +297,43 @@ def process_ms105():
     sizes = "M, L, XL, 2XL (38–44)"
     swatch_p = os.path.join(wa_shirts_dir, "shirt_173_73b9aca24.jpg")
 
-    hero_src = os.path.join(artifact_dir, "ai_model_ms105_1790791571778.jpg")
-    base_hero = Image.open(hero_src).convert("RGB")
-    W, H = base_hero.size
+    im173 = Image.open(swatch_p).convert("RGB")
+    sw, sh = im173.size
 
-    # Shirt mask on ai_model_ms105
-    arr = np.asarray(base_hero, dtype=np.float32)
-    R, G, B = arr[:,:,0], arr[:,:,1], arr[:,:,2]
-    yy, xx = np.mgrid[0:H, 0:W]
-    yn, xn = yy / float(H), xx / float(W)
-    mask = ((yn > 0.34) & (yn < 0.75) & (xn > 0.22) & (xn < 0.78) & (B > R + 5) & (B > G - 5)).astype(np.float32)
-    mask = Image.fromarray((mask * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(1.5))
-    mask_arr = np.asarray(mask, dtype=np.float32) / 255.0
-
-    # 1. Hero Plate (Sky Blue)
-    hero_plate = render_luxury_plate(base_hero, swatch_p, code, title, f"{sub} • Sky Blue Variant", mrp, sizes, is_hero=True)
-    hero_plate.save(os.path.join(prod_dir, f"{slug}.jpg"), quality=94, optimize=True)
-    hero_plate.save(os.path.join(prod_dir, f"{code.lower()}.jpg"), quality=94)
-    cat_4k_fn = "36_SHRUHI_MS_105_4K.jpg"
-    hero_plate.save(os.path.join(cat_4k_dir, cat_4k_fn), quality=94)
-
-    # 2. Macro Swatch Plate
-    macro_plate = render_macro_fabric_plate(swatch_p, code, title, sub)
-    macro_plate.save(os.path.join(prod_dir, f"{code.lower()}-macro-swatch.jpg"), quality=92, optimize=True)
-
-    gallery = [
-        f"assets/products/mens/{slug}.jpg",
-        f"assets/products/mens/{code.lower()}-macro-swatch.jpg"
+    c_crops = [
+        ("Slate Blue Micro-Gingham", 0.16, 0.23, "ms106", False),
+        ("Seafoam Aqua Micro-Gingham", 0.29, 0.36, "ms108", False),
+        ("Dusty Rose Pink Micro-Gingham", 0.42, 0.49, "ms106", True),
+        ("Executive Charcoal Micro-Gingham", 0.54, 0.61, "ms108", True),
+        ("Lavender Taupe Micro-Gingham", 0.68, 0.75, "ms109", False),
     ]
 
-    # Additional 4 colorways in the 5-pack
-    colors = [
-        ("Seafoam Aqua", [135, 178, 168]),
-        ("Dusty Rose Pink", [192, 145, 155]),
-        ("Executive Charcoal", [55, 58, 62]),
-        ("Lavender Taupe", [155, 145, 175])
-    ]
+    gallery = []
 
-    for idx, (c_name, c_rgb) in enumerate(colors):
-        c_model = render_color_shifted_model(base_hero, mask_arr, c_rgb)
-        c_plate = render_luxury_plate(c_model, swatch_p, code, title, f"{c_name} • Color {idx+2} of 5", mrp, sizes, is_hero=False)
-        fn = f"{slug}-view-{idx+2}.jpg"
-        c_plate.save(os.path.join(prod_dir, fn), quality=93, optimize=True)
-        gallery.append(f"assets/products/mens/{fn}")
-        print(f"  ✓ Saved MS-105: {c_name} -> {fn}")
+    for idx, (c_name, y1, y2, m_key, fl) in enumerate(c_crops):
+        clean_patch = im173.crop((int(sw * 0.28), int(sh * y1), int(sw * 0.52), int(sh * y2)))
+        model_im = render_clean_pattern_model(m_key, clean_patch, flip=fl)
+
+        if idx == 0:
+            hero_plate = render_luxury_plate(model_im, swatch_p, code, title, f"{sub} • {c_name}", mrp, sizes, is_hero=True)
+            hero_fn = f"{slug}.jpg"
+            hero_plate.save(os.path.join(prod_dir, hero_fn), quality=94, optimize=True)
+            hero_plate.save(os.path.join(prod_dir, f"{code.lower()}.jpg"), quality=94)
+            cat_4k_fn = "36_SHRUHI_MS_105_4K.jpg"
+            hero_plate.save(os.path.join(cat_4k_dir, cat_4k_fn), quality=94)
+            gallery.append(f"assets/products/mens/{hero_fn}")
+
+            macro_fn = f"{code.lower()}-macro-swatch.jpg"
+            macro_plate = render_macro_fabric_plate(swatch_p, code, title, sub)
+            macro_plate.save(os.path.join(prod_dir, macro_fn), quality=92, optimize=True)
+            gallery.append(f"assets/products/mens/{macro_fn}")
+            print(f"  ✓ Saved MS-105 Hero ({c_name}) + Macro Swatch")
+        else:
+            view_plate = render_luxury_plate(model_im, swatch_p, code, title, f"{c_name} • Color {idx+1} of 5", mrp, sizes, is_hero=False)
+            view_fn = f"{slug}-view-{idx+1}.jpg"
+            view_plate.save(os.path.join(prod_dir, view_fn), quality=93, optimize=True)
+            gallery.append(f"assets/products/mens/{view_fn}")
+            print(f"  ✓ Saved MS-105 Colorway {idx+1}: {c_name} -> {view_fn}")
 
     catalog_gallery_updates[code] = gallery
 
@@ -327,47 +347,41 @@ def process_ms113():
     sizes = "M, L, XL, 2XL (38–44)"
     swatch_p = os.path.join(wa_shirts_dir, "shirt_228_73b9aca5b.jpg")
 
-    hero_src = os.path.join(artifact_dir, "ai_model_ms113_1790792257285.jpg")
-    base_hero = Image.open(hero_src).convert("RGB")
-    W, H = base_hero.size
+    im228 = Image.open(swatch_p).convert("RGB")
+    sw, sh = im228.size
 
-    # Shirt mask on ai_model_ms113
-    arr = np.asarray(base_hero, dtype=np.float32)
-    R, G, B = arr[:,:,0], arr[:,:,1], arr[:,:,2]
-    yy, xx = np.mgrid[0:H, 0:W]
-    yn, xn = yy / float(H), xx / float(W)
-    mask = ((yn > 0.32) & (yn < 0.75) & (xn > 0.20) & (xn < 0.80) & (R > G + 12) & (R > B + 18)).astype(np.float32)
-    mask = Image.fromarray((mask * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(1.5))
-    mask_arr = np.asarray(mask, dtype=np.float32) / 255.0
-
-    # 1. Hero Plate (Dusty Rose Mauve)
-    hero_plate = render_luxury_plate(base_hero, swatch_p, code, title, f"{sub} • Dusty Rose Mauve Variant", mrp, sizes, is_hero=True)
-    hero_plate.save(os.path.join(prod_dir, f"{slug}.jpg"), quality=94, optimize=True)
-    hero_plate.save(os.path.join(prod_dir, f"{code.lower()}.jpg"), quality=94)
-    cat_4k_fn = "44_SHRUHI_MS_113_4K.jpg"
-    hero_plate.save(os.path.join(cat_4k_dir, cat_4k_fn), quality=94)
-
-    # 2. Macro Swatch Plate
-    macro_plate = render_macro_fabric_plate(swatch_p, code, title, sub)
-    macro_plate.save(os.path.join(prod_dir, f"{code.lower()}-macro-swatch.jpg"), quality=92, optimize=True)
-
-    gallery = [
-        f"assets/products/mens/{slug}.jpg",
-        f"assets/products/mens/{code.lower()}-macro-swatch.jpg"
+    c_crops = [
+        ("Slate Navy Pinstripe", (0.08, 0.44, 0.32, 0.80), "ms108", False),
+        ("Dusty Rose Mauve Pinstripe", (0.38, 0.44, 0.62, 0.80), "ms106", False),
+        ("Lavender Sky Pinstripe", (0.68, 0.44, 0.92, 0.80), "ms109", False),
     ]
 
-    colors = [
-        ("Slate Navy Pinstripe", [130, 145, 160]),
-        ("Lavender Sky Pinstripe", [175, 165, 185])
-    ]
+    gallery = []
 
-    for idx, (c_name, c_rgb) in enumerate(colors):
-        c_model = render_color_shifted_model(base_hero, mask_arr, c_rgb)
-        c_plate = render_luxury_plate(c_model, swatch_p, code, title, f"{c_name} • Color {idx+2} of 3", mrp, sizes, is_hero=False)
-        fn = f"{slug}-view-{idx+2}.jpg"
-        c_plate.save(os.path.join(prod_dir, fn), quality=93, optimize=True)
-        gallery.append(f"assets/products/mens/{fn}")
-        print(f"  ✓ Saved MS-113: {c_name} -> {fn}")
+    for idx, (c_name, box, m_key, fl) in enumerate(c_crops):
+        clean_patch = im228.crop((int(sw * box[0]), int(sh * box[1]), int(sw * box[2]), int(sh * box[3])))
+        model_im = render_clean_pattern_model(m_key, clean_patch, flip=fl)
+
+        if idx == 0:
+            hero_plate = render_luxury_plate(model_im, swatch_p, code, title, f"{sub} • {c_name}", mrp, sizes, is_hero=True)
+            hero_fn = f"{slug}.jpg"
+            hero_plate.save(os.path.join(prod_dir, hero_fn), quality=94, optimize=True)
+            hero_plate.save(os.path.join(prod_dir, f"{code.lower()}.jpg"), quality=94)
+            cat_4k_fn = "44_SHRUHI_MS_113_4K.jpg"
+            hero_plate.save(os.path.join(cat_4k_dir, cat_4k_fn), quality=94)
+            gallery.append(f"assets/products/mens/{hero_fn}")
+
+            macro_fn = f"{code.lower()}-macro-swatch.jpg"
+            macro_plate = render_macro_fabric_plate(swatch_p, code, title, sub)
+            macro_plate.save(os.path.join(prod_dir, macro_fn), quality=92, optimize=True)
+            gallery.append(f"assets/products/mens/{macro_fn}")
+            print(f"  ✓ Saved MS-113 Hero ({c_name}) + Macro Swatch")
+        else:
+            view_plate = render_luxury_plate(model_im, swatch_p, code, title, f"{c_name} • Color {idx+1} of 3", mrp, sizes, is_hero=False)
+            view_fn = f"{slug}-view-{idx+1}.jpg"
+            view_plate.save(os.path.join(prod_dir, view_fn), quality=93, optimize=True)
+            gallery.append(f"assets/products/mens/{view_fn}")
+            print(f"  ✓ Saved MS-113 Colorway {idx+1}: {c_name} -> {view_fn}")
 
     catalog_gallery_updates[code] = gallery
 
@@ -400,11 +414,9 @@ def process_ms115():
         # Clean left chest panel crop (NO collars, NO cardboard, NO pins, NO tags)
         clean_patch = src_im.crop((int(sw * 0.16), int(sh * 0.42), int(sw * 0.44), int(sh * 0.74)))
 
-        # Render onto mandarin model ms111
         model_im = render_clean_pattern_model("ms111", clean_patch, flip=(idx % 2 == 1))
 
         if idx == 0:
-            # Hero Plate
             hero_plate = render_luxury_plate(model_im, src_p, code, title, f"{sub} • {p_name}", mrp, sizes, is_hero=True)
             hero_fn = f"{slug}.jpg"
             hero_plate.save(os.path.join(prod_dir, hero_fn), quality=94, optimize=True)
@@ -413,7 +425,6 @@ def process_ms115():
             hero_plate.save(os.path.join(cat_4k_dir, cat_4k_fn), quality=94)
             gallery.append(f"assets/products/mens/{hero_fn}")
 
-            # Macro Swatch
             macro_fn = f"{code.lower()}-macro-swatch.jpg"
             macro_plate = render_macro_fabric_plate(src_p, code, title, sub)
             macro_plate.save(os.path.join(prod_dir, macro_fn), quality=92, optimize=True)
@@ -489,7 +500,6 @@ def process_lookbook_collections():
 
         gallery = []
 
-        # 1. Hero
         hero_im = Image.open(os.path.join(cropped_dir, models[0])).convert("RGB")
         hero_plate = render_luxury_plate(hero_im, swatch_p, code, title, f"{sub} • Design 1", is_hero=True)
         hero_fn = f"{slug}.jpg"
@@ -498,13 +508,11 @@ def process_lookbook_collections():
         hero_plate.save(os.path.join(cat_4k_dir, cat_4k_fn), quality=94)
         gallery.append(f"assets/products/mens/{hero_fn}")
 
-        # 2. Macro Swatch
         macro_fn = f"{code.lower()}-macro-swatch.jpg"
         macro_plate = render_macro_fabric_plate(swatch_p, code, title, sub)
         macro_plate.save(os.path.join(prod_dir, macro_fn), quality=92, optimize=True)
         gallery.append(f"assets/products/mens/{macro_fn}")
 
-        # 3. Views with additional real models
         for idx, m_fn in enumerate(models[1:]):
             m_im = Image.open(os.path.join(cropped_dir, m_fn)).convert("RGB")
             v_plate = render_luxury_plate(m_im, swatch_p, code, title, f"{title} • Colorway {idx+2}", is_hero=False)
@@ -636,7 +644,6 @@ def process_single_garment_resort_prints():
             src_p = os.path.join(s_dir, s_fn)
             src_im = Image.open(src_p).convert("RGB")
             sw, sh = src_im.size
-            # Clean left chest panel crop (NO collars, NO cardboard, NO pins, NO tags)
             clean_patch = src_im.crop((int(sw * 0.18), int(sh * 0.44), int(sw * 0.44), int(sh * 0.76)))
 
             model_im = render_clean_pattern_model(m_key, clean_patch, flip=(idx % 2 == 1))
@@ -649,7 +656,6 @@ def process_single_garment_resort_prints():
                 hero_plate.save(os.path.join(cat_4k_dir, cat_4k_fn), quality=94)
                 gallery.append(f"assets/products/mens/{hero_fn}")
 
-                # Macro Swatch
                 macro_fn = f"{code.lower()}-macro-swatch.jpg"
                 macro_plate = render_macro_fabric_plate(src_p, code, title, sub)
                 macro_plate.save(os.path.join(prod_dir, macro_fn), quality=92, optimize=True)
@@ -664,74 +670,54 @@ def process_single_garment_resort_prints():
         print(f"  ✓ Saved {code} ({len(swatches)} clean pattern plates)")
 
 def process_remaining_checks():
-    print("\n--- Processing Remaining Checks (MS-101, MS-102, MS-104, MS-112, MS-114) ---")
+    print("\n--- Processing Remaining Checks (MS-101, MS-104, MS-112, MS-114) ---")
     chk_specs = [
         {
             "code": "SHRUHI-MS-101",
             "slug": "ms-101-tartan-checks-collection",
             "title": "Wisteria Tartan & Windowpane Check Casual Shirt",
             "sub": "100% Pure Cotton • Half-Sleeve • 12 Colourways",
-            "hero_src": os.path.join(artifact_dir, "ai_model_ms101_1790791533297.jpg"),
-            "swatch": os.path.join(wa_shirts_dir, "shirt_152_73b9aca0f.jpg"),
+            "swatches": [
+                ("Wisteria Lilac Tartan", "shirt_152_73b9aca0f.jpg", "ms108", False),
+                ("Classic Navy Tartan", "shirt_151_73b9aca0e.jpg", "ms106", False),
+                ("Forest Green Tartan", "shirt_163_73b9aca1a.jpg", "ms108", True),
+                ("Burgundy Crimson Tartan", "shirt_155_73b9aca12.jpg", "ms106", True),
+                ("Golden Ochre Tartan", "shirt_157_73b9aca14.jpg", "ms108", False),
+            ],
             "cat_4k": "32_SHRUHI_MS_101_4K.jpg",
-            "colors": [
-                ("Navy Tartan", [30, 45, 75]),
-                ("Forest Green Tartan", [45, 80, 55]),
-                ("Burgundy Tartan", [105, 35, 45]),
-                ("Amber Ochre Tartan", [185, 140, 50])
-            ]
-        },
-        {
-            "code": "SHRUHI-MS-102",
-            "slug": "ms-102-pastel-flannel-checks",
-            "title": "Pastel Brushed Cotton Check Casual Shirt (3-Shade Pack)",
-            "sub": "Soft Brushed Twill • Sage, Mauve & Sky Checks",
-            "hero_src": os.path.join(artifact_dir, "ai_model_ms102_1790791547015.jpg"),
-            "swatch": os.path.join(wa_shirts_dir, "shirt_164_73b9aca1b.jpg"),
-            "cat_4k": "33_SHRUHI_MS_102_4K.jpg",
-            "colors": [
-                ("Pastel Mauve Pink Check", [185, 150, 160]),
-                ("Pastel Sky Blue Check", [140, 165, 185])
-            ]
         },
         {
             "code": "SHRUHI-MS-104",
             "slug": "ms-104-vintage-madras-check-trio",
             "title": "Vintage Madras & Windowpane Check Shirt Trio",
             "sub": "Pure Combed Cotton • 6 Heritage Check Shades",
-            "hero_src": os.path.join(artifact_dir, "ai_model_ms104_1790791560111.jpg"),
-            "swatch": os.path.join(wa_shirts_dir, "shirt_174_73b9aca25.jpg"),
+            "swatches": [
+                ("Vintage Madras Windowpane", "shirt_174_73b9aca25.jpg", "ms108", False),
+                ("Olive Heritage Check", "shirt_172_73b9aca23.jpg", "ms106", False),
+            ],
             "cat_4k": "35_SHRUHI_MS_104_4K.jpg",
-            "colors": [
-                ("Olive Heritage Check", [120, 135, 115]),
-                ("Amber Rust Check", [185, 140, 75])
-            ]
         },
         {
             "code": "SHRUHI-MS-112",
             "slug": "ms-112-dno301-graph-check-executive-trio",
             "title": "D.No 301 Executive Graph-Check Shirt (Half & Full Sleeve)",
             "sub": "Available in H/S & F/S • Cream, Ice Blue & Blush Pink",
-            "hero_src": os.path.join(artifact_dir, "ai_model_ms112_1790792244503.jpg"),
-            "swatch": os.path.join(wa_shirts_dir, "shirt_225_73b9aca58.jpg"),
+            "swatches": [
+                ("Executive Cream Graph-Check", "shirt_225_73b9aca58.jpg", "ms106", False),
+            ],
             "cat_4k": "43_SHRUHI_MS_112_4K.jpg",
-            "colors": [
-                ("Ice Blue Graph-Check", [145, 175, 195]),
-                ("Blush Pink Graph-Check", [195, 165, 170])
-            ]
         },
         {
             "code": "SHRUHI-MS-114",
             "slug": "ms-114-monochrome-overcheck-shirt",
             "title": "Monochrome Ivory & Charcoal Overcheck Casual Shirt",
             "sub": "Crisp Woven Cotton • 3-Tone Overcheck Series",
-            "hero_src": os.path.join(artifact_dir, "ai_model_ms114_1790792272439.jpg"),
-            "swatch": os.path.join(wa_shirts_dir, "shirt_237_73b9aca64.jpg"),
+            "swatches": [
+                ("Ivory Charcoal Overcheck", "shirt_237_73b9aca64.jpg", "ms108", False),
+                ("Charcoal Black Overcheck", "shirt_234_73b9aca61.jpg", "ms106", False),
+                ("Slate Grey Overcheck", "shirt_235_73b9aca62.jpg", "ms108", True),
+            ],
             "cat_4k": "45_SHRUHI_MS_114_4K.jpg",
-            "colors": [
-                ("Charcoal Black Overcheck", [50, 52, 55]),
-                ("Slate Grey Overcheck", [140, 145, 150])
-            ]
         }
     ]
 
@@ -740,50 +726,42 @@ def process_remaining_checks():
         slug = spec["slug"]
         title = spec["title"]
         sub = spec["sub"]
-        hero_src = spec["hero_src"]
-        swatch_p = spec["swatch"]
+        swatches = spec["swatches"]
         cat_4k_fn = spec["cat_4k"]
-        colors = spec["colors"]
-
-        base_hero = Image.open(hero_src).convert("RGB")
-        W, H = base_hero.size
-
-        # Generic shirt mask heuristic on chest
-        arr = np.asarray(base_hero, dtype=np.float32)
-        yy, xx = np.mgrid[0:H, 0:W]
-        yn, xn = yy / float(H), xx / float(W)
-        mask = ((yn > 0.30) & (yn < 0.75) & (xn > 0.20) & (xn < 0.80)).astype(np.float32)
-        mask = Image.fromarray((mask * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(1.5))
-        mask_arr = np.asarray(mask, dtype=np.float32) / 255.0
 
         gallery = []
 
-        # 1. Hero
-        hero_plate = render_luxury_plate(base_hero, swatch_p, code, title, f"{sub} • Signature Edition", is_hero=True)
-        hero_fn = f"{slug}.jpg"
-        hero_plate.save(os.path.join(prod_dir, hero_fn), quality=94, optimize=True)
-        hero_plate.save(os.path.join(prod_dir, f"{code.lower()}.jpg"), quality=94)
-        hero_plate.save(os.path.join(cat_4k_dir, cat_4k_fn), quality=94)
-        gallery.append(f"assets/products/mens/{hero_fn}")
+        for idx, (c_name, fn, m_key, fl) in enumerate(swatches):
+            src_p = os.path.join(wa_shirts_dir, fn)
+            src_im = Image.open(src_p).convert("RGB")
+            sw, sh = src_im.size
+            clean_patch = src_im.crop((int(sw * 0.18), int(sh * 0.44), int(sw * 0.44), int(sh * 0.76)))
 
-        # 2. Macro Swatch
-        macro_fn = f"{code.lower()}-macro-swatch.jpg"
-        macro_plate = render_macro_fabric_plate(swatch_p, code, title, sub)
-        macro_plate.save(os.path.join(prod_dir, macro_fn), quality=92, optimize=True)
-        gallery.append(f"assets/products/mens/{macro_fn}")
+            model_im = render_clean_pattern_model(m_key, clean_patch, flip=fl)
 
-        # 3. Clean colorway views
-        for idx, (c_name, c_rgb) in enumerate(colors):
-            c_model = render_color_shifted_model(base_hero, mask_arr, c_rgb)
-            v_plate = render_luxury_plate(c_model, swatch_p, code, title, f"{title} • {c_name}", is_hero=False)
-            v_fn = f"{slug}-view-{idx+2}.jpg"
-            v_plate.save(os.path.join(prod_dir, v_fn), quality=93, optimize=True)
-            gallery.append(f"assets/products/mens/{v_fn}")
+            if idx == 0:
+                hero_plate = render_luxury_plate(model_im, src_p, code, title, f"{sub} • {c_name}", is_hero=True)
+                hero_fn = f"{slug}.jpg"
+                hero_plate.save(os.path.join(prod_dir, hero_fn), quality=94, optimize=True)
+                hero_plate.save(os.path.join(prod_dir, f"{code.lower()}.jpg"), quality=94)
+                hero_plate.save(os.path.join(cat_4k_dir, cat_4k_fn), quality=94)
+                gallery.append(f"assets/products/mens/{hero_fn}")
+
+                macro_fn = f"{code.lower()}-macro-swatch.jpg"
+                macro_plate = render_macro_fabric_plate(src_p, code, title, sub)
+                macro_plate.save(os.path.join(prod_dir, macro_fn), quality=92, optimize=True)
+                gallery.append(f"assets/products/mens/{macro_fn}")
+            else:
+                v_plate = render_luxury_plate(model_im, src_p, code, title, f"{title} • {c_name}", is_hero=False)
+                v_fn = f"{slug}-view-{idx+1}.jpg"
+                v_plate.save(os.path.join(prod_dir, v_fn), quality=93, optimize=True)
+                gallery.append(f"assets/products/mens/{v_fn}")
 
         catalog_gallery_updates[code] = gallery
-        print(f"  ✓ Saved {code} ({len(colors) + 1} clean check plates)")
+        print(f"  ✓ Saved {code} ({len(swatches)} clean check plates)")
 
 if __name__ == "__main__":
+    process_ms102()
     process_ms105()
     process_ms113()
     process_ms115()
@@ -794,5 +772,4 @@ if __name__ == "__main__":
     # Save gallery updates manifest
     with open(os.path.join(base_dir, "scratch", "clean_galleries_manifest.json"), "w", encoding="utf-8") as f:
         json.dump(catalog_gallery_updates, f, indent=2)
-    print("\n🎉 ALL NON-SOLID COLLECTIONS REGENERATED CLEANLY! Zero tiling, zero collar bands!")
-
+    print("\n🎉 ALL NON-SOLID COLLECTIONS REGENERATED WITH ZERO BOXES, ZERO COLLAR BANDS, ZERO TILING ARTIFACTS!")

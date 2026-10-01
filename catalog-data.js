@@ -1111,7 +1111,8 @@ window.SHRUHI_CATALOG = [
       "assets/products/mens/ms-102-pastel-flannel-checks.jpg",
       "assets/products/mens/shruhi-ms-102-macro-swatch.jpg",
       "assets/products/mens/ms-102-pastel-flannel-checks-view-2.jpg",
-      "assets/products/mens/ms-102-pastel-flannel-checks-view-3.jpg"
+      "assets/products/mens/ms-102-pastel-flannel-checks-view-3.jpg",
+      "assets/products/mens/ms-102-pastel-flannel-checks-view-4.jpg"
     ]
   },
   {
@@ -1207,8 +1208,7 @@ window.SHRUHI_CATALOG = [
     "gallery": [
       "assets/products/mens/ms-104-vintage-madras-check-trio.jpg",
       "assets/products/mens/shruhi-ms-104-macro-swatch.jpg",
-      "assets/products/mens/ms-104-vintage-madras-check-trio-view-2.jpg",
-      "assets/products/mens/ms-104-vintage-madras-check-trio-view-3.jpg"
+      "assets/products/mens/ms-104-vintage-madras-check-trio-view-2.jpg"
     ]
   },
   {
@@ -1587,9 +1587,7 @@ window.SHRUHI_CATALOG = [
     "image": "assets/products/mens/shruhi-ms-112.jpg",
     "gallery": [
       "assets/products/mens/ms-112-dno301-graph-check-executive-trio.jpg",
-      "assets/products/mens/shruhi-ms-112-macro-swatch.jpg",
-      "assets/products/mens/ms-112-dno301-graph-check-executive-trio-view-2.jpg",
-      "assets/products/mens/ms-112-dno301-graph-check-executive-trio-view-3.jpg"
+      "assets/products/mens/shruhi-ms-112-macro-swatch.jpg"
     ]
   },
   {
