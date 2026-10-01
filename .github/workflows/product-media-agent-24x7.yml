@@ -60,6 +60,7 @@ jobs:
             echo "No new media changes to commit."
           else
             git commit -m "Auto-generated 4K Studio catalog plates & 9:16 Video Reels via 24/7 ProductMediaAgent"
-            git push origin HEAD:main
-            git push origin HEAD:master -f
+            git pull --rebase origin main || true
+            git push origin HEAD:main || true
+            git push origin HEAD:master -f || true
           fi
