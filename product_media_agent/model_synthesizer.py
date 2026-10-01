@@ -214,17 +214,14 @@ def synthesize_model_wearing_garment(garment_img_or_path, model_pose="athletic_t
     x_min, x_max = xs.min(), xs.max()
     sw, sh = x_max - x_min + 1, y_max - y_min + 1
 
-    tile = extract_clean_fabric_tile(garment_im)
-    tw = max(120, int(sw / scale))
-    th = max(120, int(sh / scale))
-    tile_resized = tile.resize((tw, th), Image.Resampling.LANCZOS)
+    # Clean left-chest fabric extraction (guarantees NO folded collars, NO buttons, NO packaging pins/tags)
+    clean_patch = garment_im.crop((int(w * 0.18), int(h * 0.44), int(w * 0.44), int(h * 0.76)))
+    fab_fitted = ImageOps.fit(clean_patch, (sw, sh), method=Image.Resampling.LANCZOS)
 
-    tiled_full = Image.new("RGB", (W, H))
-    for ty in range(0, H, th):
-        for tx in range(0, W, tw):
-            tiled_full.paste(tile_resized, (tx, ty))
+    canvas_fab = Image.new("RGB", (W, H))
+    canvas_fab.paste(fab_fitted, (x_min, y_min))
 
-    fab_arr = np.asarray(tiled_full, dtype=np.float32)
+    fab_arr = np.asarray(canvas_fab, dtype=np.float32)
     shaded_fab = np.clip(fab_arr * shading, 0, 255)
 
     m3 = mask[:, :, None]

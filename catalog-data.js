@@ -1060,17 +1060,12 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-101.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-101.jpg",
+      "assets/products/mens/ms-101-tartan-checks-collection.jpg",
       "assets/products/mens/shruhi-ms-101-macro-swatch.jpg",
       "assets/products/mens/ms-101-tartan-checks-collection-view-2.jpg",
       "assets/products/mens/ms-101-tartan-checks-collection-view-3.jpg",
       "assets/products/mens/ms-101-tartan-checks-collection-view-4.jpg",
-      "assets/products/mens/ms-101-tartan-checks-collection-view-5.jpg",
-      "assets/products/mens/ms-101-tartan-checks-collection-view-6.jpg",
-      "assets/products/mens/ms-101-tartan-checks-collection-view-7.jpg",
-      "assets/products/mens/ms-101-tartan-checks-collection-view-8.jpg",
-      "assets/products/mens/ms-101-tartan-checks-collection-view-9.jpg",
-      "assets/products/mens/ms-101-tartan-checks-collection-view-10.jpg"
+      "assets/products/mens/ms-101-tartan-checks-collection-view-5.jpg"
     ]
   },
   {
@@ -1113,12 +1108,10 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-102.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-102.jpg",
+      "assets/products/mens/ms-102-pastel-flannel-checks.jpg",
       "assets/products/mens/shruhi-ms-102-macro-swatch.jpg",
       "assets/products/mens/ms-102-pastel-flannel-checks-view-2.jpg",
-      "assets/products/mens/ms-102-pastel-flannel-checks-view-3.jpg",
-      "assets/products/mens/ms-102-pastel-flannel-checks-view-4.jpg",
-      "assets/products/mens/ms-102-pastel-flannel-checks-view-5.jpg"
+      "assets/products/mens/ms-102-pastel-flannel-checks-view-3.jpg"
     ]
   },
   {
@@ -1212,7 +1205,7 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-104.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-104.jpg",
+      "assets/products/mens/ms-104-vintage-madras-check-trio.jpg",
       "assets/products/mens/shruhi-ms-104-macro-swatch.jpg",
       "assets/products/mens/ms-104-vintage-madras-check-trio-view-2.jpg",
       "assets/products/mens/ms-104-vintage-madras-check-trio-view-3.jpg"
@@ -1258,9 +1251,12 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-105.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-105.jpg",
+      "assets/products/mens/ms-105-micro-gingham-5pc-pack.jpg",
       "assets/products/mens/shruhi-ms-105-macro-swatch.jpg",
-      "assets/products/mens/ms-105-micro-gingham-5pc-pack-view-2.jpg"
+      "assets/products/mens/ms-105-micro-gingham-5pc-pack-view-2.jpg",
+      "assets/products/mens/ms-105-micro-gingham-5pc-pack-view-3.jpg",
+      "assets/products/mens/ms-105-micro-gingham-5pc-pack-view-4.jpg",
+      "assets/products/mens/ms-105-micro-gingham-5pc-pack-view-5.jpg"
     ]
   },
   {
@@ -1350,12 +1346,11 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-107.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-107.jpg",
+      "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks.jpg",
       "assets/products/mens/shruhi-ms-107-macro-swatch.jpg",
       "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks-view-2.jpg",
       "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks-view-3.jpg",
-      "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks-view-4.jpg",
-      "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks-view-5.jpg"
+      "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks-view-4.jpg"
     ]
   },
   {
@@ -1591,9 +1586,10 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-112.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-112.jpg",
+      "assets/products/mens/ms-112-dno301-graph-check-executive-trio.jpg",
       "assets/products/mens/shruhi-ms-112-macro-swatch.jpg",
-      "assets/products/mens/ms-112-dno301-graph-check-executive-trio-view-2.jpg"
+      "assets/products/mens/ms-112-dno301-graph-check-executive-trio-view-2.jpg",
+      "assets/products/mens/ms-112-dno301-graph-check-executive-trio-view-3.jpg"
     ]
   },
   {
@@ -1635,9 +1631,10 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-113.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-113.jpg",
+      "assets/products/mens/ms-113-vertical-pinstripe-linen-trio.jpg",
       "assets/products/mens/shruhi-ms-113-macro-swatch.jpg",
-      "assets/products/mens/ms-113-vertical-pinstripe-linen-trio-view-2.jpg"
+      "assets/products/mens/ms-113-vertical-pinstripe-linen-trio-view-2.jpg",
+      "assets/products/mens/ms-113-vertical-pinstripe-linen-trio-view-3.jpg"
     ]
   },
   {
@@ -1679,11 +1676,10 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-114.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-114.jpg",
+      "assets/products/mens/ms-114-monochrome-overcheck-shirt.jpg",
       "assets/products/mens/shruhi-ms-114-macro-swatch.jpg",
       "assets/products/mens/ms-114-monochrome-overcheck-shirt-view-2.jpg",
-      "assets/products/mens/ms-114-monochrome-overcheck-shirt-view-3.jpg",
-      "assets/products/mens/ms-114-monochrome-overcheck-shirt-view-4.jpg"
+      "assets/products/mens/ms-114-monochrome-overcheck-shirt-view-3.jpg"
     ]
   },
   {
@@ -1725,7 +1721,7 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-115.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-115.jpg",
+      "assets/products/mens/ms-115-mandarin-botanical-resort-prints.jpg",
       "assets/products/mens/shruhi-ms-115-macro-swatch.jpg",
       "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-2.jpg",
       "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-3.jpg",
@@ -1733,8 +1729,7 @@ window.SHRUHI_CATALOG = [
       "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-5.jpg",
       "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-6.jpg",
       "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-7.jpg",
-      "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-8.jpg",
-      "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-9.jpg"
+      "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-8.jpg"
     ]
   },
   {
@@ -1776,15 +1771,11 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-116.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-116.jpg",
+      "assets/products/mens/ms-116-shadow-plaid-ombre-checks.jpg",
       "assets/products/mens/shruhi-ms-116-macro-swatch.jpg",
       "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-2.jpg",
       "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-3.jpg",
-      "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-4.jpg",
-      "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-5.jpg",
-      "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-6.jpg",
-      "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-7.jpg",
-      "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-8.jpg"
+      "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-4.jpg"
     ]
   },
   {
@@ -1826,14 +1817,11 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-117.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-117.jpg",
+      "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks.jpg",
       "assets/products/mens/shruhi-ms-117-macro-swatch.jpg",
       "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-2.jpg",
       "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-3.jpg",
-      "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-4.jpg",
-      "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-5.jpg",
-      "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-6.jpg",
-      "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-7.jpg"
+      "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-4.jpg"
     ]
   },
   {
@@ -1875,12 +1863,11 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-118.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-118.jpg",
+      "assets/products/mens/ms-118-textured-popcorn-vertical-stripes.jpg",
       "assets/products/mens/shruhi-ms-118-macro-swatch.jpg",
       "assets/products/mens/ms-118-textured-popcorn-vertical-stripes-view-2.jpg",
       "assets/products/mens/ms-118-textured-popcorn-vertical-stripes-view-3.jpg",
-      "assets/products/mens/ms-118-textured-popcorn-vertical-stripes-view-4.jpg",
-      "assets/products/mens/ms-118-textured-popcorn-vertical-stripes-view-5.jpg"
+      "assets/products/mens/ms-118-textured-popcorn-vertical-stripes-view-4.jpg"
     ]
   },
   {
@@ -1922,10 +1909,9 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-119.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-119.jpg",
+      "assets/products/mens/ms-119-linen-chambray-nautical-collection.jpg",
       "assets/products/mens/shruhi-ms-119-macro-swatch.jpg",
-      "assets/products/mens/ms-119-linen-chambray-nautical-collection-view-2.jpg",
-      "assets/products/mens/ms-119-linen-chambray-nautical-collection-view-3.jpg"
+      "assets/products/mens/ms-119-linen-chambray-nautical-collection-view-2.jpg"
     ]
   },
   {
@@ -1967,10 +1953,9 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-120.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-120.jpg",
+      "assets/products/mens/ms-120-jacquard-woven-panel-shirt.jpg",
       "assets/products/mens/shruhi-ms-120-macro-swatch.jpg",
-      "assets/products/mens/ms-120-jacquard-woven-panel-shirt-view-2.jpg",
-      "assets/products/mens/ms-120-jacquard-woven-panel-shirt-view-3.jpg"
+      "assets/products/mens/ms-120-jacquard-woven-panel-shirt-view-2.jpg"
     ]
   },
   {
@@ -2012,9 +1997,8 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-121.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-121.jpg",
-      "assets/products/mens/shruhi-ms-121-macro-swatch.jpg",
-      "assets/products/mens/ms-121-cobalt-royal-orchid-resort-shirt-view-2.jpg"
+      "assets/products/mens/ms-121-cobalt-royal-orchid-resort-shirt.jpg",
+      "assets/products/mens/shruhi-ms-121-macro-swatch.jpg"
     ]
   },
   {
@@ -2056,9 +2040,8 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-122.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-122.jpg",
-      "assets/products/mens/shruhi-ms-122-macro-swatch.jpg",
-      "assets/products/mens/ms-122-havana-rainforest-tropical-leaf-shirt-view-2.jpg"
+      "assets/products/mens/ms-122-havana-rainforest-tropical-leaf-shirt.jpg",
+      "assets/products/mens/shruhi-ms-122-macro-swatch.jpg"
     ]
   },
   {
@@ -2100,10 +2083,9 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-123.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-123.jpg",
+      "assets/products/mens/ms-123-golden-bamboo-mandarin-resort-shirt.jpg",
       "assets/products/mens/shruhi-ms-123-macro-swatch.jpg",
-      "assets/products/mens/ms-123-golden-bamboo-mandarin-resort-shirt-view-2.jpg",
-      "assets/products/mens/ms-123-golden-bamboo-mandarin-resort-shirt-view-3.jpg"
+      "assets/products/mens/ms-123-golden-bamboo-mandarin-resort-shirt-view-2.jpg"
     ]
   },
   {
@@ -2145,9 +2127,8 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-124.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-124.jpg",
-      "assets/products/mens/shruhi-ms-124-macro-swatch.jpg",
-      "assets/products/mens/ms-124-aegean-feather-botanical-resort-shirt-view-2.jpg"
+      "assets/products/mens/ms-124-aegean-feather-botanical-resort-shirt.jpg",
+      "assets/products/mens/shruhi-ms-124-macro-swatch.jpg"
     ]
   },
   {
@@ -2189,9 +2170,8 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-125.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-125.jpg",
-      "assets/products/mens/shruhi-ms-125-macro-swatch.jpg",
-      "assets/products/mens/ms-125-vintage-desert-stripe-cuban-camp-shirt-view-2.jpg"
+      "assets/products/mens/ms-125-vintage-desert-stripe-cuban-camp-shirt.jpg",
+      "assets/products/mens/shruhi-ms-125-macro-swatch.jpg"
     ]
   },
   {
@@ -2233,9 +2213,8 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-126.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-126.jpg",
-      "assets/products/mens/shruhi-ms-126-macro-swatch.jpg",
-      "assets/products/mens/ms-126-french-riviera-powder-blue-paisley-shirt-view-2.jpg"
+      "assets/products/mens/ms-126-french-riviera-powder-blue-paisley-shirt.jpg",
+      "assets/products/mens/shruhi-ms-126-macro-swatch.jpg"
     ]
   },
   {
@@ -2277,9 +2256,8 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-127.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-127.jpg",
-      "assets/products/mens/shruhi-ms-127-macro-swatch.jpg",
-      "assets/products/mens/ms-127-santorini-indigo-watercolor-splatter-shirt-view-2.jpg"
+      "assets/products/mens/ms-127-santorini-indigo-watercolor-splatter-shirt.jpg",
+      "assets/products/mens/shruhi-ms-127-macro-swatch.jpg"
     ]
   },
   {
@@ -2321,10 +2299,9 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-128.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-128.jpg",
+      "assets/products/mens/ms-128-executive-charcoal-windowpane-check-shirt.jpg",
       "assets/products/mens/shruhi-ms-128-macro-swatch.jpg",
-      "assets/products/mens/ms-128-executive-charcoal-windowpane-check-shirt-view-2.jpg",
-      "assets/products/mens/ms-128-executive-charcoal-windowpane-check-shirt-view-3.jpg"
+      "assets/products/mens/ms-128-executive-charcoal-windowpane-check-shirt-view-2.jpg"
     ]
   },
   {
@@ -2366,11 +2343,9 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-129.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-129.jpg",
+      "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt.jpg",
       "assets/products/mens/shruhi-ms-129-macro-swatch.jpg",
-      "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt-view-2.jpg",
-      "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt-view-3.jpg",
-      "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt-view-4.jpg"
+      "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt-view-2.jpg"
     ]
   },
   {
