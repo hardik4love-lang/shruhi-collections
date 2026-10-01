@@ -73,27 +73,79 @@ def render_4k_studio_plate(
     vp_h = STUDIO_PORTRAIT_H - header_h - footer_h
     vp_w = STUDIO_PORTRAIT_W - 40
 
-    img_ratio = w / h
-    vp_ratio = vp_w / vp_h
-    if img_ratio > vp_ratio:
-        new_w = vp_w
-        new_h = int(vp_w / img_ratio)
+    # Check if a human model is already present
+    from .model_synthesizer import has_human_model, synthesize_model_wearing_garment
+    is_model = has_human_model(im)
+
+    if not is_model:
+        # User requirement: If pic doesn't contain a model, ADD ONE!
+        model_im = synthesize_model_wearing_garment(im, model_pose="athletic_tailored")
+        mw, mh = model_im.size
+        target_ratio = vp_w / vp_h
+        cur_ratio = mw / mh
+        if cur_ratio > target_ratio:
+            crop_w = int(mh * target_ratio)
+            x_off = (mw - crop_w) // 2
+            model_cropped = model_im.crop((x_off, 0, x_off + crop_w, mh))
+        else:
+            crop_h = int(mw / target_ratio)
+            model_cropped = model_im.crop((0, 0, mw, crop_h))
+
+        im_resized = model_cropped.resize((vp_w, vp_h), Image.Resampling.LANCZOS)
+        im_resized = ImageEnhance.Sharpness(im_resized).enhance(1.15)
+        px = (STUDIO_PORTRAIT_W - vp_w) // 2
+        py = vp_top
+
+        draw.rounded_rectangle(
+            [px - 4, py - 4, px + vp_w + 4, py + vp_h + 4],
+            radius=14,
+            outline=COLOR_GOLD_MID,
+            width=3
+        )
+        canvas.paste(im_resized, (px, py))
+
+        # Bottom-Right Inset Card: "100% ORIGINAL FABRIC PROOF"
+        try:
+            sww, swh = im.size
+            sw_crop = im.crop((int(sww * 0.20), int(swh * 0.22), int(sww * 0.80), int(swh * 0.78)))
+            inset_w, inset_h = 340, 420
+            sw_thumb = sw_crop.resize((inset_w, inset_h - 40), Image.Resampling.LANCZOS)
+            sw_thumb = ImageEnhance.Sharpness(sw_thumb).enhance(1.2)
+
+            ix2 = STUDIO_PORTRAIT_W - 45
+            ix1 = ix2 - inset_w
+            iy2 = STUDIO_PORTRAIT_H - 135
+            iy1 = iy2 - inset_h
+
+            draw.rounded_rectangle([ix1 - 5, iy1 - 5, ix2 + 5, iy2 + 5], radius=16, fill=(22, 12, 17), outline=COLOR_GOLD_BRIGHT, width=3)
+            canvas.paste(sw_thumb, (ix1, iy1))
+
+            draw.rectangle([ix1, iy2 - 38, ix2, iy2], fill=(22, 12, 17))
+            draw.text((ix1 + 18, iy2 - 32), "100% ORIGINAL FABRIC PROOF", font=FONTS["badge"], fill=COLOR_GOLD_BRIGHT)
+        except Exception as e:
+            pass
     else:
-        new_h = vp_h
-        new_w = int(vp_h * img_ratio)
+        img_ratio = w / h
+        vp_ratio = vp_w / vp_h
+        if img_ratio > vp_ratio:
+            new_w = vp_w
+            new_h = int(vp_w / img_ratio)
+        else:
+            new_h = vp_h
+            new_w = int(vp_h * img_ratio)
 
-    im_resized = im.resize((new_w, new_h), Image.Resampling.LANCZOS)
-    px = (STUDIO_PORTRAIT_W - new_w) // 2
-    py = vp_top + (vp_h - new_h) // 2
+        im_resized = im.resize((new_w, new_h), Image.Resampling.LANCZOS)
+        px = (STUDIO_PORTRAIT_W - new_w) // 2
+        py = vp_top + (vp_h - new_h) // 2
 
-    # Hairline 24K Gold Frame around garment
-    draw.rounded_rectangle(
-        [px - 4, py - 4, px + new_w + 4, py + new_h + 4],
-        radius=14,
-        outline=COLOR_GOLD_MID,
-        width=3
-    )
-    canvas.paste(im_resized, (px, py))
+        # Hairline 24K Gold Frame around garment
+        draw.rounded_rectangle(
+            [px - 4, py - 4, px + new_w + 4, py + new_h + 4],
+            radius=14,
+            outline=COLOR_GOLD_MID,
+            width=3
+        )
+        canvas.paste(im_resized, (px, py))
 
     # Top Luxury Header Bar
     draw.rectangle([0, 0, STUDIO_PORTRAIT_W, header_h], fill=COLOR_OXBLOOD_DARK)

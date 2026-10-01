@@ -1,3 +1,5 @@
 node_modules/
 whatsapp-ai-bot/node_modules/
 facebook-automation/node_modules/
+__pycache__/
+*.pyc

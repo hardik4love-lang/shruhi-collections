@@ -5,5 +5,6 @@ and autonomously render 4K studio catalog plates, macro texture swatches, and 9:
 """
 
 from .agent import ProductMediaAgent
+from .model_synthesizer import synthesize_model_wearing_garment, has_human_model
 
-__all__ = ["ProductMediaAgent"]
+__all__ = ["ProductMediaAgent", "synthesize_model_wearing_garment", "has_human_model"]
