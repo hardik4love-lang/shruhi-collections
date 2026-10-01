@@ -2,11 +2,16 @@ name: Shruhi Collections 24/7 Facebook + WhatsApp Auto-AI Cloud Bot
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 */6 * * *"
   workflow_dispatch:
   push:
     branches:
       - main
+    paths-ignore:
+      - "assets/**"
+      - "4K_Branded_Catalog/**"
+      - "product_media_agent/incoming_samples/**"
+      - "README.md"
 
 permissions:
   contents: write
@@ -14,7 +19,7 @@ permissions:
 
 concurrency:
   group: shruhi-24x7-cloud-bot
-  cancel-in-progress: ${{ github.event_name == 'push' }}
+  cancel-in-progress: false
 
 jobs:
   facebook-whatsapp-24x7-bot:
