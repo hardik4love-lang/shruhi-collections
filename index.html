@@ -1706,6 +1706,9 @@
           <a id="storeModalWa" href="#" target="_blank" rel="noopener" class="btn-wa-instant" style="flex: 1; padding: 0.85rem; font-size: 0.8rem;">
             Reserve on WhatsApp (+91 90542 41725)
           </a>
+          <a id="storeModalVideo" href="#" target="_blank" rel="noopener" class="btn-wa-instant" style="display: none; background: #c59b27; color: #111; padding: 0.85rem 1rem; font-size: 0.76rem; text-decoration: none; font-weight: 700;">
+            🎬 9:16 Video Showcase Reel
+          </a>
           <a id="storeModalDownload" href="#" download class="btn-add-bag" style="padding: 0.85rem 1rem; font-size: 0.76rem;">
             Download 4K Plate
           </a>
@@ -2161,6 +2164,17 @@
               thumbsEl.innerHTML = '';
             }
             document.getElementById('storeModalWa').href = buildSingleWa(item, '919054241725');
+
+            const videoBtn = document.getElementById('storeModalVideo');
+            if (videoBtn) {
+              if (item.video) {
+                videoBtn.href = item.video;
+                videoBtn.style.display = 'inline-flex';
+              } else {
+                videoBtn.style.display = 'none';
+              }
+            }
+
             storeDialog.showModal();
           }
         }

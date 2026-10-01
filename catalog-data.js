@@ -35,36 +35,36 @@ window.SHRUHI_WHATSAPP_PRICE_LIST = [
   { msgNo: 28, batch: "Batch 1", code: "SHRUHI 5620 (Abstract Swirl Tunic Top)", rawMrp: "MRP_850", rawSize: "SIZE M TO 2XL", price: 850, priceFormatted: "₹850", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", image: "assets/products/wa-11-shruhi-5620-swirl-tunic.jpg" },
   { msgNo: 29, batch: "Batch 1", code: "SHRUHI KAVYA (Mauve & Ivory Dupatta Suit)", rawMrp: "MRP_2850", rawSize: "Size_S.L.2xl", price: 2850, priceFormatted: "₹2,850", sizes: ["S", "L", "2XL"], setQty: "3 Pcs Set (S, L, 2XL)", image: "assets/products/wa-12-shruhi-kavya-mauve-suit.jpg" },
   // Batch 3 — 30 Men's Luxury Shirt Collections (+91 88496 01725 • 117 AI-Model & Studio Plates)
-  { msgNo: 30, batch: "Men's Shirts", code: "SHRUHI-MS-101 (Wisteria Tartan & Windowpane Check Casual Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-101-tartan-checks-collection.jpg" },
-  { msgNo: 31, batch: "Men's Shirts", code: "SHRUHI-MS-102 (Pastel Brushed Cotton Check Casual Shirt (3-Shade Pack))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-102-pastel-flannel-checks.jpg" },
-  { msgNo: 32, batch: "Men's Shirts", code: "SHRUHI-MS-103 (Signature Lycra 4-Way Stretch Solid Shirt (12 Colours))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-103-lycra-stretch-12-colours.jpg" },
-  { msgNo: 33, batch: "Men's Shirts", code: "SHRUHI-MS-104 (Vintage Madras & Windowpane Check Shirt Trio)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-104-vintage-madras-check-trio.jpg" },
-  { msgNo: 34, batch: "Men's Shirts", code: "SHRUHI-MS-105 (Executive Micro-Gingham Check Shirt (5-Colour Pack))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-105-micro-gingham-5pc-pack.jpg" },
-  { msgNo: 35, batch: "Men's Shirts", code: "SHRUHI-MS-106 (Imported Slub Linen Solid Casual Shirt (10 Colours))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-106-imported-linen-10-colours.jpg" },
-  { msgNo: 36, batch: "Men's Shirts", code: "SHRUHI-MS-107 (Designer Studio Full-Sleeve Check Shirt Collection)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks.jpg" },
-  { msgNo: 37, batch: "Men's Shirts", code: "SHRUHI-MS-108 (Pure Linen Embroidered-Crest Shirt (12 Colours))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-108-pure-linen-crest-12-colours.jpg" },
-  { msgNo: 38, batch: "Men's Shirts", code: "SHRUHI-MS-109 (Royal Linen Resort Solid Shirt (13-Colour Master Chart))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-109-royal-linen-13-colours.jpg" },
-  { msgNo: 39, batch: "Men's Shirts", code: "SHRUHI-MS-110 (Dual-Flap Pocket Utility Casual Shirt (White & Black))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-110-dual-pocket-cargo-shirt.jpg" },
-  { msgNo: 40, batch: "Men's Shirts", code: "SHRUHI-MS-111 (Mandarin Bandhgala Collar Slub-Linen Solid Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-111-mandarin-collar-linen-solids.jpg" },
-  { msgNo: 41, batch: "Men's Shirts", code: "SHRUHI-MS-112 (D.No 301 Executive Graph-Check Shirt (Half & Full Sleeve))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-112-dno301-graph-check-executive-trio.jpg" },
-  { msgNo: 42, batch: "Men's Shirts", code: "SHRUHI-MS-113 (Tailored Vertical Pinstripe Linen-Cotton Shirt Trio)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-113-vertical-pinstripe-linen-trio.jpg" },
-  { msgNo: 43, batch: "Men's Shirts", code: "SHRUHI-MS-114 (Monochrome Ivory & Charcoal Overcheck Casual Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-114-monochrome-overcheck-shirt.jpg" },
-  { msgNo: 44, batch: "Men's Shirts", code: "SHRUHI-MS-115 (Mandarin-Collar Botanical & Tropical Resort Printed Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-115-mandarin-botanical-resort-prints.jpg" },
-  { msgNo: 45, batch: "Men's Shirts", code: "SHRUHI-MS-116 (Shadow-Plaid & Ombré Brushed Check Casual Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-116-shadow-plaid-ombre-checks.jpg" },
-  { msgNo: 46, batch: "Men's Shirts", code: "SHRUHI-MS-117 (Heritage Tartan & Micro-Houndstooth Check Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks.jpg" },
-  { msgNo: 47, batch: "Men's Shirts", code: "SHRUHI-MS-118 (Textured Popcorn-Weave & Ribbed Vertical Stripe Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-118-textured-popcorn-vertical-stripes.jpg" },
-  { msgNo: 48, batch: "Men's Shirts", code: "SHRUHI-MS-119 (Linen-Chambray & Nautical Breton Stripe Casual Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-119-linen-chambray-nautical-collection.jpg" },
-  { msgNo: 49, batch: "Men's Shirts", code: "SHRUHI-MS-120 (Artisanal Jacquard Vertical-Panel Motif Casual Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-120-jacquard-woven-panel-shirt.jpg" },
-  { msgNo: 50, batch: "Men's Shirts", code: "SHRUHI-MS-121 (Cobalt Royal Orchid Floral Resort Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-121-cobalt-royal-orchid-resort-shirt.jpg" },
-  { msgNo: 51, batch: "Men's Shirts", code: "SHRUHI-MS-122 (Havana Rainforest Tropical Botanical Leaf Resort Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-122-havana-rainforest-tropical-leaf-shirt.jpg" },
-  { msgNo: 52, batch: "Men's Shirts", code: "SHRUHI-MS-123 (Golden Bamboo & Palm Mandarin-Collar Resort Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-123-golden-bamboo-mandarin-resort-shirt.jpg" },
-  { msgNo: 53, batch: "Men's Shirts", code: "SHRUHI-MS-124 (Aegean Cyan Feather Botanical Resort Printed Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-124-aegean-feather-botanical-resort-shirt.jpg" },
-  { msgNo: 54, batch: "Men's Shirts", code: "SHRUHI-MS-125 (Vintage Desert Stripe Cuban Camp-Collar Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-125-vintage-desert-stripe-cuban-camp-shirt.jpg" },
-  { msgNo: 55, batch: "Men's Shirts", code: "SHRUHI-MS-126 (French Riviera Powder-Blue Paisley Resort Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-126-french-riviera-powder-blue-paisley-shirt.jpg" },
-  { msgNo: 56, batch: "Men's Shirts", code: "SHRUHI-MS-127 (Santorini Indigo Watercolor Splatter Casual Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-127-santorini-indigo-watercolor-splatter-shirt.jpg" },
-  { msgNo: 57, batch: "Men's Shirts", code: "SHRUHI-MS-128 (Executive Charcoal Windowpane Check Casual Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-128-executive-charcoal-windowpane-check-shirt.jpg" },
-  { msgNo: 58, batch: "Men's Shirts", code: "SHRUHI-MS-129 (Dual-Tone Heritage Plaid Casual Shirt (Crimson & Jade Duo))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt.jpg" },
-  { msgNo: 59, batch: "Men's Shirts", code: "SHRUHI-MS-130 (Minimalist Dual-Pocket Resort Camp Shirt (White & Black))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt.jpg" }
+  { msgNo: 30, batch: "Men's Shirts", code: "SHRUHI-MS-101 (Wisteria Tartan & Windowpane Check Casual Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-101.jpg" },
+  { msgNo: 31, batch: "Men's Shirts", code: "SHRUHI-MS-102 (Pastel Brushed Cotton Check Casual Shirt (3-Shade Pack))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-102.jpg" },
+  { msgNo: 32, batch: "Men's Shirts", code: "SHRUHI-MS-103 (Signature Lycra 4-Way Stretch Solid Shirt (12 Colours))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-103.jpg" },
+  { msgNo: 33, batch: "Men's Shirts", code: "SHRUHI-MS-104 (Vintage Madras & Windowpane Check Shirt Trio)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-104.jpg" },
+  { msgNo: 34, batch: "Men's Shirts", code: "SHRUHI-MS-105 (Executive Micro-Gingham Check Shirt (5-Colour Pack))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-105.jpg" },
+  { msgNo: 35, batch: "Men's Shirts", code: "SHRUHI-MS-106 (Imported Slub Linen Solid Casual Shirt (10 Colours))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-106.jpg" },
+  { msgNo: 36, batch: "Men's Shirts", code: "SHRUHI-MS-107 (Designer Studio Full-Sleeve Check Shirt Collection)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-107.jpg" },
+  { msgNo: 37, batch: "Men's Shirts", code: "SHRUHI-MS-108 (Pure Linen Embroidered-Crest Shirt (12 Colours))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-108.jpg" },
+  { msgNo: 38, batch: "Men's Shirts", code: "SHRUHI-MS-109 (Royal Linen Resort Solid Shirt (13-Colour Master Chart))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-109.jpg" },
+  { msgNo: 39, batch: "Men's Shirts", code: "SHRUHI-MS-110 (Dual-Flap Pocket Utility Casual Shirt (White & Black))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-110.jpg" },
+  { msgNo: 40, batch: "Men's Shirts", code: "SHRUHI-MS-111 (Mandarin Bandhgala Collar Slub-Linen Solid Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-111.jpg" },
+  { msgNo: 41, batch: "Men's Shirts", code: "SHRUHI-MS-112 (D.No 301 Executive Graph-Check Shirt (Half & Full Sleeve))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-112.jpg" },
+  { msgNo: 42, batch: "Men's Shirts", code: "SHRUHI-MS-113 (Tailored Vertical Pinstripe Linen-Cotton Shirt Trio)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-113.jpg" },
+  { msgNo: 43, batch: "Men's Shirts", code: "SHRUHI-MS-114 (Monochrome Ivory & Charcoal Overcheck Casual Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-114.jpg" },
+  { msgNo: 44, batch: "Men's Shirts", code: "SHRUHI-MS-115 (Mandarin-Collar Botanical & Tropical Resort Printed Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-115.jpg" },
+  { msgNo: 45, batch: "Men's Shirts", code: "SHRUHI-MS-116 (Shadow-Plaid & Ombré Brushed Check Casual Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-116.jpg" },
+  { msgNo: 46, batch: "Men's Shirts", code: "SHRUHI-MS-117 (Heritage Tartan & Micro-Houndstooth Check Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-117.jpg" },
+  { msgNo: 47, batch: "Men's Shirts", code: "SHRUHI-MS-118 (Textured Popcorn-Weave & Ribbed Vertical Stripe Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-118.jpg" },
+  { msgNo: 48, batch: "Men's Shirts", code: "SHRUHI-MS-119 (Linen-Chambray & Nautical Breton Stripe Casual Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-119.jpg" },
+  { msgNo: 49, batch: "Men's Shirts", code: "SHRUHI-MS-120 (Artisanal Jacquard Vertical-Panel Motif Casual Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-120.jpg" },
+  { msgNo: 50, batch: "Men's Shirts", code: "SHRUHI-MS-121 (Cobalt Royal Orchid Floral Resort Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-121.jpg" },
+  { msgNo: 51, batch: "Men's Shirts", code: "SHRUHI-MS-122 (Havana Rainforest Tropical Botanical Leaf Resort Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-122.jpg" },
+  { msgNo: 52, batch: "Men's Shirts", code: "SHRUHI-MS-123 (Golden Bamboo & Palm Mandarin-Collar Resort Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-123.jpg" },
+  { msgNo: 53, batch: "Men's Shirts", code: "SHRUHI-MS-124 (Aegean Cyan Feather Botanical Resort Printed Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-124.jpg" },
+  { msgNo: 54, batch: "Men's Shirts", code: "SHRUHI-MS-125 (Vintage Desert Stripe Cuban Camp-Collar Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-125.jpg" },
+  { msgNo: 55, batch: "Men's Shirts", code: "SHRUHI-MS-126 (French Riviera Powder-Blue Paisley Resort Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-126.jpg" },
+  { msgNo: 56, batch: "Men's Shirts", code: "SHRUHI-MS-127 (Santorini Indigo Watercolor Splatter Casual Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-127.jpg" },
+  { msgNo: 57, batch: "Men's Shirts", code: "SHRUHI-MS-128 (Executive Charcoal Windowpane Check Casual Shirt)", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-128.jpg" },
+  { msgNo: 58, batch: "Men's Shirts", code: "SHRUHI-MS-129 (Dual-Tone Heritage Plaid Casual Shirt (Crimson & Jade Duo))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-129.jpg" },
+  { msgNo: 59, batch: "Men's Shirts", code: "SHRUHI-MS-130 (Minimalist Dual-Pocket Resort Camp Shirt (White & Black))", rawMrp: "M.R.P.: 999/-", rawSize: "M, L, XL, 2XL", price: 999, priceFormatted: "₹999", sizes: ["M", "L", "XL", "2XL"], setQty: "4 Pcs Set (M–2XL)", whatsappPhone: "918849601725", image: "assets/products/mens/shruhi-ms-130.jpg" }
 ];
 
 window.SHRUHI_CATALOG = [
@@ -1023,6 +1023,7 @@ window.SHRUHI_CATALOG = [
   {
     "id": "ms-101-tartan-checks-collection",
     "code": "SHRUHI-MS-101",
+    "video": "assets/videos/shruhi-ms-101-showcase.mp4",
     "lineGroup": "MENS",
     "name": "Wisteria Tartan & Windowpane Check Casual Shirt",
     "brandLine": "Shruhi Collections • Men's Luxury Edition",
@@ -1050,15 +1051,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-101: Wisteria Tartan & Windowpane Check Casual Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 9 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-101-tartan-checks-collection.jpg",
+    "image": "assets/products/mens/shruhi-ms-101.jpg",
     "gallery": [
-      "assets/products/mens/ms-101-tartan-checks-collection.jpg",
+      "assets/products/mens/shruhi-ms-101.jpg",
+      "assets/products/mens/shruhi-ms-101-macro-swatch.jpg",
       "assets/products/mens/ms-101-tartan-checks-collection-view-2.jpg",
       "assets/products/mens/ms-101-tartan-checks-collection-view-3.jpg",
       "assets/products/mens/ms-101-tartan-checks-collection-view-4.jpg",
@@ -1073,6 +1076,7 @@ window.SHRUHI_CATALOG = [
   {
     "id": "ms-102-pastel-flannel-checks",
     "code": "SHRUHI-MS-102",
+    "video": "assets/videos/shruhi-ms-102-showcase.mp4",
     "lineGroup": "MENS",
     "name": "Pastel Brushed Cotton Check Casual Shirt (3-Shade Pack)",
     "brandLine": "Shruhi Collections • Men's Luxury Edition",
@@ -1100,15 +1104,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-102: Pastel Brushed Cotton Check Casual Shirt (3-Shade Pack). Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 4 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-102-pastel-flannel-checks.jpg",
+    "image": "assets/products/mens/shruhi-ms-102.jpg",
     "gallery": [
-      "assets/products/mens/ms-102-pastel-flannel-checks.jpg",
+      "assets/products/mens/shruhi-ms-102.jpg",
+      "assets/products/mens/shruhi-ms-102-macro-swatch.jpg",
       "assets/products/mens/ms-102-pastel-flannel-checks-view-2.jpg",
       "assets/products/mens/ms-102-pastel-flannel-checks-view-3.jpg",
       "assets/products/mens/ms-102-pastel-flannel-checks-view-4.jpg",
@@ -1118,6 +1124,7 @@ window.SHRUHI_CATALOG = [
   {
     "id": "ms-103-lycra-stretch-12-colours",
     "code": "SHRUHI-MS-103",
+    "video": "assets/videos/shruhi-ms-103-showcase.mp4",
     "lineGroup": "MENS",
     "name": "Signature Lycra 4-Way Stretch Solid Shirt (12 Colours)",
     "brandLine": "Shruhi Collections • Men's Luxury Edition",
@@ -1145,15 +1152,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-103: Signature Lycra 4-Way Stretch Solid Shirt (12 Colours). Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 2 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-103-lycra-stretch-12-colours.jpg",
+    "image": "assets/products/mens/shruhi-ms-103.jpg",
     "gallery": [
-      "assets/products/mens/ms-103-lycra-stretch-12-colours.jpg",
+      "assets/products/mens/shruhi-ms-103.jpg",
+      "assets/products/mens/shruhi-ms-103-macro-swatch.jpg",
       "assets/products/mens/ms-103-lycra-stretch-12-colours-view-2.jpg",
       "assets/products/mens/ms-103-lycra-stretch-12-colours-view-3.jpg"
     ]
@@ -1161,6 +1170,7 @@ window.SHRUHI_CATALOG = [
   {
     "id": "ms-104-vintage-madras-check-trio",
     "code": "SHRUHI-MS-104",
+    "video": "assets/videos/shruhi-ms-104-showcase.mp4",
     "lineGroup": "MENS",
     "name": "Vintage Madras & Windowpane Check Shirt Trio",
     "brandLine": "Shruhi Collections • Men's Luxury Edition",
@@ -1188,15 +1198,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-104: Vintage Madras & Windowpane Check Shirt Trio. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 2 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-104-vintage-madras-check-trio.jpg",
+    "image": "assets/products/mens/shruhi-ms-104.jpg",
     "gallery": [
-      "assets/products/mens/ms-104-vintage-madras-check-trio.jpg",
+      "assets/products/mens/shruhi-ms-104.jpg",
+      "assets/products/mens/shruhi-ms-104-macro-swatch.jpg",
       "assets/products/mens/ms-104-vintage-madras-check-trio-view-2.jpg",
       "assets/products/mens/ms-104-vintage-madras-check-trio-view-3.jpg"
     ]
@@ -1204,6 +1216,7 @@ window.SHRUHI_CATALOG = [
   {
     "id": "ms-105-micro-gingham-5pc-pack",
     "code": "SHRUHI-MS-105",
+    "video": "assets/videos/shruhi-ms-105-showcase.mp4",
     "lineGroup": "MENS",
     "name": "Executive Micro-Gingham Check Shirt (5-Colour Pack)",
     "brandLine": "Shruhi Collections • Men's Luxury Edition",
@@ -1231,15 +1244,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-105: Executive Micro-Gingham Check Shirt (5-Colour Pack). Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 1 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-105-micro-gingham-5pc-pack.jpg",
+    "image": "assets/products/mens/shruhi-ms-105.jpg",
     "gallery": [
-      "assets/products/mens/ms-105-micro-gingham-5pc-pack.jpg",
+      "assets/products/mens/shruhi-ms-105.jpg",
+      "assets/products/mens/shruhi-ms-105-macro-swatch.jpg",
       "assets/products/mens/ms-105-micro-gingham-5pc-pack-view-2.jpg"
     ]
   },
@@ -1273,15 +1288,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-106: Imported Slub Linen Solid Casual Shirt (10 Colours). Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 2 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-106-imported-linen-10-colours.jpg",
+    "image": "assets/products/mens/shruhi-ms-106.jpg",
     "gallery": [
-      "assets/products/mens/ms-106-imported-linen-10-colours.jpg",
+      "assets/products/mens/shruhi-ms-106.jpg",
+      "assets/products/mens/shruhi-ms-106-macro-swatch.jpg",
       "assets/products/mens/ms-106-imported-linen-10-colours-view-2.jpg",
       "assets/products/mens/ms-106-imported-linen-10-colours-view-3.jpg"
     ]
@@ -1316,15 +1333,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-107: Designer Studio Full-Sleeve Check Shirt Collection. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 4 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks.jpg",
+    "image": "assets/products/mens/shruhi-ms-107.jpg",
     "gallery": [
-      "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks.jpg",
+      "assets/products/mens/shruhi-ms-107.jpg",
+      "assets/products/mens/shruhi-ms-107-macro-swatch.jpg",
       "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks-view-2.jpg",
       "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks-view-3.jpg",
       "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks-view-4.jpg",
@@ -1361,15 +1380,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-108: Pure Linen Embroidered-Crest Shirt (12 Colours). Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 5 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-108-pure-linen-crest-12-colours.jpg",
+    "image": "assets/products/mens/shruhi-ms-108.jpg",
     "gallery": [
-      "assets/products/mens/ms-108-pure-linen-crest-12-colours.jpg",
+      "assets/products/mens/shruhi-ms-108.jpg",
+      "assets/products/mens/shruhi-ms-108-macro-swatch.jpg",
       "assets/products/mens/ms-108-pure-linen-crest-12-colours-view-2.jpg",
       "assets/products/mens/ms-108-pure-linen-crest-12-colours-view-3.jpg",
       "assets/products/mens/ms-108-pure-linen-crest-12-colours-view-4.jpg",
@@ -1407,15 +1428,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-109: Royal Linen Resort Solid Shirt (13-Colour Master Chart). Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 1 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-109-royal-linen-13-colours.jpg",
+    "image": "assets/products/mens/shruhi-ms-109.jpg",
     "gallery": [
-      "assets/products/mens/ms-109-royal-linen-13-colours.jpg",
+      "assets/products/mens/shruhi-ms-109.jpg",
+      "assets/products/mens/shruhi-ms-109-macro-swatch.jpg",
       "assets/products/mens/ms-109-royal-linen-13-colours-view-2.jpg"
     ]
   },
@@ -1449,15 +1472,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-110: Dual-Flap Pocket Utility Casual Shirt (White & Black). Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 2 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-110-dual-pocket-cargo-shirt.jpg",
+    "image": "assets/products/mens/shruhi-ms-110.jpg",
     "gallery": [
-      "assets/products/mens/ms-110-dual-pocket-cargo-shirt.jpg",
+      "assets/products/mens/shruhi-ms-110.jpg",
+      "assets/products/mens/shruhi-ms-110-macro-swatch.jpg",
       "assets/products/mens/ms-110-dual-pocket-cargo-shirt-view-2.jpg",
       "assets/products/mens/ms-110-dual-pocket-cargo-shirt-view-3.jpg"
     ]
@@ -1492,15 +1517,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-111: Mandarin Bandhgala Collar Slub-Linen Solid Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 4 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-111-mandarin-collar-linen-solids.jpg",
+    "image": "assets/products/mens/shruhi-ms-111.jpg",
     "gallery": [
-      "assets/products/mens/ms-111-mandarin-collar-linen-solids.jpg",
+      "assets/products/mens/shruhi-ms-111.jpg",
+      "assets/products/mens/shruhi-ms-111-macro-swatch.jpg",
       "assets/products/mens/ms-111-mandarin-collar-linen-solids-view-2.jpg",
       "assets/products/mens/ms-111-mandarin-collar-linen-solids-view-3.jpg",
       "assets/products/mens/ms-111-mandarin-collar-linen-solids-view-4.jpg",
@@ -1537,15 +1564,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-112: D.No 301 Executive Graph-Check Shirt (Half & Full Sleeve). Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 1 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-112-dno301-graph-check-executive-trio.jpg",
+    "image": "assets/products/mens/shruhi-ms-112.jpg",
     "gallery": [
-      "assets/products/mens/ms-112-dno301-graph-check-executive-trio.jpg",
+      "assets/products/mens/shruhi-ms-112.jpg",
+      "assets/products/mens/shruhi-ms-112-macro-swatch.jpg",
       "assets/products/mens/ms-112-dno301-graph-check-executive-trio-view-2.jpg"
     ]
   },
@@ -1579,15 +1608,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-113: Tailored Vertical Pinstripe Linen-Cotton Shirt Trio. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 1 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-113-vertical-pinstripe-linen-trio.jpg",
+    "image": "assets/products/mens/shruhi-ms-113.jpg",
     "gallery": [
-      "assets/products/mens/ms-113-vertical-pinstripe-linen-trio.jpg",
+      "assets/products/mens/shruhi-ms-113.jpg",
+      "assets/products/mens/shruhi-ms-113-macro-swatch.jpg",
       "assets/products/mens/ms-113-vertical-pinstripe-linen-trio-view-2.jpg"
     ]
   },
@@ -1621,15 +1652,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-114: Monochrome Ivory & Charcoal Overcheck Casual Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 3 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-114-monochrome-overcheck-shirt.jpg",
+    "image": "assets/products/mens/shruhi-ms-114.jpg",
     "gallery": [
-      "assets/products/mens/ms-114-monochrome-overcheck-shirt.jpg",
+      "assets/products/mens/shruhi-ms-114.jpg",
+      "assets/products/mens/shruhi-ms-114-macro-swatch.jpg",
       "assets/products/mens/ms-114-monochrome-overcheck-shirt-view-2.jpg",
       "assets/products/mens/ms-114-monochrome-overcheck-shirt-view-3.jpg",
       "assets/products/mens/ms-114-monochrome-overcheck-shirt-view-4.jpg"
@@ -1665,15 +1698,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-115: Mandarin-Collar Botanical & Tropical Resort Printed Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 8 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-115-mandarin-botanical-resort-prints.jpg",
+    "image": "assets/products/mens/shruhi-ms-115.jpg",
     "gallery": [
-      "assets/products/mens/ms-115-mandarin-botanical-resort-prints.jpg",
+      "assets/products/mens/shruhi-ms-115.jpg",
+      "assets/products/mens/shruhi-ms-115-macro-swatch.jpg",
       "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-2.jpg",
       "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-3.jpg",
       "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-4.jpg",
@@ -1714,15 +1749,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-116: Shadow-Plaid & Ombré Brushed Check Casual Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 7 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-116-shadow-plaid-ombre-checks.jpg",
+    "image": "assets/products/mens/shruhi-ms-116.jpg",
     "gallery": [
-      "assets/products/mens/ms-116-shadow-plaid-ombre-checks.jpg",
+      "assets/products/mens/shruhi-ms-116.jpg",
+      "assets/products/mens/shruhi-ms-116-macro-swatch.jpg",
       "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-2.jpg",
       "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-3.jpg",
       "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-4.jpg",
@@ -1762,15 +1799,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-117: Heritage Tartan & Micro-Houndstooth Check Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 6 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks.jpg",
+    "image": "assets/products/mens/shruhi-ms-117.jpg",
     "gallery": [
-      "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks.jpg",
+      "assets/products/mens/shruhi-ms-117.jpg",
+      "assets/products/mens/shruhi-ms-117-macro-swatch.jpg",
       "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-2.jpg",
       "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-3.jpg",
       "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-4.jpg",
@@ -1809,15 +1848,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-118: Textured Popcorn-Weave & Ribbed Vertical Stripe Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 4 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-118-textured-popcorn-vertical-stripes.jpg",
+    "image": "assets/products/mens/shruhi-ms-118.jpg",
     "gallery": [
-      "assets/products/mens/ms-118-textured-popcorn-vertical-stripes.jpg",
+      "assets/products/mens/shruhi-ms-118.jpg",
+      "assets/products/mens/shruhi-ms-118-macro-swatch.jpg",
       "assets/products/mens/ms-118-textured-popcorn-vertical-stripes-view-2.jpg",
       "assets/products/mens/ms-118-textured-popcorn-vertical-stripes-view-3.jpg",
       "assets/products/mens/ms-118-textured-popcorn-vertical-stripes-view-4.jpg",
@@ -1854,15 +1895,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-119: Linen-Chambray & Nautical Breton Stripe Casual Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 2 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-119-linen-chambray-nautical-collection.jpg",
+    "image": "assets/products/mens/shruhi-ms-119.jpg",
     "gallery": [
-      "assets/products/mens/ms-119-linen-chambray-nautical-collection.jpg",
+      "assets/products/mens/shruhi-ms-119.jpg",
+      "assets/products/mens/shruhi-ms-119-macro-swatch.jpg",
       "assets/products/mens/ms-119-linen-chambray-nautical-collection-view-2.jpg",
       "assets/products/mens/ms-119-linen-chambray-nautical-collection-view-3.jpg"
     ]
@@ -1897,15 +1940,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-120: Artisanal Jacquard Vertical-Panel Motif Casual Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 2 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-120-jacquard-woven-panel-shirt.jpg",
+    "image": "assets/products/mens/shruhi-ms-120.jpg",
     "gallery": [
-      "assets/products/mens/ms-120-jacquard-woven-panel-shirt.jpg",
+      "assets/products/mens/shruhi-ms-120.jpg",
+      "assets/products/mens/shruhi-ms-120-macro-swatch.jpg",
       "assets/products/mens/ms-120-jacquard-woven-panel-shirt-view-2.jpg",
       "assets/products/mens/ms-120-jacquard-woven-panel-shirt-view-3.jpg"
     ]
@@ -1940,15 +1985,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-121: Cobalt Royal Orchid Floral Resort Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 1 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-121-cobalt-royal-orchid-resort-shirt.jpg",
+    "image": "assets/products/mens/shruhi-ms-121.jpg",
     "gallery": [
-      "assets/products/mens/ms-121-cobalt-royal-orchid-resort-shirt.jpg",
+      "assets/products/mens/shruhi-ms-121.jpg",
+      "assets/products/mens/shruhi-ms-121-macro-swatch.jpg",
       "assets/products/mens/ms-121-cobalt-royal-orchid-resort-shirt-view-2.jpg"
     ]
   },
@@ -1982,15 +2029,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-122: Havana Rainforest Tropical Botanical Leaf Resort Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 1 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-122-havana-rainforest-tropical-leaf-shirt.jpg",
+    "image": "assets/products/mens/shruhi-ms-122.jpg",
     "gallery": [
-      "assets/products/mens/ms-122-havana-rainforest-tropical-leaf-shirt.jpg",
+      "assets/products/mens/shruhi-ms-122.jpg",
+      "assets/products/mens/shruhi-ms-122-macro-swatch.jpg",
       "assets/products/mens/ms-122-havana-rainforest-tropical-leaf-shirt-view-2.jpg"
     ]
   },
@@ -2024,15 +2073,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-123: Golden Bamboo & Palm Mandarin-Collar Resort Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 2 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-123-golden-bamboo-mandarin-resort-shirt.jpg",
+    "image": "assets/products/mens/shruhi-ms-123.jpg",
     "gallery": [
-      "assets/products/mens/ms-123-golden-bamboo-mandarin-resort-shirt.jpg",
+      "assets/products/mens/shruhi-ms-123.jpg",
+      "assets/products/mens/shruhi-ms-123-macro-swatch.jpg",
       "assets/products/mens/ms-123-golden-bamboo-mandarin-resort-shirt-view-2.jpg",
       "assets/products/mens/ms-123-golden-bamboo-mandarin-resort-shirt-view-3.jpg"
     ]
@@ -2067,15 +2118,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-124: Aegean Cyan Feather Botanical Resort Printed Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 1 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-124-aegean-feather-botanical-resort-shirt.jpg",
+    "image": "assets/products/mens/shruhi-ms-124.jpg",
     "gallery": [
-      "assets/products/mens/ms-124-aegean-feather-botanical-resort-shirt.jpg",
+      "assets/products/mens/shruhi-ms-124.jpg",
+      "assets/products/mens/shruhi-ms-124-macro-swatch.jpg",
       "assets/products/mens/ms-124-aegean-feather-botanical-resort-shirt-view-2.jpg"
     ]
   },
@@ -2109,15 +2162,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-125: Vintage Desert Stripe Cuban Camp-Collar Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 1 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-125-vintage-desert-stripe-cuban-camp-shirt.jpg",
+    "image": "assets/products/mens/shruhi-ms-125.jpg",
     "gallery": [
-      "assets/products/mens/ms-125-vintage-desert-stripe-cuban-camp-shirt.jpg",
+      "assets/products/mens/shruhi-ms-125.jpg",
+      "assets/products/mens/shruhi-ms-125-macro-swatch.jpg",
       "assets/products/mens/ms-125-vintage-desert-stripe-cuban-camp-shirt-view-2.jpg"
     ]
   },
@@ -2151,15 +2206,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-126: French Riviera Powder-Blue Paisley Resort Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 1 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-126-french-riviera-powder-blue-paisley-shirt.jpg",
+    "image": "assets/products/mens/shruhi-ms-126.jpg",
     "gallery": [
-      "assets/products/mens/ms-126-french-riviera-powder-blue-paisley-shirt.jpg",
+      "assets/products/mens/shruhi-ms-126.jpg",
+      "assets/products/mens/shruhi-ms-126-macro-swatch.jpg",
       "assets/products/mens/ms-126-french-riviera-powder-blue-paisley-shirt-view-2.jpg"
     ]
   },
@@ -2193,15 +2250,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-127: Santorini Indigo Watercolor Splatter Casual Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 1 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-127-santorini-indigo-watercolor-splatter-shirt.jpg",
+    "image": "assets/products/mens/shruhi-ms-127.jpg",
     "gallery": [
-      "assets/products/mens/ms-127-santorini-indigo-watercolor-splatter-shirt.jpg",
+      "assets/products/mens/shruhi-ms-127.jpg",
+      "assets/products/mens/shruhi-ms-127-macro-swatch.jpg",
       "assets/products/mens/ms-127-santorini-indigo-watercolor-splatter-shirt-view-2.jpg"
     ]
   },
@@ -2235,15 +2294,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-128: Executive Charcoal Windowpane Check Casual Shirt. Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 2 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-128-executive-charcoal-windowpane-check-shirt.jpg",
+    "image": "assets/products/mens/shruhi-ms-128.jpg",
     "gallery": [
-      "assets/products/mens/ms-128-executive-charcoal-windowpane-check-shirt.jpg",
+      "assets/products/mens/shruhi-ms-128.jpg",
+      "assets/products/mens/shruhi-ms-128-macro-swatch.jpg",
       "assets/products/mens/ms-128-executive-charcoal-windowpane-check-shirt-view-2.jpg",
       "assets/products/mens/ms-128-executive-charcoal-windowpane-check-shirt-view-3.jpg"
     ]
@@ -2278,15 +2339,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-129: Dual-Tone Heritage Plaid Casual Shirt (Crimson & Jade Duo). Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 3 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt.jpg",
+    "image": "assets/products/mens/shruhi-ms-129.jpg",
     "gallery": [
-      "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt.jpg",
+      "assets/products/mens/shruhi-ms-129.jpg",
+      "assets/products/mens/shruhi-ms-129-macro-swatch.jpg",
       "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt-view-2.jpg",
       "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt-view-3.jpg",
       "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt-view-4.jpg"
@@ -2322,15 +2385,17 @@ window.SHRUHI_CATALOG = [
     "description": "Shruhi Men's Luxury Edition SHRUHI-MS-130: Minimalist Dual-Pocket Resort Camp Shirt (White & Black). Crafted in premium combed cotton and slub linen with high thread count, contrast buttons, tailored collar, and reinforced seams. Sizes M to 2XL available for instant WhatsApp order.",
     "highlights": [
       "WhatsApp Verified Tag MRP: ₹999 • Sizes: M, L, XL, 2XL (38–44)",
-      "Includes AI Male Model Hero Portrait + 4 Original Fabric & Colorway Plates",
+      "✓ 100% Authentic Factory Sample Studio Plate (Zero Design Mismatch)",
+      "✓ Macro Fabric Swatch & Fiber Detail Plate Included",
       "100% Pure Combed Cotton & Imported Slub Linen with soft-wash finish",
       "Direct Men's Wear WhatsApp Order Desk: +91 88496 01725"
     ],
     "whatsappPhone": "918849601725",
     "whatsappDisplay": "+91 88496 01725",
-    "image": "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt.jpg",
+    "image": "assets/products/mens/shruhi-ms-130.jpg",
     "gallery": [
-      "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt.jpg",
+      "assets/products/mens/shruhi-ms-130.jpg",
+      "assets/products/mens/shruhi-ms-130-macro-swatch.jpg",
       "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt-view-2.jpg",
       "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt-view-3.jpg",
       "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt-view-4.jpg",
@@ -2372,34 +2437,34 @@ window.SHRUHI_ALL_19_PLATES = [
   { plateNo: 29, code: "SHRUHI 5795 (₹1,350 • Size L)", productId: "wa-5795-floral-dress", image: "assets/products/wa-10-shruhi-5795-floral-midi-dress.jpg" },
   { plateNo: 30, code: "SHRUHI 5620 (₹850 • M-2XL)", productId: "wa-5620-swirl-tunic", image: "assets/products/wa-11-shruhi-5620-swirl-tunic.jpg" },
   { plateNo: 31, code: "KAVYA (₹2,850 • S,L,2XL)", productId: "wa-kavya-mauve-suit", image: "assets/products/wa-12-shruhi-kavya-mauve-suit.jpg" },,,
-  { plateNo: 32, code: "SHRUHI-MS-101 (₹999 • M-2XL)", productId: "ms-101-tartan-checks-collection", image: "assets/products/mens/ms-101-tartan-checks-collection.jpg" },
-  { plateNo: 33, code: "SHRUHI-MS-102 (₹999 • M-2XL)", productId: "ms-102-pastel-flannel-checks", image: "assets/products/mens/ms-102-pastel-flannel-checks.jpg" },
-  { plateNo: 34, code: "SHRUHI-MS-103 (₹999 • M-2XL)", productId: "ms-103-lycra-stretch-12-colours", image: "assets/products/mens/ms-103-lycra-stretch-12-colours.jpg" },
-  { plateNo: 35, code: "SHRUHI-MS-104 (₹999 • M-2XL)", productId: "ms-104-vintage-madras-check-trio", image: "assets/products/mens/ms-104-vintage-madras-check-trio.jpg" },
-  { plateNo: 36, code: "SHRUHI-MS-105 (₹999 • M-2XL)", productId: "ms-105-micro-gingham-5pc-pack", image: "assets/products/mens/ms-105-micro-gingham-5pc-pack.jpg" },
-  { plateNo: 37, code: "SHRUHI-MS-106 (₹999 • M-2XL)", productId: "ms-106-imported-linen-10-colours", image: "assets/products/mens/ms-106-imported-linen-10-colours.jpg" },
-  { plateNo: 38, code: "SHRUHI-MS-107 (₹999 • M-2XL)", productId: "ms-107-designer-lookbook-full-sleeve-checks", image: "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks.jpg" },
-  { plateNo: 39, code: "SHRUHI-MS-108 (₹999 • M-2XL)", productId: "ms-108-pure-linen-crest-12-colours", image: "assets/products/mens/ms-108-pure-linen-crest-12-colours.jpg" },
-  { plateNo: 40, code: "SHRUHI-MS-109 (₹999 • M-2XL)", productId: "ms-109-royal-linen-13-colours", image: "assets/products/mens/ms-109-royal-linen-13-colours.jpg" },
-  { plateNo: 41, code: "SHRUHI-MS-110 (₹999 • M-2XL)", productId: "ms-110-dual-pocket-cargo-shirt", image: "assets/products/mens/ms-110-dual-pocket-cargo-shirt.jpg" },
-  { plateNo: 42, code: "SHRUHI-MS-111 (₹999 • M-2XL)", productId: "ms-111-mandarin-collar-linen-solids", image: "assets/products/mens/ms-111-mandarin-collar-linen-solids.jpg" },
-  { plateNo: 43, code: "SHRUHI-MS-112 (₹999 • M-2XL)", productId: "ms-112-dno301-graph-check-executive-trio", image: "assets/products/mens/ms-112-dno301-graph-check-executive-trio.jpg" },
-  { plateNo: 44, code: "SHRUHI-MS-113 (₹999 • M-2XL)", productId: "ms-113-vertical-pinstripe-linen-trio", image: "assets/products/mens/ms-113-vertical-pinstripe-linen-trio.jpg" },
-  { plateNo: 45, code: "SHRUHI-MS-114 (₹999 • M-2XL)", productId: "ms-114-monochrome-overcheck-shirt", image: "assets/products/mens/ms-114-monochrome-overcheck-shirt.jpg" },
-  { plateNo: 46, code: "SHRUHI-MS-115 (₹999 • M-2XL)", productId: "ms-115-mandarin-botanical-resort-prints", image: "assets/products/mens/ms-115-mandarin-botanical-resort-prints.jpg" },
-  { plateNo: 47, code: "SHRUHI-MS-116 (₹999 • M-2XL)", productId: "ms-116-shadow-plaid-ombre-checks", image: "assets/products/mens/ms-116-shadow-plaid-ombre-checks.jpg" },
-  { plateNo: 48, code: "SHRUHI-MS-117 (₹999 • M-2XL)", productId: "ms-117-heritage-tartan-houndstooth-checks", image: "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks.jpg" },
-  { plateNo: 49, code: "SHRUHI-MS-118 (₹999 • M-2XL)", productId: "ms-118-textured-popcorn-vertical-stripes", image: "assets/products/mens/ms-118-textured-popcorn-vertical-stripes.jpg" },
-  { plateNo: 50, code: "SHRUHI-MS-119 (₹999 • M-2XL)", productId: "ms-119-linen-chambray-nautical-collection", image: "assets/products/mens/ms-119-linen-chambray-nautical-collection.jpg" },
-  { plateNo: 51, code: "SHRUHI-MS-120 (₹999 • M-2XL)", productId: "ms-120-jacquard-woven-panel-shirt", image: "assets/products/mens/ms-120-jacquard-woven-panel-shirt.jpg" },
-  { plateNo: 52, code: "SHRUHI-MS-121 (₹999 • M-2XL)", productId: "ms-121-cobalt-royal-orchid-resort-shirt", image: "assets/products/mens/ms-121-cobalt-royal-orchid-resort-shirt.jpg" },
-  { plateNo: 53, code: "SHRUHI-MS-122 (₹999 • M-2XL)", productId: "ms-122-havana-rainforest-tropical-leaf-shirt", image: "assets/products/mens/ms-122-havana-rainforest-tropical-leaf-shirt.jpg" },
-  { plateNo: 54, code: "SHRUHI-MS-123 (₹999 • M-2XL)", productId: "ms-123-golden-bamboo-mandarin-resort-shirt", image: "assets/products/mens/ms-123-golden-bamboo-mandarin-resort-shirt.jpg" },
-  { plateNo: 55, code: "SHRUHI-MS-124 (₹999 • M-2XL)", productId: "ms-124-aegean-feather-botanical-resort-shirt", image: "assets/products/mens/ms-124-aegean-feather-botanical-resort-shirt.jpg" },
-  { plateNo: 56, code: "SHRUHI-MS-125 (₹999 • M-2XL)", productId: "ms-125-vintage-desert-stripe-cuban-camp-shirt", image: "assets/products/mens/ms-125-vintage-desert-stripe-cuban-camp-shirt.jpg" },
-  { plateNo: 57, code: "SHRUHI-MS-126 (₹999 • M-2XL)", productId: "ms-126-french-riviera-powder-blue-paisley-shirt", image: "assets/products/mens/ms-126-french-riviera-powder-blue-paisley-shirt.jpg" },
-  { plateNo: 58, code: "SHRUHI-MS-127 (₹999 • M-2XL)", productId: "ms-127-santorini-indigo-watercolor-splatter-shirt", image: "assets/products/mens/ms-127-santorini-indigo-watercolor-splatter-shirt.jpg" },
-  { plateNo: 59, code: "SHRUHI-MS-128 (₹999 • M-2XL)", productId: "ms-128-executive-charcoal-windowpane-check-shirt", image: "assets/products/mens/ms-128-executive-charcoal-windowpane-check-shirt.jpg" },
-  { plateNo: 60, code: "SHRUHI-MS-129 (₹999 • M-2XL)", productId: "ms-129-dual-tone-heritage-plaid-casual-shirt", image: "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt.jpg" },
-  { plateNo: 61, code: "SHRUHI-MS-130 (₹999 • M-2XL)", productId: "ms-130-minimalist-dual-pocket-resort-camp-shirt", image: "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt.jpg" }
+  { plateNo: 32, code: "SHRUHI-MS-101 (₹999 • M-2XL)", productId: "ms-101-tartan-checks-collection", image: "assets/products/mens/shruhi-ms-101.jpg" },
+  { plateNo: 33, code: "SHRUHI-MS-102 (₹999 • M-2XL)", productId: "ms-102-pastel-flannel-checks", image: "assets/products/mens/shruhi-ms-102.jpg" },
+  { plateNo: 34, code: "SHRUHI-MS-103 (₹999 • M-2XL)", productId: "ms-103-lycra-stretch-12-colours", image: "assets/products/mens/shruhi-ms-103.jpg" },
+  { plateNo: 35, code: "SHRUHI-MS-104 (₹999 • M-2XL)", productId: "ms-104-vintage-madras-check-trio", image: "assets/products/mens/shruhi-ms-104.jpg" },
+  { plateNo: 36, code: "SHRUHI-MS-105 (₹999 • M-2XL)", productId: "ms-105-micro-gingham-5pc-pack", image: "assets/products/mens/shruhi-ms-105.jpg" },
+  { plateNo: 37, code: "SHRUHI-MS-106 (₹999 • M-2XL)", productId: "ms-106-imported-linen-10-colours", image: "assets/products/mens/shruhi-ms-106.jpg" },
+  { plateNo: 38, code: "SHRUHI-MS-107 (₹999 • M-2XL)", productId: "ms-107-designer-lookbook-full-sleeve-checks", image: "assets/products/mens/shruhi-ms-107.jpg" },
+  { plateNo: 39, code: "SHRUHI-MS-108 (₹999 • M-2XL)", productId: "ms-108-pure-linen-crest-12-colours", image: "assets/products/mens/shruhi-ms-108.jpg" },
+  { plateNo: 40, code: "SHRUHI-MS-109 (₹999 • M-2XL)", productId: "ms-109-royal-linen-13-colours", image: "assets/products/mens/shruhi-ms-109.jpg" },
+  { plateNo: 41, code: "SHRUHI-MS-110 (₹999 • M-2XL)", productId: "ms-110-dual-pocket-cargo-shirt", image: "assets/products/mens/shruhi-ms-110.jpg" },
+  { plateNo: 42, code: "SHRUHI-MS-111 (₹999 • M-2XL)", productId: "ms-111-mandarin-collar-linen-solids", image: "assets/products/mens/shruhi-ms-111.jpg" },
+  { plateNo: 43, code: "SHRUHI-MS-112 (₹999 • M-2XL)", productId: "ms-112-dno301-graph-check-executive-trio", image: "assets/products/mens/shruhi-ms-112.jpg" },
+  { plateNo: 44, code: "SHRUHI-MS-113 (₹999 • M-2XL)", productId: "ms-113-vertical-pinstripe-linen-trio", image: "assets/products/mens/shruhi-ms-113.jpg" },
+  { plateNo: 45, code: "SHRUHI-MS-114 (₹999 • M-2XL)", productId: "ms-114-monochrome-overcheck-shirt", image: "assets/products/mens/shruhi-ms-114.jpg" },
+  { plateNo: 46, code: "SHRUHI-MS-115 (₹999 • M-2XL)", productId: "ms-115-mandarin-botanical-resort-prints", image: "assets/products/mens/shruhi-ms-115.jpg" },
+  { plateNo: 47, code: "SHRUHI-MS-116 (₹999 • M-2XL)", productId: "ms-116-shadow-plaid-ombre-checks", image: "assets/products/mens/shruhi-ms-116.jpg" },
+  { plateNo: 48, code: "SHRUHI-MS-117 (₹999 • M-2XL)", productId: "ms-117-heritage-tartan-houndstooth-checks", image: "assets/products/mens/shruhi-ms-117.jpg" },
+  { plateNo: 49, code: "SHRUHI-MS-118 (₹999 • M-2XL)", productId: "ms-118-textured-popcorn-vertical-stripes", image: "assets/products/mens/shruhi-ms-118.jpg" },
+  { plateNo: 50, code: "SHRUHI-MS-119 (₹999 • M-2XL)", productId: "ms-119-linen-chambray-nautical-collection", image: "assets/products/mens/shruhi-ms-119.jpg" },
+  { plateNo: 51, code: "SHRUHI-MS-120 (₹999 • M-2XL)", productId: "ms-120-jacquard-woven-panel-shirt", image: "assets/products/mens/shruhi-ms-120.jpg" },
+  { plateNo: 52, code: "SHRUHI-MS-121 (₹999 • M-2XL)", productId: "ms-121-cobalt-royal-orchid-resort-shirt", image: "assets/products/mens/shruhi-ms-121.jpg" },
+  { plateNo: 53, code: "SHRUHI-MS-122 (₹999 • M-2XL)", productId: "ms-122-havana-rainforest-tropical-leaf-shirt", image: "assets/products/mens/shruhi-ms-122.jpg" },
+  { plateNo: 54, code: "SHRUHI-MS-123 (₹999 • M-2XL)", productId: "ms-123-golden-bamboo-mandarin-resort-shirt", image: "assets/products/mens/shruhi-ms-123.jpg" },
+  { plateNo: 55, code: "SHRUHI-MS-124 (₹999 • M-2XL)", productId: "ms-124-aegean-feather-botanical-resort-shirt", image: "assets/products/mens/shruhi-ms-124.jpg" },
+  { plateNo: 56, code: "SHRUHI-MS-125 (₹999 • M-2XL)", productId: "ms-125-vintage-desert-stripe-cuban-camp-shirt", image: "assets/products/mens/shruhi-ms-125.jpg" },
+  { plateNo: 57, code: "SHRUHI-MS-126 (₹999 • M-2XL)", productId: "ms-126-french-riviera-powder-blue-paisley-shirt", image: "assets/products/mens/shruhi-ms-126.jpg" },
+  { plateNo: 58, code: "SHRUHI-MS-127 (₹999 • M-2XL)", productId: "ms-127-santorini-indigo-watercolor-splatter-shirt", image: "assets/products/mens/shruhi-ms-127.jpg" },
+  { plateNo: 59, code: "SHRUHI-MS-128 (₹999 • M-2XL)", productId: "ms-128-executive-charcoal-windowpane-check-shirt", image: "assets/products/mens/shruhi-ms-128.jpg" },
+  { plateNo: 60, code: "SHRUHI-MS-129 (₹999 • M-2XL)", productId: "ms-129-dual-tone-heritage-plaid-casual-shirt", image: "assets/products/mens/shruhi-ms-129.jpg" },
+  { plateNo: 61, code: "SHRUHI-MS-130 (₹999 • M-2XL)", productId: "ms-130-minimalist-dual-pocket-resort-camp-shirt", image: "assets/products/mens/shruhi-ms-130.jpg" }
 ];

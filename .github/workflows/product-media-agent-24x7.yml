@@ -1,0 +1,65 @@
+name: Shruhi Collections Autonomous 24/7 AI Product Media & Video Showcase Agent
+
+on:
+  schedule:
+    # Run every 30 minutes to process any dropped product samples
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      batch_all_samples:
+        description: "Process all samples in incoming folder"
+        required: false
+        default: "true"
+      generate_videos:
+        description: "Generate 9:16 MP4 showcase video reels"
+        required: false
+        default: "true"
+  push:
+    paths:
+      - "product_media_agent/incoming_samples/**"
+      - "assets/incoming-samples/**"
+
+permissions:
+  contents: write
+
+jobs:
+  product-media-agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout Shruhi Collections Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install FFmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pillow opencv-python-headless numpy
+
+      - name: Run Autonomous Product Media Agent
+        run: |
+          python -m product_media_agent.cli --batch-dir product_media_agent/incoming_samples --with-videos || true
+
+      - name: Commit and Push Generated 4K Studio Media & Video Showcases
+        run: |
+          git config user.name "Shruhi-Product-Media-Agent[bot]"
+          git config user.email "bot@shruhicollections.in"
+          git add assets/ 4K_Branded_Catalog/ catalog-data.js index.html product_media_agent/ || true
+          if git diff --staged --quiet; then
+            echo "No new media changes to commit."
+          else
+            git commit -m "Auto-generated 4K Studio catalog plates & 9:16 Video Reels via 24/7 ProductMediaAgent"
+            git push origin HEAD:main
+            git push origin HEAD:master -f
+          fi
