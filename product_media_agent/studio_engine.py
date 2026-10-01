@@ -27,7 +27,9 @@ def render_4k_studio_plate(
     sizes="M, L, XL, 2XL (38–44)",
     whatsapp_phone="+91 88496 01725",
     stickers_to_mask=None,
-    out_path=None
+    out_path=None,
+    is_solid=False,
+    rgb_color=None
 ):
     """
     Renders an ultra-high-definition 1440x1920 Studio Catalog Plate
@@ -79,7 +81,7 @@ def render_4k_studio_plate(
 
     if not is_model:
         # User requirement: If pic doesn't contain a model, ADD ONE!
-        model_im = synthesize_model_wearing_garment(im, model_pose="athletic_tailored")
+        model_im = synthesize_model_wearing_garment(im, model_pose="athletic_tailored", is_solid=is_solid, rgb_color=rgb_color)
         mw, mh = model_im.size
         target_ratio = vp_w / vp_h
         cur_ratio = mw / mh

@@ -126,15 +126,69 @@ def extract_clean_fabric_tile(garment_img, crop_box=None):
     tile.paste(ImageOps.flip(ImageOps.mirror(clean)), (pw, ph))
     return tile
 
-def synthesize_model_wearing_garment(garment_img_or_path, model_pose="athletic_tailored", scale=2.1, flip=False):
+def render_solid_model(model_pose, rgb_color, flip=False):
+    """
+    Renders an authentic, crisp solid color garment onto an editorial model
+    preserving real shadow/crease depth and subtle micro-slub/textile grain.
+    Prevents any accidental tiling or patchwork artifact on solid fabrics.
+    """
+    model_path = BASE_MODEL_PATHS.get(model_pose, list(BASE_MODEL_PATHS.values())[0])
+    if not os.path.exists(model_path):
+        return None
+
+    model_im = Image.open(model_path).convert("RGB")
+    W, H = model_im.size
+    mask = get_base_shirt_mask(model_pose, model_im)
+
+    arr = np.asarray(model_im, dtype=np.float32)
+    lum = 0.299 * arr[:, :, 0] + 0.587 * arr[:, :, 1] + 0.114 * arr[:, :, 2]
+
+    shirt_vals = lum[mask > 0.5]
+    base_lum = np.percentile(shirt_vals, 65) if len(shirt_vals) > 100 else 150.0
+
+    shading = np.clip(lum / max(base_lum, 1.0), 0.35, 1.30)
+    shading = np.power(shading, 0.95)[:, :, None]
+
+    base_rgb = np.array(rgb_color, dtype=np.float32)[None, None, :]
+    np.random.seed(42)
+    grain = 1.0 + (np.random.randn(H, W, 1).astype(np.float32) * 0.035)
+
+    colored_shirt = np.clip(base_rgb * shading * grain, 0, 255)
+
+    m3 = mask[:, :, None]
+    comp = arr * (1.0 - m3) + colored_shirt * m3
+    out_im = Image.fromarray(comp.astype(np.uint8))
+    if flip:
+        out_im = ImageOps.mirror(out_im)
+    return out_im
+
+def synthesize_model_wearing_garment(garment_img_or_path, model_pose="athletic_tailored", scale=2.1, flip=False, is_solid=False, rgb_color=None):
     """
     Applies the exact fabric and pattern from a garment sample onto an editorial studio male model.
     Preserves realistic folds, shadows, highlights, and collar lines.
+    Automatically identifies solid fabrics and renders authentic micro-grain solid shirts.
     """
     if isinstance(garment_img_or_path, str):
         garment_im = Image.open(garment_img_or_path).convert("RGB")
     else:
         garment_im = garment_img_or_path.convert("RGB")
+
+    # If explicitly marked solid or rgb_color provided
+    if is_solid and (rgb_color is not None):
+        solid_res = render_solid_model(model_pose, rgb_color, flip=flip)
+        if solid_res:
+            return solid_res
+
+    # Check for solid fabric via central texture variance
+    w, h = garment_im.size
+    cx = garment_im.crop((int(w * 0.28), int(h * 0.28), int(w * 0.72), int(h * 0.72)))
+    arr_c = np.asarray(cx, dtype=np.float32)
+    std_dev = np.std(arr_c)
+    if is_solid or (std_dev < 18.0 and not is_solid is False):
+        median_rgb = np.median(arr_c.reshape(-1, 3), axis=0).astype(int).tolist()
+        solid_res = render_solid_model(model_pose, median_rgb, flip=flip)
+        if solid_res:
+            return solid_res
 
     model_path = BASE_MODEL_PATHS.get(model_pose, list(BASE_MODEL_PATHS.values())[0])
     if not os.path.exists(model_path):

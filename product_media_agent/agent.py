@@ -60,6 +60,8 @@ class ProductMediaAgent:
         mrp_str = f"MRP ₹{mrp_num:,}"
 
         slug = code.lower().replace(" ", "-")
+        is_solid = analysis.get("pattern_type") == "Signature Solid"
+        rgb_color = analysis.get("avg_rgb")
 
         # 1. 4K Studio Catalog Plate
         studio_fn = f"{slug}.jpg"
@@ -73,7 +75,9 @@ class ProductMediaAgent:
             sizes=sizes,
             whatsapp_phone=phone,
             stickers_to_mask=analysis["stickers_to_mask"],
-            out_path=studio_path
+            out_path=studio_path,
+            is_solid=is_solid,
+            rgb_color=rgb_color
         )
 
         # 4K Branded Catalog entry
@@ -88,7 +92,9 @@ class ProductMediaAgent:
             sizes=sizes,
             whatsapp_phone=phone,
             stickers_to_mask=analysis["stickers_to_mask"],
-            out_path=cat_path
+            out_path=cat_path,
+            is_solid=is_solid,
+            rgb_color=rgb_color
         )
 
         # 2. Macro Fabric Swatch Plate

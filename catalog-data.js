@@ -1161,10 +1161,15 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-103.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-103.jpg",
+
+      "assets/products/mens/ms-103-lycra-stretch-12-colours.jpg",
       "assets/products/mens/shruhi-ms-103-macro-swatch.jpg",
       "assets/products/mens/ms-103-lycra-stretch-12-colours-view-2.jpg",
-      "assets/products/mens/ms-103-lycra-stretch-12-colours-view-3.jpg"
+      "assets/products/mens/ms-103-lycra-stretch-12-colours-view-3.jpg",
+      "assets/products/mens/ms-103-lycra-stretch-12-colours-view-4.jpg",
+      "assets/products/mens/ms-103-lycra-stretch-12-colours-view-5.jpg",
+      "assets/products/mens/ms-103-lycra-stretch-12-colours-view-6.jpg"
+
     ]
   },
   {
@@ -1297,10 +1302,13 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-106.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-106.jpg",
+
+      "assets/products/mens/ms-106-imported-linen-10-colours.jpg",
       "assets/products/mens/shruhi-ms-106-macro-swatch.jpg",
       "assets/products/mens/ms-106-imported-linen-10-colours-view-2.jpg",
-      "assets/products/mens/ms-106-imported-linen-10-colours-view-3.jpg"
+      "assets/products/mens/ms-106-imported-linen-10-colours-view-3.jpg",
+      "assets/products/mens/ms-106-imported-linen-10-colours-view-4.jpg"
+
     ]
   },
   {
@@ -1389,13 +1397,15 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-108.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-108.jpg",
+
+      "assets/products/mens/ms-108-pure-linen-crest-12-colours.jpg",
       "assets/products/mens/shruhi-ms-108-macro-swatch.jpg",
       "assets/products/mens/ms-108-pure-linen-crest-12-colours-view-2.jpg",
       "assets/products/mens/ms-108-pure-linen-crest-12-colours-view-3.jpg",
       "assets/products/mens/ms-108-pure-linen-crest-12-colours-view-4.jpg",
       "assets/products/mens/ms-108-pure-linen-crest-12-colours-view-5.jpg",
       "assets/products/mens/ms-108-pure-linen-crest-12-colours-view-6.jpg"
+
     ]
   },
   {
@@ -1437,9 +1447,13 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-109.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-109.jpg",
+
+      "assets/products/mens/ms-109-royal-linen-13-colours.jpg",
       "assets/products/mens/shruhi-ms-109-macro-swatch.jpg",
-      "assets/products/mens/ms-109-royal-linen-13-colours-view-2.jpg"
+      "assets/products/mens/ms-109-royal-linen-13-colours-view-2.jpg",
+      "assets/products/mens/ms-109-royal-linen-13-colours-view-3.jpg",
+      "assets/products/mens/ms-109-royal-linen-13-colours-view-4.jpg"
+
     ]
   },
   {
@@ -1481,10 +1495,12 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-110.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-110.jpg",
+
+      "assets/products/mens/ms-110-dual-pocket-cargo-shirt.jpg",
       "assets/products/mens/shruhi-ms-110-macro-swatch.jpg",
       "assets/products/mens/ms-110-dual-pocket-cargo-shirt-view-2.jpg",
       "assets/products/mens/ms-110-dual-pocket-cargo-shirt-view-3.jpg"
+
     ]
   },
   {
@@ -1526,12 +1542,14 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-111.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-111.jpg",
+
+      "assets/products/mens/ms-111-mandarin-collar-linen-solids.jpg",
       "assets/products/mens/shruhi-ms-111-macro-swatch.jpg",
       "assets/products/mens/ms-111-mandarin-collar-linen-solids-view-2.jpg",
       "assets/products/mens/ms-111-mandarin-collar-linen-solids-view-3.jpg",
       "assets/products/mens/ms-111-mandarin-collar-linen-solids-view-4.jpg",
       "assets/products/mens/ms-111-mandarin-collar-linen-solids-view-5.jpg"
+
     ]
   },
   {
@@ -2394,12 +2412,14 @@ window.SHRUHI_CATALOG = [
     "whatsappDisplay": "+91 88496 01725",
     "image": "assets/products/mens/shruhi-ms-130.jpg",
     "gallery": [
-      "assets/products/mens/shruhi-ms-130.jpg",
+
+      "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt.jpg",
       "assets/products/mens/shruhi-ms-130-macro-swatch.jpg",
       "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt-view-2.jpg",
       "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt-view-3.jpg",
       "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt-view-4.jpg",
       "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt-view-5.jpg"
+
     ]
   }
 ];

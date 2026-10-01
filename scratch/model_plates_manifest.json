@@ -1,0 +1,419 @@
+[
+  {
+    "id": "ms-101-tartan-checks-collection",
+    "code": "SHRUHI-MS-101",
+    "title": "Wisteria Tartan & Windowpane Check Casual Shirt",
+    "hero_image": "assets/products/mens/ms-101-tartan-checks-collection.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-101.jpg",
+    "gallery": [
+      "assets/products/mens/ms-101-tartan-checks-collection.jpg",
+      "assets/products/mens/shruhi-ms-101-macro-swatch.jpg",
+      "assets/products/mens/ms-101-tartan-checks-collection-view-2.jpg",
+      "assets/products/mens/ms-101-tartan-checks-collection-view-3.jpg",
+      "assets/products/mens/ms-101-tartan-checks-collection-view-4.jpg",
+      "assets/products/mens/ms-101-tartan-checks-collection-view-5.jpg",
+      "assets/products/mens/ms-101-tartan-checks-collection-view-6.jpg",
+      "assets/products/mens/ms-101-tartan-checks-collection-view-7.jpg",
+      "assets/products/mens/ms-101-tartan-checks-collection-view-8.jpg",
+      "assets/products/mens/ms-101-tartan-checks-collection-view-9.jpg",
+      "assets/products/mens/ms-101-tartan-checks-collection-view-10.jpg"
+    ]
+  },
+  {
+    "id": "ms-102-pastel-flannel-checks",
+    "code": "SHRUHI-MS-102",
+    "title": "Pastel Brushed Cotton Check Casual Shirt (3-Shade Pack)",
+    "hero_image": "assets/products/mens/ms-102-pastel-flannel-checks.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-102.jpg",
+    "gallery": [
+      "assets/products/mens/ms-102-pastel-flannel-checks.jpg",
+      "assets/products/mens/shruhi-ms-102-macro-swatch.jpg",
+      "assets/products/mens/ms-102-pastel-flannel-checks-view-2.jpg",
+      "assets/products/mens/ms-102-pastel-flannel-checks-view-3.jpg",
+      "assets/products/mens/ms-102-pastel-flannel-checks-view-4.jpg",
+      "assets/products/mens/ms-102-pastel-flannel-checks-view-5.jpg"
+    ]
+  },
+  {
+    "id": "ms-103-lycra-stretch-12-colours",
+    "code": "SHRUHI-MS-103",
+    "title": "Signature Lycra 4-Way Stretch Solid Shirt (12 Colours)",
+    "hero_image": "assets/products/mens/ms-103-lycra-stretch-12-colours.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-103.jpg",
+    "gallery": [
+      "assets/products/mens/ms-103-lycra-stretch-12-colours.jpg",
+      "assets/products/mens/shruhi-ms-103-macro-swatch.jpg",
+      "assets/products/mens/ms-103-lycra-stretch-12-colours-view-2.jpg",
+      "assets/products/mens/ms-103-lycra-stretch-12-colours-view-3.jpg"
+    ]
+  },
+  {
+    "id": "ms-104-vintage-madras-check-trio",
+    "code": "SHRUHI-MS-104",
+    "title": "Vintage Madras & Windowpane Check Shirt Trio",
+    "hero_image": "assets/products/mens/ms-104-vintage-madras-check-trio.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-104.jpg",
+    "gallery": [
+      "assets/products/mens/ms-104-vintage-madras-check-trio.jpg",
+      "assets/products/mens/shruhi-ms-104-macro-swatch.jpg",
+      "assets/products/mens/ms-104-vintage-madras-check-trio-view-2.jpg",
+      "assets/products/mens/ms-104-vintage-madras-check-trio-view-3.jpg"
+    ]
+  },
+  {
+    "id": "ms-105-micro-gingham-5pc-pack",
+    "code": "SHRUHI-MS-105",
+    "title": "Executive Micro-Gingham Check Shirt (5-Colour Pack)",
+    "hero_image": "assets/products/mens/ms-105-micro-gingham-5pc-pack.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-105.jpg",
+    "gallery": [
+      "assets/products/mens/ms-105-micro-gingham-5pc-pack.jpg",
+      "assets/products/mens/shruhi-ms-105-macro-swatch.jpg",
+      "assets/products/mens/ms-105-micro-gingham-5pc-pack-view-2.jpg"
+    ]
+  },
+  {
+    "id": "ms-106-imported-linen-10-colours",
+    "code": "SHRUHI-MS-106",
+    "title": "Imported Slub Linen Solid Casual Shirt (10 Colours)",
+    "hero_image": "assets/products/mens/ms-106-imported-linen-10-colours.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-106.jpg",
+    "gallery": [
+      "assets/products/mens/ms-106-imported-linen-10-colours.jpg",
+      "assets/products/mens/shruhi-ms-106-macro-swatch.jpg",
+      "assets/products/mens/ms-106-imported-linen-10-colours-view-2.jpg",
+      "assets/products/mens/ms-106-imported-linen-10-colours-view-3.jpg"
+    ]
+  },
+  {
+    "id": "ms-107-designer-lookbook-full-sleeve-checks",
+    "code": "SHRUHI-MS-107",
+    "title": "Designer Studio Full-Sleeve Check Shirt Collection",
+    "hero_image": "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-107.jpg",
+    "gallery": [
+      "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks.jpg",
+      "assets/products/mens/shruhi-ms-107-macro-swatch.jpg",
+      "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks-view-2.jpg",
+      "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks-view-3.jpg",
+      "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks-view-4.jpg",
+      "assets/products/mens/ms-107-designer-lookbook-full-sleeve-checks-view-5.jpg"
+    ]
+  },
+  {
+    "id": "ms-108-pure-linen-crest-12-colours",
+    "code": "SHRUHI-MS-108",
+    "title": "Pure Linen Embroidered-Crest Shirt (12 Colours)",
+    "hero_image": "assets/products/mens/ms-108-pure-linen-crest-12-colours.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-108.jpg",
+    "gallery": [
+      "assets/products/mens/ms-108-pure-linen-crest-12-colours.jpg",
+      "assets/products/mens/shruhi-ms-108-macro-swatch.jpg",
+      "assets/products/mens/ms-108-pure-linen-crest-12-colours-view-2.jpg",
+      "assets/products/mens/ms-108-pure-linen-crest-12-colours-view-3.jpg",
+      "assets/products/mens/ms-108-pure-linen-crest-12-colours-view-4.jpg",
+      "assets/products/mens/ms-108-pure-linen-crest-12-colours-view-5.jpg",
+      "assets/products/mens/ms-108-pure-linen-crest-12-colours-view-6.jpg"
+    ]
+  },
+  {
+    "id": "ms-109-royal-linen-13-colours",
+    "code": "SHRUHI-MS-109",
+    "title": "Royal Linen Resort Solid Shirt (13-Colour Master Chart)",
+    "hero_image": "assets/products/mens/ms-109-royal-linen-13-colours.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-109.jpg",
+    "gallery": [
+      "assets/products/mens/ms-109-royal-linen-13-colours.jpg",
+      "assets/products/mens/shruhi-ms-109-macro-swatch.jpg",
+      "assets/products/mens/ms-109-royal-linen-13-colours-view-2.jpg"
+    ]
+  },
+  {
+    "id": "ms-110-dual-pocket-cargo-shirt",
+    "code": "SHRUHI-MS-110",
+    "title": "Dual-Flap Pocket Utility Casual Shirt (White & Black)",
+    "hero_image": "assets/products/mens/ms-110-dual-pocket-cargo-shirt.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-110.jpg",
+    "gallery": [
+      "assets/products/mens/ms-110-dual-pocket-cargo-shirt.jpg",
+      "assets/products/mens/shruhi-ms-110-macro-swatch.jpg",
+      "assets/products/mens/ms-110-dual-pocket-cargo-shirt-view-2.jpg",
+      "assets/products/mens/ms-110-dual-pocket-cargo-shirt-view-3.jpg"
+    ]
+  },
+  {
+    "id": "ms-111-mandarin-collar-linen-solids",
+    "code": "SHRUHI-MS-111",
+    "title": "Mandarin Bandhgala Collar Slub-Linen Solid Shirt",
+    "hero_image": "assets/products/mens/ms-111-mandarin-collar-linen-solids.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-111.jpg",
+    "gallery": [
+      "assets/products/mens/ms-111-mandarin-collar-linen-solids.jpg",
+      "assets/products/mens/shruhi-ms-111-macro-swatch.jpg",
+      "assets/products/mens/ms-111-mandarin-collar-linen-solids-view-2.jpg",
+      "assets/products/mens/ms-111-mandarin-collar-linen-solids-view-3.jpg",
+      "assets/products/mens/ms-111-mandarin-collar-linen-solids-view-4.jpg",
+      "assets/products/mens/ms-111-mandarin-collar-linen-solids-view-5.jpg"
+    ]
+  },
+  {
+    "id": "ms-112-dno301-graph-check-executive-trio",
+    "code": "SHRUHI-MS-112",
+    "title": "D.No 301 Executive Graph-Check Shirt (Half & Full Sleeve)",
+    "hero_image": "assets/products/mens/ms-112-dno301-graph-check-executive-trio.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-112.jpg",
+    "gallery": [
+      "assets/products/mens/ms-112-dno301-graph-check-executive-trio.jpg",
+      "assets/products/mens/shruhi-ms-112-macro-swatch.jpg",
+      "assets/products/mens/ms-112-dno301-graph-check-executive-trio-view-2.jpg"
+    ]
+  },
+  {
+    "id": "ms-113-vertical-pinstripe-linen-trio",
+    "code": "SHRUHI-MS-113",
+    "title": "Tailored Vertical Pinstripe Linen-Cotton Shirt Trio",
+    "hero_image": "assets/products/mens/ms-113-vertical-pinstripe-linen-trio.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-113.jpg",
+    "gallery": [
+      "assets/products/mens/ms-113-vertical-pinstripe-linen-trio.jpg",
+      "assets/products/mens/shruhi-ms-113-macro-swatch.jpg",
+      "assets/products/mens/ms-113-vertical-pinstripe-linen-trio-view-2.jpg"
+    ]
+  },
+  {
+    "id": "ms-114-monochrome-overcheck-shirt",
+    "code": "SHRUHI-MS-114",
+    "title": "Monochrome Ivory & Charcoal Overcheck Casual Shirt",
+    "hero_image": "assets/products/mens/ms-114-monochrome-overcheck-shirt.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-114.jpg",
+    "gallery": [
+      "assets/products/mens/ms-114-monochrome-overcheck-shirt.jpg",
+      "assets/products/mens/shruhi-ms-114-macro-swatch.jpg",
+      "assets/products/mens/ms-114-monochrome-overcheck-shirt-view-2.jpg",
+      "assets/products/mens/ms-114-monochrome-overcheck-shirt-view-3.jpg",
+      "assets/products/mens/ms-114-monochrome-overcheck-shirt-view-4.jpg"
+    ]
+  },
+  {
+    "id": "ms-115-mandarin-botanical-resort-prints",
+    "code": "SHRUHI-MS-115",
+    "title": "Mandarin-Collar Botanical & Tropical Resort Printed Shirt",
+    "hero_image": "assets/products/mens/ms-115-mandarin-botanical-resort-prints.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-115.jpg",
+    "gallery": [
+      "assets/products/mens/ms-115-mandarin-botanical-resort-prints.jpg",
+      "assets/products/mens/shruhi-ms-115-macro-swatch.jpg",
+      "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-2.jpg",
+      "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-3.jpg",
+      "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-4.jpg",
+      "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-5.jpg",
+      "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-6.jpg",
+      "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-7.jpg",
+      "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-8.jpg",
+      "assets/products/mens/ms-115-mandarin-botanical-resort-prints-view-9.jpg"
+    ]
+  },
+  {
+    "id": "ms-116-shadow-plaid-ombre-checks",
+    "code": "SHRUHI-MS-116",
+    "title": "Shadow-Plaid & Ombr\u00e9 Brushed Check Casual Shirt",
+    "hero_image": "assets/products/mens/ms-116-shadow-plaid-ombre-checks.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-116.jpg",
+    "gallery": [
+      "assets/products/mens/ms-116-shadow-plaid-ombre-checks.jpg",
+      "assets/products/mens/shruhi-ms-116-macro-swatch.jpg",
+      "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-2.jpg",
+      "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-3.jpg",
+      "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-4.jpg",
+      "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-5.jpg",
+      "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-6.jpg",
+      "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-7.jpg",
+      "assets/products/mens/ms-116-shadow-plaid-ombre-checks-view-8.jpg"
+    ]
+  },
+  {
+    "id": "ms-117-heritage-tartan-houndstooth-checks",
+    "code": "SHRUHI-MS-117",
+    "title": "Heritage Tartan & Micro-Houndstooth Check Shirt",
+    "hero_image": "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-117.jpg",
+    "gallery": [
+      "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks.jpg",
+      "assets/products/mens/shruhi-ms-117-macro-swatch.jpg",
+      "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-2.jpg",
+      "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-3.jpg",
+      "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-4.jpg",
+      "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-5.jpg",
+      "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-6.jpg",
+      "assets/products/mens/ms-117-heritage-tartan-houndstooth-checks-view-7.jpg"
+    ]
+  },
+  {
+    "id": "ms-118-textured-popcorn-vertical-stripes",
+    "code": "SHRUHI-MS-118",
+    "title": "Textured Popcorn-Weave & Ribbed Vertical Stripe Shirt",
+    "hero_image": "assets/products/mens/ms-118-textured-popcorn-vertical-stripes.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-118.jpg",
+    "gallery": [
+      "assets/products/mens/ms-118-textured-popcorn-vertical-stripes.jpg",
+      "assets/products/mens/shruhi-ms-118-macro-swatch.jpg",
+      "assets/products/mens/ms-118-textured-popcorn-vertical-stripes-view-2.jpg",
+      "assets/products/mens/ms-118-textured-popcorn-vertical-stripes-view-3.jpg",
+      "assets/products/mens/ms-118-textured-popcorn-vertical-stripes-view-4.jpg",
+      "assets/products/mens/ms-118-textured-popcorn-vertical-stripes-view-5.jpg"
+    ]
+  },
+  {
+    "id": "ms-119-linen-chambray-nautical-collection",
+    "code": "SHRUHI-MS-119",
+    "title": "Linen-Chambray & Nautical Breton Stripe Casual Shirt",
+    "hero_image": "assets/products/mens/ms-119-linen-chambray-nautical-collection.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-119.jpg",
+    "gallery": [
+      "assets/products/mens/ms-119-linen-chambray-nautical-collection.jpg",
+      "assets/products/mens/shruhi-ms-119-macro-swatch.jpg",
+      "assets/products/mens/ms-119-linen-chambray-nautical-collection-view-2.jpg",
+      "assets/products/mens/ms-119-linen-chambray-nautical-collection-view-3.jpg"
+    ]
+  },
+  {
+    "id": "ms-120-jacquard-woven-panel-shirt",
+    "code": "SHRUHI-MS-120",
+    "title": "Artisanal Jacquard Vertical-Panel Motif Casual Shirt",
+    "hero_image": "assets/products/mens/ms-120-jacquard-woven-panel-shirt.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-120.jpg",
+    "gallery": [
+      "assets/products/mens/ms-120-jacquard-woven-panel-shirt.jpg",
+      "assets/products/mens/shruhi-ms-120-macro-swatch.jpg",
+      "assets/products/mens/ms-120-jacquard-woven-panel-shirt-view-2.jpg",
+      "assets/products/mens/ms-120-jacquard-woven-panel-shirt-view-3.jpg"
+    ]
+  },
+  {
+    "id": "ms-121-cobalt-royal-orchid-resort-shirt",
+    "code": "SHRUHI-MS-121",
+    "title": "Cobalt Royal Orchid Floral Resort Shirt",
+    "hero_image": "assets/products/mens/ms-121-cobalt-royal-orchid-resort-shirt.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-121.jpg",
+    "gallery": [
+      "assets/products/mens/ms-121-cobalt-royal-orchid-resort-shirt.jpg",
+      "assets/products/mens/shruhi-ms-121-macro-swatch.jpg",
+      "assets/products/mens/ms-121-cobalt-royal-orchid-resort-shirt-view-2.jpg"
+    ]
+  },
+  {
+    "id": "ms-122-havana-rainforest-tropical-leaf-shirt",
+    "code": "SHRUHI-MS-122",
+    "title": "Havana Rainforest Tropical Botanical Leaf Resort Shirt",
+    "hero_image": "assets/products/mens/ms-122-havana-rainforest-tropical-leaf-shirt.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-122.jpg",
+    "gallery": [
+      "assets/products/mens/ms-122-havana-rainforest-tropical-leaf-shirt.jpg",
+      "assets/products/mens/shruhi-ms-122-macro-swatch.jpg",
+      "assets/products/mens/ms-122-havana-rainforest-tropical-leaf-shirt-view-2.jpg"
+    ]
+  },
+  {
+    "id": "ms-123-golden-bamboo-mandarin-resort-shirt",
+    "code": "SHRUHI-MS-123",
+    "title": "Golden Bamboo & Palm Mandarin-Collar Resort Shirt",
+    "hero_image": "assets/products/mens/ms-123-golden-bamboo-mandarin-resort-shirt.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-123.jpg",
+    "gallery": [
+      "assets/products/mens/ms-123-golden-bamboo-mandarin-resort-shirt.jpg",
+      "assets/products/mens/shruhi-ms-123-macro-swatch.jpg",
+      "assets/products/mens/ms-123-golden-bamboo-mandarin-resort-shirt-view-2.jpg",
+      "assets/products/mens/ms-123-golden-bamboo-mandarin-resort-shirt-view-3.jpg"
+    ]
+  },
+  {
+    "id": "ms-124-aegean-feather-botanical-resort-shirt",
+    "code": "SHRUHI-MS-124",
+    "title": "Aegean Cyan Feather Botanical Resort Printed Shirt",
+    "hero_image": "assets/products/mens/ms-124-aegean-feather-botanical-resort-shirt.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-124.jpg",
+    "gallery": [
+      "assets/products/mens/ms-124-aegean-feather-botanical-resort-shirt.jpg",
+      "assets/products/mens/shruhi-ms-124-macro-swatch.jpg",
+      "assets/products/mens/ms-124-aegean-feather-botanical-resort-shirt-view-2.jpg"
+    ]
+  },
+  {
+    "id": "ms-125-vintage-desert-stripe-cuban-camp-shirt",
+    "code": "SHRUHI-MS-125",
+    "title": "Vintage Desert Stripe Cuban Camp-Collar Shirt",
+    "hero_image": "assets/products/mens/ms-125-vintage-desert-stripe-cuban-camp-shirt.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-125.jpg",
+    "gallery": [
+      "assets/products/mens/ms-125-vintage-desert-stripe-cuban-camp-shirt.jpg",
+      "assets/products/mens/shruhi-ms-125-macro-swatch.jpg",
+      "assets/products/mens/ms-125-vintage-desert-stripe-cuban-camp-shirt-view-2.jpg"
+    ]
+  },
+  {
+    "id": "ms-126-french-riviera-powder-blue-paisley-shirt",
+    "code": "SHRUHI-MS-126",
+    "title": "French Riviera Powder-Blue Paisley Resort Shirt",
+    "hero_image": "assets/products/mens/ms-126-french-riviera-powder-blue-paisley-shirt.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-126.jpg",
+    "gallery": [
+      "assets/products/mens/ms-126-french-riviera-powder-blue-paisley-shirt.jpg",
+      "assets/products/mens/shruhi-ms-126-macro-swatch.jpg",
+      "assets/products/mens/ms-126-french-riviera-powder-blue-paisley-shirt-view-2.jpg"
+    ]
+  },
+  {
+    "id": "ms-127-santorini-indigo-watercolor-splatter-shirt",
+    "code": "SHRUHI-MS-127",
+    "title": "Santorini Indigo Watercolor Splatter Casual Shirt",
+    "hero_image": "assets/products/mens/ms-127-santorini-indigo-watercolor-splatter-shirt.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-127.jpg",
+    "gallery": [
+      "assets/products/mens/ms-127-santorini-indigo-watercolor-splatter-shirt.jpg",
+      "assets/products/mens/shruhi-ms-127-macro-swatch.jpg",
+      "assets/products/mens/ms-127-santorini-indigo-watercolor-splatter-shirt-view-2.jpg"
+    ]
+  },
+  {
+    "id": "ms-128-executive-charcoal-windowpane-check-shirt",
+    "code": "SHRUHI-MS-128",
+    "title": "Executive Charcoal Windowpane Check Casual Shirt",
+    "hero_image": "assets/products/mens/ms-128-executive-charcoal-windowpane-check-shirt.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-128.jpg",
+    "gallery": [
+      "assets/products/mens/ms-128-executive-charcoal-windowpane-check-shirt.jpg",
+      "assets/products/mens/shruhi-ms-128-macro-swatch.jpg",
+      "assets/products/mens/ms-128-executive-charcoal-windowpane-check-shirt-view-2.jpg",
+      "assets/products/mens/ms-128-executive-charcoal-windowpane-check-shirt-view-3.jpg"
+    ]
+  },
+  {
+    "id": "ms-129-dual-tone-heritage-plaid-casual-shirt",
+    "code": "SHRUHI-MS-129",
+    "title": "Dual-Tone Heritage Plaid Casual Shirt (Crimson & Jade Duo)",
+    "hero_image": "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-129.jpg",
+    "gallery": [
+      "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt.jpg",
+      "assets/products/mens/shruhi-ms-129-macro-swatch.jpg",
+      "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt-view-2.jpg",
+      "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt-view-3.jpg",
+      "assets/products/mens/ms-129-dual-tone-heritage-plaid-casual-shirt-view-4.jpg"
+    ]
+  },
+  {
+    "id": "ms-130-minimalist-dual-pocket-resort-camp-shirt",
+    "code": "SHRUHI-MS-130",
+    "title": "Minimalist Dual-Pocket Resort Camp Shirt (White & Black)",
+    "hero_image": "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt.jpg",
+    "direct_image": "assets/products/mens/shruhi-ms-130.jpg",
+    "gallery": [
+      "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt.jpg",
+      "assets/products/mens/shruhi-ms-130-macro-swatch.jpg",
+      "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt-view-2.jpg",
+      "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt-view-3.jpg",
+      "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt-view-4.jpg",
+      "assets/products/mens/ms-130-minimalist-dual-pocket-resort-camp-shirt-view-5.jpg"
+    ]
+  }
+]
