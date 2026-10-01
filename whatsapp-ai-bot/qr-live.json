@@ -1,32 +1,30 @@
 {
   "service": "Shruhi Collections 24/7 Multi-Line WhatsApp Auto-AI Bot",
   "catalog": "59 verified 4K designs (29 Women's Ethnic S–6XL + 30 Men's AI-Model Shirts M–2XL)",
-  "startedAt": "2026-10-01T00:07:06.078Z",
+  "startedAt": "2026-10-01T08:34:47.160Z",
   "accounts": {
-    "6355285433": {
-      "recentEvents": [
-        {
-          "time": "2026-10-01T00:07:07.947Z",
-          "number": "6355285433",
-          "type": "CONNECTED",
-          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
-        }
-      ],
-      "autoRepliesSent": 0,
-      "connection": "open",
-      "linkedAccount": {
-        "id": "916355285433:22@s.whatsapp.net",
-        "name": "shruhi collection",
-        "lid": "43830845915210:22@lid"
-      },
-      "qrRaw": null,
-      "qrImgUrl": null,
-      "qrUpdatedAt": null
-    },
     "9054241725": {
       "recentEvents": [
         {
-          "time": "2026-10-01T00:07:07.120Z",
+          "time": "2026-10-01T09:25:38.810Z",
+          "number": "9054241725",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 90542 41725 (Primary 24/7 Auto-AI) ({\"id\":\"919054241725:2@s.whatsapp.net\",\"name\":\"really\",\"lid\":\"101301803343915:2@lid\"})"
+        },
+        {
+          "time": "2026-10-01T09:25:33.315Z",
+          "number": "9054241725",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 500)..."
+        },
+        {
+          "time": "2026-10-01T09:25:33.315Z",
+          "number": "9054241725",
+          "type": "DISCONNECTED",
+          "detail": "Code: 500 reason: Stream Errored (ack)"
+        },
+        {
+          "time": "2026-10-01T08:34:48.089Z",
           "number": "9054241725",
           "type": "CONNECTED",
           "detail": "✅ LIVE on +91 90542 41725 (Primary 24/7 Auto-AI) ({\"id\":\"919054241725:2@s.whatsapp.net\",\"name\":\"really\",\"lid\":\"101301803343915:2@lid\"})"
@@ -38,6 +36,164 @@
         "id": "919054241725:2@s.whatsapp.net",
         "name": "really",
         "lid": "101301803343915:2@lid"
+      },
+      "qrRaw": null,
+      "qrImgUrl": null,
+      "qrUpdatedAt": null
+    },
+    "6355285433": {
+      "recentEvents": [
+        {
+          "time": "2026-10-01T12:45:59.507Z",
+          "number": "6355285433",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
+        },
+        {
+          "time": "2026-10-01T12:45:54.132Z",
+          "number": "6355285433",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 428)..."
+        },
+        {
+          "time": "2026-10-01T12:45:54.132Z",
+          "number": "6355285433",
+          "type": "DISCONNECTED",
+          "detail": "Code: 428 reason: Connection Terminated"
+        },
+        {
+          "time": "2026-10-01T11:56:40.067Z",
+          "number": "6355285433",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
+        },
+        {
+          "time": "2026-10-01T11:56:34.450Z",
+          "number": "6355285433",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 500)..."
+        },
+        {
+          "time": "2026-10-01T11:56:34.449Z",
+          "number": "6355285433",
+          "type": "DISCONNECTED",
+          "detail": "Code: 500 reason: Stream Errored (ack)"
+        },
+        {
+          "time": "2026-10-01T11:05:56.161Z",
+          "number": "6355285433",
+          "type": "AUTO_REPLY_HELP",
+          "detail": "Sent help menu to 193260794441859@lid"
+        },
+        {
+          "time": "2026-10-01T11:05:56.040Z",
+          "number": "6355285433",
+          "type": "INCOMING_MSG",
+          "detail": "From 193260794441859@lid (append, fromMe=true): \"https://www.shruhicollections.in\""
+        },
+        {
+          "time": "2026-10-01T11:05:49.014Z",
+          "number": "6355285433",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
+        },
+        {
+          "time": "2026-10-01T11:05:44.455Z",
+          "number": "6355285433",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 500)..."
+        },
+        {
+          "time": "2026-10-01T11:05:44.455Z",
+          "number": "6355285433",
+          "type": "DISCONNECTED",
+          "detail": "Code: 500 reason: Stream Errored (ack)"
+        },
+        {
+          "time": "2026-10-01T10:15:50.608Z",
+          "number": "6355285433",
+          "type": "AUTO_REPLY_HELP",
+          "detail": "Sent help menu to 193260794441859@lid"
+        },
+        {
+          "time": "2026-10-01T10:15:50.496Z",
+          "number": "6355285433",
+          "type": "INCOMING_MSG",
+          "detail": "From 193260794441859@lid (notify, fromMe=true): \"https://www.shruhicollections.in\""
+        },
+        {
+          "time": "2026-10-01T10:15:43.387Z",
+          "number": "6355285433",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
+        },
+        {
+          "time": "2026-10-01T10:15:38.821Z",
+          "number": "6355285433",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 500)..."
+        },
+        {
+          "time": "2026-10-01T10:15:38.821Z",
+          "number": "6355285433",
+          "type": "DISCONNECTED",
+          "detail": "Code: 500 reason: Stream Errored (ack)"
+        },
+        {
+          "time": "2026-10-01T09:25:20.946Z",
+          "number": "6355285433",
+          "type": "AUTO_REPLY_HELP",
+          "detail": "Sent help menu to 193260794441859@lid"
+        },
+        {
+          "time": "2026-10-01T09:25:20.760Z",
+          "number": "6355285433",
+          "type": "INCOMING_MSG",
+          "detail": "From 193260794441859@lid (notify, fromMe=true): \"https://www.shruhicollections.in\""
+        },
+        {
+          "time": "2026-10-01T09:25:18.647Z",
+          "number": "6355285433",
+          "type": "AUTO_REPLY_PRODUCT",
+          "detail": "Sent MONI, D.NO 1042, KITTY PARTY to 141600911036551@lid"
+        },
+        {
+          "time": "2026-10-01T09:25:15.310Z",
+          "number": "6355285433",
+          "type": "INCOMING_MSG",
+          "detail": "From 141600911036551@lid (notify, fromMe=true): \"Paisa to karavo please uchina j sav 0 chu makan e change kairu so\""
+        },
+        {
+          "time": "2026-10-01T09:24:53.937Z",
+          "number": "6355285433",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
+        },
+        {
+          "time": "2026-10-01T09:24:49.407Z",
+          "number": "6355285433",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 500)..."
+        },
+        {
+          "time": "2026-10-01T09:24:49.407Z",
+          "number": "6355285433",
+          "type": "DISCONNECTED",
+          "detail": "Code: 500 reason: Stream Errored (ack)"
+        },
+        {
+          "time": "2026-10-01T08:34:49.899Z",
+          "number": "6355285433",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
+        }
+      ],
+      "autoRepliesSent": 6,
+      "connection": "open",
+      "linkedAccount": {
+        "id": "916355285433:22@s.whatsapp.net",
+        "name": "shruhi collection",
+        "lid": "43830845915210:22@lid"
       },
       "qrRaw": null,
       "qrImgUrl": null,
