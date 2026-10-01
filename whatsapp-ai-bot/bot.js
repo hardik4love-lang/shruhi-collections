@@ -423,9 +423,11 @@ async function startWhatsAppBot(account) {
           logEvent(account.number, "OWNER_JUMP_IN", `Paused Auto-AI via command for ${jid}`);
           continue;
         }
-        // Only allow fromMe messages to trigger Auto-AI if the user is explicitly testing with a catalog keyword/code
+        // Allow self-testing: if chatting with self, or if test keywords used
+        const isNoteToSelf = jid.includes(account.number) || (sock.user?.id && jid.includes(sock.user.id.split(":")[0]));
         const isSelfTestKeyword =
-          ["hi", "hello", "hey", "catalog", "menu", "price", "prices", "all", "list", "start", "shop", "shirts", "plus", "kem cho", "bhav", "pp", "pay", "payment", "qr", "upi", "gpay"].includes(clean) ||
+          isNoteToSelf ||
+          ["hi", "hello", "hey", "catalog", "menu", "price", "rate", "bhav", "detail", "all", "list", "start", "shop", "shirts", "plus", "kem cho", "namaste", "pay", "payment", "qr", "upi", "gpay", "test"].some((k) => clean.includes(k)) ||
           /^(shruhi-)?(ms-1\d{2}|\d{1,2}|10[1-7])$/i.test(clean);
         if (!isSelfTestKeyword) continue;
       }
@@ -440,7 +442,7 @@ async function startWhatsAppBot(account) {
 
       logEvent(account.number, "INCOMING_MSG", `From ${jid} (${type}, fromMe=${!!msg.key.fromMe}): "${text.slice(0, 80)}"`);
 
-      if (clean.includes("owner") || clean.includes("human") || clean.includes("call me")) {
+      if (clean === "owner" || clean === "human" || clean.includes("call me") || clean === "!pause") {
         humanTakeoverChats.set(takeoverKey, Date.now());
         const sent = await sock.sendMessage(jid, {
           text:
@@ -453,7 +455,7 @@ async function startWhatsAppBot(account) {
       }
 
       if (
-        ["pay", "payment", "qr", "upi", "gpay", "phonepe", "paytm", "scanner", "account", "bank"].includes(clean) ||
+        ["pay", "payment", "qr", "upi", "gpay", "phonepe", "paytm", "scanner", "account", "bank"].some((k) => clean.includes(k)) ||
         clean.includes("payment qr") || clean.includes("upi id") || clean.includes("qr code") || clean.includes("scan to pay")
       ) {
         const payQrPath = path.join(__dirname, "..", "assets", "payment-upi-qr.jpg");
@@ -475,10 +477,12 @@ async function startWhatsAppBot(account) {
         continue;
       }
 
-      if (
-        ["hi", "hello", "hey", "catalog", "menu", "price", "prices", "all", "list", "start", "shop", "namaste", "kem cho", "bhav", "pp"].includes(clean) ||
-        clean.includes("all product") || clean.includes("catalog") || clean.includes("kem cho")
-      ) {
+      const isGreetingOrCatalog =
+        ["hi", "hello", "hey", "catalog", "menu", "price", "rate", "prices", "all", "list", "start", "shop", "namaste", "kem cho", "bhav", "pp", "test"].some((k) =>
+          clean === k || clean.startsWith(k + " ") || clean.endsWith(" " + k) || clean.includes("catalog") || clean.includes("kem cho") || clean.includes("namaste")
+        );
+
+      if (isGreetingOrCatalog) {
         const sent = await sock.sendMessage(jid, { text: buildFullCatalogMenuText(account) });
         if (sent?.key?.id) botSentMessageIds.add(sent.key.id);
         globalStatus.accounts[account.number].autoRepliesSent++;
@@ -606,7 +610,7 @@ WA_ACCOUNTS.forEach((account) => {
 if (process.argv.includes("--cloud-24x7")) {
   const { execFile } = require("child_process");
   const fbWorkerScript = path.join(__dirname, "..", "facebook-automation", "fb-cloud-comment-worker.js");
-  console.log("☁️ [CLOUD_24X7_DAEMON] Continuous 50-minute live session active for Multi-Line WhatsApp + 45s Facebook 3-Page Comment Sweeps.");
+  console.log("☁️ [CLOUD_24X7_DAEMON] Continuous 5.5-Hour live session active for Multi-Line WhatsApp + 45s Facebook 3-Page Comment Sweeps.");
 
   setInterval(() => {
     execFile(process.execPath, [fbWorkerScript], { env: process.env }, (err) => {
@@ -615,9 +619,9 @@ if (process.argv.includes("--cloud-24x7")) {
   }, 45000);
 
   setTimeout(() => {
-    console.log("✅ 50-Minute Cloud 24/7 Live Cycle completed — saving session state & handing over to next runner.");
+    console.log("✅ 5.5-Hour Cloud 24/7 Live Cycle completed — saving session state & handing over to next runner.");
     process.exit(0);
-  }, 50 * 60 * 1000);
+  }, 330 * 60 * 1000);
 } else if (process.argv.includes("--cloud-sweep")) {
   setTimeout(() => {
     console.log("✅ Cloud Multi-Line WhatsApp + Facebook 24/7 Sweep window completed.");

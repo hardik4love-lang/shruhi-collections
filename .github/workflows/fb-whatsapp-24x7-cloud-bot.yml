@@ -19,7 +19,7 @@ concurrency:
 jobs:
   facebook-whatsapp-24x7-bot:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 360
     environment: facebook
     steps:
       - name: Checkout Shruhi Collections Repository
@@ -59,7 +59,15 @@ jobs:
         run: |
           git config --global user.email "bot@shruhicollections.in"
           git config --global user.name "Shruhi Collections 24/7 Bot"
-          git pull origin ${{ github.ref_name }} --rebase || true
           git add facebook-automation/cloud-24x7-heartbeat.json whatsapp-ai-bot/auth_6355285433 whatsapp-ai-bot/auth_9054241725 whatsapp-ai-bot/qr-live.json || true
           git diff --cached --quiet || git commit -m "⚡ 24/7 Cloud FB + Dual WhatsApp Session Sync: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          git pull origin ${{ github.ref_name }} --rebase || true
           git push || true
+
+      - name: Self-Trigger Next 24/7 Live Cloud Runner Relay
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Dispatched next 24/7 cloud relay runner..."
+          gh workflow run fb-whatsapp-24x7-cloud-bot.yml || true
