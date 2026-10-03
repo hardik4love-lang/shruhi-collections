@@ -1,12 +1,30 @@
 {
   "service": "Shruhi Collections 24/7 Multi-Line WhatsApp Auto-AI Bot",
   "catalog": "59 verified 4K designs (29 Women's Ethnic S–6XL + 30 Men's AI-Model Shirts M–2XL)",
-  "startedAt": "2026-10-02T07:45:48.776Z",
+  "startedAt": "2026-10-02T18:47:16.713Z",
   "accounts": {
     "9054241725": {
       "recentEvents": [
         {
-          "time": "2026-10-02T07:45:49.956Z",
+          "time": "2026-10-02T20:02:41.446Z",
+          "number": "9054241725",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 90542 41725 (Primary 24/7 Auto-AI) ({\"id\":\"919054241725:2@s.whatsapp.net\",\"name\":\"really\",\"lid\":\"101301803343915:2@lid\"})"
+        },
+        {
+          "time": "2026-10-02T20:02:35.841Z",
+          "number": "9054241725",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 428)..."
+        },
+        {
+          "time": "2026-10-02T20:02:35.841Z",
+          "number": "9054241725",
+          "type": "DISCONNECTED",
+          "detail": "Code: 428 reason: Connection Terminated"
+        },
+        {
+          "time": "2026-10-02T18:47:17.950Z",
           "number": "9054241725",
           "type": "CONNECTED",
           "detail": "✅ LIVE on +91 90542 41725 (Primary 24/7 Auto-AI) ({\"id\":\"919054241725:2@s.whatsapp.net\",\"name\":\"really\",\"lid\":\"101301803343915:2@lid\"})"
@@ -26,25 +44,79 @@
     "6355285433": {
       "recentEvents": [
         {
-          "time": "2026-10-02T08:55:26.238Z",
+          "time": "2026-10-02T22:40:29.352Z",
           "number": "6355285433",
           "type": "CONNECTED",
           "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
         },
         {
-          "time": "2026-10-02T08:55:20.507Z",
+          "time": "2026-10-02T22:40:24.499Z",
           "number": "6355285433",
           "type": "RECONNECTING",
           "detail": "Retrying in 4s (code 428)..."
         },
         {
-          "time": "2026-10-02T08:55:20.507Z",
+          "time": "2026-10-02T22:40:24.499Z",
           "number": "6355285433",
           "type": "DISCONNECTED",
           "detail": "Code: 428 reason: Connection Terminated"
         },
         {
-          "time": "2026-10-02T07:45:51.039Z",
+          "time": "2026-10-02T21:44:04.542Z",
+          "number": "6355285433",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
+        },
+        {
+          "time": "2026-10-02T21:43:58.968Z",
+          "number": "6355285433",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 428)..."
+        },
+        {
+          "time": "2026-10-02T21:43:58.968Z",
+          "number": "6355285433",
+          "type": "DISCONNECTED",
+          "detail": "Code: 428 reason: Connection Terminated"
+        },
+        {
+          "time": "2026-10-02T20:34:06.479Z",
+          "number": "6355285433",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
+        },
+        {
+          "time": "2026-10-02T20:34:01.709Z",
+          "number": "6355285433",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 428)..."
+        },
+        {
+          "time": "2026-10-02T20:34:01.709Z",
+          "number": "6355285433",
+          "type": "DISCONNECTED",
+          "detail": "Code: 428 reason: Connection Terminated"
+        },
+        {
+          "time": "2026-10-02T20:13:02.253Z",
+          "number": "6355285433",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
+        },
+        {
+          "time": "2026-10-02T20:12:57.382Z",
+          "number": "6355285433",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 428)..."
+        },
+        {
+          "time": "2026-10-02T20:12:57.382Z",
+          "number": "6355285433",
+          "type": "DISCONNECTED",
+          "detail": "Code: 428 reason: Connection Terminated"
+        },
+        {
+          "time": "2026-10-02T18:47:17.962Z",
           "number": "6355285433",
           "type": "CONNECTED",
           "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
