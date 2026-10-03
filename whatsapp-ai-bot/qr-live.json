@@ -1,68 +1,12 @@
 {
   "service": "Shruhi Collections 24/7 Multi-Line WhatsApp Auto-AI Bot",
   "catalog": "59 verified 4K designs (29 Women's Ethnic S–6XL + 30 Men's AI-Model Shirts M–2XL)",
-  "startedAt": "2026-10-03T00:17:56.019Z",
+  "startedAt": "2026-10-03T05:48:34.401Z",
   "accounts": {
-    "6355285433": {
-      "recentEvents": [
-        {
-          "time": "2026-10-03T00:17:57.133Z",
-          "number": "6355285433",
-          "type": "CONNECTED",
-          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
-        }
-      ],
-      "autoRepliesSent": 0,
-      "connection": "open",
-      "linkedAccount": {
-        "id": "916355285433:22@s.whatsapp.net",
-        "name": "shruhi collection",
-        "lid": "43830845915210:22@lid"
-      },
-      "qrRaw": null,
-      "qrImgUrl": null,
-      "qrUpdatedAt": null
-    },
     "9054241725": {
       "recentEvents": [
         {
-          "time": "2026-10-03T01:40:54.107Z",
-          "number": "9054241725",
-          "type": "CONNECTED",
-          "detail": "✅ LIVE on +91 90542 41725 (Primary 24/7 Auto-AI) ({\"id\":\"919054241725:2@s.whatsapp.net\",\"name\":\"really\",\"lid\":\"101301803343915:2@lid\"})"
-        },
-        {
-          "time": "2026-10-03T01:40:49.292Z",
-          "number": "9054241725",
-          "type": "RECONNECTING",
-          "detail": "Retrying in 4s (code 428)..."
-        },
-        {
-          "time": "2026-10-03T01:40:49.292Z",
-          "number": "9054241725",
-          "type": "DISCONNECTED",
-          "detail": "Code: 428 reason: Connection Terminated"
-        },
-        {
-          "time": "2026-10-03T01:08:49.800Z",
-          "number": "9054241725",
-          "type": "CONNECTED",
-          "detail": "✅ LIVE on +91 90542 41725 (Primary 24/7 Auto-AI) ({\"id\":\"919054241725:2@s.whatsapp.net\",\"name\":\"really\",\"lid\":\"101301803343915:2@lid\"})"
-        },
-        {
-          "time": "2026-10-03T01:08:44.224Z",
-          "number": "9054241725",
-          "type": "RECONNECTING",
-          "detail": "Retrying in 4s (code 428)..."
-        },
-        {
-          "time": "2026-10-03T01:08:44.223Z",
-          "number": "9054241725",
-          "type": "DISCONNECTED",
-          "detail": "Code: 428 reason: Connection Terminated"
-        },
-        {
-          "time": "2026-10-03T00:17:57.110Z",
+          "time": "2026-10-03T05:48:35.560Z",
           "number": "9054241725",
           "type": "CONNECTED",
           "detail": "✅ LIVE on +91 90542 41725 (Primary 24/7 Auto-AI) ({\"id\":\"919054241725:2@s.whatsapp.net\",\"name\":\"really\",\"lid\":\"101301803343915:2@lid\"})"
@@ -74,6 +18,200 @@
         "id": "919054241725:2@s.whatsapp.net",
         "name": "really",
         "lid": "101301803343915:2@lid"
+      },
+      "qrRaw": null,
+      "qrImgUrl": null,
+      "qrUpdatedAt": null
+    },
+    "6355285433": {
+      "recentEvents": [
+        {
+          "time": "2026-10-03T10:37:53.325Z",
+          "number": "6355285433",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
+        },
+        {
+          "time": "2026-10-03T10:37:48.452Z",
+          "number": "6355285433",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 500)..."
+        },
+        {
+          "time": "2026-10-03T10:37:48.452Z",
+          "number": "6355285433",
+          "type": "DISCONNECTED",
+          "detail": "Code: 500 reason: Stream Errored (ack)"
+        },
+        {
+          "time": "2026-10-03T09:47:59.841Z",
+          "number": "6355285433",
+          "type": "AUTO_REPLY_PAYMENT_QR",
+          "detail": "Sent UPI Payment QR (purshottamramawat27@oksbi) to 201966558953721@lid"
+        },
+        {
+          "time": "2026-10-03T09:47:58.983Z",
+          "number": "6355285433",
+          "type": "INCOMING_MSG",
+          "detail": "From 201966558953721@lid (notify, fromMe=true): \"👋 Hello! Here are my account details:\n️1️⃣ A/c No.: 6845336786\n2️⃣ IFSC Code: K\""
+        },
+        {
+          "time": "2026-10-03T09:47:57.321Z",
+          "number": "6355285433",
+          "type": "AUTO_REPLY_PRODUCT",
+          "detail": "Sent MEERA, TEJAL, MONI to 201966558953721@lid"
+        },
+        {
+          "time": "2026-10-03T09:47:54.017Z",
+          "number": "6355285433",
+          "type": "INCOMING_MSG",
+          "detail": "From 201966558953721@lid (append, fromMe=true): \"Your token was replaced with a new one. You can use this token to access HTTP AP\""
+        },
+        {
+          "time": "2026-10-03T09:47:47.811Z",
+          "number": "6355285433",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
+        },
+        {
+          "time": "2026-10-03T09:47:41.853Z",
+          "number": "6355285433",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 500)..."
+        },
+        {
+          "time": "2026-10-03T09:47:41.853Z",
+          "number": "6355285433",
+          "type": "DISCONNECTED",
+          "detail": "Code: 500 reason: Stream Errored (ack)"
+        },
+        {
+          "time": "2026-10-03T08:58:20.177Z",
+          "number": "6355285433",
+          "type": "AUTO_REPLY_PAYMENT_QR",
+          "detail": "Sent UPI Payment QR (purshottamramawat27@oksbi) to 201966558953721@lid"
+        },
+        {
+          "time": "2026-10-03T08:58:19.739Z",
+          "number": "6355285433",
+          "type": "INCOMING_MSG",
+          "detail": "From 201966558953721@lid (notify, fromMe=true): \"👋 Hello! Here are my account details:\n️1️⃣ A/c No.: 6845336786\n2️⃣ IFSC Code: K\""
+        },
+        {
+          "time": "2026-10-03T08:58:09.575Z",
+          "number": "6355285433",
+          "type": "AUTO_REPLY_PRODUCT",
+          "detail": "Sent MEERA, TEJAL, MONI to 201966558953721@lid"
+        },
+        {
+          "time": "2026-10-03T08:58:07.132Z",
+          "number": "6355285433",
+          "type": "INCOMING_MSG",
+          "detail": "From 201966558953721@lid (notify, fromMe=true): \"Your token was replaced with a new one. You can use this token to access HTTP AP\""
+        },
+        {
+          "time": "2026-10-03T08:57:40.931Z",
+          "number": "6355285433",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
+        },
+        {
+          "time": "2026-10-03T08:57:36.205Z",
+          "number": "6355285433",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 428)..."
+        },
+        {
+          "time": "2026-10-03T08:57:36.205Z",
+          "number": "6355285433",
+          "type": "DISCONNECTED",
+          "detail": "Code: 428 reason: Connection Terminated"
+        },
+        {
+          "time": "2026-10-03T08:21:58.618Z",
+          "number": "6355285433",
+          "type": "AUTO_REPLY_HELP",
+          "detail": "Sent help menu to 201966558953721@lid"
+        },
+        {
+          "time": "2026-10-03T08:21:58.463Z",
+          "number": "6355285433",
+          "type": "INCOMING_MSG",
+          "detail": "From 201966558953721@lid (notify, fromMe=false): \"Totk\""
+        },
+        {
+          "time": "2026-10-03T08:20:45.421Z",
+          "number": "6355285433",
+          "type": "AUTO_REPLY_PRODUCT",
+          "detail": "Sent SHRUHI 5041 to 201966558953721@lid"
+        },
+        {
+          "time": "2026-10-03T08:20:44.541Z",
+          "number": "6355285433",
+          "type": "INCOMING_MSG",
+          "detail": "From 201966558953721@lid (notify, fromMe=false): \"Acc num\""
+        },
+        {
+          "time": "2026-10-03T08:20:12.183Z",
+          "number": "6355285433",
+          "type": "AUTO_REPLY_PAYMENT_QR",
+          "detail": "Sent UPI Payment QR (purshottamramawat27@oksbi) to 201966558953721@lid"
+        },
+        {
+          "time": "2026-10-03T08:20:11.597Z",
+          "number": "6355285433",
+          "type": "INCOMING_MSG",
+          "detail": "From 201966558953721@lid (notify, fromMe=true): \"👋 Hello! Here are my account details:\n️1️⃣ A/c No.: 6845336786\n2️⃣ IFSC Code: K\""
+        },
+        {
+          "time": "2026-10-03T08:20:05.558Z",
+          "number": "6355285433",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
+        },
+        {
+          "time": "2026-10-03T08:20:00.774Z",
+          "number": "6355285433",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 500)..."
+        },
+        {
+          "time": "2026-10-03T08:20:00.774Z",
+          "number": "6355285433",
+          "type": "DISCONNECTED",
+          "detail": "Code: 500 reason: Stream Errored (ack)"
+        },
+        {
+          "time": "2026-10-03T08:19:50.329Z",
+          "number": "6355285433",
+          "type": "AUTO_REPLY_PRODUCT",
+          "detail": "Sent MEERA, TEJAL, MONI to 201966558953721@lid"
+        },
+        {
+          "time": "2026-10-03T08:19:47.864Z",
+          "number": "6355285433",
+          "type": "INCOMING_MSG",
+          "detail": "From 201966558953721@lid (notify, fromMe=true): \"Your token was replaced with a new one. You can use this token to access HTTP AP\""
+        },
+        {
+          "time": "2026-10-03T07:58:23.714Z",
+          "number": "6355285433",
+          "type": "AUTO_REPLY_PRODUCT",
+          "detail": "Sent SHRUHI 5041 to 201966558953721@lid"
+        },
+        {
+          "time": "2026-10-03T07:58:22.260Z",
+          "number": "6355285433",
+          "type": "INCOMING_MSG",
+          "detail": "From 201966558953721@lid (notify, fromMe=false): \"Send acc number\""
+        }
+      ],
+      "autoRepliesSent": 15,
+      "connection": "open",
+      "linkedAccount": {
+        "id": "916355285433:22@s.whatsapp.net",
+        "name": "shruhi collection",
+        "lid": "43830845915210:22@lid"
       },
       "qrRaw": null,
       "qrImgUrl": null,
