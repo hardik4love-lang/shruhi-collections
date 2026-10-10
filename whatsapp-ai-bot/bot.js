@@ -16,6 +16,10 @@
  *    Type !ai or /ai to resume Auto-AI for that customer.
  */
 
+// 🛑 STOPPED BY USER REQUEST: WhatsApp automation disabled
+console.log("🛑 [STOPPED] WhatsApp automation is disabled by user request. Exiting cleanly.");
+process.exit(0);
+
 const http = require("http");
 const fs   = require("fs");
 const path = require("path");
