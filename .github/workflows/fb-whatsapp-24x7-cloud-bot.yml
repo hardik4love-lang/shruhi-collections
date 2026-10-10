@@ -1,17 +1,7 @@
 name: Shruhi Collections 24/7 Facebook + WhatsApp Auto-AI Cloud Bot
 
 on:
-  schedule:
-    - cron: "0 */6 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - "assets/**"
-      - "4K_Branded_Catalog/**"
-      - "product_media_agent/incoming_samples/**"
-      - "README.md"
 
 permissions:
   contents: write
@@ -52,27 +42,7 @@ jobs:
         run: |
           echo "========================================================================"
           echo "☁️  SHRUHI COLLECTIONS — CONTINUOUS 24/7 LIVE CLOUD DAEMON (GITHUB)"
-          echo "   WhatsApp #1 : +91 90542 41725 (Primary 24/7 Auto-AI — All 59 Editions)"
-          echo "   WhatsApp #2 : +91 63552 85433 (Secondary 24/7 Auto-AI — All 59 Editions)"
+          echo "   WhatsApp    : STOPPED / DISABLED BY USER"
           echo "   Facebook    : Auto-Update Profile & 3 Pages + 100 Groups + 24/7 Reply (every 45s)"
           echo "========================================================================"
           node facebook-automation/fb-cloud-comment-worker.js || true
-          node whatsapp-ai-bot/bot.js --cloud-24x7
-
-      - name: Save & Push Updated WhatsApp Sessions & Cloud Heartbeat on Cycle Rotation
-        if: always()
-        run: |
-          git config --global user.email "bot@shruhicollections.in"
-          git config --global user.name "Shruhi Collections 24/7 Bot"
-          git add facebook-automation/cloud-24x7-heartbeat.json whatsapp-ai-bot/auth_6355285433 whatsapp-ai-bot/auth_9054241725 whatsapp-ai-bot/qr-live.json || true
-          git diff --cached --quiet || git commit -m "⚡ 24/7 Cloud FB + Dual WhatsApp Session Sync: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-          git pull origin ${{ github.ref_name }} --rebase || true
-          git push || true
-
-      - name: Self-Trigger Next 24/7 Live Cloud Runner Relay
-        if: always()
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "Dispatched next 24/7 cloud relay runner..."
-          gh workflow run fb-whatsapp-24x7-cloud-bot.yml || true
