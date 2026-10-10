@@ -1,12 +1,12 @@
 {
   "service": "Shruhi Collections 24/7 Multi-Line WhatsApp Auto-AI Bot",
   "catalog": "59 verified 4K designs (29 Women's Ethnic S–6XL + 30 Men's AI-Model Shirts M–2XL)",
-  "startedAt": "2026-10-10T03:11:59.006Z",
+  "startedAt": "2026-10-10T08:42:40.717Z",
   "accounts": {
     "9054241725": {
       "recentEvents": [
         {
-          "time": "2026-10-10T03:12:00.788Z",
+          "time": "2026-10-10T08:42:42.481Z",
           "number": "9054241725",
           "type": "CONNECTED",
           "detail": "✅ LIVE on +91 90542 41725 (Primary 24/7 Auto-AI) ({\"id\":\"919054241725:2@s.whatsapp.net\",\"name\":\"really\",\"lid\":\"101301803343915:2@lid\"})"
@@ -26,7 +26,25 @@
     "6355285433": {
       "recentEvents": [
         {
-          "time": "2026-10-10T03:12:00.028Z",
+          "time": "2026-10-10T10:49:34.157Z",
+          "number": "6355285433",
+          "type": "CONNECTED",
+          "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
+        },
+        {
+          "time": "2026-10-10T10:49:28.770Z",
+          "number": "6355285433",
+          "type": "RECONNECTING",
+          "detail": "Retrying in 4s (code 500)..."
+        },
+        {
+          "time": "2026-10-10T10:49:28.770Z",
+          "number": "6355285433",
+          "type": "DISCONNECTED",
+          "detail": "Code: 500 reason: Stream Errored (ack)"
+        },
+        {
+          "time": "2026-10-10T08:42:43.314Z",
           "number": "6355285433",
           "type": "CONNECTED",
           "detail": "✅ LIVE on +91 63552 85433 (Secondary 24/7 Auto-AI) ({\"id\":\"916355285433:22@s.whatsapp.net\",\"name\":\"shruhi collection\",\"lid\":\"43830845915210:22@lid\"})"
