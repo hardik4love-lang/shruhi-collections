@@ -1,12 +1,14 @@
 {
-  "name": "shruhi-collections-24x7-bot",
-  "version": "2.0.0",
-  "description": "Shruhi Collections — Unified 24/7 Cloud WhatsApp (+91 63552 85433) + Facebook 3-Page & 100-Group Comment Auto-Reply Bot",
-  "main": "whatsapp-ai-bot/bot.js",
+  "name": "shruhi-collections-digital-flagship",
+  "version": "2.1.0",
+  "description": "Shruhi Collections — Surat Loom Direct Digital Flagship & 24/7 Agentic Storefront",
+  "main": "server.js",
   "scripts": {
-    "start": "node whatsapp-ai-bot/bot.js",
+    "start": "node server.js",
+    "serve": "node server.js",
+    "wa-bot": "node whatsapp-ai-bot/bot.js",
     "fb-bot": "node facebook-automation/fb-cloud-comment-worker.js",
-    "dev": "node whatsapp-ai-bot/bot.js"
+    "dev": "node server.js"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.16",
