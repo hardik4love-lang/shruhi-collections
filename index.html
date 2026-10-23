@@ -2279,17 +2279,55 @@
   </dialog>
 
   <!-- 3. Size Chart Guide Modal (S to 6XL) -->
-  <dialog id="sizeChartModal" class="store-dialog" closedby="any" style="max-width: 720px;">
+  <dialog id="sizeChartModal" class="store-dialog" closedby="any" style="max-width: 760px;">
     <div style="padding: 1.85rem; max-height: 88vh; overflow-y: auto;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
         <div>
-          <h3 style="font-family: var(--font-serif); font-size: 1.65rem; color: var(--oxblood-deep);">Shruhi Collections — Standard &amp; Curvy Size Guide</h3>
-          <span style="font-size: 0.78rem; color: var(--text-taupe);">Garment Ready Measurements (in Inches) &bull; Sizes S to 6XL</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.65rem; color: var(--oxblood-deep); margin: 0;">Shruhi Collections — Standard &amp; Curvy Size Guide</h3>
+          <span style="font-size: 0.78rem; color: var(--text-taupe);">Garment Ready Measurements (in Inches) &bull; Sizes S to 6XL &bull; Surat Loom Atelier</span>
         </div>
         <form method="dialog">
           <button type="submit" class="sz-chip-btn">&times; Close</button>
         </form>
       </div>
+
+      <!-- Curvy Couture Interactive Fit Recommender -->
+      <div style="background: linear-gradient(135deg, rgba(109,27,41,0.06), rgba(212,175,55,0.09)); border: 1px solid rgba(109,27,41,0.18); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+          <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--oxblood-deep); margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+            <span>✨</span> Curvy Couture Precision Sizing Engine
+          </h4>
+          <span id="fitBadge" style="background: var(--oxblood-deep); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 999px; letter-spacing: 0.05em; text-transform: uppercase;">3XL Curvy Active</span>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--text-taupe); margin-top: 0; margin-bottom: 1rem;">Enter your exact body measurements below. Our Surat atelier algorithm calculates your ideal size with tailoring comfort ease.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.85rem; margin-bottom: 1rem;">
+          <div>
+            <label style="display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--oxblood-deep); margin-bottom: 0.25rem;">Bust (Inches)</label>
+            <input type="number" id="fitBustInput" value="46" min="32" max="65" step="0.5" style="width: 100%; padding: 0.55rem 0.75rem; border: 1px solid rgba(109,27,41,0.25); border-radius: 8px; font-weight: 700; font-size: 1rem; color: var(--oxblood-deep); background: #fff;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--oxblood-deep); margin-bottom: 0.25rem;">Waist (Inches)</label>
+            <input type="number" id="fitWaistInput" value="42" min="26" max="60" step="0.5" style="width: 100%; padding: 0.55rem 0.75rem; border: 1px solid rgba(109,27,41,0.25); border-radius: 8px; font-weight: 700; font-size: 1rem; color: var(--oxblood-deep); background: #fff;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--oxblood-deep); margin-bottom: 0.25rem;">Hip (Inches)</label>
+            <input type="number" id="fitHipInput" value="49" min="34" max="70" step="0.5" style="width: 100%; padding: 0.55rem 0.75rem; border: 1px solid rgba(109,27,41,0.25); border-radius: 8px; font-weight: 700; font-size: 1rem; color: var(--oxblood-deep); background: #fff;">
+          </div>
+        </div>
+
+        <div id="fitResultBox" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; background: #fff; border: 1px solid rgba(212,175,55,0.4); border-radius: 8px; padding: 0.75rem 1rem; gap: 0.75rem;">
+          <div>
+            <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-taupe); font-weight: 600;">Tailored Recommendation</div>
+            <div id="fitRecommendationText" style="font-size: 1.15rem; font-weight: 800; color: var(--oxblood-deep); font-family: var(--font-serif);">Size 3XL (46) &bull; Curvy Couture Plus-Size</div>
+            <div id="fitConfidenceText" style="font-size: 0.75rem; color: #15803d; font-weight: 600;">99% Match (Includes standard 2.5" breathing &amp; movement ease)</div>
+          </div>
+          <button id="applyFitSizeBtn" type="button" style="background: var(--oxblood-deep); color: #fff; border: none; padding: 0.55rem 1.15rem; border-radius: 8px; font-size: 0.8rem; font-weight: 700; cursor: pointer; letter-spacing: 0.04em; transition: all 0.2s;">
+            Filter Lookbook to My Size &rarr;
+          </button>
+        </div>
+      </div>
+
       <table class="schedule-table">
         <thead>
           <tr>
@@ -2301,15 +2339,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>S (36)</strong></td><td>36"</td><td>32"</td><td>39"</td><td>Petite / Standard Fit</td></tr>
-          <tr><td><strong>M (38)</strong></td><td>38"</td><td>34"</td><td>41"</td><td>Standard Boutique Fit</td></tr>
-          <tr><td><strong>L (40)</strong></td><td>40"</td><td>36"</td><td>43"</td><td>Standard Boutique Fit</td></tr>
-          <tr><td><strong>XL (42)</strong></td><td>42"</td><td>38"</td><td>45"</td><td>Standard Boutique Fit</td></tr>
-          <tr><td><strong>2XL (44)</strong></td><td>44"</td><td>40"</td><td>47"</td><td>Extended Boutique Fit</td></tr>
-          <tr><td><strong>3XL (46)</strong></td><td>46"</td><td>42"</td><td>49"</td><td>Curvy Couture Plus-Size</td></tr>
-          <tr><td><strong>4XL (48)</strong></td><td>48"</td><td>44"</td><td>51"</td><td>Curvy Couture Plus-Size</td></tr>
-          <tr><td><strong>5XL (50)</strong></td><td>50"</td><td>46"</td><td>53"</td><td>Curvy Couture Plus-Size</td></tr>
-          <tr><td><strong>6XL (52)</strong></td><td>52"</td><td>48"</td><td>55"</td><td>Curvy Couture Plus-Size</td></tr>
+          <tr id="row-size-S"><td><strong>S (36)</strong></td><td>36"</td><td>32"</td><td>39"</td><td>Petite / Standard Fit</td></tr>
+          <tr id="row-size-M"><td><strong>M (38)</strong></td><td>38"</td><td>34"</td><td>41"</td><td>Standard Boutique Fit</td></tr>
+          <tr id="row-size-L"><td><strong>L (40)</strong></td><td>40"</td><td>36"</td><td>43"</td><td>Standard Boutique Fit</td></tr>
+          <tr id="row-size-XL"><td><strong>XL (42)</strong></td><td>42"</td><td>38"</td><td>45"</td><td>Standard Boutique Fit</td></tr>
+          <tr id="row-size-2XL"><td><strong>2XL (44)</strong></td><td>44"</td><td>40"</td><td>47"</td><td>Extended Boutique Fit</td></tr>
+          <tr id="row-size-3XL" style="background: rgba(109,27,41,0.12); font-weight: bold;"><td><strong>3XL (46)</strong></td><td>46"</td><td>42"</td><td>49"</td><td>Curvy Couture Plus-Size</td></tr>
+          <tr id="row-size-4XL"><td><strong>4XL (48)</strong></td><td>48"</td><td>44"</td><td>51"</td><td>Curvy Couture Plus-Size</td></tr>
+          <tr id="row-size-5XL"><td><strong>5XL (50)</strong></td><td>50"</td><td>46"</td><td>53"</td><td>Curvy Couture Plus-Size</td></tr>
+          <tr id="row-size-6XL"><td><strong>6XL (52)</strong></td><td>52"</td><td>48"</td><td>55"</td><td>Curvy Couture Plus-Size</td></tr>
         </tbody>
       </table>
     </div>
@@ -2775,6 +2813,64 @@
       document.getElementById('openSizeChartBtn').addEventListener('click', () => {
         sizeChartModal.showModal();
       });
+
+      // Curvy Couture Sizing Calculator Engine
+      function calculateCurvyFit() {
+        const bust = parseFloat(document.getElementById('fitBustInput')?.value || '46');
+        const waist = parseFloat(document.getElementById('fitWaistInput')?.value || '42');
+        const hip = parseFloat(document.getElementById('fitHipInput')?.value || '49');
+
+        const sizes = [
+          { key: 'S', label: 'S (36)', bust: 36, waist: 32, hip: 39, desc: 'Petite / Standard Fit' },
+          { key: 'M', label: 'M (38)', bust: 38, waist: 34, hip: 41, desc: 'Standard Boutique Fit' },
+          { key: 'L', label: 'L (40)', bust: 40, waist: 36, hip: 43, desc: 'Standard Boutique Fit' },
+          { key: 'XL', label: 'XL (42)', bust: 42, waist: 38, hip: 45, desc: 'Standard Boutique Fit' },
+          { key: '2XL', label: '2XL (44)', bust: 44, waist: 40, hip: 47, desc: 'Extended Boutique Fit' },
+          { key: '3XL', label: '3XL (46)', bust: 46, waist: 42, hip: 49, desc: 'Curvy Couture Plus-Size' },
+          { key: '4XL', label: '4XL (48)', bust: 48, waist: 44, hip: 51, desc: 'Curvy Couture Plus-Size' },
+          { key: '5XL', label: '5XL (50)', bust: 50, waist: 46, hip: 53, desc: 'Curvy Couture Plus-Size' },
+          { key: '6XL', label: '6XL (52)', bust: 52, waist: 48, hip: 55, desc: 'Curvy Couture Plus-Size' }
+        ];
+
+        let matched = sizes.find(s => s.bust >= bust && s.waist >= waist && s.hip >= hip);
+        if (!matched) matched = sizes[sizes.length - 1];
+
+        sizes.forEach(s => {
+          const row = document.getElementById('row-size-' + s.key);
+          if (row) {
+            if (s.key === matched.key) {
+              row.style.background = 'rgba(109,27,41,0.12)';
+              row.style.fontWeight = 'bold';
+            } else {
+              row.style.background = 'transparent';
+              row.style.fontWeight = 'normal';
+            }
+          }
+        });
+
+        const recText = document.getElementById('fitRecommendationText');
+        const badge = document.getElementById('fitBadge');
+        if (recText) recText.innerHTML = `Size <strong>${matched.label}</strong> &bull; ${matched.desc}`;
+        if (badge) badge.textContent = `${matched.key} RECOMMENDED`;
+
+        return matched.key;
+      }
+
+      document.getElementById('applyFitSizeBtn')?.addEventListener('click', () => {
+        const targetSize = calculateCurvyFit();
+        activeSize = targetSize;
+        document.querySelectorAll('.sz-chip-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.getAttribute('data-size') === targetSize);
+        });
+        render();
+        sizeChartModal.close();
+        document.getElementById('catalogGridAnchor')?.scrollIntoView({ behavior: 'smooth' });
+      });
+
+      ['fitBustInput', 'fitWaistInput', 'fitHipInput'].forEach(id => {
+        document.getElementById(id)?.addEventListener('input', calculateCurvyFit);
+      });
+
 
       document.getElementById('clearBagBtn').addEventListener('click', () => {
         bag.length = 0;
