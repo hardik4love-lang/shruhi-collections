@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Plus_Jakarta_Sans, Cinzel } from "next/font/google";
 import "./globals.css";
+import WhatsAppConciergeDock from "@/components/WhatsAppConciergeDock";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -42,9 +43,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${cinzel.variable} ${cormorant.variable} ${jakarta.variable} font-sans antialiased bg-ivory text-neutral-900 selection:bg-oxblood-500 selection:text-white`}
+        className={`${cinzel.variable} ${cormorant.variable} ${jakarta.variable} font-sans antialiased bg-ivory text-neutral-900 selection:bg-oxblood-500 selection:text-white pb-16 sm:pb-0`}
       >
         {children}
+        <WhatsAppConciergeDock />
       </body>
     </html>
   );
