@@ -80,8 +80,8 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // API Status / Diagnostics
-  if (pathname === '/api/status') {
+  // API Status & Catalog Diagnostics
+  if (pathname === '/api/status' || pathname === '/api/catalog') {
     const payload = JSON.stringify({
       status: 'online',
       platform: 'Shruhi Collections Surat Digital Flagship',
