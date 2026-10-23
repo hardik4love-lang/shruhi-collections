@@ -18,6 +18,38 @@
     </image:image>
   </url>
 
+  <!-- Statutory Legal & Consumer Protection Policies -->
+  <url>
+    <loc>https://www.shruhicollections.in/privacy-policy.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/terms.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/shipping-policy.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/refund-policy.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/contact.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Deep-Linking Semantic Collections -->
   <url>
     <loc>https://www.shruhicollections.in/collections/curvy-couture.html</loc>
