@@ -1,0 +1,1778 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Shruhi Collections Surat Loom Direct 4K Digital Flagship",
+  "numberOfItems": 59,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-meera-plus-suit",
+        "name": "Meera Mustard Zari-Yoke 3-Piece Suit Set",
+        "description": "A regal mustard-olive 3-piece ethnic ensemble by Shruhi Collections (MRP \u20b91,950 \u2022 Sizes M to 2XL). Features a richly embroidered square neckline yoke paired with sleek trousers and a statement ethnic-printed border dupatta.",
+        "image": "https://www.shruhicollections.in/assets/products/meera-mustard-plus-size-suit.jpg",
+        "sku": "MEERA",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Suit Set",
+        "color": "Mustard Olive Gold",
+        "material": "Festive Silk Blend with Woven Dupatta",
+        "offers": {
+          "@type": "Offer",
+          "price": "1950",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-astha-maroon-aline",
+        "name": "Astha Deep Maroon A-Line Tunic & Pant Set",
+        "description": "Designed for refined evening poise by Shruhi Collections, the Astha ensemble (MRP \u20b91,550 \u2022 Size L) pairs a flared A-line deep maroon kurti with tailored straight trousers. A contrasting lime-olive center yoke framed by antique gold geometric embroidery and a scalloped hemline lends heritage artistry.",
+        "image": "https://www.shruhicollections.in/assets/products/astha-maroon-aline-kurti-set.jpg",
+        "sku": "ASTHA",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "A-Line Kurti & Pant Set",
+        "color": "Deep Maroon & Olive Gold",
+        "material": "Textured Chanderi / Slub Silk Blend",
+        "offers": {
+          "@type": "Offer",
+          "price": "1550",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-styleefik-lamex",
+        "name": "Lamex Bronze-Gold Scalloped Border Suit Set",
+        "description": "From the Shruhi Collections festive line, Lamex (MRP \u20b92,850 \u2022 Sizes M to 2XL) shimmers in an antique bronze-olive hue. Delicate silver-and-maroon floral embroidery graces the rounded neckline and cuffs, while a bold vertical row of circular floral medallions mirrors the scalloped border of the matching dupatta.",
+        "image": "https://www.shruhicollections.in/assets/products/styleefik-lamex-bronze-suit.jpg",
+        "sku": "LAMEX",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Festive Suit Set",
+        "color": "Antique Bronze Gold",
+        "material": "Lustrous Tissue-Silk Blend",
+        "offers": {
+          "@type": "Offer",
+          "price": "2850",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-styleefik-tejal",
+        "name": "Tejal Golden-Ochre V-Neck Palazzo Suit Set",
+        "description": "Tejal by Shruhi Collections (MRP \u20b93,550 \u2022 Sizes M to 2XL) reimagines festive dressing with a sweeping wide-leg palazzo silhouette in warm golden ochre. The V-neck tunic is highlighted by a central diamond-motif embroidered medallion, delicate all-over sequin buttis, and a scalloped dori-embroidered border.",
+        "image": "https://www.shruhicollections.in/assets/products/styleefik-tejal-ochre-sharara-set.jpg",
+        "sku": "TEJAL",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Palazzo / Sharara Suit",
+        "color": "Warm Golden Ochre",
+        "material": "Rich Shimmer Silk with Flowing Palazzo",
+        "offers": {
+          "@type": "Offer",
+          "price": "3550",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-moni-pastel-twin",
+        "name": "Moni Pastel Sage & Ivory Scalloped Dupatta Suit",
+        "description": "Showcased in two serene colourways\u2014Mist Sage Green and Pearl Ivory\u2014the Moni 3-piece suit set by Shruhi Collections (MRP \u20b92,550 \u2022 Sizes M to 2XL) balances minimalist straight kurtis with opulent burgundy-and-plum embroidered neckline plackets, bold cuff borders, and an heirloom-inspired scalloped archway dupatta.",
+        "image": "https://www.shruhicollections.in/assets/products/moni-pastel-twin-suit-set.jpg",
+        "sku": "MONI",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Pastel Suit Set",
+        "color": "Sage Pastel Green & Ivory Cream",
+        "material": "Soft Chanderi Cotton-Silk",
+        "offers": {
+          "@type": "Offer",
+          "price": "2550",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-dno-1042-plus-suit",
+        "name": "D.No 1042 Olive & Bandhani Print Plus-Size Suit (2-Colour Series)",
+        "description": "Crafted by Shruhi Collections in inclusive sizes 3XL to 5XL/6XL (MRP \u20b92,550), Design No. 1042 pairs a rich olive-green straight kurta with matching trousers and a contrast dupatta in Teal Botanical Leaf (3XL\u20135XL) or Crimson Bandhani print (3XL\u20136XL).",
+        "image": "https://www.shruhicollections.in/assets/products/dno-1042-olive-teal-plus-size-suit.jpg",
+        "sku": "D.NO 1042",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Plus-Size Suit Set",
+        "color": "Olive Green with Teal / Crimson Dupatta",
+        "material": "Soft Viscose Silk with Printed Modal Dupatta",
+        "offers": {
+          "@type": "Offer",
+          "price": "2550",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-styleefik-kitty-party",
+        "name": "Kitty Party Mustard Collared Appliqu\u00e9 Co-ord Set",
+        "description": "A conversation-starting contemporary co-ord set by Shruhi Collections (MRP \u20b91,800 \u2022 Sizes L to 2XL). Tailored in earthy mustard-ochre, the collared button-down tunic features whimsical embroidered fashion-figure motifs along the lower hem and pairs effortlessly with matching straight-leg trousers.",
+        "image": "https://www.shruhicollections.in/assets/products/styleefik-kitty-party-mustard-coord.jpg",
+        "sku": "KITTY PARTY",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Contemporary Co-ord Set",
+        "color": "Mustard Ochre",
+        "material": "Crisp Linen-Cotton Slub",
+        "offers": {
+          "@type": "Offer",
+          "price": "1800",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-styleefik-manika",
+        "name": "Manika Berry-Mauve Mandala V-Neck Suit Set",
+        "description": "Manika by Shruhi Collections (MRP \u20b92,850 \u2022 Sizes M to 2XL) brings together a romantic berry-mauve palette and precision geometric threadwork. The V-neck kurta showcases a striking circular medallion and chevron collar detail, complemented by embroidered cuffs and a scalloped-edge dupatta.",
+        "image": "https://www.shruhicollections.in/assets/products/styleefik-manika-mauve-suit.jpg",
+        "sku": "MANIKA",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Suit Set",
+        "color": "Berry Rose Mauve",
+        "material": "Lustrous Modal / Roman Silk",
+        "offers": {
+          "@type": "Offer",
+          "price": "2850",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-alkapuri-wine-suit",
+        "name": "Alkapuri Deep Wine Palazzo & Organza Dupatta Set",
+        "description": "Understated luxury defines the Alkapuri deep wine 3-piece suit by Shruhi Collections (MRP \u20b92,250 \u2022 Sizes M to 2XL). The straight-cut tunic features a refined silver-zari neckline and vertical placket with intricately worked sleeve cuffs, paired with relaxed wide-leg palazzos and a lightweight matching dupatta.",
+        "image": "https://www.shruhicollections.in/assets/products/alkapuri-wine-palazzo-suit.jpg",
+        "sku": "ALKAPURI",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Palazzo Suit Set",
+        "color": "Deep Plum Wine",
+        "material": "Roman Silk with Sheer Embroidered Dupatta",
+        "offers": {
+          "@type": "Offer",
+          "price": "2250",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-dno-1038-plus-suit",
+        "name": "D.No 1038 Crimson Maroon Geometric Panel Plus-Size Suit",
+        "description": "Engineered by Shruhi Collections to flatter curvy figures in sizes 3XL, 5XL, and 6XL (MRP \u20b92,650), Design No. 1038 features a bold vertical center panel of heritage geometric tile print accented with real mirror-work highlights, matching trousers, and a full geometric-printed dupatta.",
+        "image": "https://www.shruhicollections.in/assets/products/dno-1038-maroon-ajrakh-plus-size-suit.jpg",
+        "sku": "D.NO 1038",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Plus-Size Suit Set",
+        "color": "Crimson Maroon",
+        "material": "Premium Heavy Rayon / Silk Blend",
+        "offers": {
+          "@type": "Offer",
+          "price": "2650",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-mostyle-4781-tunic",
+        "name": "Shruhi 4781 Ivory Floral Lace-Trim Peplum Tunic",
+        "description": "Shruhi Code 4781 (MRP \u20b91,550 \u2022 Sizes M to XL) is a breezy ivory floral fusion top crafted for effortless everyday styling. Features a front keyhole tie-up neckline, pintuck bodice detailing, wide white crochet lace borders at the cuffs and hem, and a detachable green braided waist cord.",
+        "image": "https://www.shruhicollections.in/assets/products/mostyle-4781-ivory-floral-tunic.jpg",
+        "sku": "SHRUHI 4781",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Fusion Peplum Tunic Top",
+        "color": "Ivory Multi-Floral",
+        "material": "Breathable Textured Cotton Lawn",
+        "offers": {
+          "@type": "Offer",
+          "price": "1550",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-mostyle-5708-coord",
+        "name": "Shruhi 5708 Cream & Dusty Rose Strappy Floral Co-ord Set",
+        "description": "Channelling modern resort sophistication, Shruhi Code 5708 (MRP \u20b91,750 \u2022 Sizes L, XL) pairs a cream strappy tunic\u2014complete with adjustable tie-up shoulder straps and a central embroidered sunburst motif\u2014with matching wide-leg trousers adorned in climbing dusty-rose chrysanthemum blooms.",
+        "image": "https://www.shruhicollections.in/assets/products/mostyle-5708-cream-floral-coord.jpg",
+        "sku": "SHRUHI 5708",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Summer Resort Co-ord Set",
+        "color": "Cream Ivory & Dusty Rose",
+        "material": "Lightweight Linen-Viscose Blend",
+        "offers": {
+          "@type": "Offer",
+          "price": "1750",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-valentina-magenta-suit",
+        "name": "Valentina Jamun-Magenta Patola Dupatta Suit Set",
+        "description": "Valentina by Shruhi Collections (MRP \u20b92,550 \u2022 Size L) celebrates Gujarat-inspired textile heritage with a rich jamun-magenta straight kurta framed by vertical printed borders, fine pintuck pleats, and diamond mirror-work motifs down the center. Paired with matching cigarette pants and a Patola-style dupatta.",
+        "image": "https://www.shruhicollections.in/assets/products/valentina-magenta-patola-suit.jpg",
+        "sku": "VALENTINA",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Heritage Suit Set",
+        "color": "Jamun Magenta Wine",
+        "material": "Lustrous Modal Silk with Woven-Look Printed Dupatta",
+        "offers": {
+          "@type": "Offer",
+          "price": "2550",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-lock-brown-deer-suit",
+        "name": "Lock Espresso Brown Crimson-Moon & Deer Motif Suit Set",
+        "description": "A standout artistic creation by Shruhi Collections in deep espresso brown, the Lock 3-piece suit set (MRP \u20b92,350 \u2022 Size M) features a magenta-piped V-neckline, vertical silver leaf motifs, and a striking white stag silhouetted against a crimson moon near the hem.",
+        "image": "https://www.shruhicollections.in/assets/products/lock-coffee-brown-deer-motif-suit.jpg",
+        "sku": "LOCK",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Designer Suit Set",
+        "color": "Espresso Brown & Magenta",
+        "material": "Textured Tussar-Linen Silk Blend",
+        "offers": {
+          "@type": "Offer",
+          "price": "2350",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-mostyle-5810-dress",
+        "name": "Shruhi 5810 Jet-Black Paisley Border Midi Dress",
+        "description": "Shruhi Code 5810 (MRP \u20b91,450 \u2022 Sizes M to 2XL) is an effortless one-piece Indo-Western midi dress in classic jet black. Designed with a notched mandarin collar, wooden-style front buttons, three-quarter sleeves, and a braided tassel belt that cinches above a vivid multicolor paisley-embroidered hemline.",
+        "image": "https://www.shruhicollections.in/assets/products/mostyle-5810-black-paisley-midi-dress.jpg",
+        "sku": "SHRUHI 5810",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Indo-Western Midi Dress",
+        "color": "Jet Black & Multicolor",
+        "material": "Soft Rayon Crepe",
+        "offers": {
+          "@type": "Offer",
+          "price": "1450",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-mostyle-b2876-coord",
+        "name": "Shruhi B-2876 Burgundy Kashmiri-Floral Embroidered Co-ord",
+        "description": "One of the most opulent ensembles in the Shruhi Collections lookbook, Code B-2876 (MRP \u20b92,250 \u2022 Sizes 3XL to 5XL) in deep burgundy-maroon showcases lush multicolor floral vine embroidery across both the front and back curved hemline, sleeve cuffs, and wide-leg trouser ankles.",
+        "image": "https://www.shruhicollections.in/assets/products/mostyle-b2876-maroon-embroidered-coord.jpg",
+        "sku": "SHRUHI B-2876",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Embroidered Plus-Size Co-ord Set",
+        "color": "Deep Burgundy Wine",
+        "material": "Premium Velvet-Touch / Heavy Roman Silk",
+        "offers": {
+          "@type": "Offer",
+          "price": "2250",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-mostyle-5625-tunic",
+        "name": "Shruhi 5625 Midnight Navy & Crimson Botanical Short Kurti",
+        "description": "Shruhi Code 5625 combines everyday comfort with rich heritage printmaking. Cut from breathable cotton in midnight navy layered with crimson, mustard, and sage foliage, this tailored hip-length tunic features a neat mandarin collar and three-quarter sleeves.",
+        "image": "https://www.shruhicollections.in/assets/products/mostyle-5625-navy-botanical-tunic.jpg",
+        "sku": "SHRUHI 5625",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Everyday Printed Short Kurti",
+        "color": "Midnight Navy, Crimson & Ochre",
+        "material": "100% Pure Cambric Cotton",
+        "offers": {
+          "@type": "Offer",
+          "price": "850",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-mostyle-5041-kaftan",
+        "name": "Shruhi 5041 Dusty Plum Chevron Kaftan & Palazzo Co-ord",
+        "description": "Effortless movement meets bohemian royalty in Shruhi Code 5041 (MRP \u20b91,550 \u2022 Sizes L, XL). This two-piece kaftan co-ord set pairs a relaxed poncho-style V-neck top with sweeping wide-leg palazzos in dusty plum chevron bandhani print, accented by a vibrant turquoise-and-coral border.",
+        "image": "https://www.shruhicollections.in/assets/products/mostyle-5041-plum-chevron-kaftan-coord.jpg",
+        "sku": "SHRUHI 5041",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Kaftan & Palazzo Co-ord Set",
+        "color": "Dusty Plum & Turquoise Accent",
+        "material": "Fluid Modal Satin / Muslin Silk",
+        "offers": {
+          "@type": "Offer",
+          "price": "1550",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-wa-anupama-rust-suit",
+        "name": "Anupama Cinnamon-Rust Embroidered Scallop Dupatta Suit",
+        "description": "Tailored in a warm cinnamon-rust tone and available across an inclusive M to 5XL size range (MRP \u20b92,550), Anupama-I features delicate silver-zari neckline embroidery, scattered motif buttis, and a matching dupatta framed by scalloped cutwork.",
+        "image": "https://www.shruhicollections.in/assets/products/wa-02-shruhi-anupama-rust-suit.jpg",
+        "sku": "ANUPAMA-I",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Festive Suit Set",
+        "color": "Cinnamon Rust Brown",
+        "material": "Lustrous Roman Silk with Scalloped Dupatta",
+        "offers": {
+          "@type": "Offer",
+          "price": "2550",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-wa-glory-taupe-suit",
+        "name": "Glory Taupe-Beige Organza Floral Dupatta Suit Set",
+        "description": "From the Shruhi Collections Glory line (MRP \u20b92,650, Sizes M to 2XL), this refined taupe-beige 3-piece ensemble pairs a shimmering straight kurta featuring pearl-and-zari neckline embroidery with tailored trousers and a botanical-printed organza dupatta.",
+        "image": "https://www.shruhicollections.in/assets/products/wa-03-shruhi-glory-taupe-suit.jpg",
+        "sku": "SHRUHI GLORY",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Organza Dupatta Suit",
+        "color": "Taupe Grey-Beige",
+        "material": "Soft Shimmer Silk with Printed Organza Dupatta",
+        "offers": {
+          "@type": "Offer",
+          "price": "2650",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-wa-galaxy-banarasi-suit",
+        "name": "Galaxy Ivory & Royal Crimson Banarasi Silk Dupatta Suit",
+        "description": "The crown jewel of the WhatsApp priced collection (MRP \u20b93,550, Sizes M to 5XL), Galaxy contrasts a luminous pearl-ivory straight suit featuring a crimson-and-gold embroidered yoke against a richly woven heirloom crimson Banarasi silk dupatta.",
+        "image": "https://www.shruhicollections.in/assets/products/wa-04-shruhi-galaxy-banarasi-suit.jpg",
+        "sku": "SHRUHI GALAXY",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Banarasi Bridal/Festive Suit",
+        "color": "Pearl Ivory & Crimson Red",
+        "material": "Chanderi Silk Kurta with Heavy Woven Banarasi Dupatta",
+        "offers": {
+          "@type": "Offer",
+          "price": "3550",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-wa-5601-denim-dress",
+        "name": "Shruhi 5601 Indigo Denim Button-Down Tiered Midi Dress",
+        "description": "Shruhi Code 5601 (MRP \u20b91,550, Sizes M to 2XL) brings contemporary western-fusion ease to the lookbook. Tailored in soft washed indigo denim chambray, it features a crisp shirt collar, cuffed 3/4 sleeves, and a gathered ombr\u00e9-washed midi skirt tier.",
+        "image": "https://www.shruhicollections.in/assets/products/wa-05-shruhi-5601-denim-midi-dress.jpg",
+        "sku": "SHRUHI 5601",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Contemporary Denim Midi Dress",
+        "color": "Classic Indigo Denim Blue",
+        "material": "Soft Washed Tencel-Denim Chambray",
+        "offers": {
+          "@type": "Offer",
+          "price": "1550",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-wa-shree-coffee-suit",
+        "name": "Shree Coffee-Brown Zari-Yoke Elegance 3-Piece Suit Set",
+        "description": "From the Shruhi Shree Elegance series (MRP \u20b92,550, Sizes M to 2XL), this deep coffee-brown 3-piece suit features an ornate antique-gold embroidered neckline yoke, scattered shimmer buttis, matching straight pants, and a tassel-trimmed sheer dupatta.",
+        "image": "https://www.shruhicollections.in/assets/products/wa-06-shruhi-shree-coffee-suit.jpg",
+        "sku": "SHRUHI SHREE",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Festive Suit Set",
+        "color": "Rich Coffee Brown",
+        "material": "Lustrous Modal / Chanderi Silk",
+        "offers": {
+          "@type": "Offer",
+          "price": "2550",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-wa-anupama-ivory-suit",
+        "name": "Anupama Pearl-Ivory Scalloped Dupatta Plus-Size Suit",
+        "description": "The pearl-ivory counterpart in the Anupama curvy couture line (MRP \u20b92,550, Sizes 3XL to 5XL). Features a refined silver-and-taupe embroidered rounded neckline, delicate front buttis, matching ivory trousers, and a statement scalloped cutwork dupatta.",
+        "image": "https://www.shruhicollections.in/assets/products/wa-07-shruhi-anupama-ivory-suit.jpg",
+        "sku": "ANUPAMA-II",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Plus-Size Suit Set",
+        "color": "Pearl White Ivory",
+        "material": "Lustrous Roman Silk with Scalloped Dupatta",
+        "offers": {
+          "@type": "Offer",
+          "price": "2550",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-wa-dno1002-mustard-coord",
+        "name": "D.No 1002 Mustard-Gold Geometric Yoke Plus-Size Palazzo Set",
+        "description": "Design No. 1002 in Mustard Gold (MRP \u20b91,500, Sizes 3XL & 4XL) is a smart two-piece plus-size kurta and palazzo set featuring a striking black-and-maroon geometric embroidered bib yoke, matching geometric sleeve cuffs, and relaxed wide-leg palazzo bottoms.",
+        "image": "https://www.shruhicollections.in/assets/products/wa-08-dno-1002-mustard-plus-coord.jpg",
+        "sku": "D.NO 1002 (GOLD)",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Plus-Size Kurta & Palazzo Set",
+        "color": "Mustard Ochre & Black-Maroon Yoke",
+        "material": "Heavy Slub Rayon / Cotton Silk",
+        "offers": {
+          "@type": "Offer",
+          "price": "1500",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-wa-dno1002-ivory-coord",
+        "name": "D.No 1002 Ivory & Rust Geometric Yoke Plus-Size Palazzo Set",
+        "description": "Design No. 1002 in Cream Ivory (MRP \u20b91,500, Sizes 3XL to 5XL) pairs a breezy ivory straight kurta featuring a bold rust-and-maroon geometric embroidered center yoke and matching sleeve cuffs with flowing wide-leg ivory palazzo trousers.",
+        "image": "https://www.shruhicollections.in/assets/products/wa-09-dno-1002-ivory-plus-coord.jpg",
+        "sku": "D.NO 1002 (IVORY)",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Plus-Size Kurta & Palazzo Set",
+        "color": "Cream Ivory & Rust Crimson",
+        "material": "Heavy Slub Rayon / Cotton Silk",
+        "offers": {
+          "@type": "Offer",
+          "price": "1500",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-wa-5795-floral-dress",
+        "name": "Shruhi 5795 Crimson & Beige Kalamkari Floral Midi Dress",
+        "description": "Shruhi Code 5795 (MRP \u20b91,350, Size L) is a sun-drenched A-line midi dress crafted in breathable cotton with an all-over crimson-and-beige botanical floral print, notched lapel collar, fitted waist pleats, and roll-tab three-quarter sleeves.",
+        "image": "https://www.shruhicollections.in/assets/products/wa-10-shruhi-5795-floral-midi-dress.jpg",
+        "sku": "SHRUHI 5795",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Block-Print A-Line Midi Dress",
+        "color": "Crimson Maroon & Sand Beige",
+        "material": "100% Pure Soft Cambric Cotton",
+        "offers": {
+          "@type": "Offer",
+          "price": "1350",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-wa-5620-swirl-tunic",
+        "name": "Shruhi 5620 Multicolor Abstract Marble-Swirl Short Tunic",
+        "description": "Shruhi Code 5620 (MRP \u20b9850, Sizes M to 2XL) is a contemporary hip-length tunic top featuring an artistic watercolor swirl and foliage print in muted sage, mauve, navy, and gold, finished with a mandarin collar and button placket.",
+        "image": "https://www.shruhicollections.in/assets/products/wa-11-shruhi-5620-swirl-tunic.jpg",
+        "sku": "SHRUHI 5620",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Printed Contemporary Short Kurti",
+        "color": "Sage, Mauve & Ochre Marble Swirl",
+        "material": "Soft Viscose Lawn / Muslin Blend",
+        "offers": {
+          "@type": "Offer",
+          "price": "850",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 29,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-wa-kavya-mauve-suit",
+        "name": "Kavya Dusty-Mauve Cutwork Hem & Ivory Organza Dupatta Suit",
+        "description": "Kavya by Shruhi Collections (MRP \u20b92,850, Sizes S, L, 2XL) pairs a dusty mauve-taupe straight kurta featuring geometric V-neck embroidery and an intricate cutwork border hemline with wide-leg palazzos and a contrasting pearl-ivory scalloped organza dupatta.",
+        "image": "https://www.shruhicollections.in/assets/products/wa-12-shruhi-kavya-mauve-suit.jpg",
+        "sku": "SHRUHI KAVYA",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "3-Piece Designer Palazzo Suit",
+        "color": "Dusty Mauve-Brown & Pearl Ivory",
+        "material": "Textured Chanderi Silk with Scalloped Organza Dupatta",
+        "offers": {
+          "@type": "Offer",
+          "price": "2850",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 30,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-101-tartan-checks-collection",
+        "name": "Wisteria Tartan & Windowpane Check Casual Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-101.jpg",
+        "sku": "SHRUHI-MS-101",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "100% Pure Cotton \u2022 Half-Sleeve \u2022 12 Colourways",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 31,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-102-pastel-flannel-checks",
+        "name": "Pastel Brushed Cotton Check Casual Shirt (3-Shade Pack)",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-102.jpg",
+        "sku": "SHRUHI-MS-102",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Soft Brushed Twill \u2022 Sage, Mauve & Sky Checks",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 32,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-103-lycra-stretch-12-colours",
+        "name": "Signature Lycra 4-Way Stretch Solid Shirt (12 Colours)",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-103.jpg",
+        "sku": "SHRUHI-MS-103",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Imported Lycra Stretch \u2022 Tailored Fit \u2022 12-Shade Chart",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 33,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-104-vintage-madras-check-trio",
+        "name": "Vintage Madras & Windowpane Check Shirt Trio",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-104.jpg",
+        "sku": "SHRUHI-MS-104",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Pure Combed Cotton \u2022 6 Heritage Check Shades",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 34,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-105-micro-gingham-5pc-pack",
+        "name": "Executive Micro-Gingham Check Shirt (5-Colour Pack)",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-105.jpg",
+        "sku": "SHRUHI-MS-105",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Fine Gingham Weave \u2022 Sky, Blush, Slate, Aqua & Taupe",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 35,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-106-imported-linen-10-colours",
+        "name": "Imported Slub Linen Solid Casual Shirt (10 Colours)",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-106.jpg",
+        "sku": "SHRUHI-MS-106",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Imported Textured Linen \u2022 Chest Crest Detail \u2022 10 Shades",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 36,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-107-designer-lookbook-full-sleeve-checks",
+        "name": "Designer Studio Full-Sleeve Check Shirt Collection",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-107.jpg",
+        "sku": "SHRUHI-MS-107",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Tailored Roll-Up Full Sleeve \u2022 16 Signature Plaids",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 37,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-108-pure-linen-crest-12-colours",
+        "name": "Pure Linen Embroidered-Crest Shirt (12 Colours)",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-108.jpg",
+        "sku": "SHRUHI-MS-108",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Breathable Pure Linen \u2022 Embroidered Chest Crest",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 38,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-109-royal-linen-13-colours",
+        "name": "Royal Linen Resort Solid Shirt (13-Colour Master Chart)",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-109.jpg",
+        "sku": "SHRUHI-MS-109",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Luxury Resort Linen \u2022 Pastel & Jewel Tones \u2022 13 Colours",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 39,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-110-dual-pocket-cargo-shirt",
+        "name": "Dual-Flap Pocket Utility Casual Shirt (White & Black)",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-110.jpg",
+        "sku": "SHRUHI-MS-110",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Heavy Twill Cotton \u2022 Dual Chest Flap Pockets",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 40,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-111-mandarin-collar-linen-solids",
+        "name": "Mandarin Bandhgala Collar Slub-Linen Solid Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-111.jpg",
+        "sku": "SHRUHI-MS-111",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Contemporary Chinese Collar \u2022 8 Earthy & Jewel Shades",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 41,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-112-dno301-graph-check-executive-trio",
+        "name": "D.No 301 Executive Graph-Check Shirt (Half & Full Sleeve)",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-112.jpg",
+        "sku": "SHRUHI-MS-112",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Available in H/S & F/S \u2022 Cream, Ice Blue & Blush Pink",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 42,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-113-vertical-pinstripe-linen-trio",
+        "name": "Tailored Vertical Pinstripe Linen-Cotton Shirt Trio",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-113.jpg",
+        "sku": "SHRUHI-MS-113",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Fine Woven Pinstripes \u2022 Slate Blue, Rose & Lavender",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 43,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-114-monochrome-overcheck-shirt",
+        "name": "Monochrome Ivory & Charcoal Overcheck Casual Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-114.jpg",
+        "sku": "SHRUHI-MS-114",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Crisp Woven Cotton \u2022 3-Tone Overcheck Series",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 44,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-115-mandarin-botanical-resort-prints",
+        "name": "Mandarin-Collar Botanical & Tropical Resort Printed Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-115.jpg",
+        "sku": "SHRUHI-MS-115",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "12 Designer Holiday Prints \u2022 Soft Combed Cotton",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 45,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-116-shadow-plaid-ombre-checks",
+        "name": "Shadow-Plaid & Ombr\u00e9 Brushed Check Casual Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-116.jpg",
+        "sku": "SHRUHI-MS-116",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "10 Signature Ombr\u00e9 & Shadow Check Colorways",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 46,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-117-heritage-tartan-houndstooth-checks",
+        "name": "Heritage Tartan & Micro-Houndstooth Check Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-117.jpg",
+        "sku": "SHRUHI-MS-117",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "10 Classic Tartan, Houndstooth & Windowpane Checks",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 47,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-118-textured-popcorn-vertical-stripes",
+        "name": "Textured Popcorn-Weave & Ribbed Vertical Stripe Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-118.jpg",
+        "sku": "SHRUHI-MS-118",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Artisanal Popcorn & Corduroy Rib Texture \u2022 6 Colorways",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 48,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-119-linen-chambray-nautical-collection",
+        "name": "Linen-Chambray & Nautical Breton Stripe Casual Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-119.jpg",
+        "sku": "SHRUHI-MS-119",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Olive Khaki, Periwinkle Chambray & Sand Breton Stripes",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 49,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-120-jacquard-woven-panel-shirt",
+        "name": "Artisanal Jacquard Vertical-Panel Motif Casual Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-120.jpg",
+        "sku": "SHRUHI-MS-120",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Woven Geometric Tapestry Panels \u2022 Silver & Dusty Rose",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 50,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-121-cobalt-royal-orchid-resort-shirt",
+        "name": "Cobalt Royal Orchid Floral Resort Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-121.jpg",
+        "sku": "SHRUHI-MS-121",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Luxe Hawaiian Floral Print \u2022 Pure Combed Cotton \u2022 Half-Sleeve",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 51,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-122-havana-rainforest-tropical-leaf-shirt",
+        "name": "Havana Rainforest Tropical Botanical Leaf Resort Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-122.jpg",
+        "sku": "SHRUHI-MS-122",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Coffee Brown & Sage Botanical Weave \u2022 Camp Resort Collar",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 52,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-123-golden-bamboo-mandarin-resort-shirt",
+        "name": "Golden Bamboo & Palm Mandarin-Collar Resort Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-123.jpg",
+        "sku": "SHRUHI-MS-123",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Sunlit Yellow Palm Print \u2022 Bandhgala Stand Collar",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 53,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-124-aegean-feather-botanical-resort-shirt",
+        "name": "Aegean Cyan Feather Botanical Resort Printed Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-124.jpg",
+        "sku": "SHRUHI-MS-124",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Cyan & Navy Feather Foliage Print \u2022 Breathable Cotton Lawn",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 54,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-125-vintage-desert-stripe-cuban-camp-shirt",
+        "name": "Vintage Desert Stripe Cuban Camp-Collar Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-125.jpg",
+        "sku": "SHRUHI-MS-125",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Sand Khaki, Ivory & Umber Horizontal Striped Twill",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 55,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-126-french-riviera-powder-blue-paisley-shirt",
+        "name": "French Riviera Powder-Blue Paisley Resort Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-126.jpg",
+        "sku": "SHRUHI-MS-126",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Vintage Micro-Paisley & Floral Motif \u2022 Silk-Touch Voile",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 56,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-127-santorini-indigo-watercolor-splatter-shirt",
+        "name": "Santorini Indigo Watercolor Splatter Casual Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-127.jpg",
+        "sku": "SHRUHI-MS-127",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Abstract Ceramic Splatter Art \u2022 Cobalt on Ivory Canvas",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 57,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-128-executive-charcoal-windowpane-check-shirt",
+        "name": "Executive Charcoal Windowpane Check Casual Shirt",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-128.jpg",
+        "sku": "SHRUHI-MS-128",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Crisp Slate Grey Plaid \u2022 Tailored Half-Sleeve Silhouette",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 58,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-129-dual-tone-heritage-plaid-casual-shirt",
+        "name": "Dual-Tone Heritage Plaid Casual Shirt (Crimson & Jade Duo)",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-129.jpg",
+        "sku": "SHRUHI-MS-129",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Yarn-Dyed Heritage Tartan Plaid \u2022 Twin Colorway Pack",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 59,
+      "item": {
+        "@type": "Product",
+        "@id": "https://www.shruhicollections.in/#product-ms-130-minimalist-dual-pocket-resort-camp-shirt",
+        "name": "Minimalist Dual-Pocket Resort Camp Shirt (White & Black)",
+        "description": "Shruhi Men",
+        "image": "https://www.shruhicollections.in/assets/products/mens/shruhi-ms-130.jpg",
+        "sku": "SHRUHI-MS-130",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shruhi Collections Surat"
+        },
+        "category": "Men",
+        "color": "Clean Short-Sleeve Resort Fit \u2022 Twin Buttoned Chest Pockets",
+        "material": "100% Pure Combed Cotton & Imported Slub Linen",
+        "offers": {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shruhi Collections"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage / Flagship Store -->
+  <url>
+    <loc>https://www.shruhicollections.in/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/01_SHRUHI_MEERA_4K.jpg</image:loc>
+      <image:title>Shruhi Collections — Meera Ethnic Suit 4K Studio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/social/shruhi-fb-cover-option2-4k.jpg</image:loc>
+      <image:title>Shruhi Collections — Official Flagship Banner</image:title>
+    </image:image>
+  </url>
+
+  <!-- Deep-Linking Semantic Collections -->
+  <url>
+    <loc>https://www.shruhicollections.in/collections/curvy-couture.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/dno-1042-olive-teal-plus-size-suit.jpg</image:loc>
+      <image:title>Curvy Couture 3XL–6XL Plus-Size Suits Surat Loom Direct</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/collections/mens-luxury-shirts.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-101.jpg</image:loc>
+      <image:title>Men's Luxury Shirts Slub Linen &amp; Lycra Stretch Surat Loom Direct</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/collections/festive-couture.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/styleefik-tejal-ochre-sharara-set.jpg</image:loc>
+      <image:title>Festive Couture &amp; Banarasi Silk Dupatta Suits Surat Loom Direct</image:title>
+    </image:image>
+  </url>
+
+  <!-- Theme Variants (discoverable alternate designs) -->
+  <url>
+    <loc>https://www.shruhicollections.in/option-1-royal-heritage.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/option-2-midnight-luxe.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/option-3-modern-boutique.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+
+  <!-- Individual Product Detail Pages -->
+  <url>
+    <loc>https://www.shruhicollections.in/products/meera-plus-suit.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/meera-mustard-plus-size-suit.jpg</image:loc>
+      <image:title>Meera Mustard Zari-Yoke 3-Piece Suit Set</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/astha-maroon-aline.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/astha-maroon-aline-kurti-set.jpg</image:loc>
+      <image:title>Astha Deep Maroon A-Line Tunic &amp; Pant Set</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/styleefik-lamex.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/styleefik-lamex-bronze-suit.jpg</image:loc>
+      <image:title>Lamex Bronze-Gold Scalloped Border Suit Set</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/styleefik-tejal.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/styleefik-tejal-ochre-sharara-set.jpg</image:loc>
+      <image:title>Tejal Golden-Ochre V-Neck Palazzo Suit Set</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/moni-pastel-twin.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/moni-pastel-twin-suit-set.jpg</image:loc>
+      <image:title>Moni Pastel Sage &amp; Ivory Scalloped Dupatta Suit</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/dno-1042-plus-suit.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/dno-1042-olive-teal-plus-size-suit.jpg</image:loc>
+      <image:title>D.No 1042 Olive &amp; Bandhani Print Plus-Size Suit (2-Colour Series)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/styleefik-kitty-party.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/styleefik-kitty-party-mustard-coord.jpg</image:loc>
+      <image:title>Kitty Party Mustard Collared Appliqué Co-ord Set</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/styleefik-manika.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/styleefik-manika-mauve-suit.jpg</image:loc>
+      <image:title>Manika Berry-Mauve Mandala V-Neck Suit Set</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/alkapuri-wine-suit.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/alkapuri-wine-palazzo-suit.jpg</image:loc>
+      <image:title>Alkapuri Deep Wine Palazzo &amp; Organza Dupatta Set</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/dno-1038-plus-suit.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/dno-1038-maroon-ajrakh-plus-size-suit.jpg</image:loc>
+      <image:title>D.No 1038 Crimson Maroon Geometric Panel Plus-Size Suit</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/mostyle-4781-tunic.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mostyle-4781-ivory-floral-tunic.jpg</image:loc>
+      <image:title>Shruhi 4781 Ivory Floral Lace-Trim Peplum Tunic</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/mostyle-5708-coord.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mostyle-5708-cream-floral-coord.jpg</image:loc>
+      <image:title>Shruhi 5708 Cream &amp; Dusty Rose Strappy Floral Co-ord Set</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/valentina-magenta-suit.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/valentina-magenta-patola-suit.jpg</image:loc>
+      <image:title>Valentina Jamun-Magenta Patola Dupatta Suit Set</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/lock-brown-deer-suit.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/lock-coffee-brown-deer-motif-suit.jpg</image:loc>
+      <image:title>Lock Espresso Brown Crimson-Moon &amp; Deer Motif Suit Set</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/mostyle-5810-dress.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mostyle-5810-black-paisley-midi-dress.jpg</image:loc>
+      <image:title>Shruhi 5810 Jet-Black Paisley Border Midi Dress</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/mostyle-b2876-coord.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mostyle-b2876-maroon-embroidered-coord.jpg</image:loc>
+      <image:title>Shruhi B-2876 Burgundy Kashmiri-Floral Embroidered Co-ord</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/mostyle-5625-tunic.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mostyle-5625-navy-botanical-tunic.jpg</image:loc>
+      <image:title>Shruhi 5625 Midnight Navy &amp; Crimson Botanical Short Kurti</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/mostyle-5041-kaftan.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mostyle-5041-plum-chevron-kaftan-coord.jpg</image:loc>
+      <image:title>Shruhi 5041 Dusty Plum Chevron Kaftan &amp; Palazzo Co-ord</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/wa-anupama-rust-suit.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/wa-02-shruhi-anupama-rust-suit.jpg</image:loc>
+      <image:title>Anupama Cinnamon-Rust Embroidered Scallop Dupatta Suit</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/wa-glory-taupe-suit.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/wa-03-shruhi-glory-taupe-suit.jpg</image:loc>
+      <image:title>Glory Taupe-Beige Organza Floral Dupatta Suit Set</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/wa-galaxy-banarasi-suit.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/wa-04-shruhi-galaxy-banarasi-suit.jpg</image:loc>
+      <image:title>Galaxy Ivory &amp; Royal Crimson Banarasi Silk Dupatta Suit</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/wa-5601-denim-dress.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/wa-05-shruhi-5601-denim-midi-dress.jpg</image:loc>
+      <image:title>Shruhi 5601 Indigo Denim Button-Down Tiered Midi Dress</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/wa-shree-coffee-suit.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/wa-06-shruhi-shree-coffee-suit.jpg</image:loc>
+      <image:title>Shree Coffee-Brown Zari-Yoke Elegance 3-Piece Suit Set</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/wa-anupama-ivory-suit.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/wa-07-shruhi-anupama-ivory-suit.jpg</image:loc>
+      <image:title>Anupama Pearl-Ivory Scalloped Dupatta Plus-Size Suit</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/wa-dno1002-mustard-coord.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/wa-08-dno-1002-mustard-plus-coord.jpg</image:loc>
+      <image:title>D.No 1002 Mustard-Gold Geometric Yoke Plus-Size Palazzo Set</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/wa-dno1002-ivory-coord.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/wa-09-dno-1002-ivory-plus-coord.jpg</image:loc>
+      <image:title>D.No 1002 Ivory &amp; Rust Geometric Yoke Plus-Size Palazzo Set</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/wa-5795-floral-dress.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/wa-10-shruhi-5795-floral-midi-dress.jpg</image:loc>
+      <image:title>Shruhi 5795 Crimson &amp; Beige Kalamkari Floral Midi Dress</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/wa-5620-swirl-tunic.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/wa-11-shruhi-5620-swirl-tunic.jpg</image:loc>
+      <image:title>Shruhi 5620 Multicolor Abstract Marble-Swirl Short Tunic</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/wa-kavya-mauve-suit.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/wa-12-shruhi-kavya-mauve-suit.jpg</image:loc>
+      <image:title>Kavya Dusty-Mauve Cutwork Hem &amp; Ivory Organza Dupatta Suit</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-101-tartan-checks-collection.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-101.jpg</image:loc>
+      <image:title>Wisteria Tartan &amp; Windowpane Check Casual Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-102-pastel-flannel-checks.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-102.jpg</image:loc>
+      <image:title>Pastel Brushed Cotton Check Casual Shirt (3-Shade Pack)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-103-lycra-stretch-12-colours.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-103.jpg</image:loc>
+      <image:title>Signature Lycra 4-Way Stretch Solid Shirt (12 Colours)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-104-vintage-madras-check-trio.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-104.jpg</image:loc>
+      <image:title>Vintage Madras &amp; Windowpane Check Shirt Trio</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-105-micro-gingham-5pc-pack.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-105.jpg</image:loc>
+      <image:title>Executive Micro-Gingham Check Shirt (5-Colour Pack)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-106-imported-linen-10-colours.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-106.jpg</image:loc>
+      <image:title>Imported Slub Linen Solid Casual Shirt (10 Colours)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-107-designer-lookbook-full-sleeve-checks.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-107.jpg</image:loc>
+      <image:title>Designer Studio Full-Sleeve Check Shirt Collection</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-108-pure-linen-crest-12-colours.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-108.jpg</image:loc>
+      <image:title>Pure Linen Embroidered-Crest Shirt (12 Colours)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-109-royal-linen-13-colours.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-109.jpg</image:loc>
+      <image:title>Royal Linen Resort Solid Shirt (13-Colour Master Chart)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-110-dual-pocket-cargo-shirt.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-110.jpg</image:loc>
+      <image:title>Dual-Flap Pocket Utility Casual Shirt (White &amp; Black)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-111-mandarin-collar-linen-solids.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-111.jpg</image:loc>
+      <image:title>Mandarin Bandhgala Collar Slub-Linen Solid Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-112-dno301-graph-check-executive-trio.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-112.jpg</image:loc>
+      <image:title>D.No 301 Executive Graph-Check Shirt (Half &amp; Full Sleeve)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-113-vertical-pinstripe-linen-trio.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-113.jpg</image:loc>
+      <image:title>Tailored Vertical Pinstripe Linen-Cotton Shirt Trio</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-114-monochrome-overcheck-shirt.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-114.jpg</image:loc>
+      <image:title>Monochrome Ivory &amp; Charcoal Overcheck Casual Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-115-mandarin-botanical-resort-prints.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-115.jpg</image:loc>
+      <image:title>Mandarin-Collar Botanical &amp; Tropical Resort Printed Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-116-shadow-plaid-ombre-checks.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-116.jpg</image:loc>
+      <image:title>Shadow-Plaid &amp; Ombré Brushed Check Casual Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-117-heritage-tartan-houndstooth-checks.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-117.jpg</image:loc>
+      <image:title>Heritage Tartan &amp; Micro-Houndstooth Check Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-118-textured-popcorn-vertical-stripes.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-118.jpg</image:loc>
+      <image:title>Textured Popcorn-Weave &amp; Ribbed Vertical Stripe Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-119-linen-chambray-nautical-collection.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-119.jpg</image:loc>
+      <image:title>Linen-Chambray &amp; Nautical Breton Stripe Casual Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-120-jacquard-woven-panel-shirt.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-120.jpg</image:loc>
+      <image:title>Artisanal Jacquard Vertical-Panel Motif Casual Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-121-cobalt-royal-orchid-resort-shirt.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-121.jpg</image:loc>
+      <image:title>Cobalt Royal Orchid Floral Resort Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-122-havana-rainforest-tropical-leaf-shirt.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-122.jpg</image:loc>
+      <image:title>Havana Rainforest Tropical Botanical Leaf Resort Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-123-golden-bamboo-mandarin-resort-shirt.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-123.jpg</image:loc>
+      <image:title>Golden Bamboo &amp; Palm Mandarin-Collar Resort Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-124-aegean-feather-botanical-resort-shirt.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-124.jpg</image:loc>
+      <image:title>Aegean Cyan Feather Botanical Resort Printed Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-125-vintage-desert-stripe-cuban-camp-shirt.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-125.jpg</image:loc>
+      <image:title>Vintage Desert Stripe Cuban Camp-Collar Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-126-french-riviera-powder-blue-paisley-shirt.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-126.jpg</image:loc>
+      <image:title>French Riviera Powder-Blue Paisley Resort Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-127-santorini-indigo-watercolor-splatter-shirt.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-127.jpg</image:loc>
+      <image:title>Santorini Indigo Watercolor Splatter Casual Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-128-executive-charcoal-windowpane-check-shirt.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-128.jpg</image:loc>
+      <image:title>Executive Charcoal Windowpane Check Casual Shirt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-129-dual-tone-heritage-plaid-casual-shirt.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-129.jpg</image:loc>
+      <image:title>Dual-Tone Heritage Plaid Casual Shirt (Crimson &amp; Jade Duo)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.shruhicollections.in/products/ms-130-minimalist-dual-pocket-resort-camp-shirt.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.shruhicollections.in/assets/products/mens/shruhi-ms-130.jpg</image:loc>
+      <image:title>Minimalist Dual-Pocket Resort Camp Shirt (White &amp; Black)</image:title>
+    </image:image>
+  </url>
+
+</urlset>

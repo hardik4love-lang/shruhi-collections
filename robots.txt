@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /whatsapp-ai-bot/
+Disallow: /node_modules/
+Disallow: /*.json$
+
+# Priority crawling hints for Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap declaration
+Sitemap: https://www.shruhicollections.in/sitemap.xml
