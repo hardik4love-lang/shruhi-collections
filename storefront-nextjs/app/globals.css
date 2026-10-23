@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-serif: var(--font-cinzel);
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-jakarta);
+  --bg-ivory: #fcfaf7;
+  --oxblood-deep: #5a131f;
+}
+
+body {
+  background-color: var(--bg-ivory);
+  color: #1a1a1a;
+}
