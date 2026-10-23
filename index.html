@@ -1224,6 +1224,7 @@
       }
     }
   </style>
+  <script src="https://checkout.razorpay.com/v1/checkout.js" async></script>
 </head>
 <body>
   <!-- Imperial Top Announcement Bar -->
@@ -2293,11 +2294,20 @@
         <div>🔄 <strong>Hassle-Free Size Exchange:</strong> Sizing replacement guarantee across all sizes (S to 6XL).</div>
       </div>
 
-      <div style="display: flex; justify-content: space-between; gap: 0.65rem; flex-wrap: wrap;">
-        <button type="button" class="sz-chip-btn" id="clearBagBtn">Clear Selection</button>
-        <a id="bagModalSendWa" href="#" target="_blank" rel="noopener" class="btn-wa-instant" style="flex: 1; padding: 0.85rem; font-size: 0.82rem;">
-          Send Order &amp; Payment Screenshot on WhatsApp (+91 90542 41725) &rarr;
-        </a>
+      <!-- Frictionless Dual Checkout: Instant Gateway or WhatsApp Concierge -->
+      <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+        <div style="display: flex; gap: 0.65rem; flex-wrap: wrap;">
+          <button type="button" onclick="launchOnlineCheckout()" style="flex: 1; min-width: 240px; background: linear-gradient(135deg, #1A050B 0%, #6D1B29 100%); color: var(--gold-champagne); border: 1.5px solid var(--gold-burnished); padding: 0.9rem 1rem; border-radius: 4px; font-weight: 700; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.45rem; box-shadow: 0 4px 15px rgba(109, 27, 41, 0.25);">
+            <span>💳 Pay Online (Cards / NetBanking / UPI)</span> &rarr;
+          </button>
+          <a id="bagModalSendWa" href="#" target="_blank" rel="noopener" class="btn-wa-instant" style="flex: 1; min-width: 240px; padding: 0.9rem 1rem; font-size: 0.82rem;">
+            <span>💬 Concierge Order via WhatsApp</span> &rarr;
+          </a>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.25rem;">
+          <button type="button" class="sz-chip-btn" id="clearBagBtn">Clear Selection</button>
+          <span style="font-size: 0.7rem; color: #8C7B6E;">🔒 256-Bit SSL Encrypted • Direct Surat Loom Dispatch</span>
+        </div>
       </div>
     </div>
   </dialog>
@@ -2958,6 +2968,45 @@
           verifyPincode();
         }
       });
+
+
+    window.launchOnlineCheckout = function() {
+      if (!bag.length) {
+        alert("Your selection bag is currently empty. Please add an item first.");
+        return;
+      }
+      const totalVal = bag.reduce((sum, entry) => sum + entry.unitPrice * entry.qty, 0);
+      const upiDiscount = totalVal >= 999 ? 100 : 0;
+      const payableVal = Math.max(0, totalVal - upiDiscount);
+      const custName = (document.getElementById('custName')?.value || '').trim() || 'Valued Patron';
+      const custCity = (document.getElementById('custCity')?.value || '').trim() || 'India';
+
+      if (window.Razorpay && window.SHRUHI_RAZORPAY_KEY) {
+        const options = {
+          key: window.SHRUHI_RAZORPAY_KEY,
+          amount: payableVal * 100,
+          currency: "INR",
+          name: "Shruhi Collections Surat",
+          description: `Order (${bag.length} items) • Surat Loom Direct`,
+          image: "https://www.shruhicollections.in/favicon.svg",
+          handler: function (response) {
+            alert("✓ Payment Successful! Ref ID: " + response.razorpay_payment_id + "\nForwarding order confirmation to WhatsApp Concierge...");
+            const waText = encodeURIComponent(`*SHRUHI ORDER CONFIRMATION*\n• Payment Ref: ${response.razorpay_payment_id}\n• Amount Paid: ₹${payableVal}\n• Items: ${bag.map(b => b.code + ' (' + b.size + ')').join(', ')}\n• Name: ${custName}\n• Delivery City: ${custCity}`);
+            window.open(`https://wa.me/919054241725?text=${waText}`, '_blank');
+            bag.length = 0;
+            renderBagModal();
+            document.getElementById('bagModal').close();
+          },
+          prefill: { name: custName, contact: "9054241725" },
+          theme: { color: "#6D1B29" }
+        };
+        const rzp = new Razorpay(options);
+        rzp.open();
+      } else {
+        // Instant Direct WhatsApp Handoff with pre-filled payment details
+        document.getElementById('bagModalSendWa').click();
+      }
+    };
 
       loadBag();
       render();
