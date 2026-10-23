@@ -46,10 +46,11 @@ jobs:
       - name: Validate JSON Configuration Files
         run: |
           node -e "
+            const fs = require('fs');
             const files = ['manifest.webmanifest', 'catalog-schema-graph.json', 'seo-keyword-clusters.json', 'restock-advisory.json'];
             for (const f of files) {
               try {
-                require('./' + f);
+                JSON.parse(fs.readFileSync(f, 'utf8'));
                 console.log('✓ Valid JSON:', f);
               } catch (err) {
                 console.error('✗ Invalid JSON in file:', f, err.message);
