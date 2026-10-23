@@ -1,18 +1,13 @@
-export interface ProductVariant {
-  size: string;
-  inStock: boolean;
-  bustInches?: number;
-  waistInches?: number;
-  hipInches?: number;
-}
+import catalogData from '@/data/catalog.json';
 
 export interface CatalogProduct {
   id: string;
   slug: string;
   name: string;
-  code: string;
+  code?: string;
+  sku: string;
   fabric: string;
-  colorName: string;
+  color: string;
   price: number;
   mrp: number;
   category: 'curvy-couture' | 'festive-couture' | 'mens-shirts';
@@ -36,6 +31,19 @@ export const SIZE_CHART_SPECS = [
   { size: '6XL', label: '6XL (52)', bust: 52, waist: 48, hip: 55, desc: 'Curvy Couture Plus-Size' },
 ];
 
+export function getAllProducts(): CatalogProduct[] {
+  return catalogData as CatalogProduct[];
+}
+
+export function getProductBySlug(slug: string): CatalogProduct | undefined {
+  return (catalogData as CatalogProduct[]).find((p) => p.slug === slug);
+}
+
+export function getProductsByCategory(category: string): CatalogProduct[] {
+  if (category === 'all') return catalogData as CatalogProduct[];
+  return (catalogData as CatalogProduct[]).filter((p) => p.category === category);
+}
+
 export function calculateCurvySize(bust: number, waist: number, hip: number) {
   let matched = SIZE_CHART_SPECS.find(s => s.bust >= bust && s.waist >= waist && s.hip >= hip);
   if (!matched) matched = SIZE_CHART_SPECS[SIZE_CHART_SPECS.length - 1];
@@ -43,6 +51,6 @@ export function calculateCurvySize(bust: number, waist: number, hip: number) {
 }
 
 export function buildWhatsAppOrderUrl(product: CatalogProduct, selectedSize: string, phone: string = '919054241725') {
-  const text = `Hello Shruhi Collections! I would like to order this Surat Loom Edition:\n\n*Product:* ${product.name} (${product.code})\n*Fabric:* ${product.fabric}\n*Size Selected:* ${selectedSize}\n*Direct Loom Price:* ₹${product.price.toLocaleString('en-IN')}\n\nPlease confirm availability and delivery timeline.`;
+  const text = `Hello Shruhi Collections! I would like to order this Surat Loom Edition:\n\n*Product:* ${product.name} (SKU: ${product.sku})\n*Fabric:* ${product.fabric}\n*Size Selected:* ${selectedSize}\n*Direct Loom Price:* ₹${product.price.toLocaleString('en-IN')}\n\nPlease confirm availability and delivery timeline.`;
   return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 }
