@@ -1,0 +1,369 @@
+{
+  "total_clustered_keywords": 59,
+  "clusters": {
+    "curvy_couture_plus_size": [
+      {
+        "keyword": "plus size d.no 1042 olive & bandhani print plus-size suit (2-colour series) 3xl 4xl 5xl 6xl",
+        "code": "D.NO 1042",
+        "target_url": "https://www.shruhicollections.in/collections/curvy-couture.html",
+        "search_intent": "Commercial High-Intent"
+      },
+      {
+        "keyword": "plus size d.no 1038 crimson maroon geometric panel plus-size suit 3xl 4xl 5xl 6xl",
+        "code": "D.NO 1038",
+        "target_url": "https://www.shruhicollections.in/collections/curvy-couture.html",
+        "search_intent": "Commercial High-Intent"
+      },
+      {
+        "keyword": "plus size shruhi b-2876 burgundy kashmiri-floral embroidered co-ord 3xl 4xl 5xl 6xl",
+        "code": "SHRUHI B-2876",
+        "target_url": "https://www.shruhicollections.in/collections/curvy-couture.html",
+        "search_intent": "Commercial High-Intent"
+      },
+      {
+        "keyword": "plus size anupama cinnamon-rust embroidered scallop dupatta suit 3xl 4xl 5xl 6xl",
+        "code": "ANUPAMA-I",
+        "target_url": "https://www.shruhicollections.in/collections/curvy-couture.html",
+        "search_intent": "Commercial High-Intent"
+      },
+      {
+        "keyword": "plus size galaxy ivory & royal crimson banarasi silk dupatta suit 3xl 4xl 5xl 6xl",
+        "code": "SHRUHI GALAXY",
+        "target_url": "https://www.shruhicollections.in/collections/curvy-couture.html",
+        "search_intent": "Commercial High-Intent"
+      },
+      {
+        "keyword": "plus size anupama pearl-ivory scalloped dupatta plus-size suit 3xl 4xl 5xl 6xl",
+        "code": "ANUPAMA-II",
+        "target_url": "https://www.shruhicollections.in/collections/curvy-couture.html",
+        "search_intent": "Commercial High-Intent"
+      },
+      {
+        "keyword": "plus size d.no 1002 mustard-gold geometric yoke plus-size palazzo set 3xl 4xl 5xl 6xl",
+        "code": "D.NO 1002 (GOLD)",
+        "target_url": "https://www.shruhicollections.in/collections/curvy-couture.html",
+        "search_intent": "Commercial High-Intent"
+      },
+      {
+        "keyword": "plus size d.no 1002 ivory & rust geometric yoke plus-size palazzo set 3xl 4xl 5xl 6xl",
+        "code": "D.NO 1002 (IVORY)",
+        "target_url": "https://www.shruhicollections.in/collections/curvy-couture.html",
+        "search_intent": "Commercial High-Intent"
+      }
+    ],
+    "mens_luxury_shirts": [
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-101 surat",
+        "code": "SHRUHI-MS-101",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-102 surat",
+        "code": "SHRUHI-MS-102",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-103 surat",
+        "code": "SHRUHI-MS-103",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-104 surat",
+        "code": "SHRUHI-MS-104",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-105 surat",
+        "code": "SHRUHI-MS-105",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-106 surat",
+        "code": "SHRUHI-MS-106",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-107 surat",
+        "code": "SHRUHI-MS-107",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-108 surat",
+        "code": "SHRUHI-MS-108",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-109 surat",
+        "code": "SHRUHI-MS-109",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-110 surat",
+        "code": "SHRUHI-MS-110",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-111 surat",
+        "code": "SHRUHI-MS-111",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-112 surat",
+        "code": "SHRUHI-MS-112",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-113 surat",
+        "code": "SHRUHI-MS-113",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-114 surat",
+        "code": "SHRUHI-MS-114",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-115 surat",
+        "code": "SHRUHI-MS-115",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-116 surat",
+        "code": "SHRUHI-MS-116",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-117 surat",
+        "code": "SHRUHI-MS-117",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-118 surat",
+        "code": "SHRUHI-MS-118",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-119 surat",
+        "code": "SHRUHI-MS-119",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-120 surat",
+        "code": "SHRUHI-MS-120",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-121 surat",
+        "code": "SHRUHI-MS-121",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-122 surat",
+        "code": "SHRUHI-MS-122",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-123 surat",
+        "code": "SHRUHI-MS-123",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-124 surat",
+        "code": "SHRUHI-MS-124",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-125 surat",
+        "code": "SHRUHI-MS-125",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-126 surat",
+        "code": "SHRUHI-MS-126",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-127 surat",
+        "code": "SHRUHI-MS-127",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-128 surat",
+        "code": "SHRUHI-MS-128",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-129 surat",
+        "code": "SHRUHI-MS-129",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      },
+      {
+        "keyword": "mens 100% pure combed cotton & imported slub linen shirt shruhi-ms-130 surat",
+        "code": "SHRUHI-MS-130",
+        "target_url": "https://www.shruhicollections.in/collections/mens-luxury-shirts.html",
+        "search_intent": "Direct Purchase Intent"
+      }
+    ],
+    "festive_banarasi_couture": [
+      {
+        "keyword": "festive lustrous tissue-silk blend suit surat wholesale",
+        "code": "LAMEX",
+        "target_url": "https://www.shruhicollections.in/collections/festive-couture.html",
+        "search_intent": "Celebratory / Wedding Commercial"
+      },
+      {
+        "keyword": "festive rich shimmer silk with flowing palazzo suit surat wholesale",
+        "code": "TEJAL",
+        "target_url": "https://www.shruhicollections.in/collections/festive-couture.html",
+        "search_intent": "Celebratory / Wedding Commercial"
+      },
+      {
+        "keyword": "festive soft chanderi cotton-silk suit surat wholesale",
+        "code": "MONI",
+        "target_url": "https://www.shruhicollections.in/collections/festive-couture.html",
+        "search_intent": "Celebratory / Wedding Commercial"
+      },
+      {
+        "keyword": "festive lustrous modal / roman silk suit surat wholesale",
+        "code": "MANIKA",
+        "target_url": "https://www.shruhicollections.in/collections/festive-couture.html",
+        "search_intent": "Celebratory / Wedding Commercial"
+      },
+      {
+        "keyword": "festive lustrous modal silk with woven-look printed dupatta suit surat wholesale",
+        "code": "VALENTINA",
+        "target_url": "https://www.shruhicollections.in/collections/festive-couture.html",
+        "search_intent": "Celebratory / Wedding Commercial"
+      },
+      {
+        "keyword": "festive soft shimmer silk with printed organza dupatta suit surat wholesale",
+        "code": "SHRUHI GLORY",
+        "target_url": "https://www.shruhicollections.in/collections/festive-couture.html",
+        "search_intent": "Celebratory / Wedding Commercial"
+      },
+      {
+        "keyword": "festive lustrous modal / chanderi silk suit surat wholesale",
+        "code": "SHRUHI SHREE",
+        "target_url": "https://www.shruhicollections.in/collections/festive-couture.html",
+        "search_intent": "Celebratory / Wedding Commercial"
+      },
+      {
+        "keyword": "festive textured chanderi silk with scalloped organza dupatta suit surat wholesale",
+        "code": "SHRUHI KAVYA",
+        "target_url": "https://www.shruhicollections.in/collections/festive-couture.html",
+        "search_intent": "Celebratory / Wedding Commercial"
+      }
+    ],
+    "chanderi_slub_silk_sets": [
+      {
+        "keyword": "festive silk blend with woven dupatta kurti pant set mustard olive gold",
+        "code": "MEERA",
+        "target_url": "https://www.shruhicollections.in/",
+        "search_intent": "Everyday Luxury Ethnic"
+      },
+      {
+        "keyword": "textured chanderi / slub silk blend kurti pant set deep maroon & olive gold",
+        "code": "ASTHA",
+        "target_url": "https://www.shruhicollections.in/",
+        "search_intent": "Everyday Luxury Ethnic"
+      },
+      {
+        "keyword": "roman silk with sheer embroidered dupatta kurti pant set deep plum wine",
+        "code": "ALKAPURI",
+        "target_url": "https://www.shruhicollections.in/",
+        "search_intent": "Everyday Luxury Ethnic"
+      },
+      {
+        "keyword": "breathable textured cotton lawn kurti pant set ivory multi-floral",
+        "code": "SHRUHI 4781",
+        "target_url": "https://www.shruhicollections.in/",
+        "search_intent": "Everyday Luxury Ethnic"
+      },
+      {
+        "keyword": "textured tussar-linen silk blend kurti pant set espresso brown & magenta",
+        "code": "LOCK",
+        "target_url": "https://www.shruhicollections.in/",
+        "search_intent": "Everyday Luxury Ethnic"
+      },
+      {
+        "keyword": "soft rayon crepe kurti pant set jet black & multicolor",
+        "code": "SHRUHI 5810",
+        "target_url": "https://www.shruhicollections.in/",
+        "search_intent": "Everyday Luxury Ethnic"
+      },
+      {
+        "keyword": "100% pure cambric cotton kurti pant set midnight navy, crimson & ochre",
+        "code": "SHRUHI 5625",
+        "target_url": "https://www.shruhicollections.in/",
+        "search_intent": "Everyday Luxury Ethnic"
+      },
+      {
+        "keyword": "soft washed tencel-denim chambray kurti pant set classic indigo denim blue",
+        "code": "SHRUHI 5601",
+        "target_url": "https://www.shruhicollections.in/",
+        "search_intent": "Everyday Luxury Ethnic"
+      },
+      {
+        "keyword": "100% pure soft cambric cotton kurti pant set crimson maroon & sand beige",
+        "code": "SHRUHI 5795",
+        "target_url": "https://www.shruhicollections.in/",
+        "search_intent": "Everyday Luxury Ethnic"
+      },
+      {
+        "keyword": "soft viscose lawn / muslin blend kurti pant set sage, mauve & ochre marble swirl",
+        "code": "SHRUHI 5620",
+        "target_url": "https://www.shruhicollections.in/",
+        "search_intent": "Everyday Luxury Ethnic"
+      }
+    ],
+    "cotton_coord_casuals": [
+      {
+        "keyword": "designer co-ord set mustard ochre surat loom",
+        "code": "KITTY PARTY",
+        "target_url": "https://www.shruhicollections.in/",
+        "search_intent": "Casual Chic Organic"
+      },
+      {
+        "keyword": "designer co-ord set cream ivory & dusty rose surat loom",
+        "code": "SHRUHI 5708",
+        "target_url": "https://www.shruhicollections.in/",
+        "search_intent": "Casual Chic Organic"
+      },
+      {
+        "keyword": "designer co-ord set dusty plum & turquoise accent surat loom",
+        "code": "SHRUHI 5041",
+        "target_url": "https://www.shruhicollections.in/",
+        "search_intent": "Casual Chic Organic"
+      }
+    ]
+  }
+}

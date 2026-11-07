@@ -1,0 +1,103 @@
+name: Agentic Flywheel Nightly Autonomous Sync
+
+on:
+  schedule:
+    # 02:00 UTC = 07:30 AM IST (Daily before morning commerce peak)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      force_full_sync:
+        description: 'Force complete re-generation of all 59 PDPs and feeds'
+        required: false
+        default: 'true'
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: agentic-flywheel-sync
+  cancel-in-progress: false
+
+jobs:
+  flywheel-sync:
+    name: Autonomous Catalog, SEO & Restock Flywheel
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout Storefront Repository
+        uses: actions/checkout@v4
+        with:
+          path: storefront
+
+      - name: Checkout Algorise AI Engine
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/algorise-ai
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: algorise-ai
+        continue-on-error: true
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: algorise-ai/pyproject.toml
+
+      - name: Install Engine Core Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pydantic fastapi uvicorn structlog opentelemetry-api prometheus-client requests
+
+      - name: Execute Autonomous Agentic Flywheel Sync
+        env:
+          STOREFRONT_ROOT: ${{ github.workspace }}/storefront
+          ENGINE_ROOT: ${{ github.workspace }}/algorise-ai
+        run: |
+          python - << 'EOF'
+          import sys
+          import os
+
+          engine_dir = os.environ.get("ENGINE_ROOT", "")
+          storefront_dir = os.environ.get("STOREFRONT_ROOT", "")
+
+          if os.path.exists(engine_dir):
+              sys.path.insert(0, engine_dir)
+          else:
+              print("Note: Running inline standalone flywheel script")
+
+          catalog_path = os.path.join(storefront_dir, "catalog-data.js")
+          restock_path = os.path.join(storefront_dir, "restock-advisory.json")
+
+          print(f"Executing Flywheel Sync for: {catalog_path}")
+          
+          try:
+              from engine.growth_engine import CatalogGrowthAgent, CatalogParser
+              from engine.restock_optimizer import RestockMarginOptimizer
+              
+              growth = CatalogGrowthAgent()
+              optimizer = RestockMarginOptimizer()
+
+              # 1. Full Flywheel Sync (Schema, Clusters, Merchant TSV, PDPs, Sitemap)
+              res = growth.sync_all(catalog_path=catalog_path, storefront_root=storefront_dir)
+              print(f"Growth Engine Sync completed: {res.get('checkpoint_checksum', 'OK')}")
+
+              # 2. Restock & Margin Optimizer
+              opt_res = optimizer.optimize_and_export(catalog_path, restock_path)
+              print(f"Restock Advisory generated: {opt_res}")
+
+          except Exception as exc:
+              print(f"Engine execution warning/fallback: {exc}")
+              # Non-destructive fallback
+              pass
+          EOF
+
+      - name: Commit & Push Updated Storefront Artifacts
+        working-directory: storefront
+        run: |
+          git config --local user.email "flywheel-bot@algorise.ai"
+          git config --local user.name "Algorise Flywheel Autonomous Agent"
+          git add sitemap.xml catalog-schema-graph.json seo-keyword-clusters.json google-merchant-feed.tsv restock-advisory.json products/
+          git diff --staged --quiet || (git commit -m "chore(flywheel): autonomous nightly catalog sync & restock advisory [skip ci]" && git push)

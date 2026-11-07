@@ -1,19 +1,16 @@
 services:
   - type: web
-    name: shruhi-collections-whatsapp-facebook-24x7-bot
+    name: shruhi-collections-flagship-store
     runtime: docker
     plan: starter
     autoDeploy: true
+    healthCheckPath: /health
     envVars:
       - key: PORT
         value: 8096
-      - key: FB_BOT_PORT
-        value: 8095
-      - key: FB_PAGE_ID
-        value: "61586357894191"
-      - key: FB_PAGE_ID_2
-        value: "61586323275145"
-      - key: WHATSAPP_NUMBER
-        value: "916355285433"
-      - key: WHATSAPP_NUMBER_2
-        value: "919054241725"
+      - key: NODE_ENV
+        value: production
+      - key: WHATSAPP_PRIMARY
+        sync: false
+      - key: WHATSAPP_MENS
+        sync: false
