@@ -5,7 +5,7 @@
   "FB_PAGE_URL": "https://www.facebook.com/profile.php?id=61586357894191",
   "FB_PAGE_URL_2": "https://www.facebook.com/profile.php?id=61586323275145",
   "FB_PAGE_URL_3": "https://www.facebook.com/shruhi_boutique_reseller_hub",
-  "PLAN_TIER": "SURAT PRO TIER — 4-Pillar Social Sales Engine (3 Pages + 100 Groups + 1 Viral Reel + 24/7 Client Handoff)",
+  "PLAN_TIER": "SURAT PRO TIER \u2014 4-Pillar Social Sales Engine (3 Pages + 100 Groups + 1 Viral Reel + 24/7 Client Handoff)",
   "CLIENT_PROMISE_4_PILLARS": [
     "1. Connect & Keep Updated 3 Facebook Pages (61586357894191, 61586323275145, @shruhi_boutique_reseller_hub)",
     "2. Join Up to 100 Relevant Marketing Groups (4.82M+ Combined Buyers)",
@@ -15,13 +15,15 @@
   "CONNECTED_PAGES": [
     {
       "id": "61586357894191",
-      "name": "Shruhi Collections — Official Flagship Boutique",
-      "url": "https://www.facebook.com/profile.php?id=61586357894191"
+      "name": "Shruhi Collections \u2014 Official Flagship Boutique",
+      "url": "https://www.facebook.com/profile.php?id=61586357894191",
+      "notes": "Flagship Women's Haute Ethnic & Curvy Couture (29 Editions)"
     },
     {
       "id": "61586323275145",
       "name": "Shruhi Curvy & Plus-Size Couture (Sizes 3XL to 6XL)",
-      "url": "https://www.facebook.com/profile.php?id=61586323275145"
+      "url": "https://www.facebook.com/profile.php?id=61586323275145",
+      "notes": "Curvy Couture (3XL\u20136XL) & Men's Luxury Shirts (30 Editions)"
     },
     {
       "id": "shruhi_boutique_reseller_hub",
@@ -37,7 +39,9 @@
   "HERO_BOTS_INCLUDED": 100,
   "PORT": 8095,
   "PUBLIC_SITE_URL": "https://shruhicollections.in",
-  "WHATSAPP_NUMBER": "916355285433",
-  "WHATSAPP_NUMBER_2": "919054241725",
-  "WHATSAPP_DISPLAY": "+91 63552 85433 & +91 90542 41725"
+  "WHATSAPP_NUMBER": "9054241725",
+  "WHATSAPP_NUMBER_2": "8849601725",
+  "WHATSAPP_DISPLAY": "+91 90542 41725 & +91 88496 01725",
+  "WHATSAPP_NUMBER_3": "6355285433",
+  "TOTAL_PRODUCTS_SYNCED": 59
 }
