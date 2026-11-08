@@ -11,9 +11,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
+    rel="preload"
+    as="style"
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
+    onload="this.onload=null;this.rel='stylesheet'"
   />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    />
+  </noscript>
   <style>
     @view-transition {
       navigation: auto;
@@ -821,7 +829,13 @@
       let activeSize = 'all';
       let query = '';
 
-      // Populate Runway Strip with 5 Spotlight Designs
+      // High-speed WebP thumbnail resolver
+      function getThumb(img) {
+        if (!img) return '';
+        return img.replace('assets/products/', 'assets/products/thumbs/').replace(/\.(jpg|jpeg|png)$/i, '.webp');
+      }
+
+      // Populate Runway Strip with 5 Spotlight Designs (optimized WebP thumbnails)
       const spotlights = ['wa-galaxy-banarasi-suit', 'styleefik-tejal', 'ms-107-designer-lookbook-full-sleeve-checks', 'ms-103-lycra-stretch-12-colours', 'wa-kavya-mauve-suit']
         .map((id) => catalog.find((c) => c.id === id))
         .filter(Boolean);
@@ -830,7 +844,7 @@
         .map(
           (item) => `
           <div class="runway-card" data-open="${item.id}">
-            <img src="${item.image}" alt="${item.name}" />
+            <img src="${getThumb(item.image)}" alt="${item.name}" width="280" height="350" fetchpriority="high" decoding="async" />
             <div class="runway-card-overlay">
               <span>${item.code} • MRP ${item.priceFormatted || ''} • ${item.sizes.join('/')}</span>
               <h3>${item.name}</h3>
@@ -865,7 +879,7 @@
             (item) => `
             <article class="magazine-card">
               <div class="mag-media" data-open="${item.id}">
-                <img src="${item.image}" alt="${item.name}" loading="lazy" />
+                <img src="${getThumb(item.image)}" alt="${item.name}" loading="lazy" decoding="async" width="300" height="400" />
                 <div class="mag-top-badges">
                   <span class="mag-code">${item.code} • ${item.priceFormatted || ''}</span>
                   ${item.isPlusSize ? `<span class="mag-plus">PLUS ${item.sizes[0]}–${item.sizes[item.sizes.length - 1]}</span>` : ''}
